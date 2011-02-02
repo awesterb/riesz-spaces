@@ -1,0 +1,17 @@
+
+# /
+/*.log
+/body.tmp
+/head.tmp
+/*.out
+/*.pdf
+/*.toc
+/*.bbl
+/*.blg
+/*.make
+/*.make.temp
+/*.d
+/*.fls
+/*.aux
+/*.dvi
+/*.ps
