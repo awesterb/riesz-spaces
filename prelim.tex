@@ -108,5 +108,128 @@ we then have
 \frac{x+y}{2} - \sup\left\{ \frac{x-y}{2}, -\frac{x-y}{2} \right\}
   & = x\wedge y\htam{. }
 \end{align*}
-\stub
+%
+%
+%
+% 1.4
+%
+\section{Elementary properties}
+Let~$E$ be a Riesz space. 
+We collect a number of basic identities and inequalities.
+For the sake of readability
+we occasionally omit clauses such as ``for all~$x$ in~$E$''.
+\begin{enumerate}
+\item % 
+\label{i:1.4-1}
+Let~$X\subseteq E$, and let~$A\colon E\rightarrow E$ 
+be an order isomorphism.
+\snote{``order isomorphism'' has not been defined.}
+If~$X$ has a supremum,
+then so does $A(X)$,
+and
+\begin{align*}
+\sup A(X) &= A(\sup X)
+\htam{.} \\
+\intertext{%
+Similarly, %
+}
+\inf A(X) &= A(\inf X)
+\htam{.}
+\end{align*}
+\item %
+If~$x,y\in E$, then
+\begin{equation*}
+\frmd{ (x\vee y) = (-x)\wedge(-y) }
+\htam{.}
+\end{equation*}
+\item %
+It follows from \ref{i:1.4-1} that
+\snote{So: $\lambda\cdot -$ is an order isomorphism.} 
+\begin{alignat*}
+\lambda \sup X &= \sup \lambda X \qquad &&(\lambda \in [0,\infty)\,) \\
+\intertext{%
+whenever~$X\subseteq E$ and~$\sup X$ exists.
+In particular, }
+\lambda (x \vee y) &=  (\lambda x) \vee (\lambda y) 
+  \qquad &&(x,y\in E\htam{; }\lambda\in[0,\infty)\,)\htam{.}
+\end{alignat*}
+\item %
+For~$X\subseteq E$ and $a\in E$,
+set~$X+a:=\{x+a\colon x\in X\}$.
+By \ref{i:1.4-1} we have
+\begin{align*}
+\sup(X+a) &= (\sup X) + a \\
+\intertext{%
+if $X\subseteq A$ and $\sup X$ exists.
+Similarly, }
+\inf (X+a) &= (\inf X)+a
+\end{align*}
+if~$X$ has an infimum.
+\item %
+In particular,
+\snote{So: $-+a$ is an order isomorphism.}
+\begin{equation*}
+\label{i1.4-5}
+\frmd{%
+(x+a)\vee   (y+a)=(x\vee y)+a
+\htam{, } \qquad 
+(x+a)\wedge (y+a)=(x\wedge y)+a }
+\htam{.}
+\end{equation*}
+\item %
+\label{i1.4-6}
+\begin{equation*}
+x\vee y + x\wedge y = x+y
+\end{equation*}
+because~$(x\vee y)-x-y 
+\smash{\stackrel{\htam{\ref{i1.4-5}}}{=}}
+(x-x-y)\vee(y-x-y)=(-y)\vee(-x)=x\wedge y$.
+\item %
+Take~$a\in E$ and let $M_a\colon E\rightarrow E$ 
+be either the map~$x\mapsto x\vee a$
+or~$x\mapsto x\wedge a$. 
+Let~$A\subseteq E$.
+Then
+\begin{align*}
+M_a(\sup X) &= \sup M_a(X) \\
+\intertext{%
+if $X$ has a supremum and}
+M_a(\inf X) &= \inf M_a(X)
+\end{align*}
+if~$X$ has an infimum.
+Proof for $M_a(x)=x\vee a$:
+\begin{itemize}
+\item %
+If~$X$ has a supremum:  
+For~$z\in E$ we
+\begin{align*}
+z\ge (\sup X)\vee a  
+  & \iff z\ge \sup X\ \htam{ and }\  z\ge a \\
+  & \iff z\ge x\quad (x\in X)\ \htam{ and }\  z\ge a\\
+  & \iff z\ge x\vee a\quad (x\in X) \\
+  & \iff z\htam{ is upper bound for }M_a(X)\htam{.}
+\end{align*}
+\item %
+If~$X$ has an infimum: 
+The fact that $M_a$ is increasing 
+implies that $M_a(\inf X)$ is a lower bound
+for $M_a(X)$.
+Now let~$z$
+be any lower bound for~$M_a(X)$;
+we prove~$z\leq M_a(\inf X)$.
+For all~$x\in X$
+we have
+$z\leq x\vee a 
+\smash{\stackrel{\htam{\ref{i1.4-6}}}{=}}
+x+a - x\wedge a
+\leq x+a-(\inf X)\wedge a$,
+whence
+$x\ge z-a+(\inf X)\wedge a$.
+Then $\inf X\geq z-a+(\inf X)\wedge a$
+so that 
+$z\leq \inf X +a - (\inf X)\wedge a
+\smash{\stackrel{\htam{\ref{i1.4-6}}}{=}}
+(\inf X)\vee a = M_a(\inf X)$.
+\end{itemize}
+\end{enumerate}
 \end{document}
