@@ -1,14 +1,112 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
-
+% 1
 \chapter{Preliminaries}
+%
+% 1.1
+\section{Definitions}
+\begin{enumerate}
+% 1
+\item 
+A \keyword{lattice} is a (partially) ordered set in which
+every nonempty finite subset has an infimum and a supremum. 
+If $a,b$ are elements of a lattice~$\Lambda$ 
+we write~$a\wedge b = \inf\{a,b\}$
+and~$a\vee b = \sup\{a,b\}$.
+% 2
+\item 
+A lattice $\Lambda$ is \keyword{distributive}
+if for all $a,b,c$ in $\Lambda$
+\begin{align*}
+(a\vee b)\wedge c &= (a\wedge c)\vee (b\wedge c)\htam{, } &
+(a\wedge b)\vee c &= (a\vee c) \wedge (b\vee c) 
+\end{align*}
+% 3
+\item 
+A Boolean algebra~$\Lambda$ is a distributive lattice
+with a smallest element~$0$
+and a largest element~$1$
+such that for every~$x$ in~$\Lambda$
+there is a complement,
+i.e., 
+an element~$y$ of~$\Lambda$
+with~$x\wedge y=0$, $x\vee y=1$.
+In a Boolean algebra the complement is unique.
+The complement of~$x$ is denoted:~$x'$.
+% 4
+\item 
+Let~$X$ be a set.
+A collection~$\mathcal{R}$ 
+of subsets of~$X$
+is called a \keyword{ring} if
+\begin{align*}
+&A,B\in\mathcal{R} \quad \implies \quad 
+  A\cap B \in \mathcal{R}\htam{, }\ 
+  A\cup B \in \mathcal{R}\htam{, }\ 
+  A\backslash B \in \mathcal{R}\htam{; } \\
+&\varnothing \in \mathcal{R}
+\htam{.}
+\end{align*}
+A ring~$\mathcal{R}$ is an \keyword{algebra} if
+\begin{align*}
+X \in \mathcal{R}
+\htam{.}
+\end{align*}
+(An algebra of sets is a Boolean algebra.) 
+A $\sigma$-algebra in~$X$
+is an algebra~$\mathcal{R}$
+of subsets of~$X$
+with
+\begin{align*}
+A_1, A_2, \ldots \in \mathcal{R}\quad \implies\quad 
+  \bigcup_n A_n \in \mathcal{R}
+\htam{.}
+\end{align*}
+\end{enumerate}
+%
+%
+%
+% 1.2
+%
+\section{Definition}
+An \keyword{ordered vector space} 
+is a (real) vector~space~$E$
+endowed with an ordering such that
+\begin{equation*}
+x,y\in E\htam{, }\ x\leq y
+ \quad \implies \quad
+\begin{cases}
+x+a \leq y+a  
+  & (a\in E)\htam{, } \\
+\lambda x \leq \lambda y 
+  & (\lambda \in [0,\infty)\,)\htam{. }
+\end{cases}
+\end{equation*}
+Observe that then for all $x,y\in E$
+\begin{equation*}
+x\leq y \quad \implies \quad -x \geq -y\htam{.}
+\end{equation*}
+(Take $a:=-x-y$.)
+%
+%
+% 1.3
+%
+\section{Definition}
+A \keyword{Riesz space} ($=$ \keyword{vector lattice})
+is an ordered vector space that is a lattice.
 
-\section{wee}
-
-\subsection{weee}
-
-\subsubsection{wee}
-
+If~$E$ is an ordered vector space 
+in which for every element~$x$
+the set~$\{x,-x\}$ has a supremum,
+then~$E$ is a Riesz space;
+indeed,
+for $x,y\in E$
+we then have
+\begin{align*}
+\frac{x+y}{2} + \sup\left\{ \frac{x-y}{2}, -\frac{x-y}{2} \right\} 
+  & = x\vee y\htam{,} \\ 
+\frac{x+y}{2} + \sup\left\{ \frac{x-y}{2}, -\frac{x-y}{2} \right\}
+  & = x\wedge y\htam{. }
+\end{align*}
 \stub
-
 \end{document}
