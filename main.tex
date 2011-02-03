@@ -1,5 +1,6 @@
-\documentclass[a4paper,draft,twoside,reqno]{memoir}
+\documentclass[a4paper,draft,twoside,reqno]{article}
 \usepackage[english]{babel}
+\usepackage{ifthen}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{nccmath}
@@ -7,12 +8,6 @@
 
 \input{common.tex}
 \usepackage[final]{hyperref}
-
-\chapterstyle{hangnum}
-\addtocounter{secnumdepth}{2}
-\setsechook{\hangsecnum}
-\setsubsechook{\hangsecnum}
-\setsubsubsechook{\hangsecnum}
 
 \title{Riesz spaces}
 
