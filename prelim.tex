@@ -5,6 +5,7 @@
 %
 % 1.1
 \begin{psec}[Definitions]
+\label{1.1}
 \begin{enumerate}
 % 1
 \item 
@@ -70,6 +71,7 @@ with%
 % 1.2
 %
 \begin{psec}[Definition]
+\label{1.2}
 An \keyword{ordered vector space} 
 is a (real) vector~space~$E$
 endowed with an ordering such that
@@ -94,6 +96,7 @@ x\leq y \quad \implies \quad -x \geq -y\htam{.}
 % 1.3
 %
 \begin{psec}[Definition]
+\label{1.3}
 A \keyword{Riesz space} ($=$ \keyword{vector lattice})
 is an ordered vector space that is a lattice.
 
@@ -117,13 +120,14 @@ we then have
 % 1.4
 %
 \begin{psec}{Elementary properties}
+\label{1.4}
 Let~$E$ be a Riesz space. 
 We collect a number of basic identities and inequalities.
 For the sake of readability
 we occasionally omit clauses such as ``for all~$x$ in~$E$''.
 \begin{enumerate}
 \item % 
-\label{i:1.4-1}
+\label{1.4-1}
 Let~$X\subseteq E$, and let~$A\colon E\rightarrow E$ 
 be an order isomorphism.
 \snote{``order isomorphism'' has not been defined.}
@@ -140,13 +144,15 @@ Similarly, %
 \htam{.}
 \end{align*}
 \item %
+\label{1.4-2}
 If~$x,y\in E$, then
 \begin{equation*}
 \frmd{ (x\vee y) = (-x)\wedge(-y) }
 \htam{.}
 \end{equation*}
 \item %
-It follows from \ref{i:1.4-1} that
+\label{1.4-3}
+It follows from \ref{1.4-1} that
 \snote{So: $\lambda\cdot -$ is an order isomorphism.} 
 \begin{alignat*}
 \lambda \sup X &= \sup \lambda X \qquad &&(\lambda \in [0,\infty)\,) \\
@@ -157,9 +163,10 @@ In particular, }
   \qquad &&(x,y\in E\htam{; }\lambda\in[0,\infty)\,)\htam{.}
 \end{alignat*}
 \item %
+\label{1.4-4}
 For~$X\subseteq E$ and $a\in E$,
 set~$X+a:=\{x+a\colon x\in X\}$.
-By \ref{i:1.4-1} we have
+By \ref{1.4-1} we have
 \begin{align*}
 \sup(X+a) &= (\sup X) + a \\
 \intertext{%
@@ -169,6 +176,7 @@ Similarly, }
 \end{align*}
 if~$X$ has an infimum.
 \item %
+\label{1.4-5}
 In particular,
 \snote{So: $-+a$ is an order isomorphism.}
 \begin{equation*}
@@ -180,14 +188,15 @@ In particular,
 \htam{.}
 \end{equation*}
 \item %
-\label{i1.4-6}
+\label{1.4-6}
 \begin{equation*}
 x\vee y + x\wedge y = x+y
 \end{equation*}
 because~$(x\vee y)-x-y 
-\smash{\stackrel{\htam{\ref{i1.4-5}}}{=}}
+\isref{1.4-5}
 (x-x-y)\vee(y-x-y)=(-y)\vee(-x)=x\wedge y$.
 \item %
+\label{1.4-7}
 Take~$a\in E$ and let $M_a\colon E\rightarrow E$ 
 be either the map~$x\mapsto x\vee a$
 or~$x\mapsto x\wedge a$. 
@@ -223,7 +232,7 @@ we prove~$z\leq M_a(\inf X)$.
 For all~$x\in X$
 we have
 $z\leq x\vee a 
-\smash{\stackrel{\htam{\ref{i1.4-6}}}{=}}
+\isref{1.4-6}
 x+a - x\wedge a
 \leq x+a-(\inf X)\wedge a$,
 whence
@@ -231,9 +240,111 @@ $x\ge z-a+(\inf X)\wedge a$.
 Then $\inf X\geq z-a+(\inf X)\wedge a$
 so that 
 $z\leq \inf X +a - (\inf X)\wedge a
-\smash{\stackrel{\htam{\ref{i1.4-6}}}{=}}
+\isref{1.4-6}
 (\inf X)\vee a = M_a(\inf X)$.
 \end{itemize}
+\item %
+\label{1.4-8}
+Hence, $E$ is distributive:
+\begin{equation*}
+\frmd{(x\wedge y)\vee a = (x\vee a)\wedge(y\vee a)
+\htam{, }\qquad
+(x\vee y)\wedge a = (x\wedge a)\vee (y\wedge a)}
+\htam{.}
+\end{equation*}
+\item %
+\label{1.4-9}
+Define
+\begin{equation*}
+\frmd{%
+x^+ := x\vee 0\htam{, }\qquad
+x^- := (-x)\vee 0\htam{, }\qquad
+|x| := x\vee(-x)}
+\htam{.}
+\end{equation*}
+Then 
+\begin{equation*}
+\frmd{ x = x^+ - x^- }
+\end{equation*}
+since $x^+ - x^-
+\isref{1.4-2}(x\vee 0)+(x\wedge 0) 
+\isref{1.4-6}x+0$.
+
+Furthermore:
+$x^+ + x^- 
+= x^+ + (x^+ - x) 
+= 2(x\vee 0) -x
+= (2x)\vee 0 -x
+\isref{1.4-5} (2x-x)\vee(0-x) = x\vee(-x) = |x|$:
+\begin{equation*}
+\frmd{|x| = x^+ + x^-}
+\end{equation*}
+which implies
+\begin{equation*}
+\frmd{|x|\ge 0}
+\end{equation*}
+and 
+thereby~$|x|=|x|\vee 0
+= x\vee(-x)\vee 0 \isref{1.4-7} (x\vee 0) \vee (-x\vee 0)$,
+i.e., 
+\begin{equation*}
+\frmd{|x| = x^+ \vee x^-}
+\htam{.}
+\end{equation*}
+Hence, $x^+ + x^- = x^+ \vee x^-$,
+so that, 
+by \ref{1.4-6},
+\begin{equation*}
+\frmd{x^+ \wedge x^- = 0} 
+\htam{.}
+\end{equation*}
+
+From the definition of $|-|$
+it is apparent that~$|-x|=|x|$.
+Hence, 
+\begin{equation*}
+\frmd{|\lambda x|=|\lambda| |x|} 
+  \qquad (\lambda\in\mathbb{R}\htam{, }\ x\in E)\htam{.}
+\end{equation*}
+Of course,
+$x=x^+ - x^-\leq x^+ + x^- = |x|$
+and $-x\leq|-x|=|x|$,
+so $-|x|\leq x \leq |x|$.
+Consequently,
+\begin{equation*}
+\frmd{|x|=0 \quad \implies \quad x=0}
+\htam{.}
+\end{equation*}
+%
+\item%
+\label{1.4-10}
+If $x,y\in E$,
+then $x^+\geq x$, 
+$y^+\geq y$,
+so $x^+ + y^+ \geq x+y$.
+Also,
+$x^+ + y^+\geq 0$.
+Thus
+\begin{align*}
+&\frmd{(x+y)^+ \leq x^+ + y^+}\\
+\intertext{ and, 
+similarly, 
+$(x+y)^- \leq x^- + y^-$.
+It follows that}
+&\frmd{|x+y|\leq|x|+|y|}
+\htam{.}
+\end{align*}
+From this,
+it follows that
+\begin{equation*}
+||x|-|y|| \leq |x-y| 
+\htam{.}
+\end{equation*}
+
+In \ref{1.3} 
+\snote{Should point to 1.3---will be fixed.}
+we have already observed:
+\stub
 \end{enumerate}
 \end{psec}
 \stub
