@@ -1,10 +1,10 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 % 1
-\chapter{Preliminaries}
+\section{Preliminaries}
 %
 % 1.1
-\section{Definitions}
+\begin{psec}[Definitions]
 \begin{enumerate}
 % 1
 \item 
@@ -63,12 +63,13 @@ with%
 \htam{.}
 \end{align*}
 \end{enumerate}
+\end{psec}
 %
 %
 %
 % 1.2
 %
-\section{Definition}
+\begin{psec}[Definition]
 An \keyword{ordered vector space} 
 is a (real) vector~space~$E$
 endowed with an ordering such that
@@ -87,11 +88,12 @@ Observe that then for all $x,y\in E$
 x\leq y \quad \implies \quad -x \geq -y\htam{.}
 \end{equation*}
 (Take $a:=-x-y$.)
+\end{psec}
 %
 %
 % 1.3
 %
-\section{Definition}
+\begin{psec}[Definition]
 A \keyword{Riesz space} ($=$ \keyword{vector lattice})
 is an ordered vector space that is a lattice.
 
@@ -108,12 +110,13 @@ we then have
 \frac{x+y}{2} - \sup\left\{ \frac{x-y}{2}, -\frac{x-y}{2} \right\}
   & = x\wedge y\htam{. }
 \end{align*}
+\end{psec}
 %
 %
 %
 % 1.4
 %
-\section{Elementary properties}
+\begin{psec}{Elementary properties}
 Let~$E$ be a Riesz space. 
 We collect a number of basic identities and inequalities.
 For the sake of readability
@@ -232,4 +235,6 @@ $z\leq \inf X +a - (\inf X)\wedge a
 (\inf X)\vee a = M_a(\inf X)$.
 \end{itemize}
 \end{enumerate}
+\end{psec}
+\stub
 \end{document}
