@@ -344,6 +344,45 @@ it follows that
 In \ref{1.3} 
 \snote{Should point to 1.3---will be fixed.}
 we have already observed:
+\snote{put frame around this}
+\begin{align*}
+x \vee y 
+  &= \frac{x+y}{2} + \left | \frac{x-y}{2} \right | \\
+x \wedge y 
+  &= \frac{x+y}{2} - \left | \frac{x-y}{2} \right | 
+\htam{.}
+\end{align*}
+%
+\item
+\label{1.4-11}
+Define the relation $\perp$ on~$E$ by
+\begin{equation*}
+\frmd{x \perp y \quad \iff \quad |x|\wedge|y|=0}
+\htam{.}
+\end{equation*}
+
+For all $x$ we have seen that $x^+\wedge x^- = 0$,
+so
+\begin{equation*}
+\frmd{x^+ \perp x^-}
+\htam{.}
+\end{equation*}
+For any $x$ and $y$, 
+$|x-x\wedge y|\wedge|y-x\wedge y|
+=(x-x\wedge y) \wedge (y-x\wedge y)
+\isref{1.4-5} x\wedge y - x\wedge y$:
+\begin{equation*}
+\frmd{x-x\wedge y \quad \perp \quad y- x\wedge y}
+\htam{.}
+\end{equation*}
+
+It follows from the triangle inequality
+ that~$x\perp y_1 + y_2$
+as soon as~$x\perp y_1$ and $x\perp y_2$.
+From this,
+one infers easily that for every~$x$
+the set~$\{ y: x\perp y\}$
+is a linear subspace of~$E$.
 \stub
 \end{enumerate}
 \end{psec}
