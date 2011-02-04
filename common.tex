@@ -1,7 +1,10 @@
+%  for setting
 \newcommand{\stub}{\emph{Stub.}}
+\newcommand{\snote}[1]{\footnote{\emph{Bram: }#1}}
+
+%  misc.
 \newcommand{\keyword}[1]{\emph{#1}}
 \newcommand{\htam}[1]{\ensuremath{\textnormal{#1}}}
-\newcommand{\snote}[1]{\footnote{\emph{Bram: }#1}}
 \newcommand{\frmd}[1]{\fbox{$ #1 $}}
 \newcommand{\isref}[1]{\ensuremath{\smash{\stackrel{\htam{\ref{#1}}}{=}}}}
 \newenvironment{psec}[1][]{{%
@@ -11,3 +14,5 @@
                 \the\value{section}.\the\value{subsection}}}%
         \ifthenelse{\equal{#1}{}}{}{\textbf{{#1}.}}}}
         {\par\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
+
+%  common notation
