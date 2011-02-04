@@ -418,4 +418,41 @@ Riesz~space~$\ell^\infty(X)$.
 \snote{Add continuation.}
 \end{enumerate}
 \end{psec}
+%
+%                  1.6
+%
+\begin{psec}[Intermezzo]
+If $E$ is an ordered vector space, 
+then every linear subspace of~$E$ is an ordered vector space
+under the ordering it inherits from~$E$.
+
+Now let $E$ be a Riesz space,
+$D$ a linear subspace of~$E$.
+Then~$D$ is an ordered vector space.
+$D$ is called a \keyword{Riesz subspace} of~$E$
+if
+\begin{equation*}
+x,y\in D \quad \implies \quad x\vee y\in D\htam{, }\quad x\wedge y\in D
+\htam{.}
+\end{equation*}
+In this case,
+$x\vee y$ and $x\wedge y$ are the least upper bound
+and the greatest lower bound of~$\{x,y\}$ in the ordered set~$D$,
+so that~$D$ is a Riesz space and the lattice operations on~$D$
+are the restrictions of those on~$E$.
+(See, however, Exercise~\ref{e1.7}.)
+
+With the formulas given in~\ref{1.3} one sees
+that a linear subspace~$D$ of~$E$ is a Riesz subspace if
+\begin{align*}
+x\in D\quad &\implies \quad |x|\in D
+\htam{,} \\ 
+\intertext{%
+or, 
+equivalently
+(since $|x|=x^+ + (-x)^+$), if}
+x\in D \quad &\implies \quad x^+ \in D
+\htam{.}
+\end{align*}
+\end{psec}
 \end{document}
