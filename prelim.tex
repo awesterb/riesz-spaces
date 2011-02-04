@@ -545,4 +545,50 @@ $\mu$-integrable functions is a Riesz subspace
 of~$\mathcal F_{\mathcal A}$.
 \end{enumerate}
 \end{psec}
+%
+%                  1.8
+%
+
+The construction of the next example is more involved. 
+(See~\ref{1.10}.)
+\snote{We do not want an indent here. 
+Do we want more space above then below since this remark relates 
+to the text below?}
+\begin{psec}
+\label{1.8}
+Consider a real-valued function~$\varphi$ on a lattice~$\Lambda$.
+\begin{enumerate}
+\item
+\label{1.8-1}
+For $a,b\in\Lambda$ with $a\leq b$
+we define the variation of $\varphi$ on $[a,b]$
+\begin{multline*}
+\Var{[a,b]}{\varphi}
+  \ :=\  \sup\bigl\{ 
+         \textstyle{\sum_{n=1}^{N}} |\varphi(s_n) - \varphi(s_{n-1})|\colon
+         N\in\N\htam{; } \\
+         a=s_0 \leq s_1 \leq \ldots \leq s_N = b \bigr\}
+\htam{.}
+\end{multline*}
+(Possibly, the variation is $\infty$.)
+If $\varphi$ is increasing, 
+$\Var{[a,b]}{\varphi} = \varphi(b)-\varphi(a)$.
+%
+\item
+\label{1.8-2}
+$\varphi$ is said to be \keyword{modular} if
+\begin{equation*}
+\varphi(s\vee t) + \varphi(s \wedge t) = \varphi (s) + \varphi (t)
+\qquad (s,t\in \Lambda)
+\htam{.}
+\end{equation*}
+E.g., if $\Lambda$ is a Riesz space, 
+every linear function is modular (\ref{1.4}\ref{1.4-6}).
+If $\Lambda$ is a ring of sets,
+additive functions are modular.
+On~$[0,1]$, all functions are modular.
+On $\Cont{[0,1]}$, 
+the function~$\smash{f\mapsto\int_0^1 f(x)^{37} dx}$ is modular.
+\end{enumerate}
+\end{psec}
 \end{document}
