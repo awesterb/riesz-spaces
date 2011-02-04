@@ -15,6 +15,16 @@
         \ifthenelse{\equal{#1}{}}{}{\textbf{{#1}.}}}}
         {\par\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 
+%  new symbols  (due to Bas Westerbaan)
+\newcommand\lbb{\mathchoice{[\kern-1.42pt[}% 
+                    {[\kern-1.42pt[}% 
+                    {[\kern-1.2pt[}% 
+                    {[\kern-1.15pt[}} 
+\newcommand\rbb{\mathchoice{]\kern-1.42pt]}% 
+                    {]\kern-1.42pt]}% 
+                    {]\kern-1.2pt]}% 
+                    {]\kern-1.15pt]}}
+
 %  common notation
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
