@@ -836,11 +836,31 @@ Then
       \leq 2c
 \htam{.}
 \end{align*}
+\end{psec}
+%
+%                  1.12
+%
 
 Thus, $\Mod(\mathcal A)$ consists precisely of
 the bounded additive functions on~$\mathcal A$.
 Observing that an additive function is increasing
 if and only if it has all values in~$[0,\infty)$
 we arrive at:
+\begin{psec}{Theorem}
+Let $\mathcal A$ be an algebra of subsets
+of a set~$X$.
+Denote by~$\BA(\mathcal A)$ 
+the set of all bounded additive functions on~$\mathcal A$.
+Then under pointwise ordering~$\BA(\mathcal A)$
+is a Dedekind complete Riesz space.
+
+For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
+\snote{Decrease the size of the stack below $\sup$.}
+\begin{equation*}
+\mu^+(A) 
+  = \sup_{\substack{T\in \mathcal{A} \\ T\subseteq A}} \mu(T)
+  \qquad (A\in\mathcal A)
+\htam{.}
+\end{equation*}
 \end{psec}
 \end{document}
