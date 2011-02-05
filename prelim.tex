@@ -390,6 +390,10 @@ E^+ := \{x\in E\colon x\ge 0\}
 %
 %                  1.5
 %
+%
+% Set up counter used for resumed numbering
+\newcounter{list-1.5}
+%
 \begin{psec}[Examples]
 \label{1.5}
 \begin{enumerate}
@@ -411,10 +415,10 @@ this~$\R^X$ is a Riesz space:
 For any set~$X$ the bounded functions on~$X$ form a 
 Riesz~space~$\ell^\infty(X)$.
 %
+\setcounter{list-1.5}{\value{enumi}}
 \item
 \label{1.5-3}
 (See below)
-\snote{Add continuation.}
 \end{enumerate}
 \end{psec}
 %
@@ -459,10 +463,10 @@ x\in D \quad &\implies \quad x^+ \in D
 %
 \begin{psec}[``1.5 continued'']
 \label{1.5_2}
-\snote{Fix.}
 Many Riesz spaces are obtained as subspaces of~$\R^X$:
 \snote{This enumeration should start with (3).}
 \begin{enumerate}
+\setcounter{enumi}{\value{list-1.5}}
 \item
 \label{1.5-3}
 For a topological space~$X$ the space $\Cont{X}$
@@ -499,6 +503,7 @@ with~$u=(1,\,-\sfrac{1}{2},\, \sfrac{1}{3},\, -\sfrac{1}{4},\, \ldots)$
 the set~$\{u,-u\}$
 does not even have an upper bound.
 %
+\setcounter{list-1.5}{\value{enumi}}
 \item
 (See below)
 \end{enumerate}
@@ -522,6 +527,7 @@ but not a Riesz subspace of~$\R^{[0,1]}$ or~$\Cont{[0,1]}$.
 \label{1.5_3}
 \snote{Psec should have number 1.5 and enumeration should start with (7)}
 \begin{enumerate}
+\setcounter{enumi}{\value{list-1.5}}
 \item
 \label{1.5-7}
 If $\mathcal{R}$ is a ring of subsets of a set~$X$,
