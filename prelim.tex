@@ -11,7 +11,8 @@ maybe we could set the psec-title sans serif.}
 \label{1.1}
 \begin{enumerate}
 % 1
-\item 
+\item
+\label{1.1-1} 
 A \keyword{lattice} is a (partially) ordered set in which
 every nonempty finite subset has an infimum and a supremum. 
 If $a,b$ are elements of a lattice~$\Lambda$ 
@@ -19,6 +20,7 @@ we write~$a\wedge b = \inf\{a,b\}$
 and~$a\vee b = \sup\{a,b\}$.
 % 2
 \item 
+\label{1.1-2}
 A lattice $\Lambda$ is \keyword{distributive}
 if for all $a,b,c$ in $\Lambda$
 \snote{The spacing above and below math displays should be decreased
@@ -29,6 +31,7 @@ resembling the amsart style.}
 \end{align*}
 % 3
 \item 
+\label{1.1-3}
 A \keyword{Boolean algebra}~$\Lambda$ is a distributive lattice
 with a smallest element~$0$
 and a largest element~$1$
@@ -41,6 +44,7 @@ In a Boolean algebra the complement is unique.
 The complement of~$x$ is denoted:~$x'$.
 % 4
 \item 
+\label{1.1-4}
 Let~$X$ be a set.
 A collection~$\mathcal{R}$ 
 of subsets of~$X$
@@ -421,7 +425,6 @@ Riesz~space~$\ell^\infty(X)$.
 %
 \setcounter{list-1.5}{\value{enumi}}
 \item
-\label{1.5-3}
 (See below)
 \end{enumerate}
 \end{psec}
@@ -773,4 +776,71 @@ Hence~$\smash{\sum} |\varphi(s_n) - \varphi(s_{n-1})|
 This establishes~\eqref{eq1.10_2}.
 \end{itemize}
 %\end{proof}
+%
+%                  1.11
+%
+\begin{psec}{}
+\label{1.11}
+A special case:
+
+Let $\mathcal{A}$ be an algebra of subsets of a set~$X$
+(see~\ref{1.1}\ref{1.1-4}).
+Under inclusion,
+$\mathcal A$ is a distributive lattice lattice 
+with smallest element~$\eset$.
+
+Let $\mu\colon\mathcal A\ra \R$.
+If $\mu$ is additive,
+$\mu$ is modular and~$\mu(\eset)=0$;
+conversely,
+a modular~$\mu\colon\mathcal A\ra \R$
+with~$\mu(\eset)=0$ is additive.
+Less obvious is this:
+If~$\mu\colon\mathcal A\ra \R$ is additive,
+then
+\begin{equation*}
+\Var{[\eset, A]}{\mu} <\infty\htam{ for all }A\in\mathcal A
+\quad \iff \quad 
+\mu\htam{ is bounded.}
+\end{equation*}
+Indeed, 
+for every $A$ in $\mathcal A$
+we have $|\mu(A)| 
+  \leq |\mu(A) - \mu(\eset)| + |\mu(X) - \mu(A)|
+  \leq \Var{[\eset,A]}{\mu}$,
+which proves the implication ``$\Rightarrow$''.
+For the reverse,
+let~$c:=\sup_{A\in\mathcal A} |\mu(A)|$;
+it suffices to prove~$\Var{[\eset,X]}\mu \leq 2c$.
+Thus, let $S_0,S_1,\dotsc,S_N\in\mathcal{A}$,
+$\eset = S_0 \subseteq S_1 \subseteq \ldots \subseteq S_N = X$;
+we prove $\smash{\sum |\mu(S_n)-\mu(S_{n-1})|\leq 2c}$.
+Setting $T_n :=S_n \backslash S_{n-1}\quad(n=1,\dotsc,N)$
+we have pairwise disjoint~$T_1,\dotsc,T_N$
+in~$\mathcal A$ and are done if
+\snote{Improve the setting of $\Var{}{}$.}
+\begin{equation*}
+\sum \bigl|\mu(T_n)\bigr| \leq 2c
+\htam{.}
+\end{equation*}
+Put $\mathcal{N}_+ := \{ n\colon \mu(T_n)>0\}\htam{, }
+\quad \mathcal{N}_- := \{ n\colon \mu(T_n)<0\}$.
+Then
+\snote{Fix the spacing of the $\bigr(\bigcup$ below.}
+\begin{align*}
+\sum\bigl| \mu(T_n)\bigr| 
+  & = \sum_{n\in\mathcal{N}_+} \mu(T_n)
+      -\sum_{n\in\mathcal{N}_-} \mu(T_n) = \\
+  & = \mu\bigl( \bigcup_{n\in\mathcal{N}_+} T_n\bigr)
+      -\mu\bigl( \bigcup_{n\in\mathcal{N}_-} T_n\bigr) 
+      \leq 2c
+\htam{.}
+\end{align*}
+
+Thus, $\Mod(\mathcal A)$ consists precisely of
+the bounded additive functions on~$\mathcal A$.
+Observing that an additive function is increasing
+if and only if it has all values in~$[0,\infty)$
+we arrive at:
+\end{psec}
 \end{document}
