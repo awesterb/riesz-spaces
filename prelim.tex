@@ -863,4 +863,34 @@ For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
 \htam{.}
 \end{equation*}
 \end{psec}
+%
+%                  1.13
+%
+\begin{psec}{Definition}
+\label{1.13}
+Let $\mathcal A$ be a $\sigma$-algebra 
+of subsets of a set~$X$.
+A \keyword{signed measure} on~$\mathcal A$
+is a function~$\mu\colon\mathcal A \ra \R$ with
+\begin{equation*}
+\textstyle{\htam{if }(A_n)_n\htam{ is a disjoint sequence in }\mathcal{A}
+\htam{, then }\mu\bigl(\bigcup A_n\bigr)=\sum\mu(A_n)}
+\end{equation*}
+or, equivalently: 
+$\mu$ is additive
+and if $A_n\downarrow \eset$ in $\mathcal A$,
+then $\mu(A_n)\ra 0$.
+
+The signed measures on $\mathcal A$ form 
+a vector space~$\sigma(\mathcal A)$,
+ordered in the natural way:
+\begin{equation*}
+\mu \leq \nu 
+  \quad \iff \quad
+  \mu(A)\leq\nu(A)\qquad (A\in\mathcal A)
+\htam{.}
+\end{equation*}
+$\{ \mu\in \sigma(\mathcal A)\colon \mu \ge 0\}$
+is precisely the set of all finite measures on~$\mathcal A$.
+\end{psec}
 \end{document}
