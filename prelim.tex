@@ -432,6 +432,7 @@ Riesz~space~$\ell^\infty(X)$.
 %                  1.6
 %
 \begin{psec}{Intermezzo}
+\label{1.6}
 If $E$ is an ordered vector space, 
 then every linear subspace of~$E$ is an ordered vector space
 under the ordering it inherits from~$E$.
@@ -847,6 +848,7 @@ Observing that an additive function is increasing
 if and only if it has all values in~$[0,\infty)$
 we arrive at:
 \begin{psec}{Theorem}
+\label{1.12}
 Let $\mathcal A$ be an algebra of subsets
 of a set~$X$.
 Denote by~$\BA(\mathcal A)$ 
@@ -893,4 +895,67 @@ ordered in the natural way:
 $\{ \mu\in \sigma(\mathcal A)\colon \mu \ge 0\}$
 is precisely the set of all finite measures on~$\mathcal A$.
 \end{psec}
+%
+%                  1.14
+%
+\begin{psec}{Theorem}
+Let $\mathcal{A}$ be a $\sigma$-algebra on a set~$X$.
+\begin{enumerate}
+\item
+\label{1.14-1}
+Every signed measure on $\mathcal A$ is bounded.
+%
+\item
+\label{1.14-2}
+$\sigma(A)$ is a Riesz space and is, 
+in fact,
+a Riesz subspace of $\BA(\mathcal A)$.
+\end{enumerate}
+\end{psec}
+\textbf{Proof}\snote{Fix.}
+\ref{1.14-1} Let $\mu\in\sigma(\mathcal A)$
+and suppose $\mu$ is not bounded.
+Let $\mathcal{A}_\infty$ be
+the collection of all sets~$A$ in~$\mathcal A$ for which
+\begin{equation*}
+\{ \mu(B)\colon B\in \mathcal A\htam{, }B\subseteq A \}
+\end{equation*} 
+is unbounded.  
+Then $X\in\mathcal{A}_\infty$, and:
+\snote{The following paragraph should be (uniformly) indented.}
+
+if $A\in \mathcal{A}_\infty$,
+there is a $B$ in $\mathcal A$ with $B\subseteq A$
+and $|\mu(B)|\geq |\mu(A)|+1$
+then~$|\mu(B)|\geq 1$
+and~$|\mu(A\backslash B)|\ge 1$,
+whereas either~$B$ or~$A\backslash B$
+belongs to~$\mathcal{A}_\infty$.
+Thus, there is an~$A'$ in~$\mathcal{A}_\infty$ with~$A'\subseteq A$
+and~$|\mu(A\backslash A')|\ge 1$.
+
+It is now easy to obtain a 
+sequence~$X\supseteq A_1\supseteq A_2\supseteq A_3 \supseteq \dotsb$
+in~$\mathcal{A}_\infty$ 
+with~$|\mu(A_n\backslash A_{n+1})|\geq 1$ for each $n$.
+Contradiction.
+
+\ref{1.14-2} 
+It follows that $\sigma(\mathcal{A})$ 
+is a linear subspace of~$\BA(\mathcal A)$.
+To show that it is a Riesz subspace,
+let~$\mu\in\sigma(\mathcal A)$;
+we prove~$\mu^+\in\sigma(\mathcal A)$. (See~\ref{1.6}.)
+
+Let $(A_n)_n$ be a disjoint sequence in~$\mathcal A$.
+We have
+\begin{equation*}
+\mu^+ \bigl( \bigcup A_n \bigr)
+   \ \geq\  \sup_N  \mu^+(A_1 \cup \dotsb \cup A_N) 
+   \ =\  \sum_{n=1}^\infty \mu^+(A_n)
+\htam{,}
+\end{equation*}
+so that, 
+by the comment following~\ref{1.12},
+$\mu^+\bigl(\bigcup A_n\bigr) \leq \sum\mu^+(A_n)$.
 \end{document}
