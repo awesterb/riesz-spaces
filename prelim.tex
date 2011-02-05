@@ -6,6 +6,8 @@
 %                  1.1
 %
 \begin{psec}{Definitions}
+\snote{The dot after the psec-title should go;
+maybe we could set the psec-title sans serif.}
 \label{1.1}
 \begin{enumerate}
 % 1
@@ -19,6 +21,8 @@ and~$a\vee b = \sup\{a,b\}$.
 \item 
 A lattice $\Lambda$ is \keyword{distributive}
 if for all $a,b,c$ in $\Lambda$
+\snote{The spacing above and below math displays should be decreased
+resembling the amsart style.}
 \begin{align*}
 (a\vee b)\wedge c &= (a\wedge c)\vee (b\wedge c)\htam{, } &
 (a\wedge b)\vee c &= (a\vee c) \wedge (b\vee c) 
@@ -126,7 +130,6 @@ we occasionally omit clauses such as ``for all~$x$ in~$E$''.
 \label{1.4-1}
 Let~$X\subseteq E$, and let~$A\colon E\ra E$ 
 be an order isomorphism.
-\snote{``order isomorphism'' has not been defined.}
 If~$X$ has a supremum,
 then so does $A(X)$,
 and
@@ -149,7 +152,6 @@ If~$x,y\in E$, then
 \item %
 \label{1.4-3}
 It follows from \ref{1.4-1} that
-\snote{So: $\lambda\cdot -$ is an order isomorphism.} 
 \begin{alignat*}
 \lambda \sup X &= \sup \lambda X \qquad &&(\lambda \in [0,\infty)\,) \\
 \intertext{%
@@ -174,9 +176,7 @@ if~$X$ has an infimum.
 \item %
 \label{1.4-5}
 In particular,
-\snote{So: $-+a$ is an order isomorphism.}
 \begin{equation*}
-\label{i1.4-5}
 \frmd{%
 (x+a)\vee   (y+a)=(x\vee y)+a
 \htam{, } \qquad 
@@ -188,6 +188,7 @@ In particular,
 \begin{equation*}
 x\vee y + x\wedge y = x+y
 \end{equation*}
+\snote{The list number ``\ref{1.4-6}'' is not alligned.}
 because~$(x\vee y)-x-y 
 \isref{1.4-5}
 (x-x-y)\vee(y-x-y)=(-y)\vee(-x)=x\wedge y$.
@@ -206,6 +207,7 @@ M_a(\inf X) &= \inf M_a(X)
 \end{align*}
 if~$X$ has an infimum.
 Proof for $M_a(x)=x\vee a$:
+\snote{The itemize below looks silly.}
 \begin{itemize}
 \item %
 If~$X$ has a supremum:  
@@ -267,6 +269,8 @@ since $x^+ - x^-
 \isref{1.4-6}x+0$.
 
 Furthermore:
+\snote{We may want to use an indent at the start of a paragraph
+even in an item of an enumerate.}
 $x^+ + x^- 
 = x^+ + (x^+ - x) 
 = 2(x\vee 0) -x
@@ -323,7 +327,7 @@ $x^+ + y^+\geq 0$.
 Thus
 \begin{align*}
 &\frmd{(x+y)^+ \leq x^+ + y^+}\\
-\intertext{ and, 
+\intertext{and, 
 similarly, 
 $(x+y)^- \leq x^- + y^-$.
 It follows that}
@@ -464,7 +468,6 @@ x\in D \quad &\implies \quad x^+ \in D
 \begin{psec}[1.5]{continued}
 \label{1.5_2}
 Many Riesz spaces are obtained as subspaces of~$\R^X$:
-\snote{This enumeration should start with (3).}
 \begin{enumerate}
 \setcounter{enumi}{\value{list-1.5}}
 \item
@@ -525,7 +528,6 @@ but not a Riesz subspace of~$\R^{[0,1]}$ or~$\Cont{[0,1]}$.
 %
 \begin{psec}[1.5]{continued}
 \label{1.5_3}
-\snote{Psec should have number 1.5 and enumeration should start with (7)}
 \begin{enumerate}
 \setcounter{enumi}{\value{list-1.5}}
 \item
