@@ -1,8 +1,12 @@
+%  for setting
 \newcommand{\stub}{\emph{Stub.}}
+\newcommand{\snote}[1]{\footnote{\emph{Bram: }#1}}
+
+%  misc.
 \newcommand{\keyword}[1]{\emph{#1}}
 \newcommand{\htam}[1]{\ensuremath{\textnormal{#1}}}
-\newcommand{\snote}[1]{\footnote{\emph{Bram: }#1}}
 \newcommand{\frmd}[1]{\fbox{$ #1 $}}
+\newcommand{\isref}[1]{\ensuremath{\smash{\stackrel{\htam{\ref{#1}}}{=}}}}
 \newenvironment{psec}[1][]{{%
         \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
         \noindent\addtocounter{subsection}{1}%
@@ -10,3 +14,26 @@
                 \the\value{section}.\the\value{subsection}}}%
         \ifthenelse{\equal{#1}{}}{}{\textbf{{#1}.}}}}
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
+
+%  new symbols  (due to Bas Westerbaan)
+\newcommand\lbb{\mathchoice{[\kern-1.42pt[}% 
+                    {[\kern-1.42pt[}% 
+                    {[\kern-1.2pt[}% 
+                    {[\kern-1.15pt[}} 
+\newcommand\rbb{\mathchoice{]\kern-1.42pt]}% 
+                    {]\kern-1.42pt]}% 
+                    {]\kern-1.2pt]}% 
+                    {]\kern-1.15pt]}}
+
+%  common notation
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\cseq}{\ensuremath{\mathsf{c}}}  % convergent sequences
+\newcommand{\ra}{\ensuremath{\rightarrow}}
+\newcommand{\SpaceOp}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\Cont}[1]{\ensuremath{\SpaceOp{C}(#1)}}
+\newcommand{\BCont}[1]{\ensuremath{\SpaceOp{BC}(#1)}}
+\newcommand{\Mod}{\ensuremath{\SpaceOp{Mod}}}
+
+% variation, see 1.8
+\newcommand{\Var}[2]{\ensuremath{\smash{\underset{#1}{\mathrm{Var}}}\,#2}}

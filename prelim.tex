@@ -3,8 +3,10 @@
 % 1
 \section{Preliminaries}
 %
-% 1.1
+%                  1.1
+%
 \begin{psec}[Definitions]
+\label{1.1}
 \begin{enumerate}
 % 1
 \item 
@@ -65,11 +67,10 @@ with%
 \end{enumerate}
 \end{psec}
 %
-%
-%
-% 1.2
+%                  1.2
 %
 \begin{psec}[Definition]
+\label{1.2}
 An \keyword{ordered vector space} 
 is a (real) vector~space~$E$
 endowed with an ordering such that
@@ -90,10 +91,10 @@ x\leq y \quad \implies \quad -x \geq -y\htam{.}
 (Take $a:=-x-y$.)
 \end{psec}
 %
-%
-% 1.3
+%                  1.3
 %
 \begin{psec}[Definition]
+\label{1.3}
 A \keyword{Riesz space} ($=$ \keyword{vector lattice})
 is an ordered vector space that is a lattice.
 
@@ -112,19 +113,18 @@ we then have
 \end{align*}
 \end{psec}
 %
-%
-%
-% 1.4
+%                  1.4
 %
 \begin{psec}{Elementary properties}
+\label{1.4}
 Let~$E$ be a Riesz space. 
 We collect a number of basic identities and inequalities.
 For the sake of readability
 we occasionally omit clauses such as ``for all~$x$ in~$E$''.
 \begin{enumerate}
 \item % 
-\label{i:1.4-1}
-Let~$X\subseteq E$, and let~$A\colon E\rightarrow E$ 
+\label{1.4-1}
+Let~$X\subseteq E$, and let~$A\colon E\ra E$ 
 be an order isomorphism.
 \snote{``order isomorphism'' has not been defined.}
 If~$X$ has a supremum,
@@ -140,13 +140,15 @@ Similarly, %
 \htam{.}
 \end{align*}
 \item %
+\label{1.4-2}
 If~$x,y\in E$, then
 \begin{equation*}
 \frmd{ (x\vee y) = (-x)\wedge(-y) }
 \htam{.}
 \end{equation*}
 \item %
-It follows from \ref{i:1.4-1} that
+\label{1.4-3}
+It follows from \ref{1.4-1} that
 \snote{So: $\lambda\cdot -$ is an order isomorphism.} 
 \begin{alignat*}
 \lambda \sup X &= \sup \lambda X \qquad &&(\lambda \in [0,\infty)\,) \\
@@ -157,9 +159,10 @@ In particular, }
   \qquad &&(x,y\in E\htam{; }\lambda\in[0,\infty)\,)\htam{.}
 \end{alignat*}
 \item %
+\label{1.4-4}
 For~$X\subseteq E$ and $a\in E$,
 set~$X+a:=\{x+a\colon x\in X\}$.
-By \ref{i:1.4-1} we have
+By \ref{1.4-1} we have
 \begin{align*}
 \sup(X+a) &= (\sup X) + a \\
 \intertext{%
@@ -169,6 +172,7 @@ Similarly, }
 \end{align*}
 if~$X$ has an infimum.
 \item %
+\label{1.4-5}
 In particular,
 \snote{So: $-+a$ is an order isomorphism.}
 \begin{equation*}
@@ -180,15 +184,16 @@ In particular,
 \htam{.}
 \end{equation*}
 \item %
-\label{i1.4-6}
+\label{1.4-6}
 \begin{equation*}
 x\vee y + x\wedge y = x+y
 \end{equation*}
 because~$(x\vee y)-x-y 
-\smash{\stackrel{\htam{\ref{i1.4-5}}}{=}}
+\isref{1.4-5}
 (x-x-y)\vee(y-x-y)=(-y)\vee(-x)=x\wedge y$.
 \item %
-Take~$a\in E$ and let $M_a\colon E\rightarrow E$ 
+\label{1.4-7}
+Take~$a\in E$ and let $M_a\colon E\ra E$ 
 be either the map~$x\mapsto x\vee a$
 or~$x\mapsto x\wedge a$. 
 Let~$A\subseteq E$.
@@ -223,7 +228,7 @@ we prove~$z\leq M_a(\inf X)$.
 For all~$x\in X$
 we have
 $z\leq x\vee a 
-\smash{\stackrel{\htam{\ref{i1.4-6}}}{=}}
+\isref{1.4-6}
 x+a - x\wedge a
 \leq x+a-(\inf X)\wedge a$,
 whence
@@ -231,10 +236,534 @@ $x\ge z-a+(\inf X)\wedge a$.
 Then $\inf X\geq z-a+(\inf X)\wedge a$
 so that 
 $z\leq \inf X +a - (\inf X)\wedge a
-\smash{\stackrel{\htam{\ref{i1.4-6}}}{=}}
+\isref{1.4-6}
 (\inf X)\vee a = M_a(\inf X)$.
 \end{itemize}
+\item %
+\label{1.4-8}
+Hence, $E$ is distributive:
+\begin{equation*}
+\frmd{(x\wedge y)\vee a = (x\vee a)\wedge(y\vee a)
+\htam{, }\qquad
+(x\vee y)\wedge a = (x\wedge a)\vee (y\wedge a)}
+\htam{.}
+\end{equation*}
+\item %
+\label{1.4-9}
+Define
+\begin{equation*}
+\frmd{%
+x^+ := x\vee 0\htam{, }\qquad
+x^- := (-x)\vee 0\htam{, }\qquad
+|x| := x\vee(-x)}
+\htam{.}
+\end{equation*}
+Then 
+\begin{equation*}
+\frmd{ x = x^+ - x^- }
+\end{equation*}
+since $x^+ - x^-
+\isref{1.4-2}(x\vee 0)+(x\wedge 0) 
+\isref{1.4-6}x+0$.
+
+Furthermore:
+$x^+ + x^- 
+= x^+ + (x^+ - x) 
+= 2(x\vee 0) -x
+= (2x)\vee 0 -x
+\isref{1.4-5} (2x-x)\vee(0-x) = x\vee(-x) = |x|$:
+\begin{equation*}
+\frmd{|x| = x^+ + x^-}
+\end{equation*}
+which implies
+\begin{equation*}
+\frmd{|x|\ge 0}
+\end{equation*}
+and 
+thereby~$|x|=|x|\vee 0
+= x\vee(-x)\vee 0 \isref{1.4-7} (x\vee 0) \vee (-x\vee 0)$,
+i.e., 
+\begin{equation*}
+\frmd{|x| = x^+ \vee x^-}
+\htam{.}
+\end{equation*}
+Hence, $x^+ + x^- = x^+ \vee x^-$,
+so that, 
+by \ref{1.4-6},
+\begin{equation*}
+\frmd{x^+ \wedge x^- = 0} 
+\htam{.}
+\end{equation*}
+
+From the definition of $|-|$
+it is apparent that~$|-x|=|x|$.
+Hence, 
+\begin{equation*}
+\frmd{|\lambda x|=|\lambda| |x|} 
+  \qquad (\lambda\in\R\htam{, }\ x\in E)\htam{.}
+\end{equation*}
+Of course,
+$x=x^+ - x^-\leq x^+ + x^- = |x|$
+and $-x\leq|-x|=|x|$,
+so $-|x|\leq x \leq |x|$.
+Consequently,
+\begin{equation*}
+\frmd{|x|=0 \quad \implies \quad x=0}
+\htam{.}
+\end{equation*}
+%
+\item%
+\label{1.4-10}
+If $x,y\in E$,
+then $x^+\geq x$, 
+$y^+\geq y$,
+so $x^+ + y^+ \geq x+y$.
+Also,
+$x^+ + y^+\geq 0$.
+Thus
+\begin{align*}
+&\frmd{(x+y)^+ \leq x^+ + y^+}\\
+\intertext{ and, 
+similarly, 
+$(x+y)^- \leq x^- + y^-$.
+It follows that}
+&\frmd{|x+y|\leq|x|+|y|}
+\htam{.}
+\end{align*}
+From this,
+it follows that
+\begin{equation*}
+||x|-|y|| \leq |x-y| 
+\htam{.}
+\end{equation*}
+
+In \ref{1.3} 
+\snote{Should point to 1.3---will be fixed.}
+we have already observed:
+\snote{put frame around this}
+\begin{align*}
+x \vee y 
+  &= \frac{x+y}{2} + \left | \frac{x-y}{2} \right | \\
+x \wedge y 
+  &= \frac{x+y}{2} - \left | \frac{x-y}{2} \right | 
+\htam{.}
+\end{align*}
+%
+\item
+\label{1.4-11}
+Define the relation $\perp$ on~$E$ by
+\begin{equation*}
+\frmd{x \perp y \quad \iff \quad |x|\wedge|y|=0}
+\htam{.}
+\end{equation*}
+
+For all $x$ we have seen that $x^+\wedge x^- = 0$,
+so
+\begin{equation*}
+\frmd{x^+ \perp x^-}
+\htam{.}
+\end{equation*}
+For any $x$ and $y$, 
+$|x-x\wedge y|\wedge|y-x\wedge y|
+=(x-x\wedge y) \wedge (y-x\wedge y)
+\isref{1.4-5} x\wedge y - x\wedge y$:
+\begin{equation*}
+\frmd{x-x\wedge y \quad \perp \quad y- x\wedge y}
+\htam{.}
+\end{equation*}
+
+It follows from the triangle inequality
+ that~$x\perp y_1 + y_2$
+as soon as~$x\perp y_1$ and $x\perp y_2$.
+From this,
+one infers easily that for every~$x$
+the set~$\{ y: x\perp y\}$
+is a linear subspace of~$E$.
+%
+\item \label{1.14-12}
+The \keyword{positive cone} of~$E$ is the set
+\begin{equation*}
+E^+ := \{x\in E\colon x\ge 0\}
+\htam{.}
+\end{equation*}
 \end{enumerate}
 \end{psec}
-\stub
+%
+%                  1.5
+%
+\begin{psec}[Examples]
+\label{1.5}
+\begin{enumerate}
+\item
+\label{1.5-1}
+For any set~$X$
+the functions~$X\ra \R$
+form an ordered vector space~$\R^X$;
+this~$\R^X$ is a Riesz space:
+\begin{equation*}
+(f\vee g)(x) = f(x)\vee g(x)\htam{, } \quad 
+(f\wedge g)(x) = f(x)\wedge g(x)\qquad
+(x\in X\htam{; }f,g\in\R^X)
+\htam{.}
+\end{equation*}
+%
+\item
+\label{1.5-2}
+For any set~$X$ the bounded functions on~$X$ form a 
+Riesz~space~$\ell^\infty(X)$.
+%
+\item
+\label{1.5-3}
+(See below)
+\snote{Add continuation.}
+\end{enumerate}
+\end{psec}
+%
+%                  1.6
+%
+\begin{psec}[Intermezzo]
+If $E$ is an ordered vector space, 
+then every linear subspace of~$E$ is an ordered vector space
+under the ordering it inherits from~$E$.
+
+Now let $E$ be a Riesz space,
+$D$ a linear subspace of~$E$.
+Then~$D$ is an ordered vector space.
+$D$ is called a \keyword{Riesz subspace} of~$E$
+if
+\begin{equation*}
+x,y\in D \quad \implies \quad x\vee y\in D\htam{, }\quad x\wedge y\in D
+\htam{.}
+\end{equation*}
+In this case,
+$x\vee y$ and $x\wedge y$ are the least upper bound
+and the greatest lower bound of~$\{x,y\}$ in the ordered set~$D$,
+so that~$D$ is a Riesz space and the lattice operations on~$D$
+are the restrictions of those on~$E$.
+(See, however, Exercise~\ref{1.7}.)
+
+With the formulas given in~\ref{1.3} one sees
+that a linear subspace~$D$ of~$E$ is a Riesz subspace if
+\begin{align*}
+x\in D\quad &\implies \quad |x|\in D
+\htam{,} \\ 
+\intertext{%
+or, 
+equivalently
+(since $|x|=x^+ + (-x)^+$), if}
+x\in D \quad &\implies \quad x^+ \in D
+\htam{.}
+\end{align*}
+\end{psec}
+%
+%                  1.5 --- part 2
+%
+\begin{psec}[``1.5 continued'']
+\label{1.5_2}
+\snote{Fix.}
+Many Riesz spaces are obtained as subspaces of~$\R^X$:
+\snote{This enumeration should start with (3).}
+\begin{enumerate}
+\item
+\label{1.5-3}
+For a topological space~$X$ the space $\Cont{X}$
+of all continuous function~$X\ra\R$ is a Riesz subspace of~$\R^X$.
+The space~$\BCont{X}$ of all bounded continuous functions 
+is a Riesz subspace of~$\Cont{X}$,
+hence of~$\R^X$.
+%
+\item
+\label{1.5-4}
+The differentiable functions on~$[0,1]$ 
+do not form a Riesz space
+under pointwise ordering:
+there is no smallest differentiable function
+that majorizes both~$x\mapsto x$ and~$x\mapsto 1-x$.
+(But see~\ref{1.7}.)
+%
+\item
+\label{1.5-5}
+For $X=\N$: 
+The space $\cseq$ of all convergent sequences 
+is a Riesz subspace of~$\R^\N$,
+as are the space~$\cseq_0$
+of all sequences that converge to~$0$,
+and the space~$\ell^1$
+of all sequences~$(x_n)_n$
+for which~$\sum|x_n|$ is finite.
+%
+\item
+\label{1.5-6}
+The sequences~$(x_n)_n$ for which~$\sum x_n$ exists (and is finite)
+do not form a Riesz space:
+with~$u=(1,\,-\sfrac{1}{2},\, \sfrac{1}{3},\, -\sfrac{1}{4},\, \ldots)$
+the set~$\{u,-u\}$
+does not even have an upper bound.
+%
+\item
+(See below)
+\end{enumerate}
+\end{psec}
+%
+%                  1.7
+%
+\begin{psec}[Exercise]
+\label{1.7}
+A function~$f$ on~$[0,1]$ is called \keyword{affine}
+if there exist numbers~$a$ and~$b$ 
+such that~$f(x)=ax+b\quad (x\in[0,1])$.
+Show that the vector space of all affine functions on~$[0,1]$
+is a Riesz space under the natural ordering,
+but not a Riesz subspace of~$\R^{[0,1]}$ or~$\Cont{[0,1]}$.
+\end{psec}
+%
+%                  1.5 --- part 3
+%
+\begin{psec}[``1.5 continued'']
+\label{1.5_3}
+\snote{Psec should have number 1.5 and enumeration should start with (7)}
+\begin{enumerate}
+\item
+\label{1.5-7}
+If $\mathcal{R}$ is a ring of subsets of a set~$X$,
+the $\mathcal{R}$-step functions form a 
+Riesz subspace~$\lbb \mathcal{R} \rbb$ of $\R^X$.
+%
+\item
+\label{1.5-8}
+If $\mathcal{A}$ is a $\sigma$-algebra 
+in\snote{Should it be ``on''?} set~$X$,
+the $\mathcal A$-measurable functions on~$X$
+form a Riesz subspace~$\mathcal F_{\mathcal A}$ of~$\R^X$.
+%
+\item
+\label{1.5-9}
+If $(X,\mathcal A,\mu)$ is a measure space,
+the space~$\mathcal L_{\mathcal A}[\mu]$
+of all $\mathcal A$-measurable 
+$\mu$-integrable functions is a Riesz subspace
+of~$\mathcal F_{\mathcal A}$.
+\end{enumerate}
+\end{psec}
+%
+%                  1.8
+%
+
+The construction of the next example is more involved. 
+(See~\ref{1.10}.)
+\snote{We do not want an indent here. 
+Do we want more space above then below since this remark relates 
+to the text below?}
+\begin{psec}
+\label{1.8}
+Consider a real-valued function~$\varphi$ on a lattice~$\Lambda$.
+\begin{enumerate}
+\item
+\label{1.8-1}
+For $a,b\in\Lambda$ with $a\leq b$
+we define the variation of $\varphi$ on $[a,b]$
+\begin{multline*}
+\Var{[a,b]}{\varphi}
+  \ :=\  \sup\bigl\{ 
+         \textstyle{\sum_{n=1}^{N}} |\varphi(s_n) - \varphi(s_{n-1})|\colon
+         N\in\N\htam{; } \\
+         a=s_0 \leq s_1 \leq \ldots \leq s_N = b \bigr\}
+\htam{.}
+\end{multline*}
+(Possibly, the variation is $\infty$.)
+If $\varphi$ is increasing, 
+$\Var{[a,b]}{\varphi} = \varphi(b)-\varphi(a)$.
+%
+\item
+\label{1.8-2}
+$\varphi$ is said to be \keyword{modular} if
+\begin{equation*}
+\varphi(s\vee t) + \varphi(s \wedge t) = \varphi (s) + \varphi (t)
+\qquad (s,t\in \Lambda)
+\htam{.}
+\end{equation*}
+E.g., if $\Lambda$ is a Riesz space, 
+every linear function is modular (\ref{1.4}\ref{1.4-6}).
+If $\Lambda$ is a ring of sets,
+additive functions are modular.
+On~$[0,1]$, all functions are modular.
+On $\Cont{[0,1]}$, 
+the function~$\smash{f\mapsto\int_0^1 f(x)^{37} dx}$ is modular.
+\end{enumerate}
+\end{psec}
+%
+%                  1.9
+%
+\begin{psec}[Lemma]
+\snote{Text should have emphasis.}
+\label{1.9}
+Let $\varphi$ be a modular real-valued function 
+on a lattice~$\Lambda$
+and let~$a,b,c\in\Lambda$, $a\leq b\leq c$.
+Then
+\begin{equation*}
+\Var{[a,c]}{\varphi} 
+  = \Var{[a,b]}{\varphi} + \Var{[b,c]}{\varphi}
+\htam{.}
+\end{equation*}
+\end{psec}
+%\begin{proof}
+\textbf{Proof} 
+\snote{Add proof environment. }
+The proof of the inequality ``$\geq$'' is straightforward.
+For the reverse,
+assume~$a=s_0\leq s_1 \leq \ldots \leq s_N = c$.
+Then
+\begin{equation*}
+a \leq s_0\wedge b \leq s_1 \wedge b \leq \ldots s_N\wedge b
+  = b = s_0 \vee b \leq s_1 \vee b \leq \ldots s_N\vee b = c
+\htam{.}
+\end{equation*}
+For each $n$,
+\snote{Flush the even lines to the right.}
+\begin{align*}
+\bigl|\varphi(s_n) - \varphi(s_{n-1})\bigr| 
+  & \ \leq\  \left|\bigl(\varphi (s_n) - \varphi(s_n\vee b)\bigr) 
+      - \bigl(\varphi(s_{n-1})  - \varphi(s_{n-1} \vee b)\bigr)\right| \\
+ & \qquad  + \bigl|\varphi(s_n\vee b) - \varphi(s_{n-1}\vee b)\bigr| \\ 
+ & \ = \ \bigl|\bigl(\varphi(s_n \wedge b) - \varphi(b)\bigr)-
+       \bigl(\varphi(s_{n-1}\wedge b) - \varphi(b)\bigr)\bigr| \\
+ & \qquad + \bigl|\varphi(s_n \vee b) - \varphi(s_{n+1} \vee b)\bigr| \\
+ & \ = \ \bigl| \varphi(s_n\wedge b) -\varphi(s_{n-1}\wedge b) \bigr|
+       + \bigl| \varphi(s_n \vee b) - \varphi(s_{n-1}\vee b) \bigr|
+\htam{.}
+\end{align*}
+Therefore,
+$\smash{\sum_n}|\varphi(s_n)-\varphi(s_{n-1})|
+  \leq \Var{[a,b]}{\varphi} + \Var{[b,c]}{\varphi}$.
+The lemma follows.
+%\end{proof}
+%
+%                  1.10
+%
+\begin{psec}[Theorem]
+\snote{Text should be with emphasis.}
+\label{1.10}
+Let $\Lambda$ be a distributive lattice with a smallest
+element, $0$. 
+Form the set~$\Mod(\Lambda)$
+of all functions~$\varphi\colon\Lambda\ra\R$ satisfying
+\begin{align*}
+&\varphi\htam{ is modular,} \\
+&\varphi(0) = 0\htam{, } \\
+&\Var{[0,a]} \varphi < \infty\htam{ for all }a\htam{ in }\Lambda
+\htam{.}
+\end{align*}
+Endow $\Mod(\Lambda)$ with the ordering $\leq$ defined by
+\begin{equation*}
+\varphi \leq \psi \quad \iff \quad \psi - \varphi\htam{ is increasing.}
+\end{equation*}
+Under this ordering, $\Mod(\Lambda)$ is a Riesz space.
+\end{psec}
+%\begin{proof} 
+\textbf{Proof}\snote{Fix}
+It will be clear that $\Mod(\Lambda)$ is an ordered vector space.
+
+Let $\varphi\in\Mod(\Lambda)$. 
+It suffices to prove that the set $\{\varphi,-\varphi\}$
+has a supremum in~$\Mod(\Lambda)$. (See~\ref{1.3}.)
+
+Define $\omega\colon\Lambda \ra \R$ by
+\begin{equation*}
+\omega(s) := \Var{[0,s]}\varphi \qquad (s\in \Lambda)\htam{.}
+\end{equation*}
+It will turn out that this~$\omega$ 
+is the desired supremum of~$\{\varphi,-\varphi\}$.
+\begin{itemize}
+\item 
+We first prove $\omega$ to be modular.
+Let $a,b\in \Lambda$; we show that
+$\omega(a\vee b) - \omega(a) = \omega(b) - \omega(a\wedge b)$,
+or equivalently (by the lemma)
+\begin{equation}
+\label{eq1.10_1}  \tag{$*$}
+\Var{[a,a\vee b]}\varphi = \Var{[a\wedge b,b]}\varphi 
+\htam{.}
+\end{equation}
+
+With $As := s\vee a \quad (a\wedge b\leq s\leq b)$
+and $Bt := t\wedge b \quad (a\leq t \leq a\vee b)$
+we have increasing maps~$A\colon [a\wedge b,b]\ra [a,a\vee b]$
+and~$B\colon [a,a\vee b]\ra[a\wedge b,b]$.
+They are each other's inverses: 
+if $s\in[a\wedge b, b]$ and $t\in [a,a\vee b]$
+then~$BAs = (s\vee a)\wedge b = (s\wedge b) \vee (a\wedge b) = s$ 
+\snote{Distributivity of~$\Lambda$ is not needed here; modularity suffices.}
+and~$ABt = (t\wedge b)\vee a = (t\vee a)\wedge(b\vee a) = t$.
+
+Furthermore, if $s\in [a\wedge b, b]$, then
+\begin{align*}
+\varphi(As) - \varphi(s) 
+  & = \varphi(As) - \varphi ((As)\wedge b) \\
+  & = \varphi((As)\vee b) - \varphi(b) \\
+  & = \varphi(s\vee a\vee b)-\varphi(b) = \varphi(a\vee b)-\varphi(b)
+\htam{,}
+\end{align*}
+independent of $s$.
+Hence, $\varphi(As)-\varphi(As')=\varphi(s)-\varphi(s')$
+for all $s,s'\in[a\wedge b,b]$.
+
+From these considerations, \eqref{eq1.10_1} is an easy consequence.
+%
+\item
+As $\omega$ is increasing (by the preceding lemma),
+for all~$a$ in~$\Lambda$ 
+we have~$\Var{[0,a]}\omega = \omega(a)-\omega(0)<\infty$.
+Thus, $\omega\in\Mod(\Lambda)$.
+%
+\item
+For $a,b\in\Lambda$ with $a\leq b$ we have
+\begin{align*}
+(\omega - \varphi)(b) - (\omega-\varphi)(a)
+  & = (\omega(b) - \omega(a)) - (\varphi(b) - \varphi(a)) \\
+  & = \Var{[a,b]}\varphi - (\varphi(b) - \varphi(a)) \ge 0
+\htam{.}
+\end{align*}
+Thus, $\omega-\varphi$ is increasing, 
+i.e., $\omega\ge \varphi$ in the ordering of~$\Mod(\Lambda)$.
+Similarly, $\omega\geq -\varphi$,
+so $\omega$ is an upper bound of~$\{ \varphi, -\varphi \}$.
+%
+\item
+Finally, 
+let $\psi$ be any upper bound of~$\{\varphi,-\varphi\}$;
+we prove $\psi\ge \omega$,
+i.e. $\psi-\omega$ is increasing.
+Let $a\leq b$ in $\Lambda$.
+Then 
+\begin{equation*}
+(\psi-\omega)(b) - (\psi-\omega)(a)
+  = \psi(b) - \psi(a) - \Var{[a,b]}\varphi
+\htam{; }
+\end{equation*}
+Thus, 
+we wish to show that
+\begin{equation}
+\label{eq1.10_2}  \tag{$**$}
+\Var{[a,b]}\varphi \ \leq\  \psi(b)-\psi(a) \htam{.}
+\end{equation}
+Let $a=s_0\leq s_1 \leq \ldots \leq s_N = b$.
+As $\psi-\varphi$ and $\psi+\varphi$ are increasing we have
+\begin{align*}
+\varphi(s_n) - \varphi(s_{n-1})
+  &\  \leq\  \psi(s_n) - \psi(s_{n-1}) 
+\quad\htam{ and }\quad \\
+-\varphi(s_n) + \varphi(s_{n-1})
+  &\  \leq\  \psi(s_n) - \psi(s_{n-1})
+\htam{,}
+\end{align*}
+i.e., 
+$|\varphi(s_n) - \varphi(s_{n-1})| 
+  \leq \psi(s_n) - \psi(s_{n-1})$ 
+for each $n$.
+Hence~$\smash{\sum} |\varphi(s_n) - \varphi(s_{n-1})|
+  \leq \psi (b) - \psi(a)$.
+This establishes~\eqref{eq1.10_2}.
+\end{itemize}
+%\end{proof}
 \end{document}
