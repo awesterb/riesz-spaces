@@ -7,12 +7,12 @@
 \newcommand{\htam}[1]{\ensuremath{\textnormal{#1}}}
 \newcommand{\frmd}[1]{\fbox{$ #1 $}}
 \newcommand{\isref}[1]{\ensuremath{\smash{\stackrel{\htam{\ref{#1}}}{=}}}}
-\newenvironment{psec}[1][]{\refstepcounter{subsection}{%
+\NewDocumentEnvironment{psec}{o g}{\refstepcounter{subsection}{%
         \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
         \noindent%
         \makebox[0pt][r]{\makebox[.5in]{%
                 \the\value{section}.\the\value{subsection}}}%
-        \ifthenelse{\equal{#1}{}}{}{\textbf{{#1}.}}}}
+	\IfNoValueTF{#2}{}{\textbf{{#2}.}}}}
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 
 %  new symbols  (due to Bas Westerbaan)
