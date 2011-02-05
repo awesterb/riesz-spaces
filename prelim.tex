@@ -638,4 +638,132 @@ $\smash{\sum_n}|\varphi(s_n)-\varphi(s_{n-1})|
   \leq \Var{[a,b]}{\varphi} + \Var{[b,c]}{\varphi}$.
 The lemma follows.
 %\end{proof}
+%
+%                  1.10
+%
+\begin{psec}[Theorem]
+\snote{Text should be with emphasis.}
+\label{1.10}
+Let $\Lambda$ be a distributive lattice with a smallest
+element, $0$. 
+Form the set~$\Mod(\Lambda)$
+of all functions~$\varphi\colon\Lambda\ra\R$ satisfying
+\begin{align*}
+&\varphi\htam{ is modular,} \\
+&\varphi(0) = 0\htam{, } \\
+&\Var{[0,a]} \varphi < \infty\htam{ for all }a\htam{ in }\Lambda
+\htam{.}
+\end{align*}
+Endow $\Mod(\Lambda)$ with the ordering $\leq$ defined by
+\begin{equation*}
+\varphi \leq \psi \quad \iff \quad \psi - \varphi\htam{ is increasing.}
+\end{equation*}
+Under this ordering, $\Mod(\Lambda)$ is a Riesz space.
+\end{psec}
+%\begin{proof} 
+\textbf{Proof}\snote{Fix}
+It will be clear that $\Mod(\Lambda)$ is an ordered vector space.
+
+Let $\varphi\in\Mod(\Lambda)$. 
+It suffices to prove that the set $\{\varphi,-\varphi\}$
+has a supremum in~$\Mod(\Lambda)$. (See~\ref{1.3}.)
+
+Define $\omega\colon\Lambda \ra \R$ by
+\begin{equation*}
+\omega(s) := \Var{[0,s]}\varphi \qquad (s\in \Lambda)\htam{.}
+\end{equation*}
+It will turn out that this~$\omega$ 
+is the desired supremum of~$\{\varphi,-\varphi\}$.
+\begin{itemize}
+\item 
+We first prove $\omega$ to be modular.
+Let $a,b\in \Lambda$; we show that
+$\omega(a\vee b) - \omega(a) = \omega(b) - \omega(a\wedge b)$,
+or equivalently (by the lemma)
+\begin{equation}
+\label{eq1.10_1}  \tag{$*$}
+\Var{[a,a\vee b]}\varphi = \Var{[a\wedge b,b]}\varphi 
+\htam{.}
+\end{equation}
+
+With $As := s\vee a \quad (a\wedge b\leq s\leq b)$
+and $Bt := t\wedge b \quad (a\leq t \leq a\vee b)$
+we have increasing maps~$A\colon [a\wedge b,b]\ra [a,a\vee b]$
+and~$B\colon [a,a\vee b]\ra[a\wedge b,b]$.
+They are each other's inverses: 
+if $s\in[a\wedge b, b]$ and $t\in [a,a\vee b]$
+then~$BAs = (s\vee a)\wedge b = (s\wedge b) \vee (a\wedge b) = s$ 
+\snote{Distributivity of~$\Lambda$ is not needed here; modularity suffices.}
+and~$ABt = (t\wedge b)\vee a = (t\vee a)\wedge(b\vee a) = t$.
+
+Furthermore, if $s\in [a\wedge b, b]$, then
+\begin{align*}
+\varphi(As) - \varphi(s) 
+  & = \varphi(As) - \varphi ((As)\wedge b) \\
+  & = \varphi((As)\vee b) - \varphi(b) \\
+  & = \varphi(s\vee a\vee b)-\varphi(b) = \varphi(a\vee b)-\varphi(b)
+\htam{,}
+\end{align*}
+independent of $s$.
+Hence, $\varphi(As)-\varphi(As')=\varphi(s)-\varphi(s')$
+for all $s,s'\in[a\wedge b,b]$.
+
+From these considerations, \eqref{eq1.10_1} is an easy consequence.
+%
+\item
+As $\omega$ is increasing (by the preceding lemma),
+for all~$a$ in~$\Lambda$ 
+we have~$\Var{[0,a]}\omega = \omega(a)-\omega(0)<\infty$.
+Thus, $\omega\in\Mod(\Lambda)$.
+%
+\item
+For $a,b\in\Lambda$ with $a\leq b$ we have
+\begin{align*}
+(\omega - \varphi)(b) - (\omega-\varphi)(a)
+  & = (\omega(b) - \omega(a)) - (\varphi(b) - \varphi(a)) \\
+  & = \Var{[a,b]}\varphi - (\varphi(b) - \varphi(a)) \ge 0
+\htam{.}
+\end{align*}
+Thus, $\omega-\varphi$ is increasing, 
+i.e., $\omega\ge \varphi$ in the ordering of~$\Mod(\Lambda)$.
+Similarly, $\omega\geq -\varphi$,
+so $\omega$ is an upper bound of~$\{ \varphi, -\varphi \}$.
+%
+\item
+Finally, 
+let $\psi$ be any upper bound of~$\{\varphi,-\varphi\}$;
+we prove $\psi\ge \omega$,
+i.e. $\psi-\omega$ is increasing.
+Let $a\leq b$ in $\Lambda$.
+Then 
+\begin{equation*}
+(\psi-\omega)(b) - (\psi-\omega)(a)
+  = \psi(b) - \psi(a) - \Var{[a,b]}\varphi
+\htam{; }
+\end{equation*}
+Thus, 
+we wish to show that
+\begin{equation}
+\label{eq1.10_2}  \tag{$**$}
+\Var{[a,b]}\varphi \ \leq\  \psi(b)-\psi(a) \htam{.}
+\end{equation}
+Let $a=s_0\leq s_1 \leq \ldots \leq s_N = b$.
+As $\psi-\varphi$ and $\psi+\varphi$ are increasing we have
+\begin{align*}
+\varphi(s_n) - \varphi(s_{n-1})
+  &\  \leq\  \psi(s_n) - \psi(s_{n-1}) 
+\quad\htam{ and }\quad \\
+-\varphi(s_n) + \varphi(s_{n-1})
+  &\  \leq\  \psi(s_n) - \psi(s_{n-1})
+\htam{,}
+\end{align*}
+i.e., 
+$|\varphi(s_n) - \varphi(s_{n-1})| 
+  \leq \psi(s_n) - \psi(s_{n-1})$ 
+for each $n$.
+Hence~$\smash{\sum} |\varphi(s_n) - \varphi(s_{n-1})|
+  \leq \psi (b) - \psi(a)$.
+This establishes~\eqref{eq1.10_2}.
+\end{itemize}
+%\end{proof}
 \end{document}
