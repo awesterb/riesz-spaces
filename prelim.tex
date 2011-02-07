@@ -631,22 +631,20 @@ a \leq s_0\wedge b \leq s_1 \wedge b \leq \ldots s_N\wedge b
 \htam{.}
 \end{equation*}
 For each $n$,
-\snote{Flush the even lines to the right.}
 \begin{align*}
-\bigl|\varphi(s_n) - \varphi(s_{n-1})\bigr| 
-  & \ \leq\  \left|\bigl(\varphi (s_n) - \varphi(s_n\vee b)\bigr) 
-      - \bigl(\varphi(s_{n-1})  - \varphi(s_{n-1} \vee b)\bigr)\right| \\
- & \qquad  + \bigl|\varphi(s_n\vee b) - \varphi(s_{n-1}\vee b)\bigr| \\ 
- & \ = \ \bigl|\bigl(\varphi(s_n \wedge b) - \varphi(b)\bigr)-
-       \bigl(\varphi(s_{n-1}\wedge b) - \varphi(b)\bigr)\bigr| \\
- & \qquad + \bigl|\varphi(s_n \vee b) - \varphi(s_{n+1} \vee b)\bigr| \\
- & \ = \ \bigl| \varphi(s_n\wedge b) -\varphi(s_{n-1}\wedge b) \bigr|
-       + \bigl| \varphi(s_n \vee b) - \varphi(s_{n-1}\vee b) \bigr|
+ \bigl| \varphi(s_n & \wedge b) -\varphi(s_{n-1}\wedge b) \bigr|
+       + \bigl| \varphi(s_n \vee b) - \varphi(s_{n-1}\vee b) \bigr|  \\
+ & \leq \bigl| \varphi(s_n\wedge b)
+       + \varphi(s_n \vee b) 
+       -\varphi(s_{n-1}\wedge b) 
+       - \varphi(s_{n-1}\vee b) \bigr| \\
+ & = \bigl|\varphi(s_n) + \varphi(b) - \varphi(s_{n-1}) -\varphi(b) \bigr| \\
+ & = \bigl|\varphi(s_n) - \varphi(s_{n-1})\bigr|
 \htam{.}
 \end{align*}
 Therefore,
-$\smash{\sum_n}|\varphi(s_n)-\varphi(s_{n-1})|
-  \leq \Var{[a,b]}{\varphi} + \Var{[b,c]}{\varphi}$.
+$\Var{[a,b]}{\varphi} + \Var{[b,c]}{\varphi} \geq
+\smash{\sum_n}|\varphi(s_n)-\varphi(s_{n-1})|$.
 The lemma follows.
 %\end{proof}
 %
