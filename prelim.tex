@@ -6,10 +6,13 @@
 %                  1.1
 %
 \begin{psec}{Definitions}
+\snote{The dot after the psec-title should go;
+maybe we could set the psec-title sans serif.}
 \label{1.1}
 \begin{enumerate}
 % 1
-\item 
+\item
+\label{1.1-1} 
 A \keyword{lattice} is a (partially) ordered set in which
 every nonempty finite subset has an infimum and a supremum. 
 If $a,b$ are elements of a lattice~$\Lambda$ 
@@ -17,14 +20,18 @@ we write~$a\wedge b = \inf\{a,b\}$
 and~$a\vee b = \sup\{a,b\}$.
 % 2
 \item 
+\label{1.1-2}
 A lattice $\Lambda$ is \keyword{distributive}
 if for all $a,b,c$ in $\Lambda$
+\snote{The spacing above and below math displays should be decreased
+resembling the amsart style.}
 \begin{align*}
 (a\vee b)\wedge c &= (a\wedge c)\vee (b\wedge c)\htam{, } &
 (a\wedge b)\vee c &= (a\vee c) \wedge (b\vee c) 
 \end{align*}
 % 3
 \item 
+\label{1.1-3}
 A \keyword{Boolean algebra}~$\Lambda$ is a distributive lattice
 with a smallest element~$0$
 and a largest element~$1$
@@ -37,6 +44,7 @@ In a Boolean algebra the complement is unique.
 The complement of~$x$ is denoted:~$x'$.
 % 4
 \item 
+\label{1.1-4}
 Let~$X$ be a set.
 A collection~$\mathcal{R}$ 
 of subsets of~$X$
@@ -126,7 +134,6 @@ we occasionally omit clauses such as ``for all~$x$ in~$E$''.
 \label{1.4-1}
 Let~$X\subseteq E$, and let~$A\colon E\ra E$ 
 be an order isomorphism.
-\snote{``order isomorphism'' has not been defined.}
 If~$X$ has a supremum,
 then so does $A(X)$,
 and
@@ -149,7 +156,6 @@ If~$x,y\in E$, then
 \item %
 \label{1.4-3}
 It follows from \ref{1.4-1} that
-\snote{So: $\lambda\cdot -$ is an order isomorphism.} 
 \begin{alignat*}
 \lambda \sup X &= \sup \lambda X \qquad &&(\lambda \in [0,\infty)\,) \\
 \intertext{%
@@ -174,9 +180,7 @@ if~$X$ has an infimum.
 \item %
 \label{1.4-5}
 In particular,
-\snote{So: $-+a$ is an order isomorphism.}
 \begin{equation*}
-\label{i1.4-5}
 \frmd{%
 (x+a)\vee   (y+a)=(x\vee y)+a
 \htam{, } \qquad 
@@ -188,6 +192,7 @@ In particular,
 \begin{equation*}
 x\vee y + x\wedge y = x+y
 \end{equation*}
+\snote{The list number ``\ref{1.4-6}'' is not alligned.}
 because~$(x\vee y)-x-y 
 \isref{1.4-5}
 (x-x-y)\vee(y-x-y)=(-y)\vee(-x)=x\wedge y$.
@@ -206,6 +211,7 @@ M_a(\inf X) &= \inf M_a(X)
 \end{align*}
 if~$X$ has an infimum.
 Proof for $M_a(x)=x\vee a$:
+\snote{The itemize below looks silly.}
 \begin{itemize}
 \item %
 If~$X$ has a supremum:  
@@ -267,6 +273,8 @@ since $x^+ - x^-
 \isref{1.4-6}x+0$.
 
 Furthermore:
+\snote{We may want to use an indent at the start of a paragraph
+even in an item of an enumerate.}
 $x^+ + x^- 
 = x^+ + (x^+ - x) 
 = 2(x\vee 0) -x
@@ -323,7 +331,7 @@ $x^+ + y^+\geq 0$.
 Thus
 \begin{align*}
 &\frmd{(x+y)^+ \leq x^+ + y^+}\\
-\intertext{ and, 
+\intertext{and, 
 similarly, 
 $(x+y)^- \leq x^- + y^-$.
 It follows that}
@@ -417,7 +425,6 @@ Riesz~space~$\ell^\infty(X)$.
 %
 \setcounter{list-1.5}{\value{enumi}}
 \item
-\label{1.5-3}
 (See below)
 \end{enumerate}
 \end{psec}
@@ -425,6 +432,7 @@ Riesz~space~$\ell^\infty(X)$.
 %                  1.6
 %
 \begin{psec}{Intermezzo}
+\label{1.6}
 If $E$ is an ordered vector space, 
 then every linear subspace of~$E$ is an ordered vector space
 under the ordering it inherits from~$E$.
@@ -464,7 +472,6 @@ x\in D \quad &\implies \quad x^+ \in D
 \begin{psec}[1.5]{continued}
 \label{1.5_2}
 Many Riesz spaces are obtained as subspaces of~$\R^X$:
-\snote{This enumeration should start with (3).}
 \begin{enumerate}
 \setcounter{enumi}{\value{list-1.5}}
 \item
@@ -525,7 +532,6 @@ but not a Riesz subspace of~$\R^{[0,1]}$ or~$\Cont{[0,1]}$.
 %
 \begin{psec}[1.5]{continued}
 \label{1.5_3}
-\snote{Psec should have number 1.5 and enumeration should start with (7)}
 \begin{enumerate}
 \setcounter{enumi}{\value{list-1.5}}
 \item
@@ -771,4 +777,185 @@ Hence~$\smash{\sum} |\varphi(s_n) - \varphi(s_{n-1})|
 This establishes~\eqref{eq1.10_2}.
 \end{itemize}
 %\end{proof}
+%
+%                  1.11
+%
+\begin{psec}{}
+\label{1.11}
+A special case:
+
+Let $\mathcal{A}$ be an algebra of subsets of a set~$X$
+(see~\ref{1.1}\ref{1.1-4}).
+Under inclusion,
+$\mathcal A$ is a distributive lattice lattice 
+with smallest element~$\eset$.
+
+Let $\mu\colon\mathcal A\ra \R$.
+If $\mu$ is additive,
+$\mu$ is modular and~$\mu(\eset)=0$;
+conversely,
+a modular~$\mu\colon\mathcal A\ra \R$
+with~$\mu(\eset)=0$ is additive.
+Less obvious is this:
+If~$\mu\colon\mathcal A\ra \R$ is additive,
+then
+\begin{equation*}
+\Var{[\eset, A]}{\mu} <\infty\htam{ for all }A\in\mathcal A
+\quad \iff \quad 
+\mu\htam{ is bounded.}
+\end{equation*}
+Indeed, 
+for every $A$ in $\mathcal A$
+we have $|\mu(A)| 
+  \leq |\mu(A) - \mu(\eset)| + |\mu(X) - \mu(A)|
+  \leq \Var{[\eset,A]}{\mu}$,
+which proves the implication ``$\Rightarrow$''.
+For the reverse,
+let~$c:=\sup_{A\in\mathcal A} |\mu(A)|$;
+it suffices to prove~$\Var{[\eset,X]}\mu \leq 2c$.
+Thus, let $S_0,S_1,\dotsc,S_N\in\mathcal{A}$,
+$\eset = S_0 \subseteq S_1 \subseteq \ldots \subseteq S_N = X$;
+we prove $\smash{\sum |\mu(S_n)-\mu(S_{n-1})|\leq 2c}$.
+Setting $T_n :=S_n \backslash S_{n-1}\quad(n=1,\dotsc,N)$
+we have pairwise disjoint~$T_1,\dotsc,T_N$
+in~$\mathcal A$ and are done if
+\snote{Improve the setting of $\Var{}{}$.}
+\begin{equation*}
+\sum \bigl|\mu(T_n)\bigr| \leq 2c
+\htam{.}
+\end{equation*}
+Put $\mathcal{N}_+ := \{ n\colon \mu(T_n)>0\}\htam{, }
+\quad \mathcal{N}_- := \{ n\colon \mu(T_n)<0\}$.
+Then
+\snote{Fix the spacing of the $\bigr(\bigcup$ below.}
+\begin{align*}
+\sum\bigl| \mu(T_n)\bigr| 
+  & = \sum_{n\in\mathcal{N}_+} \mu(T_n)
+      -\sum_{n\in\mathcal{N}_-} \mu(T_n) = \\
+  & = \mu\bigl( \bigcup_{n\in\mathcal{N}_+} T_n\bigr)
+      -\mu\bigl( \bigcup_{n\in\mathcal{N}_-} T_n\bigr) 
+      \leq 2c
+\htam{.}
+\end{align*}
+\end{psec}
+%
+%                  1.12
+%
+
+Thus, $\Mod(\mathcal A)$ consists precisely of
+the bounded additive functions on~$\mathcal A$.
+Observing that an additive function is increasing
+if and only if it has all values in~$[0,\infty)$
+we arrive at:
+\begin{psec}{Theorem}
+\label{1.12}
+Let $\mathcal A$ be an algebra of subsets
+of a set~$X$.
+Denote by~$\BA(\mathcal A)$ 
+the set of all bounded additive functions on~$\mathcal A$.
+Then under pointwise ordering~$\BA(\mathcal A)$
+is a Dedekind complete Riesz space.
+
+For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
+\snote{Decrease the size of the stack below $\sup$.}
+\begin{equation*}
+\mu^+(A) 
+  = \sup_{\substack{T\in \mathcal{A} \\ T\subseteq A}} \mu(T)
+  \qquad (A\in\mathcal A)
+\htam{.}
+\end{equation*}
+\end{psec}
+%
+%                  1.13
+%
+\begin{psec}{Definition}
+\label{1.13}
+Let $\mathcal A$ be a $\sigma$-algebra 
+of subsets of a set~$X$.
+A \keyword{signed measure} on~$\mathcal A$
+is a function~$\mu\colon\mathcal A \ra \R$ with
+\begin{equation*}
+\textstyle{\htam{if }(A_n)_n\htam{ is a disjoint sequence in }\mathcal{A}
+\htam{, then }\mu\bigl(\bigcup A_n\bigr)=\sum\mu(A_n)}
+\end{equation*}
+or, equivalently: 
+$\mu$ is additive
+and if $A_n\downarrow \eset$ in $\mathcal A$,
+then $\mu(A_n)\ra 0$.
+
+The signed measures on $\mathcal A$ form 
+a vector space~$\sigma(\mathcal A)$,
+ordered in the natural way:
+\begin{equation*}
+\mu \leq \nu 
+  \quad \iff \quad
+  \mu(A)\leq\nu(A)\qquad (A\in\mathcal A)
+\htam{.}
+\end{equation*}
+$\{ \mu\in \sigma(\mathcal A)\colon \mu \ge 0\}$
+is precisely the set of all finite measures on~$\mathcal A$.
+\end{psec}
+%
+%                  1.14
+%
+\begin{psec}{Theorem}
+Let $\mathcal{A}$ be a $\sigma$-algebra on a set~$X$.
+\begin{enumerate}
+\item
+\label{1.14-1}
+Every signed measure on $\mathcal A$ is bounded.
+%
+\item
+\label{1.14-2}
+$\sigma(A)$ is a Riesz space and is, 
+in fact,
+a Riesz subspace of $\BA(\mathcal A)$.
+\end{enumerate}
+\end{psec}
+\textbf{Proof}\snote{Fix.}
+\ref{1.14-1} Let $\mu\in\sigma(\mathcal A)$
+and suppose $\mu$ is not bounded.
+Let $\mathcal{A}_\infty$ be
+the collection of all sets~$A$ in~$\mathcal A$ for which
+\begin{equation*}
+\{ \mu(B)\colon B\in \mathcal A\htam{, }B\subseteq A \}
+\end{equation*} 
+is unbounded.  
+Then $X\in\mathcal{A}_\infty$, and:
+\snote{The following paragraph should be (uniformly) indented.}
+
+if $A\in \mathcal{A}_\infty$,
+there is a $B$ in $\mathcal A$ with $B\subseteq A$
+and $|\mu(B)|\geq |\mu(A)|+1$
+then~$|\mu(B)|\geq 1$
+and~$|\mu(A\backslash B)|\ge 1$,
+whereas either~$B$ or~$A\backslash B$
+belongs to~$\mathcal{A}_\infty$.
+Thus, there is an~$A'$ in~$\mathcal{A}_\infty$ with~$A'\subseteq A$
+and~$|\mu(A\backslash A')|\ge 1$.
+
+It is now easy to obtain a 
+sequence~$X\supseteq A_1\supseteq A_2\supseteq A_3 \supseteq \dotsb$
+in~$\mathcal{A}_\infty$ 
+with~$|\mu(A_n\backslash A_{n+1})|\geq 1$ for each $n$.
+Contradiction.
+
+\ref{1.14-2} 
+It follows that $\sigma(\mathcal{A})$ 
+is a linear subspace of~$\BA(\mathcal A)$.
+To show that it is a Riesz subspace,
+let~$\mu\in\sigma(\mathcal A)$;
+we prove~$\mu^+\in\sigma(\mathcal A)$. (See~\ref{1.6}.)
+
+Let $(A_n)_n$ be a disjoint sequence in~$\mathcal A$.
+We have
+\begin{equation*}
+\mu^+ \bigl( \bigcup A_n \bigr)
+   \ \geq\  \sup_N  \mu^+(A_1 \cup \dotsb \cup A_N) 
+   \ =\  \sum_{n=1}^\infty \mu^+(A_n)
+\htam{,}
+\end{equation*}
+so that, 
+by the comment following~\ref{1.12},
+$\mu^+\bigl(\bigcup A_n\bigr) \leq \sum\mu^+(A_n)$.
 \end{document}
