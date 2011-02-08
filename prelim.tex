@@ -826,13 +826,12 @@ in~$\mathcal A$ and are done if
 Put $\mathcal{N}_+ := \{ n\colon \mu(T_n)>0\}\htam{, }
 \quad \mathcal{N}_- := \{ n\colon \mu(T_n)<0\}$.
 Then
-\snote{Fix the spacing of the $\bigr(\bigcup$ below.}
 \begin{align*}
 \sum\bigl| \mu(T_n)\bigr| 
-  & = \sum_{n\in\mathcal{N}_+} \mu(T_n)
-      -\sum_{n\in\mathcal{N}_-} \mu(T_n) = \\
-  & = \mu\bigl( \bigcup_{n\in\mathcal{N}_+} T_n\bigr)
-      -\mu\bigl( \bigcup_{\mathrlap{n\in\mathcal{N}_-}\phantom{n\in\mathcal{N}}} T_n\bigr) 
+  & = \sum_{\lsub{n\in\mathcal{N}_+}{n\in\mathcal{N}}} \mu(T_n)
+      -\sum_{\lsub{n\in\mathcal{N}_-}{n\in\mathcal{N}}} \mu(T_n) = \\
+  & = \mu\bigl( \bigcup_{\lsub{n\in\mathcal{N}_+}{n\in\mathcal{N}}} T_n\bigr)
+      -\mu\bigl( \bigcup_{\lsub{n\in\mathcal{N}_-}{n\in\mathcal{N}}} T_n\bigr) 
       \leq 2c
 \htam{.}
 \end{align*}

@@ -52,6 +52,10 @@
 \newcommand{\VarOp}{\ensuremath{\mathop{\mathrm{Var}}}}
 \newcommand{\Var}[2]{\VarOp_{#1}#2}
 
+% subtle setting matters
+%   sets #1 left aligned in the box created by #2
+\newcommand{\lsub}[2]{\mathrlap{#1}\phantom{#2}}
+
 % Set list styles
 \setenumerate[1]{ref=(\arabic*),label=(\arabic*),leftmargin=0pt,%
 		 labelindent=0pt,labelsep=0pt,labelwidth=2em,itemindent=2em,%
