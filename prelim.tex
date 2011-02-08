@@ -714,7 +714,7 @@ for all $s,s'\in[a\wedge b,b]$.
 From these considerations, \eqref{eq1.10_1} is an easy consequence.
 %
 \item
-As $\omega$ is increasing (by the preceding lemma),
+As $\omega$ is increasing (by lemma~\ref{1.9}),
 for all~$a$ in~$\Lambda$ 
 we have $\Var{[0,a]}\omega = \omega(a)-\omega(0)<\infty$.
 Thus, $\omega\in\Mod(\Lambda)$.
@@ -813,7 +813,10 @@ we have $|\mu(A)|
   \leq \Var{[\eset,A]}{\mu}$,
 which proves the implication ``$\Rightarrow$''.
 For the reverse,
-let $c:=\sup_{A\in\mathcal A} |\mu(A)|$;
+let 
+\begin{equation*}
+c:=\sup_{A\in\mathcal A} |\mu(A)|\htam{;}
+\end{equation*}
 it suffices to prove~$\Var{[\eset,X]}\mu \leq 2c$.
 Thus, let $S_0,S_1,\dotsc,S_N\in\mathcal{A}$,
 $\eset = S_0 \subseteq S_1 \subseteq \ldots \subseteq S_N = X$;
@@ -934,6 +937,7 @@ then~$|\mu(B)|\geq 1$
 and~$|\mu(A\backslash B)|\ge 1$,
 whereas either~$B$ or~$A\backslash B$
 belongs to~$\mathcal{A}_\infty$.
+
 Thus, there is an~$A'$ in~$\mathcal{A}_\infty$ with~$A'\subseteq A$
 and~$|\mu(A\backslash A')|\ge 1$.
 \end{quote}
