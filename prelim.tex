@@ -838,7 +838,7 @@ Then
   & = \sum_{n\in\mathcal{N}_+} \mu(T_n)
       -\sum_{n\in\mathcal{N}_-} \mu(T_n) = \\
   & = \mu\bigl( \bigcup_{n\in\mathcal{N}_+} T_n\bigr)
-      -\mu\bigl( \bigcup_{n\in\mathcal{N}_-} T_n\bigr) 
+      -\mu\bigl( \bigcup_{\mathrlap{n\in\mathcal{N}_-}\phantom{n\in\mathcal{N}}} T_n\bigr) 
       \leq 2c
 \htam{.}
 \end{align*}
@@ -865,7 +865,8 @@ For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
 \snote{Decrease the size of the stack below $\sup$.}
 \begin{equation*}
 \mu^+(A) 
-  = \sup_{\substack{T\in \mathcal{A} \\ T\subseteq A}} \mu(T)
+  = \sup_{\substack{\scriptscriptstyle T\in \mathcal{A} \\
+		    \scriptscriptstyle T\subseteq A}} \mu(T)
   \qquad (A\in\mathcal A)
 \htam{.}
 \end{equation*}
