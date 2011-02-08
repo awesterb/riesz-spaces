@@ -8,6 +8,8 @@
 \newcommand{\frmd}[1]{\fbox{$ #1 $}}
 \newcommand{\isref}[1]{\ensuremath{\mathrel{\smash{%
 		\stackrel{\scriptscriptstyle\htam{\ref{#1}}}{=}}}}}
+
+% environments
 \NewDocumentEnvironment{psec}{o g}{%
 	\IfNoValueTF{#1}{\refstepcounter{subsection}}{}{%
         \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
@@ -17,6 +19,11 @@
 			{\the\value{section}.\the\value{subsection}}%
 			{\ref{#1}}}}%
 	\IfNoValueTF{#2}{}{\textbf{{#2}}\ }}}
+        {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
+\NewDocumentEnvironment{psec*}{g}{%
+        \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
+        \noindent%
+	\IfNoValueTF{#1}{}{\textbf{{#1}}\ }}
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 
 %  new symbols  (due to Bas Westerbaan)

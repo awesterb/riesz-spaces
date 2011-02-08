@@ -614,9 +614,7 @@ Then
 \htam{.}
 \end{equation*}
 \end{psec}
-%\begin{proof}
-\textbf{Proof} 
-\snote{Add proof environment. }
+\begin{psec*}{Proof}
 The proof of the inequality ``$\geq$'' is straightforward.
 For the reverse,
 assume~$a=s_0\leq s_1 \leq \ldots \leq s_N = c$.
@@ -642,7 +640,7 @@ Therefore,
 $\Var{[a,b]}{\varphi} + \Var{[b,c]}{\varphi} \geq
 \smash{\sum_n}|\varphi(s_n)-\varphi(s_{n-1})|$.
 The lemma follows.
-%\end{proof}
+\end{psec*}
 %
 %                  1.10
 %
@@ -665,8 +663,7 @@ Endow $\Mod(\Lambda)$ with the ordering $\leq$ defined by
 \end{equation*}
 Under this ordering, $\Mod(\Lambda)$ is a Riesz space.
 \end{psec}
-%\begin{proof} 
-\textbf{Proof}\snote{Fix}
+\begin{psec*}{Proof}
 It will be clear that $\Mod(\Lambda)$ is an ordered vector space.
 
 Let $\varphi\in\Mod(\Lambda)$. 
@@ -769,8 +766,8 @@ Hence~$\smash{\sum} |\varphi(s_n) - \varphi(s_{n-1})|
   \leq \psi (b) - \psi(a)$.
 This establishes~\eqref{eq1.10_2}.
 \end{itemize}
-
-Comment:
+\end{psec*}
+\begin{psec*}{Comment}
 The distributivity of $\Lambda$ is used only to prove
 that~$\omega$ is modular.  
 In fact, 
@@ -778,6 +775,7 @@ the distributivity condition
 may be weakened to ``modularity'':
 $x\vee(y\wedge z) = (x\vee y)\wedge z$
 whenever~$x\leq z$.
+\end{psec*}
 %
 %                  1.11
 %
@@ -911,7 +909,7 @@ in fact,
 a Riesz subspace of $\BA(\mathcal A)$.
 \end{enumerate}
 \end{psec}
-\textbf{Proof}\snote{Fix.}
+\begin{psec*}{Proof}
 \ref{1.14-1} Let $\mu\in\sigma(\mathcal A)$
 and suppose $\mu$ is not bounded.
 Let $\mathcal{A}_\infty$ be
@@ -958,4 +956,5 @@ We have
 so that, 
 by the comment following~\ref{1.12},
 $\mu^+\bigl(\bigcup A_n\bigr) \leq \sum\mu^+(A_n)$.
+\end{psec*}
 \end{document}
