@@ -30,7 +30,38 @@ For a general approach to similar constructions
 it pays to investigate ``Riesz homomorphisms'' 
 and ``Riesz ideals''.
 \end{psec}
+%
+%                  2.2
+%
+\begin{psec}{Definitions}
+Let $E$ and $F$ be Riesz spaces 
+and $T$ a linear map $E\ra F$.
+We call~$T$ \keyword{positive} 
+if it is order preserving ($=\htam{increasing}$),
+which is the case if and only if
+\begin{equation*}
+T(E^+) \subseteq F^+\htam{, }
+\end{equation*}
+whereas $T$ is a \keyword{Riesz homomorphism} 
+it is (linear and) a 
+lattice homomorphism, i.e.,
+\begin{equation*}
+T(x\vee y) = Tx \vee Ty\htam{,}
+\quad T(x\wedge y)=Tx\wedge Ty
+\qquad (x,y\in E)\htam{.}
+\end{equation*}
+Every Riesz homomorphism is positive. 
+($x\in E^+\iff x=x\vee 0$)
 
+We leave it to the reader to define ``Riesz isomorphism''
+and ``Riesz isomorphic''.
 
+A linear (bijective) order isomorphism is,
+of course,
+a Riesz isomorphism,
+but some positive linear bijections are not
+(e.g., $(x_1,x_2)\mapsto(x_1,x_1+x_2)$ as a map
+$\R^2\ra\R^2$).
+\end{psec}
 \clearpage
 \end{document}
