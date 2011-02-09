@@ -10,7 +10,7 @@
 		\stackrel{\scriptscriptstyle\htam{\ref{#1}}}{=}}}}}
 
 % environments
-\NewDocumentEnvironment{psec}{o g}{%
+\NewDocumentEnvironment{psec}{o m g}{%
 	\IfNoValueTF{#1}{\refstepcounter{subsection}}{}{%
         \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
         \noindent%
@@ -18,7 +18,8 @@
 		\IfNoValueTF{#1}%
 			{\the\value{section}.\the\value{subsection}}%
 			{\ref{#1}}}}%
-	\IfNoValueTF{#2}{}{\textbf{{#2}}\ }}}
+	\IfNoValueTF{#3}{}{\textbf{{#3}}\ }%
+	\IfNoValueTF{#2}{}{\label{#2}}}}
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 \newcommand\statement[1]{\emph{#1}}
 \NewDocumentEnvironment{psec*}{g}{%
