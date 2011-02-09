@@ -569,14 +569,16 @@ Consider a real-valued function~$\varphi$ on a lattice~$\Lambda$.
 \label{1.8-1}
 For $a,b\in\Lambda$ with $a\leq b$
 we define the \keyword{variation} of $\varphi$ on $[a,b]$
-\begin{multline*}
+\begin{equation*}
+\begin{split}
 \Var{[a,b]}{\varphi}
   \ :=\  \sup\bigl\{ 
-         \textstyle{\sum_{n=1}^{N}} |\varphi(s_n) - \varphi(s_{n-1})|\colon
-         N\in\N\htam{; } \\
+         &\textstyle{\sum_{n=1}^{N}} |\varphi(s_n) - \varphi(s_{n-1})|\colon \\
+         &\qquad N\in\N\htam{; } 
          a=s_0 \leq s_1 \leq \ldots \leq s_N = b \bigr\}
 \htam{.}
-\end{multline*}
+\end{split}
+\end{equation*}
 (Possibly, the variation is $\infty$.)
 If $\varphi$ is increasing, 
 $\Var{[a,b]}{\varphi} = \varphi(b)-\varphi(a)$.
