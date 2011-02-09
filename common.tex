@@ -10,16 +10,25 @@
 		\stackrel{\scriptscriptstyle\htam{\ref{#1}}}{=}}}}}
 
 % environments
+\renewenvironment{proof}{%
+	\ifdim\lastskip<1em\removelastskip\vskip0.3em\fi%
+	\par\penalty-100{%
+	\noindent%
+	\textbf{Proof\ }}%
+	\noindent}%
+	{\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 \NewDocumentEnvironment{psec}{o m g}{%
-	\IfNoValueTF{#1}{\refstepcounter{subsection}}{}{%
-        \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
-        \noindent%
+	\IfNoValueTF{#1}{\refstepcounter{subsection}}{}%
+	\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
+        \par\penalty-200{%
+	\noindent%
         \makebox[0pt][r]{\makebox[.5in]{%
 		\IfNoValueTF{#1}%
 			{\the\value{section}.\the\value{subsection}}%
 			{\ref{#1}}}}%
 	\IfNoValueTF{#3}{}{\textbf{{#3}}\ }%
-	\IfNoValueTF{#2}{}{\label{#2}}}}
+	\IfNoValueTF{#2}{}{\label{#2}}%
+        \noindent}}%
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 \newcommand\statement[1]{\emph{#1}}
 \NewDocumentEnvironment{psec*}{g}{%
@@ -62,8 +71,8 @@
 % Set list styles
 \setenumerate[1]{ref=(\arabic*),label=(\arabic*),leftmargin=0pt,%
 		 labelindent=0pt,labelsep=0pt,labelwidth=2em,itemindent=2em,%
-		 align=left,itemsep=4pt}
+		 align=left,itemsep=0.3em}
 \setitemize[1]{leftmargin=0pt,%
 		 labelindent=0pt,labelsep=0pt,labelwidth=1em,itemindent=2em,%
-		 align=left, itemsep=4pt}
+		 align=left, itemsep=0.3em}
 
