@@ -256,5 +256,35 @@ with $x=y+z$, $y\leq a$, $z\leq b$;
 e.g., $y=x\wedge a$ and $z=x-y=x\vee a-a$.)
 \end{enumerate}
 \end{psec}
+%
+%                  2.11
+%
+\begin{psec}{2.11}{Definitions}
+The intersection of any collection of Riesz subspaces
+(or ideals) of a Riesz space~$E$ 
+is again a Riesz subspace
+(or ideal, respectively)
+of~$E$.
+
+For $u\in E^+$, 
+the \keyword{principal (Riesz) ideal generated} by~$u$ 
+is the intersection of all Riesz ideals
+that contain~$u$;
+it is the set
+\begin{equation*}
+\bigcup_{n\in\N} [-nu,nu]
+\htam{.}
+\end{equation*}
+
+An element $u$ of $E^+$
+is called 
+a \keyword{(strong) unit} of~$E$
+if the principal ideal it generates is~$E$ itself,
+i.e., 
+if for every~$x$ in~$E$
+there exists an~$n$ in~$\N$ with $|x|\leq ne$.
+
+$E$ is said to be \keyword{unitary} if it has a unit.
+\end{psec}
 \clearpage
 \end{document}
