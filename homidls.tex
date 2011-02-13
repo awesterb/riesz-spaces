@@ -514,5 +514,36 @@ By~\ref{2.19-I},
 $X$ and~$Y$ are homeomorphic. \xqed
 \end{enumerate}
 \end{proof}
+
+In~\ref{2.20} and~\ref{2.21} 
+we consider two variations
+of Kaplansky's Theorem.
+%
+%                  2.20
+%
+\begin{psec}{2.20}{Theorem (Gelfand--Kolmogorov)}
+\statement{%
+Let $X$ and $Y$ be compact Hausdorff spaces
+and suppose there is a linear bijection $T\colon \Cont{X}\ra\Cont{Y}$
+that is multiplicative:
+\begin{equation*}
+T(fg) = Tf \cdot Tg 
+\qquad (f,g\in \Cont{X}\,)
+\htam{.}
+\end{equation*}
+Then $X$ and $Y$ are homeomorphic.
+}
+\end{psec}
+\begin{proof}
+If $f\in\Cont{X}^+$,
+then $f = \sqrt{f}^2$,
+so that $Tf = \smash{(T\sqrt{f})^2}\in \Cont{Y}^+$.
+It follows that~$T$
+is increasing.
+So is $T^{-1}$.
+Thus, $T$ is an order isomorphism
+and thereby a Riesz isomorphism.
+Now apply~\ref{2.17}.
+\end{proof}
 \clearpage
 \end{document}
