@@ -547,5 +547,77 @@ Thus, $T$ is an order isomorphism
 and thereby a Riesz isomorphism.
 Now apply~\ref{2.17}.
 \end{proof}
+%
+%                  2.21
+%
+\begin{psec}{2.21}{Theorem (Banach--Stone)}
+\statement{%
+Let $X$ and $Y$ be compact Hausdorff spaces
+and suppose there is a linear
+bijection $T\colon \Cont{X} \ra \Cont{Y}$
+that is an isometry relative to the sup-norm, i.e.,
+\begin{equation*}
+\| Tf -Tg \|_\infty = \| f-g \|_\infty 
+\qquad (f,g\in\Cont{X}\,)
+\htam{.}
+\end{equation*}
+Then $X$ and $Y$ are homeomorpic.
+}
+\end{psec}
+\begin{proof}
+\begin{enumerate}[label=(\Roman*)]
+\item \label{2.21-I}
+First,
+assume $T\mathbb{1}_X = \mathbb{1}_Y$.
+
+Let $a\in\R$, $c\in[0,\infty)$,
+For $f\in \Cont{X}$ we have:
+\begin{align*}
+f(X)\subseteq 
+  &\  [a-c,a+c] \iff \| f-a\mathbb{1}_X \|_\infty \leq c \\
+  & \iff \|Tf - a\mathbb{1}_Y\|_\infty \leq c \\
+  & \iff (Tf)(Y) \subseteq [a-c,a+c]
+\htam{.}
+\end{align*}
+It follows easily that $T$ maps $\Cont{X}^+$ onto $\Cont{Y}^+$,
+and we can proceed as in~\ref{2.20}.
+\item \label{2.21-II}
+For the general case,
+set~$u:=T\mathbb{1}_X$,
+we prove $|u|=\mathbb{1}_Y$.
+(Then $f\mapsto u^{-1} Tf$
+is a linear bijection $\Cont{X}\ra\Cont{Y}$ 
+that is isometric and sends~$\mathbb{1}_X$ to~$\mathbb{1}_Y$,
+so that we can apply~\ref{2.21-I}.)
+
+Observe that for~$f$ in~$\Cont{X}$
+\begin{equation}
+\label{eq2.21} \tag{$*$}
+|f|\leq \mathbb{1}_X
+\iff
+\|f\|_\infty \leq 1
+\iff
+\|Tf \|_\infty \leq 1
+\iff
+|Tf| \leq \mathbb{1}_Y
+\htam{.}
+\end{equation}
+
+Put $w:=\mathbb{1}_Y - |u|$;
+we prove $w=0$.
+By~\eqref{eq2.21},
+$|u|\leq\mathbb{1}_Y$, 
+so $w\ge 0$.
+Then $|u+w|\leq |u|+w=\mathbb{1}_Y$,
+so that (with~\eqref{eq2.21})
+$|\mathbb{1}_X + T^{-1} w|\leq \mathbb{1}_X$,
+and $T^{-1} w\leq 0$.
+But also $|u-w|\leq |u|+w=\mathbb{1}_Y$,
+$|\mathbb{1}_X - T^{-1} w|\leq \mathbb{1}_X$,
+and $T^{-1} w\ge 0$.
+Hence, $T^{-1} w=0$.
+Thus, $w=0$. \xqed
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
