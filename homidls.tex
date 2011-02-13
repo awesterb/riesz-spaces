@@ -355,5 +355,47 @@ We use the same symbol ``$\delta_a$''
 to denote the restriction of~$\delta_a$
 to any Riesz subspace of~$\R^X$.
 \end{psec}
+%
+%                  2.16
+%
+\begin{psec}{2.16}{Theorem}
+\statement{%
+Let $X$ be a compact Hausdorff space.
+Then $a \leftrightarrow \delta_a$
+is a bijective correspondence
+between the points of~$X$
+and the Riesz homomorphisms
+$\varphi\colon \Cont{X}\ra \R$ 
+with~$\varphi(\mathbb{1})=1$.
+}
+\end{psec}
+\begin{proof}
+Let $\varphi$ be a Riesz homomorphism $\Cont{X}\ra \R$
+with~$\varphi(\mathbb{1})=1$.
+We prove $\varphi=\delta_a$ for some~$a$ in~$X$.
+(The rest of the theorem 
+we leave to the reader.)
+
+\emph{Suppose} there is no such~$a$.
+Then for every~$a\in X$,
+we can choose an~$f_a$ in~$\Cont{X}$
+with $\varphi(f_a)\neq f_a(a)$.
+Setting $g_a := | f_a - \varphi(f_a) \mathbb{1}|$
+we have~$g_a \in \Cont{X}^+$,
+$\varphi(g_a)=0$,
+$g_a(a)>0$.
+By compactness,
+there exist $a_1,\dotsc,a_N$ in~$X$ such that
+\begin{equation*}
+X = \bigcup_n \{ x\colon g_{a_n} (x) > 0 \}\htam{.}
+\end{equation*}
+Put $g:=g_{a_1}\vee \dotsb \vee g_{a_N}$.
+We have $\varphi(g) =0$ 
+but $g(x)>0$ for all~$x\in X$.
+There is a positive number~$\varepsilon$
+with $g\geq \varepsilon \mathbb{1}$.
+Then $\varphi(g)\geq \varepsilon \varphi(\mathbb{1})=\varepsilon$.
+Contradiction. \xqed
+\end{proof}
 \clearpage
 \end{document}
