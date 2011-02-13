@@ -449,5 +449,70 @@ so there is an~$i_0$ in~$I$ with the property
 that for all~$i$ in~$I$ with $i\ge i_0$
 we have $f(x_i)\neq 0$, whence $x_i \in U$. \xqed
 \end{proof}
+%
+%                  2.19
+%
+\begin{psec}{2.19}{Theorem (Kaplansky)}
+Let $X$ and $Y$ be compact Hausdorff spaces
+such that $\Cont{X}$ and $\Cont{Y}$ are Riesz isomorphic.
+Then~$X$ and~$Y$ are homeomorphic.
+\end{psec}
+\begin{proof}
+Let $T\colon \Cont{X}\ra \Cont{Y}$ be a Riesz isomorphism.
+\begin{enumerate}[label=(\Roman*)]
+\item \label{2.19-I}
+For the moment, assume 
+$T\mathbb{1}_X = \mathbb{1}_Y$.
+For every~$y\in Y$ 
+we can apply~\ref{2.15} to the Riesz homomorphism
+$f\mapsto (Tf)(y)\quad (f\in\Cont{X})$.
+Then we obtain a map $\tau\colon Y\ra X$ such that
+\begin{alignat*}{2}
+(Tf)(y) &= f(\tau(y)) 
+\qquad &(f\in\Cont{X}\htam{, }\ y\in Y)
+\htam{.}\\
+\intertext{%
+In the same way (using $\tau^{-1} \mathbb{1}_Y = \mathbb{1}_X$)
+we obtain a $\sigma\colon X\ra Y$ with}
+(T^{-1}g)(x) &= g(\sigma(x)) 
+ &(g\in \Cont{Y}\htam{, }\ x\in X)
+\htam{.}
+\end{alignat*}
+
+If $x\in X$, then for every~$f$ in $\Cont{X}$ we have
+\begin{equation*}
+f(x) = (T^{-1} T f)(x) = (Tf)(\sigma(x)) = f(\tau(\sigma (x)))\htam{,}
+\end{equation*}
+so that $x=\tau(\sigma(x))$.
+Similarly, $y=\sigma(\tau(y))$ for all $y\in Y$.
+Thus, $\sigma$ and~$\tau$ are bijective and each other's inverses.
+
+If $(x_i)_{i \in I}$ is a net in~$X$,
+converging to a point~$x$,
+then for all~$g$ in $\Cont{Y}$
+we have $g(\sigma(x_i))=(T^{-1} g)(x_i)\ra (T^{-1}g)(x)=g(\sigma(x))$,
+so $\sigma(x_i)\ra \sigma(x)$ according to Lemma~\ref{2.18}.
+We see that~$\sigma$ is continuous;
+and so is~$\tau$.
+Then $\sigma$ and $\tau$ are homeomorphisms.
+%
+\item \label{2.19-II}
+For the general case,
+observe that~$T^{-1}\mathbb{1}_Y$ is bounded:
+there is a positive number~$c$ 
+with ~$T^{-1}\mathbb{1}_Y \leq c \mathbb{1}_X$.
+This implies $T\mathbb{1}_X \ge c^{-1} \mathbb{1}_Y$.
+In particular,
+all values of~$T\mathbb{1}_X$ are strictly positive.
+Then
+\begin{equation*}
+f \mapsto \frac{Tf}{T\mathbb{1}_X}
+\end{equation*}
+is a Riesz isomorphism $\Cont{X}\ra\Cont{Y}$
+sending~$\mathbb{1}_X$ to~$\mathbb{1}_Y$.
+By~\ref{2.19-I}, 
+$X$ and~$Y$ are homeomorphic. \xqed
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
