@@ -16,12 +16,12 @@ that are equal to~$f$ $\mu$-a.e.,
 and put 
 $F_{\mathcal A}(\mu):=\{(f)_\mu\colon f\in\mathcal{F}_{\mathcal A}\}$.
 Then~$F_{\mathcal A}(\mu)$ 
-is a Riesz-space
+is a Riesz space
 under the ordering
 \begin{align*}
 & (f)_\mu \leq (g)_\mu \quad \iff \quad f\leq g\ \mu\htam{-a.e.,} \\
 \intertext{%
-the lattice operations begin given by}%
+the lattice operations being given by}%
 & (f)_\mu \vee (g)_\mu = (f\vee g)_\mu \htam{, }
   \qquad (f)_\mu \wedge (g)_\mu = (f\wedge g)_\mu
 \htam{.}
@@ -42,7 +42,7 @@ which is the case if and only if
 \begin{equation*}
 T(E^+) \subseteq F^+\htam{, }
 \end{equation*}
-whereas $T$ is a \keyword{Riesz homomorphism} 
+and $T$ is a \keyword{Riesz homomorphism} if
 it is (linear and) a 
 lattice homomorphism, i.e.,
 \begin{equation*}
@@ -154,13 +154,13 @@ how one defines
 \begin{enumerate}
 \item \label{2.8-1}%
 (Back to~\ref{2.1}.)
-Let $(X,\mathcal A, \mu)$ be a measure space
+Let $(X,\mathcal A, \mu)$ be a measure space.
 $D:=\{f\in {\mathcal F}_{\mathcal A}\colon f=0\ \mu\htam{-a.e.} \}$
 is a Riesz ideal of~${\mathcal F}_{\mathcal A}$;
 the quotient Riesz space is~$\mathrm{F}_{\mathcal A} (\mu)$.
 
 The same~$D$ is a Riesz ideal of~$\mathcal{L}_{\mathcal A}[\mu]$;
-the quotient~${\mathcal L}_{\mathcal A}[\mu]/I$ is denoted
+the quotient~${\mathcal L}_{\mathcal A}[\mu]/D$ is denoted
 \begin{equation*}
 \mathrm{L}^1(\mu)\htam{.}
 \end{equation*}
@@ -332,7 +332,7 @@ is a weak unit in~$\Cont{\R}$.
 \begin{psec}{2.14}{Exercise}
 Prove the following \textbf{Theorem}: \ %
 \statement{%
-If $E$ is a Riesz space, $a\in E$,
+If $E$ is a Riesz space, $a\in E$, and
 \begin{equation*}
 a^\perp := \{ x\in E\colon x\perp a \} \htam{, }
 \end{equation*}
@@ -376,7 +376,7 @@ We prove $\varphi=\delta_a$ for some~$a$ in~$X$.
 (The rest of the theorem 
 we leave to the reader.)
 
-\emph{Suppose} there is no such~$a$.
+Suppose there is no such~$a$.
 Then for every~$a\in X$,
 we can choose an~$f_a$ in~$\Cont{X}$
 with $\varphi(f_a)\neq f_a(a)$.
@@ -466,9 +466,9 @@ Let $T\colon \Cont{X}\ra \Cont{Y}$ be a Riesz isomorphism.
 For the moment, assume 
 $T\mathbb{1}_X = \mathbb{1}_Y$.
 For every~$y\in Y$ 
-we can apply~\ref{2.15} to the Riesz homomorphism
+we can apply~\ref{2.16} to the Riesz homomorphism
 $f\mapsto (Tf)(y)\quad (f\in\Cont{X})$.
-Then we obtain a map $\tau\colon Y\ra X$ such that
+Thus we obtain a map $\tau\colon Y\ra X$ such that
 \begin{alignat*}{2}
 (Tf)(y) &= f(\tau(y)) 
 \qquad &(f\in\Cont{X}\htam{, }\ y\in Y)
@@ -545,7 +545,7 @@ is increasing.
 So is $T^{-1}$.
 Thus, $T$ is an order isomorphism
 and thereby a Riesz isomorphism.
-Now apply~\ref{2.17}.
+Now apply~\ref{2.17}. \xqed
 \end{proof}
 %
 %                  2.21
