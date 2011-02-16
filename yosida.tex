@@ -110,5 +110,79 @@ this $T_*$ is a Riesz homomorphism.
 }
 \end{equation*}
 \end{psec}
+%
+%                  3.5
+%
+\begin{psec}{3.5}{Lemma}
+\statement{
+Let $E$ be a Riesz space, $E\neq \{0\}$
+and $E$ are the only Riesz ideals of~$E$.
+Then $E$ is Riesz isomorphic to $\R$.
+}
+\end{psec}
+\begin{proof}
+\begin{enumerate}[label=(\Roman*)]
+\item \label{3.5-I} 
+($E$ is totally ordered.) 
+Let $a\in E$; 
+we prove that $a\geq 0$ or $a\leq 0$.
+The set $\{ x\colon x\perp a^+ \}$
+is a Riesz ideal (see~\textbf{?!?}),
+hence is either~$\{0\}$ or~$E$.
+In the first case,
+$a^-=0$, 
+which implies $a=a^+\geq 0$.
+In the second case
+we have $a^+ \perp a^+$, so $a^+=0$ 
+and $a=-a^-\leq 0$.
+%
+\item \label{3.5-II}
+($E$ is Archimedean.)
+Let $a,b\in E$, $n|a|\leq b$ for all $n\in \N$;
+we prove $a=0$. 
+That is easy. 
+Suppose~$a\neq 0$.
+The set $J:=\{ x\colon n|x|\leq b\htam{ for all }n\}$
+is a Riesz ideal containing~$a$,
+hence unequal to~$\{0\}$.
+Then $J=E$,
+so $|a|+b\in J$,
+$|a|+b\leq b$,
+$|a|\leq 0$,
+and $a=0$.
+%
+\item \label{3.5-III} 
+(A totally ordered Archimedean space is at most $1$-dimensional.)
+Choose $a\in E^+$, $a\neq 0$.
+The map $\lambda \mapsto \lambda a$ 
+is a linear order isomorphism
+of~\R{} onto a $1$-dimensional linear subspace of~$E$.
+We are done if this subspace is~$E$ itself.
+Thus, take~$b$ in~$E^+\backslash\{0\}$;
+it suffices to show that~$b=\lambda a$
+for some $\lambda \in \R$.
+
+According to Exercise~\ref{3.2} there exist
+$\sigma_0,\tau_0\in[0,\infty)$ such that
+\begin{alignat*}{2}
+&\htam{ if }\sigma\in\R\htam{, then }
+  & \sigma a\leq b 
+  &\iff \sigma\leq\sigma_0\htam{, } \\
+&\htam{ if }\tau\in\R\htam{, then }
+  & \tau b \leq a 
+  &\iff \tau \leq \tau_0\htam{.}
+\end{alignat*}
+If $\sigma\in\R$ with $\sigma>\sigma_0$
+we have $\sigma a\nleq b$,
+so $b\leq \sigma a$,
+$\sigma^{-1} b\leq a$
+(note that $\sigma > \sigma_0 \geq 0$),
+and therefore $\sigma^{-1}\leq \tau_0$
+and $1\leq \sigma\tau_0$.
+Hence, $1\leq \sigma_0 \tau_0$.
+This yields $\sigma_0 a \leq b \leq \sigma_0 \tau_0 b = \sigma_0 a$,
+so that $b = \sigma_0 a$. \xqed
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
