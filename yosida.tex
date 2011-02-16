@@ -41,5 +41,49 @@ the set $\{ \lambda\in \R\colon \lambda a \leq b \}$
 has a largest element.
 \end{enumerate}
 \end{psec}
+%
+%                  3.3
+%
+\begin{psec}{3.3}{Examples}
+\begin{enumerate}
+\item \label{3.3-1}
+$\R^X$ is Archimedean for every set $X$.
+Riesz subspaces of Archimedean spaces are Archimedean,
+so~$\Cont{X}$, $\ell^\infty$, $\cseq_0$, \ldots{} 
+are all Archimedean.
+%
+\item \label{3.3-2}%
+\newcommand{\leqlex}{\leq_{\mathrm{lex}}}
+Defining a binary relation $\leqlex$ on $\R^2$ by
+\begin{align*}
+(x_1,x_2) \leqlex (y_1,y_2)   \quad \iff \quad
+& \htam{ either }x_1<y_2 \\
+& \htam{ or }x_1 = y_1\htam{, }\ x_2 \leq y_2\htam{, }
+\end{align*}
+we have a total ordering,
+turning $\R^2$ into a Riesz space.
+The element~$(0,1)$ is infinitesimal
+(\,$(0,n)\leqlex(1,0)$ for all $n$ in $\N$).
+The element $(1,0)$ is a strong unit.
+$(0,1)$ is a weak but not a strong unit.
+
+$\R^2$ with the ordering $\leqlex$ is called
+the \keyword{lexicographic plane}.
+%
+\item \label{3.3-3}%
+(Quotients of Archimedean spaces may fail to be Archimedean.)
+Let~$E$ be the quotient Riesz space $\R^X / \ell^\infty$
+and let~$Q$ be the quotient map $\R^\N\ra E$.
+For $a=(a_1, a_2, \dotsc)\in \R^\N$,
+let $a^* := (a_1,2a_2,3a_3,\dotsc)$.
+If $a\in \smash{{(\R^\N)}^+}$, then for all~$n$ in~$\N$
+\begin{equation*}
+na \leq a^* + (na_1,\, na_2,\, \dotsc, na_n,\, 0,\, 0,\, \dotsc)
+\end{equation*}
+whence $n\, Qa\leq Qa^*$.
+
+It follows that all elements of $E$ are infinitesimal.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
