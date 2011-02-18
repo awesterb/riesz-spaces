@@ -269,5 +269,45 @@ is a proper Riesz ideal in~$\ell^\infty$,
 so there must be nonzero Riesz homomorphisms
 $\ell^\infty\ra \R$ that vanish on~$\cseq_0$.
 \end{psec}
+%
+%                  3.9
+%
+\begin{psec}{3.9}{Lemma}
+\statement{
+Let $E$ be an Archimedean unitary Riesz space
+and let $a\in E$, $a>0$.
+Then there is a Riesz homomorphism
+$\varphi\colon E \ra \R$ with $\varphi(a)>0$.
+}
+\end{psec}
+\begin{proof}
+Choose a unit $e$ in $E$.
+As $E$ is Archimedean
+there is an $n$ in $\N$
+with $na\nleq e$,
+i.e. $na-e\nleq 0$.
+But $na-e\leq(na-e)^+$,
+so $(na-e)^+\neq 0$.
+
+By exercise~\ref{2.14},
+$J:=\{x\colon x\perp(na-e)^+\}$
+is a Riesz ideal of~$E$;
+it is proper because it does not contain $(na-e)^+$.
+By~\ref{3.7}\ref{3.7-4}
+there exists a nonzero Riesz homomorphism 
+$f\colon E\ra \R$
+whose kernel contains $J$.
+
+Now $(na-e)^-\in J$,
+so $\smash{0=f\bigl((na-e)^-\bigr)=\bigl(nf(a)-f(e)\bigr)^-}$,
+which implies that
+$nf(a)-f(e)=(nf(a)-f(e))^+\geq 0$.
+Thus,
+$nf(a)\geq f(e)$.
+The kernel of~$f$
+is a Riesz ideal,
+proper because~$f$ is nonzero.
+Hence, $f(e)>0$ and $f(a)>0$.
+\end{proof}
 \clearpage
 \end{document}
