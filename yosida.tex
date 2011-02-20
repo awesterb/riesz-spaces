@@ -421,5 +421,114 @@ Thus, the lattice operations $x\mapsto \| x\|$
 and $x\mapsto x^+$
 are (uniformly) continuous.
 \end{psec}
+%
+%                  3.14
+%
+\begin{psec}{3.14}{Yosida Representation Theorem}
+\statement{
+Let $E$ be an Archimedean Riesz space
+with a unit, $e$.
+Let $\Phi$ be the set of all Riesz homomorphisms
+$\varphi\colon E \ra \R$ with $\varphi(e)=1$,
+topologized as a subset of $\R^E$ (product topology).
+For $x\in E$ define a function~$\hat{x}$ on~$\Phi$ by
+\begin{equation*}
+\hat{x}(\varphi):=\varphi(x)\qquad (\varphi\in \Phi)\htam{,}
+\end{equation*}
+(so that $\hat{e}=\mathbb{1}$),
+and put $\hat{E}:=\{\hat{x}\colon x\in E\}.$
+Then:}
+
+\statement{
+$\Phi$ is a compact Hausdorff space,
+$\hat{E}$ is a Riesz subspace of $\Cont{\Phi}$,
+dense in the sense of~$\|\cdot\|_\infty$.
+The map $x\mapsto \hat{x}$
+is a Riesz isomorphism $E\ra \hat{E}$,
+and $\|x\|_e = \|\hat{x}\|_\infty$
+for all~$x$ in~$E$.
+}
+\end{psec}
+\begin{proof}
+\begin{enumerate}[label=(\Roman*)]
+\item \label{3.14-I}
+If $x\in E$, then $|x|\leq \| x\|_e\, e$\ 
+ (\ref{3.12}\ref{3.12-1}),
+so that for all~$\varphi$ in~$\Phi$
+\begin{equation*}
+|\varphi(x)|=\varphi(|x|)\leq \|x\|_e\, \varphi(e)=\|x\|_e\htam{.}
+\end{equation*}
+It follows that (also topologically)
+\begin{equation*}
+\Phi 
+\ \subseteq  \ 
+\prod_{x\in E} \bigl[-\| x \|_e , \|x \|_e \bigr] 
+\ \subseteq \ \R^E\htam{.}
+\end{equation*}
+Hence,
+by Tychonoff's Theorem,
+$\Phi$ will be compact if it is closed in~$\R^E$.
+Thus, let $(\varphi_i)_{i\in I}$
+be a net in~$\Phi$,
+converging to some $\varphi\in\R^E$;
+we need $\varphi\in\Phi$.
+From the definition of the product topology we obtain
+\begin{equation}
+\label{eq3.14-I} \tag{$*$}
+\varphi_i(x) \longrightarrow \varphi(x) \qquad (x\in E)\htam{.}
+\end{equation}
+Hence, 
+if $x,y\in E$,
+then $\varphi_i(x)\rightarrow \varphi(x)$,
+$\varphi_i(y)\rightarrow \varphi(y)$,
+$\varphi_i(x+y)\rightarrow \varphi(x+y)$,
+whereas $\varphi_i(x)+\varphi_i(y)=\varphi_i(x+y)$ for all $i$;
+it follows that $\varphi(x)+\varphi(y) = \varphi(x+y)$.
+Similarly, $\varphi(\lambda x)=\lambda \varphi(x)
+\quad (x\in E,\ \lambda\in \R)$,
+$\varphi(|x|)=|\varphi(x)|\quad(x\in E)$,
+and $\varphi(e)=1$.
+Thus~$\varphi\in\Phi$.
+%
+\item \label{3.14-II}
+Formula~\eqref{eq3.14-I} 
+read as ``$\hat{x}(\varphi_i)\rightarrow\hat{x}(\varphi)\quad (x\in E)$''
+shows that $\hat{E}\subseteq\Cont{\Phi}$.
+From the definitions it is apprarent that $x\mapsto\hat{x}$
+is a Riesz homomorphism $E\ra\Cont{\Phi}$.
+Then its range, $\hat{E}$, 
+is a Riesz subspace of~$\Cont{\Phi}$.
+%
+\item \label{3.14-III}
+If $\varphi,\psi\in\Phi$ and $\varphi\neq\psi$,
+then trivially there is an~$x$ in~$E$ with $\varphi(x)\neq\psi(x)$,
+i.e. $\hat{x}(\varphi) \neq\hat{x}(\psi)$.
+Hence, $\hat{E}$ is dense in~$\Cont{\Phi}$ by the 
+Stone--Weierstrass Theorem.
+%
+\item \label{3.14-IV}
+It remains to prove that the map $x\mapsto \hat{x}$
+is injective.
+Let $a\in E$, $a\neq 0$;
+it suffices to show that $\hat{a}\neq 0$.
+By lemma~\ref{3.8},
+there is a Riesz homomorphism $\omega\colon E\ra \R$
+with $\omega(|a|)>0$.
+As $|a|\leq ne$ for some $n\in \N$
+we have $\omega(e)>0$.
+Setting $\varphi:=\omega(e)^{-1} \omega$
+we find $\varphi\in \Phi$ 
+and $|\hat{a}(\varphi)| = |\varphi(a)| = \varphi(|a|)>0$.
+%
+\item \label{3.14-V}
+Finally,
+$x\mapsto \hat{x}$
+being an isomorphism $E\ra \hat{E}$:
+\begin{equation*}
+\|x\|_e = \|\hat{x}\|_{\hat{e}} = \|\hat{x}\|_\mathbb{1} 
+= \|\hat{x}\|_\infty\qquad (x\in E)\mathrlap{\htam{. \qquad \xqed}}
+\end{equation*}
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
