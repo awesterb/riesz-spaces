@@ -309,5 +309,44 @@ is a Riesz ideal,
 proper because~$f$ is nonzero.
 Hence, $f(e)>0$ and $f(a)>0$.
 \end{proof}
+%
+%                  3.10
+%
+\begin{psec}{3.10}%
+For the main theorem of this chapter
+we need some results from functional analysis.
+\begin{enumerate}
+\item \label{3.10-1}
+Let $X$ be a topological space.
+
+For $f\in \BCont{X}$ (\ref{1.5}\ref{1.5-3}) we set
+\begin{equation*}
+\| f \|_\infty := \sup \bigl\{ | f(x) | \colon x \in X\bigr\}\htam{.}
+\end{equation*}
+The function $\|\cdot \|_\infty$ is a norm on $\BCont{X}$.
+The convergence it induces is uniform convergence:
+$\|f_n-f\|\ra 0$ if and only if for every~$\varepsilon >0$
+there is an $N\in \N$ with
+\begin{equation*}
+\htam{ if }n\geq N
+\htam{, then }|f_n(x)-f(x)|\leq \varepsilon
+\htam{ for all }x\htam{.}
+\end{equation*}
+%
+\item \label{3.10-2}
+\textbf{Stone--Weierstrass Theorem}\  \statement{%
+Let $X$ be a compact Hausdorff space,
+$D$ a Riesz subspace of $\Cont{X}$($=\BCont{X}$)
+with the properties
+\begin{align*}
+& \mathbb{1}\in D\htam{, } \\
+& \htam{if }x,y\in X\htam{ and }x\neq y
+\htam{, there is an }f\htam{ in }D
+\htam{ with }f(x)\neq f(y)\htam{.}
+\end{align*}
+Then $D$ is dense in $\Cont{X}$.
+}
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
