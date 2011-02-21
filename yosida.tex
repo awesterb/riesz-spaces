@@ -599,5 +599,85 @@ containing one of them but not the other.
 Prove that~$X$ is zerodimensional
 and $\mathcal{R}=\clopen(X)$.
 \end{psec}
+%
+%                  3.19
+%
+\begin{psec}{3.19}{Exercise}
+Applying Yosida's Theorem to $\ell^\infty$ (\ref{2.8}\ref{2.8-2})
+we obtain a compact Hausdorff space~$\Phi$
+and a Riesz isomorphism $f\mapsto \hat{f}$
+of~$\ell^\infty$ onto a Riesz subspace of~$\Cont{\Phi}$
+sending~$\mathbb{1}_\N$ to~$\mathbb{1}_\Phi$,
+implying
+\begin{equation*}
+\|\hat{f}\|_\infty = \|f\|_\infty \qquad (f\in \ell^\infty)\htam{.}
+\end{equation*}
+\begin{enumerate}
+\item \label{3.19-1}
+If $A\subseteq \N$,
+then $\mathbb{1}_A \wedge (\mathbb{1}_\N - \mathbb{1}_A)=0$
+in~$\ell^\infty$.
+Deduce that~$\hat{\mathbb{1}}_A$ is the indicator
+of some clopen subset~$\hat{A}$ of~$\Phi$.
+%
+\item \label{3.19-2}
+By $\mathcal{P}(\N)$ we denote the algebra (\ref{1.1}\ref{1.1-4})
+of all subsets of~$\N$.
+Put
+\begin{equation*}
+\mathcal{R}:=\{ \hat{A}\colon \subseteq \N \}\htam{.}
+\end{equation*}
+Show that $\mathcal{R}$ is an algebra of sets
+(and a sublattice of $\clopen(\Phi)$)
+and that $A\mapsto \hat{A}$
+is a lattice isomorphism $\mathcal{P}(\N)\ra \mathcal{R}$.
+%
+\item \label{3.19-3}
+Prove: If $f\in\Cont{\Phi}$ and $\varepsilon>0$,
+there exist pairwise disjoint $B_1,\dotsc,B_N\in\mathcal{R}$
+and real numbers $s_1,\dotsc,s_N$
+such that $\bigcup B_n = \Phi$
+and $| f- \sum s_n \mathbb{1}_{B_n}| \leq \varepsilon \mathbb{1}_\Phi$.
+%
+\item \label{3.19-4}
+Infer that $\mathcal{R}$ is a base for the topology of~$\Phi$.
+%
+\item \label{3.19-5}
+We prove the following remarkable property of~$\Phi$:
+If~$(\varphi_n)_n$ is a converging sequence in~$\Phi$,
+then there is an~$N$ with $\varphi_N=\varphi_{N+1}=\varphi_{N+2}=\dotsb$.
+
+Indeed,
+suppose we have a sequence~$(\varphi_n)_n$ in~$\Phi$
+with limit~$\varphi$
+for which no such~$N$ exists.
+Show that there is a sequence 
+$n_1,B_1,n_2,B_2,n_3,\dotsc$ 
+such that
+\begin{equation*}
+\left\{
+\begin{aligned}
+&n_1 < n_2 < \dotsb\htam{ in }\N\htam{, } \\
+&B_1\supset B_2 \supset \dotsb\htam{ in }\mathcal{R}\htam{,} \\
+&\varphi\in B_i\htam{ and } \varphi_{n_i} \notin B_i \quad 
+    &&(i\in \N)\htam{,} \\
+&\varphi_n\in B_i\htam{ if }n\geq n_{i+1} 
+    && (i,n\in \N)\htam{.}
+\end{aligned}
+\right. 
+\end{equation*}
+
+Use~\ref{3.19-2} to obtain a set~$C$ in~$\mathcal{R}$
+such that $B_i \backslash B_{i+1}\subseteq C$
+if~$i$ is even,
+$B_i \backslash B_{i+1} \subseteq \Phi\backslash C$
+if~$i$ is odd, 
+implying that $\varphi_{n_i}\in C$
+if~$i$ is odd,
+$\varphi_{n_i}\in\Phi\backslash C$
+if~$i$ is even.
+Show that this is false.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
