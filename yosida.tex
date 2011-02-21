@@ -679,5 +679,181 @@ if~$i$ is even.
 Show that this is false.
 \end{enumerate}
 \end{psec}
+%
+%                  3.20
+%
+\begin{psec}{3.20}{Stone Representation Theorem}
+\statement{
+Every Boolean algebra is isomorphic
+to the Boolean algebra of all clopen subsets of some 
+zerodimensional compact Hausdorff space.
+}
+\end{psec}
+\begin{proof}
+Let $\Lambda$ be a Boolean algebra with $0\neq 1$.
+Put $\Lambda^*:=\Lambda \backslash\{0\}$.
+\begin{enumerate}[label=(\Roman*),leftmargin=*]
+\item \label{3.20-I}
+By a ``partition'' of~$\Lambda^*$
+we mean a finite subset~$S$ of~$\Lambda^*$
+such that
+\begin{alignat*}{2}
+& \htam{if }s_1,s_2\in S\htam{ and }s_1\neq s_2
+   \htam{, then }s_1\wedge s_2=0\htam{;} \\
+& \sup S=1\htam{.}
+\end{alignat*}
+A partition~$T$ is a ``refinement'' of a partition~$S$
+if for every~$t\in T$ there is an~$s\in S$ with $t\leq s$.
+
+For a partition $S$ let $E_S$ be the collection
+of all functions $f\colon \Lambda^* \ra \R$ with the property
+\begin{align*}
+s\in S\htam{, }\ x\in\Lambda^*\htam{, }\ x\leq s
+\quad \implies \quad f(x)=f(s)\htam{.}
+\end{align*}
+
+As an example,
+for each $a\in\Lambda$ 
+we define $e_a\colon \Lambda^* \ra \R$ by
+\begin{alignat*}{2}
+e_a(x) := 1 \quad & \htam{ if } x\leq a\htam{,} \\
+e_a(x) := 0 \quad & \htam{ if } x\nleq a\htam{.}
+\end{alignat*}
+If $a\neq0,1$, we have $e_a\in E_S$ 
+where $S$ is the partition $\{a, a'\}$,
+$a'$ being the complement of~$a$.
+The functions~$e_0$ and~$e_1$ lie in~$E_{\{1\}}$,
+and
+\begin{equation*}
+e_0 = 0\htam{, } \qquad e_1 = \mathbb{1}_{\Lambda^*}\htam{.}
+\end{equation*}
+%
+\item \label{3.20-II}
+Every $E_S$ is a Riesz subspace of $\R^{\Lambda^*}$.
+If~$S$ and~$T$ are partitions
+and~$T$ is a refinement of~$S$,
+then $E_S\subseteq E_T$.
+Any two partitions $S_1,S_2$ 
+have a common refinement,
+e.g., $\{ s_1 \wedge s_2\colon s_1\in S_1\htam{, }s_2\in S_2\htam{, }\htam{, }
+  s_1 \wedge s_2 \neq 0\}$.
+
+It follows from these considerations 
+that the union of all spaces~$E_S$
+is a Riesz subspace of~$\R^{\Lambda^*}$.
+We call this union~$E$.
+%
+\item \label{3.20-III}
+Let $D$ be the collection of all functions $f$ on~$\Lambda^*$
+for which there is a partition~$S$ such that
+\begin{equation*}
+f\in E_S \quad \htam{ and } \quad f(s)=0 \qquad (s\in S)\htam{.}
+\end{equation*}
+Observe: if $f\in D$ 
+and if~$T$ is \keyword{any} 
+partition with $f\in E_T$,
+then $f(t)=0$ for all $t\in T$.
+(Indeed, if $t\in T$,
+there is an $s\in S$ with $s\wedge t\neq 0$;
+then $f(t)=f(s\wedge t)=f(s)=0$.)
+
+$D$ is easily seen to be a Riesz ideal in~$E$.
+We are going to apply the Yosida Theorem to~$E/D$.
+To this end, 
+we prove~$E/D$
+to be unitary and Archimedean.
+%
+\item \label{3.20-IV}
+First we describe the ordering on $E/D$.
+Let $Q\colon E\ra E/D$ be the quotient map.
+
+Let $f,g\in E$. 
+Choose a partition $S$ with $f,g\in S$.
+\begin{align*}
+Qf \leq Qg 
+& \iff Qg = Qf \wedge Qg \\
+& \iff Q(g-f\wedge g)=0 \\
+& \iff g-f\wedge g \in D \\
+& \relnote{\iff}{(*)} g-f\wedge g =0\quad\htam { on }S \\
+& \iff f\leq g\quad\htam{ on }S
+\end{align*}
+(Step $(*)$ uses the fact that $g-f\wedge g\in E_S$.)
+%
+\item \label{3.20-V}
+($E/D$ is unitary.)
+Take $f\in E$.
+Choose a partition $S$ with $f\in E_S$,
+and observe that also
+$\mathbb{1}_{\Lambda^*}\in E_S$.
+As $S$ is finite, 
+there is an~$n$ in~$\N$
+with $|f|\leq n \mathbb{1}_{\Lambda^*}$ on $S$.
+Then $|Qf|\leq n Q\mathbb{1}_{\Lambda^*}$.
+
+Thus, $Q\mathbb{1}_{\Lambda^*}$ is a unit in $E/D$.
+%
+\item \label{3.20-VI}
+($E/D$ is Archimedean.)
+Let $f,g\in E^+$ be so that $nQf\leq Qg$ for all $n\in \N$;
+we prove $Qf=0$.
+Take a partition~$S$ with $f,g\in E_S$.
+As also $nf\in E_S$
+for all~$n$
+we have $nf(s)\leq g(s)\quad(n\in \N,\ s\in S)$.
+It follows that $f(s)=0\quad (s\in S)$,
+so $f\in D$ and $Qf=0$.
+%
+\item \label{3.20-VII}
+Yosida's Theorem produces a compact Hausdorff space~$\Phi$
+and a Riesz isomorphism of~$E/D$ 
+onto a dense Riesz subspace of~$\Cont{\Phi}$
+that sends~$Q\mathbb{1}_{\Lambda^*}$ to~$\mathbb{1}_\Phi$.
+Composition of this isomorphism with~$Q$ 
+yields a Riesz homomorphism $f\mapsto \tilde{f}$
+of~$E$ onto~$\Cont{\Phi}$ for which
+\begin{alignat*}{2}
+& \tilde{f} = 0 \quad \iff \quad f\in D\qquad (f\in E) \\
+& \{ \tilde{f}\colon f\in E\} \htam{ is dense in } \Cont{\Phi}\htam{, } \\
+& \tilde{\mathbb{1}}_{\Lambda^*} = \mathbb{1}_\Phi\htam{.}
+\end{alignat*}
+
+It is elementary that the maps $a\mapsto Qe_a$ 
+and, therefore, $a\mapsto \tilde{e}_a$,
+are lattice homomorphisms.
+It follows in particular that for every~$a$
+\begin{equation*}
+\tilde{e}_a \vee \tilde{e}_{a'} = \mathbb{1}_\Phi\htam{, }
+\qquad \tilde{e}_a \wedge \tilde{e}_{a'}=0\htam{, }
+\end{equation*}
+so that~$\tilde{e}_a$ is the indicator of a certain subset,
+$\Phi_a$, of~$\Phi$.
+As~$\tilde{e}_a$ is continuous,
+the set~$\Phi_a$ is clopen.
+
+We now have a lattice homomorphism $a\mapsto \Phi_a$
+of~$\Lambda$ into~$\clopen(\Phi)$.
+%
+\item \label{3.20-VIII}
+The proofs of the following two statements 
+we leave to the reader.
+\begin{itemize}
+\item 
+If $a,b\in \Lambda$ and $e_a - e_b \in D$, then $a=b$.
+\item
+If $S$ is a partition and $f\in E_S$, 
+then $f-\sum_{s\in S} f(s)e_s \in D$.
+\end{itemize}
+The first of these statements implies
+that the map $a\mapsto \Phi_a$ is injective.
+Denoting by~$\mathcal{R}$ 
+the algebra of sets $\{ \Phi_a\colon a\in \Lambda \}$
+we see from the second statement that every~$\tilde{f}\quad(f\in E)$
+is an $\mathcal{R}$-step function.
+But $\{\tilde{f}\colon f\in E\}$ is dense in~$\Cont{\Phi}$.
+Then~$\mathcal{R}$ separates the points of~$\Phi$
+(see~\ref{3.17});
+so~$\Phi$ is zerodimensional and $\mathcal{R}=\clopen(\Phi)$.~\xqed
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
