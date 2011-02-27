@@ -26,7 +26,7 @@ Let $E$ be a Riesz space.
 Prove the equivalence of:
 \begin{enumerate}
 \item[$(\alpha)$] \label{3.2-alpha}
-$E$ is Archimedean
+$E$ is Archimedean.
 %
 \item[$(\beta)$] \label{3.2-beta}
 If $a,b\in E^+$ and $na\leq b$ for all $n\in \N$, then $a=0$.
@@ -72,7 +72,7 @@ the \keyword{lexicographic plane}.
 %
 \item \label{3.3-3}%
 (Quotients of Archimedean spaces may fail to be Archimedean.)
-Let~$E$ be the quotient Riesz space $\R^X / \ell^\infty$
+Let~$E$ be the quotient Riesz space $\R^\N / \ell^\infty$
 and let~$Q$ be the quotient map $\R^\N\ra E$.
 For $a=(a_1, a_2, \dotsc)\in \R^\N$,
 let $a^* := (a_1,2a_2,3a_3,\dotsc)$.
@@ -115,8 +115,8 @@ this $T_*$ is a Riesz homomorphism.
 %
 \begin{psec}{3.5}{Lemma}
 \statement{
-Let $E$ be a Riesz space, $E\neq \{0\}$
-and $E$ are the only Riesz ideals of~$E$.
+Let $E$ be a Riesz space, $E\neq \{0\}$.
+Suppose $\{0\}$ and $E$ are the only Riesz ideals of~$E$.
 Then $E$ is Riesz isomorphic to $\R$.
 }
 \end{psec}
@@ -127,7 +127,7 @@ Then $E$ is Riesz isomorphic to $\R$.
 Let $a\in E$; 
 we prove that $a\geq 0$ or $a\leq 0$.
 The set $\{ x\colon x\perp a^+ \}$
-is a Riesz ideal (see~\textbf{?!?}),
+is a Riesz ideal (see~\ref{2.14}),
 hence is either~$\{0\}$ or~$E$.
 In the first case,
 $a^-=0$, 
@@ -239,7 +239,7 @@ there is a maximal one.
 \item \label{3.7-3}
 Consequently:
 Every proper Riesz ideal of~$E$
-is contained in a maximal Riesz ideal.
+is contained in a maximal proper Riesz ideal.
 %
 \item \label{3.7-4}
 Therefore,
@@ -297,17 +297,17 @@ By~\ref{3.7}\ref{3.7-4}
 there exists a nonzero Riesz homomorphism 
 $f\colon E\ra \R$
 whose kernel contains $J$.
+This kernel is a Riesz ideal,
+proper because~$f$ is nonzero.
+Hence, $f(e)>0$.
 
 Now $(na-e)^-\in J$,
 so $\smash{0=f\bigl((na-e)^-\bigr)=\bigl(nf(a)-f(e)\bigr)^-}$,
 which implies that
 $nf(a)-f(e)=(nf(a)-f(e))^+\geq 0$.
 Thus,
-$nf(a)\geq f(e)$.
-The kernel of~$f$
-is a Riesz ideal,
-proper because~$f$ is nonzero.
-Hence, $f(e)>0$ and $f(a)>0$.
+$nf(a)\geq f(e)>0$ 
+and~$f(a)>0$.  \xqed
 \end{proof}
 %
 %                  3.10
@@ -325,7 +325,7 @@ For $f\in \BCont{X}$ (\ref{1.5}\ref{1.5-3}) we set
 \end{equation*}
 The function $\|\cdot \|_\infty$ is a norm on $\BCont{X}$.
 The convergence it induces is uniform convergence:
-$\|f_n-f\|\ra 0$ if and only if for every~$\varepsilon >0$
+$\|f_n-f\|_\infty\ra 0$ if and only if for every~$\varepsilon >0$
 there is an $N\in \N$ with
 \begin{equation*}
 \htam{ if }n\geq N
@@ -374,7 +374,7 @@ If $x\in E$, then
 \begin{equation*}
 |x|\leq \|x\|_e e\htam{.}
 \end{equation*}
-(See exercise~\ref{3.2}.)
+(See exercise~\ref{3.2}\ref{3.2-alpha}$\implies$\ref{3.2-delta}.)
 %
 \item \label{3.12-2}
 $\|\cdot\|_e$ is a norm.
@@ -417,7 +417,7 @@ Show that for all $x,y\in E$
 \|\,|x|-|y|\,\|_e & \leq \|x-y\|_e\htam{,}\\
 \| x^+ - y^+ \|_e & \leq \|x-y\|_e\htam{.}
 \end{align*}
-Thus, the lattice operations $x\mapsto \| x\|$
+Thus, the operations $x\mapsto |x|$
 and $x\mapsto x^+$
 are (uniformly) continuous.
 \end{psec}
@@ -448,6 +448,9 @@ is a Riesz isomorphism $E\ra \hat{E}$,
 and $\|x\|_e = \|\hat{x}\|_\infty$
 for all~$x$ in~$E$.
 }
+
+The space~$\Phi$ is called 
+the \keyword{spectrum} of the Riesz space~$E$.
 \end{psec}
 \begin{proof}
 \begin{enumerate}[label=(\Roman*)]
@@ -491,10 +494,10 @@ and $\varphi(e)=1$.
 Thus~$\varphi\in\Phi$.
 %
 \item \label{3.14-II}
-Formula~\eqref{eq3.14-I} 
-read as ``$\hat{x}(\varphi_i)\rightarrow\hat{x}(\varphi)\quad (x\in E)$''
+Formula~\eqref{eq3.14-I},
+read as ``$\hat{x}(\varphi_i)\rightarrow\hat{x}(\varphi)\quad (x\in E)$'',
 shows that $\hat{E}\subseteq\Cont{\Phi}$.
-From the definitions it is apprarent that $x\mapsto\hat{x}$
+From the definitions it is apparent that $x\mapsto\hat{x}$
 is a Riesz homomorphism $E\ra\Cont{\Phi}$.
 Then its range, $\hat{E}$, 
 is a Riesz subspace of~$\Cont{\Phi}$.
@@ -511,7 +514,7 @@ It remains to prove that the map $x\mapsto \hat{x}$
 is injective.
 Let $a\in E$, $a\neq 0$;
 it suffices to show that $\hat{a}\neq 0$.
-By lemma~\ref{3.8},
+By lemma~\ref{3.9},
 there is a Riesz homomorphism $\omega\colon E\ra \R$
 with $\omega(|a|)>0$.
 As $|a|\leq ne$ for some $n\in \N$
@@ -569,7 +572,7 @@ is due not only to
 K.~Yosida
 but also to 
 S.~Kakutani,
-and S.~Krein,
+M.~and S.~Krein,
 and H.~Nakano)
 to prove a representation theorem
 for abstract Boolean algebras.
@@ -584,7 +587,7 @@ The clopen subsets of~$X$ form an algebra,
 $X$ is said to be \keyword{zerodimensional}
 if the clopen sets form a base 
 for the topology (e.g.,~$\mathbb{Q}$, 
-or $\{0,1,\sfrac{1}{2},\sfrac{1}{4},\dotsc\}$).
+or $\{0,1,\sfrac{1}{2},\sfrac{1}{3},\sfrac{1}{4},\dotsc\}$).
 \end{psec}
 %
 %                  3.18
@@ -625,7 +628,7 @@ By $\mathcal{P}(\N)$ we denote the algebra (\ref{1.1}\ref{1.1-4})
 of all subsets of~$\N$.
 Put
 \begin{equation*}
-\mathcal{R}:=\{ \hat{A}\colon \subseteq \N \}\htam{.}
+\mathcal{R}:=\{ \hat{A}\colon A \subseteq \N \}\htam{.}
 \end{equation*}
 Show that $\mathcal{R}$ is an algebra of sets
 (and a sublattice of $\clopen(\Phi)$)
@@ -689,7 +692,78 @@ to the Boolean algebra of all clopen subsets of some
 zerodimensional compact Hausdorff space.
 }
 \end{psec}
+The proof of this theorem
+is a complicated and abstract affair.
+The following lines may give an idea 
+of what is really going on.
+
+The basic idea is to use Yosida's Theorem,
+applied to a suitable Riesz space.
+Such a space is easily found if~$\Lambda$
+is not an abstract Boolean algebra
+but an algebra of subsets of a set~$X$:
+Take the space~$\lbb\Lambda\rbb$
+of all $\Lambda$-step functions,
+with~$\mathbb{1}_X$ as the unit.
+It is not difficult to show that then,
+under Yosida's Theorem,
+indicators of subsets of~$X$ correspond 
+to indicators of subsets of~$\Phi$,
+yielding a bijection $\Lambda \ra \clopen(X)$.
+
+What we need is a proof that can be applied
+to general Boolean algebras,
+not just to algebras of sets.
+Therefore,
+we reconsider the above:
+Can we describe~$\lbb \Lambda \rbb$,
+as an abstract Riesz space,
+in terms of~$\Lambda$
+without explicit mention of the points of~$X$?
+
+There are in fact,
+various ways to do so.
+The following idea is quite natural:
+view a $\Lambda$-step function
+\begin{equation*}
+\label{eq3.20rem} \tag{$*$}
+\lambda_1 \mathbb{1}_{A_1} + \dotsb + \lambda_N \mathbb{1}_{A_N}
+\end{equation*}
+(with $A_1,\dotsc,A_N$ disjoint)
+as a function defined on the finite set
+$\{A_1,\dotsc,A_N\}$, sending~$A_n$ to~$\lambda_n\quad (n=1,\dotsc,N)$.
+Using this idea in the Boolean algebra situation
+one can define a, say,
+``abstract step function''
+to be a function on a finite subset $\{a_1,\dotsc,a_N\}$
+of the Boolean algebra
+with $a_n\wedge a_m=0\quad(n\neq m)$.
+With sensibly defined addition and ordering
+this yields a Riesz space,
+and a proof of the theorem.
+
+The drawback of this approach is that checking the details
+turns out to be very laborious.
+Accordingly,
+we prefer the following variation:
+We represent the step function~\eqref{eq3.20rem}
+by a function defined on all of~$\Lambda$,
+assigning the value~$\lambda_n$ to~$A_n$
+\emph{and to all subsets of}~$A_n$,
+with arbitrary values elsewhere.
+We now have a ready-made Riesz space structure
+that precisely fits our purposes,
+except that the same step function will have many
+representations.
+That difficulty we overcome by dividing by
+the right Riesz ideal.
+(The reader will have noticed that
+a function cannot really for each~$n$ assign the value~$\lambda_n$
+to~$A_n$ and all of its subsets.
+Our proof deals with the functions defined on~$\Lambda\backslash\{0\}$
+rather than the entire~$\Lambda$.)
 \begin{proof}
+of the Stone Representation Theorem.
 Let $\Lambda$ be a Boolean algebra with $0\neq 1$.
 Put $\Lambda^*:=\Lambda \backslash\{0\}$.
 \begin{enumerate}[label=(\Roman*),leftmargin=*]
@@ -851,7 +925,7 @@ we see from the second statement that every~$\tilde{f}\quad(f\in E)$
 is an $\mathcal{R}$-step function.
 But $\{\tilde{f}\colon f\in E\}$ is dense in~$\Cont{\Phi}$.
 Then~$\mathcal{R}$ separates the points of~$\Phi$
-(see~\ref{3.17});
+(see~\ref{3.18});
 so~$\Phi$ is zerodimensional and $\mathcal{R}=\clopen(\Phi)$.~\xqed
 \end{enumerate}
 \end{proof}
