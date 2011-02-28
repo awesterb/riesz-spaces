@@ -123,5 +123,66 @@ Then~$\hat{E}$ is closed in~$\Cont{\Phi}$
 But it is also dense,
 so~$\hat{E}$ equals~$\Cont{\Phi}$. \xqed
 \end{proof}
+%
+%                  4.6
+%
+\begin{psec}{4.6}{Examples}
+\begin{enumerate}
+\item \label{4.6-1}
+For every set~$X$
+the space $\ell^\infty(X)$ (\ref{1.5}\ref{1.5-2})
+is uniformly complete.
+(A brief proof:
+Let $f_1,f_2,\dotsc\in \ell^\infty(X)$
+and let $(\varepsilon_n)_n$ be a sequence in~$(0,\infty)$,
+tending to~$0$ and with
+\begin{equation*}
+\|f_n-f_N\|_\infty \leq \varepsilon_N \qquad (n\geq N)\htam{.}
+\end{equation*}
+For every $x\in X$ we have $|f_n(x)-f_N(x)|\leq\varepsilon_N\quad (n\geq N)$,
+so that $(f_n(x))_n$ is a Cauchy sequence in~$\R$;
+let~$f(x)$ be its limit.
+Thus we obtain a function~$f$.
+For all~$x$,
+$|f(x)-f_1(x)|=\lim_{n\ra \infty} |f_n(x)-f_1(x)|\leq \varepsilon_1$,
+so~$f$ is bounded: $f\in \ell^\infty(X)$.
+Take $N\in\N$;
+then for all~$x$,
+$|f(x)-f_N(x)|
+=\lim_{n\ra\infty}|f_n(x)-f_N(x)|
+\leq\varepsilon_N$.
+Thus, $\| f-f_N \|_\infty \leq \varepsilon_N \ra 0$.)
+%
+\item \label{4.6-2}
+If $X$ is a topological space,
+$\BCont{X}$ is a $\|\cdot\|_\infty$-closed subset of~$\ell^\infty(X)$,
+hence is uniformly complete.
+(Proof of the closedness:
+Let $f\in \ell^\infty(X)$ lie in the closure of~$\BCont{X}$.
+Let $x_i\ra a$ in~$X$.
+Question:
+must $f(x_i)\ra f(a)$?
+Take $\varepsilon>0$.
+Question:
+Is there an~$i_0$
+such that $|f(x_i)-f(a)|<\varepsilon\quad(i\geq i_0)$?
+Choose $g\in\BCont{X}$ 
+with $\|f-g\|_\infty\leq \sfrac{\varepsilon}{3}$.
+There is an~$i_0$ such that $|g(x_i)-g(a)|<\sfrac{\varepsilon}{3}$
+for all $i\geq i_0$.
+For such~$i$ we have
+$|f(x_i)-f(a)|
+\leq|f(x_i)-g(x_i)| + |g(x_i)-g(a)| + |g(a)-f(a)|
+\leq \varepsilon$.)
+%
+\item \label{4.6-3}
+In particular,
+of course,
+the~$\Cont{\Phi}$ of Yosida's Theorem is uniformly complete.
+%
+\item \label{4.6-4}
+More examples follow later on in this chapter.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
