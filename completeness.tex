@@ -33,5 +33,53 @@ the norm~$\|\cdot\|_u$
 if and only if it is complete under~$\|\cdot\|_e$.
 \end{enumerate}
 \end{psec}
+%
+%                  4.2
+%
+\begin{psec}{4.2}{Definitions}
+Let $E$ be an Archimedean unitary Riesz space.
+The topology induced by~$\|\cdot\|_e$,
+where~$e$ is any unit,
+is called the \keyword{(relatively) uniform topology}.
+$E$ is said to be
+\keyword{uniformly complete}
+if it is complete relative to~$\|\cdot\|_e$
+where~$e$ is any unit.
+
+We use terms such as ``relatively uniformly closed''
+and ``relatively uniformly convergent''
+with the obvious meanings.
+For instance,
+if~$e$ is a unit in~$E$,
+a sequence $(x_n)_n$
+``converges relatively uniformly''
+to an element $a$ 
+if and only if for every $\varepsilon>0$
+there is an~$N$ with
+\begin{equation*}
+|x_n - a| \leq \varepsilon e \qquad (n\geq N)\htam{.}
+\end{equation*}
+
+In spaces such as~$\ell^\infty$
+and $\BCont{X}$
+the constant function $\mathbb{1}$
+serves as a unit.
+As~$\|\cdot\|_\mathbb{1}$ coincides
+with the sup-norm,
+\emph{in these spaces,
+relatively uniform convergence is just uniform convergence.}
+
+Accordingly,
+the qualification ``relatively'' is often dropped.
+(However,
+if~$E$ is the space of 
+all scalar multiples of the function 
+$i\colon x \mapsto x\quad (x\in [0,\infty)\,)$,
+then the sequence $(n^{-1}i)_n$
+converges to~$0$
+relatively uniformly,
+but not uniformly.
+
+\end{psec}
 \clearpage
 \end{document}
