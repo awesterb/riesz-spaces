@@ -245,5 +245,58 @@ The tricky part is that the word ``uniformly''
 refers first to the unit of~$E_u$,
 later to the unit of~$E$.
 \end{psec}
+%
+%                  4.9
+%
+\noindent
+Let us turn to uniform completeness of quotients.
+There we hit a snag:
+a quotient of a uniformly complete Riesz space
+need not even be Archimedean.
+We have the following result.
+\begin{psec}{4.9}{Theorem}
+\statement{Let $D$ be a Riesz ideal
+in a unitary Riesz space~$E$.
+Then the quotient Riesz space~$E/D$
+is Archimedean if and only if~$D$
+is a uniformly closed subset of~$E$.}
+\end{psec}
+\begin{proof}
+Let $Q$ be the quotient map $E\ra E/D$.
+Choose a unit~$e$ in~$E$.
+Observe that~$Qe$ is a unit in~$E/D$.
+\begin{enumerate}[label=(\Roman*)]
+\item \label{4.9-I}
+Suppose $E/D$ is Archimedean.
+Then~$Qe$ defines a norm~$\|\cdot\|_{Qe}$ on~$E/D$,
+and from the definitions it is apparent that
+\begin{equation*}
+\|Qx\|_{Qe} \leq \| x \|_e \qquad (x\in E)\htam{.}
+\end{equation*}
+(Actually,
+$\|\cdot\|_{Qe}$ is the quotient norm:
+$\|Qx\|_{Qe}=\inf\{ \|y\|_e\colon Qy=Qx\}$.)
+If~$a\in E$ lies in the $\|\cdot\|_e$-closure of~$D$,
+then~$Qa$ lies in the $\|\cdot\|_{Qe}$-closure of~$Q(D)=\{0\}$,
+so that~$Qa=0$ and~$a\in D$.
+%
+\item \label{4.9-II}
+Suppose $D$ is $\|\cdot\|_e$-closed in~$E$.
+Let $a,b\in E^+$, 
+$Qa\leq n^{-1} Qb$ for all $n$;
+we prove $Qa=0$.
+As~$b$ is smaller than some multiple of~$e$,
+we may assume~$b\leq e$.
+For each~$n$, 
+put $x_n := (a-n^{-1}b)^+$;
+then $x_n \in D$
+because $Qx_n=0$.
+We have $a=a^+ \geq x_n \geq a-n^{-1} b\quad (n\in \N)$
+and $b\leq e$;
+it follows that $\| a - x_n \|_e\leq n^{-1}$ for each $n$.
+Hence, $a$ lies in the $\|\cdot\|_e$-closure of~$D$,
+which is~$D$. \xqed
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
