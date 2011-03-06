@@ -307,5 +307,69 @@ which is~$D$. \xqed
 in a uniformly complete (unitary Archimedean) Riesz space~$E$.
 Then~$E/D$ is (unitary, Archimedean, and) uniformly complete.}
 \end{psec}
+%
+%                  4.11
+%
+\noindent Before turning to the proof
+we consider a special situation:
+\begin{psec}{4.11}{Theorem}
+\statement{%
+Let $X$ be a compact Hausdorff space,
+$D$ a uniformly closed Riesz ideal of~$\Cont{X}$.
+Then there exists a closed subset~$A$ of~$X$ such that
+\begin{equation*}
+D = \{ f\in\Cont{X}\colon f|A=0\}\htam{.}
+\end{equation*}}%
+\end{psec}
+\begin{proof}
+Define
+\begin{equation*}
+A := \bigcap_{f\in D} \bigl\{ x\colon f(x)=0 \bigr\}\htam{.}
+\end{equation*}
+$A$ is a closed set (possibly $\varnothing$).
+Trivially, $D\subseteq\{ f\colon f|A=0\}$.
+Conversely, suppose
+\begin{equation*}
+f\in \Cont{X}\htam{, }\qquad f|A=0\htam{; }
+\end{equation*}
+we prove $f\in D$.
+For convenience,
+assume~$f\geq 0$
+(or replace~$f$ by~$|f|$).
+Let~$\varepsilon\in(0,\infty)$;
+we are done if we can find an~$f_\varepsilon$ in~$D$
+with~$|f-f_\varepsilon|\leq \varepsilon\mathbb{1}$.
+
+Claim:
+$(f-\varepsilon\mathbb{1})^+$ is such an~$f_\varepsilon$.
+
+First,
+note that $f=f^+\geq (f-\varepsilon\mathbb{1})^+ 
+\geq f-\varepsilon\mathbb{1}$,
+so that $0\leq f - (f-\varepsilon \mathbb{1})^+ 
+\leq \varepsilon \mathbb{1}$.
+We are done if $(f-\varepsilon \mathbb{1})^+\in D$.
+
+The set $B:=\{ x\colon f(x)\geq \varepsilon \}$ is closed.
+For every point~$b$ of~$B$
+we have~$b\notin A$,
+so there is a~$g$ in~$D^+$ with~$g(b)>0$;
+then there is also a~$g$ in~$D^+$
+with $g(b)>f(b)$.
+Hence:
+\begin{equation*}
+B \subseteq \bigcup_{g\in D^+} \bigl\{ x\colon g(x) > f(x) \bigr\}\htam{.}
+\end{equation*}
+By the compactness of~$B$,
+there exist $g_1,\dotsc,g_N$ in~$D^+$ such that
+\begin{equation*}
+B \subseteq \bigcup_{n} \bigl\{ x\colon g_n(x)>f(x) \bigr\}\htam{.}
+\end{equation*}
+Setting $g:=g_1\vee \dotsb \vee g_N$,
+we get~$g\in D^+$
+and $g>f$ on~$B$;
+then $g\geq(f-\varepsilon\mathbb{1})^+$,
+and $(f-\varepsilon \mathbb{1})^+ \in D$. \xqed
+\end{proof}
 \clearpage
 \end{document}
