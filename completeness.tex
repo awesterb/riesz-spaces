@@ -378,5 +378,90 @@ Then $D=\{ f\colon |A = 0 \}$ for some closed $A\subseteq X$,
 and $E/D$ is Riesz isomorphic to~$\Cont{A}$~(\ref{2.9}).
 But $\Cont{A}$ is uniformly complete (\ref{4.6}\ref{4.6-1}). \xqed
 \end{proof}
+%
+%                  4.12
+%
+\noindent The following is an application of Theorem~\ref{4.5}.
+\begin{psec}{4.12}{The Stone--\v{C}ech compactification}
+Let~$X$ be a topological space.
+\begin{enumerate}[label=(\Roman*)]
+\item \label{4.12-I}
+The Stone--\v{C}ech compactification of~$X$,
+denoted
+\begin{equation*}
+\beta X
+\end{equation*}
+is the compact Hausdorff space
+obtained from~$\BCont{X}$
+by applying the Yosida Theorem.
+Explicitly:
+$\beta X$ is 
+the set of all Riesz homomorphisms
+$\BCont{X}\ra \R$ that send~$\mathbb{1}_X$ to~$1$,
+topologized as a subset of~$\R^{\BCont{X}}$.
+It is,
+indeed,
+a compact Hausdorff space,
+and we have a map
+$\beta\colon X \ra \beta X$ given by
+\begin{equation*}
+\tag{$*$} \label{eq4.12*}
+\beta(x)\ \htam{ is the evaluation }\ 
+f\mapsto f(x) 
+\quad(f\in \BCont{X}\,)\htam{.}
+\end{equation*}
+(The notation is standard but deplorable:
+the range of~$\beta$ is~$\beta(X)$, not $\beta X$.)
+
+The map $f\mapsto \hat{f}$ of~$\BCont{X}$ into~$\Cont{\beta X}$
+satisfies $\hat{f}(\beta(x))=(\beta(x))(f)$, i.e.,
+\begin{alignat*}{2}
+\tag{$**$} \label{eq4.12**}
+&\hat{f}(\beta(x)) = f(x) \qquad (x\in X\htam{,}\ f\in\BCont{X}\,)\htam{.}\\
+&\xymatrix{
+X\ar[r]^f \ar[d]_\beta & \R \\
+\beta X \ar[ru]_{\hat f}}
+\end{alignat*}
+As $\BCont{X}$ is uniformly complete (\ref{4.6}\ref{4.6-2}),
+the correspondence $f\mapsto \hat{f}$
+is a Riesz isomorphism of~$\BCont{X}$ onto~$\Cont{\beta X}$.
+%
+\item \label{4.12-II}
+$\beta(X)$ is a subset of~$\beta X$.
+If $x,y\in X$ and $\beta(x)=\beta(y)$,
+then $f(x)=f(y)$ for all $f$~in~$\BCont{X}$.
+Hence,
+for every~$f$ in~$\BCont{X}$
+the formula $\beta(x)\mapsto f(x)$ 
+determines a function on~$\beta(X)$.
+By the above,
+this function (is continuous and)
+extends to the continuous 
+function $\hat{f}\colon \beta X \ra \R$.
+
+Often (see below) $\beta$ is injective
+and a homeomorphism of~$X$ onto~$\beta(X)$;
+then~$X$ and~$\beta(X)$ may be identified,
+and one may view~$X$ as a subset of~$\beta X$,
+and~$\hat f$ as an extension of~$f$.
+%
+\item \label{4.12-III}
+If $X$ itself is a compact Hausdorff space,
+then~$\beta$ is a homeomorphism of~$X$ onto~$\beta X$;
+that is~\ref{3.12}.
+%
+\item \label{4.12-IV}
+$\beta(X)$ is always a dense subset of~$\beta X$.
+Indeed, suppose it is not.
+By Urysohn's Lemma
+there exists a nonzero~$g$ in $\Cont{\beta X}$
+such that $g=0$ on (the closure of) $\beta(X)$;
+then we have a nonzero~$f$ in $\BCont{X}$
+with $\hat f = 0$ on~$\beta (X)$;
+but then (with \eqref{eq4.12**}) 
+$f = \hat f \circ \beta = 0$:
+contradiction.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
