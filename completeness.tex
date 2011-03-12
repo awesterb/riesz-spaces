@@ -357,14 +357,15 @@ so there is a~$g$ in~$D^+$ with~$g(b)>0$;
 then there is also a~$g$ in~$D^+$
 with $g(b)>f(b)$.
 Hence:
-\begin{equation*}
-B \subseteq \bigcup_{g\in D^+} \bigl\{ x\colon g(x) > f(x) \bigr\}\htam{.}
-\end{equation*}
+\begin{align*}
+B \subseteq &\bigcup_{\lsub{g\in D^+}{g\in D}} 
+\bigl\{ x\colon g(x) > f(x) \bigr\}\htam{.}\\
+\intertext{%
 By the compactness of~$B$,
-there exist $g_1,\dotsc,g_N$ in~$D^+$ such that
-\begin{equation*}
-B \subseteq \bigcup_{n} \bigl\{ x\colon g_n(x)>f(x) \bigr\}\htam{.}
-\end{equation*}
+there exist $g_1,\dotsc,g_N$ in~$D^+$ such that}
+B \subseteq &\bigcup_{\lsub{\phantom{g}\,n}{g\in D}} 
+\bigl\{ x\colon g_n(x)>f(x) \bigr\}\htam{.}%
+\end{align*}
 Setting $g:=g_1\vee \dotsb \vee g_N$,
 we get~$g\in D^+$
 and $g>f$ on~$B$;
