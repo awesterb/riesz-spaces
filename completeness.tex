@@ -605,5 +605,44 @@ if every countable nonempty subset
 that is bounded from above
 has a supremum.
 \end{psec}
+%
+%                  4.17
+%
+\begin{psec}{4.17}{Comments}
+\begin{enumerate}
+\item \label{4.17-1}
+Of course,
+a Riesz space is [$\sigma$-]Dedekind complete
+if and only if every [countable] nonempty subset
+that is bounded from below has an infimum.
+%
+\item \label{4.17-2}
+There are various alternative ways to describe
+$\sigma$-Dedekind completeness.
+One of them:
+
+Call a subset~$W$ of~$E$ \keyword{upwards directed}
+if for all $w_1,w_2\in W$
+there exists a $w\in W$ with $w_1\leq w$, $w_2\leq w$.
+Claim:
+\statement{$E$ is already [$\sigma$-]Dedekind complete
+if every [countable] nonempty subset of~$E^+$ that is upwards
+directed and bounded from above has a supremum.}
+Indeed,
+suppose the latter condition is satisfied.
+Let $\varnothing\neq W\subseteq E$ 
+and let~$W$ be bounded from above.
+Choose~$w_0$ in~$W$.
+The set
+\begin{equation*}
+W_0 :=\bigl\{w_0\vee w_1\vee \dotsb \vee w_N\colon
+ N\in \N,\ w_1,\dotsc,w_N\in W\bigr\}
+\end{equation*}
+is upwards directed and has the same upper bounds~$W$ has.
+By the given property of~$E$,
+the set $W_0 - w_0$ has a supremum.
+Then $\sup(W_0-w_0)+w_0$ is the supremum of~$W_0$ and of $W$.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
