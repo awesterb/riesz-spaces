@@ -511,5 +511,34 @@ Prove that this is false
 by showing that the sequence $(\beta(n^{-1}))_n$ in $\beta(0,1]$
 has no converging subsequence.
 \end{psec}
+%
+%                  4.14
+%
+\begin{psec}{4.14}{Exercise}
+\begin{enumerate}
+\item \label{4.14-1}
+Let $X,Y$ be topological spaces,
+$\tau$ a continuous map $X\rightarrow Y$.
+Prove that the formula
+\begin{equation*}
+\beta\tau\colon\varphi\mapsto\varphi\circ\tau\qquad(\varphi\in\BCont{X}\,)
+\end{equation*}
+defines a continuous map $\beta\tau\colon\beta X\ra\beta Y$,
+satisfying $(\beta\tau)\circ\beta=\beta\circ\tau$:
+\begin{equation*}
+\xymatrix{
+X\ar[r]^\tau \ar[d]_\beta& Y\ar[d]_\beta \\
+\beta X\ar[r]^{\beta\tau} & \beta Y
+}
+\end{equation*}
+%
+\item \label{4.14-2}
+Let~$X$ be a topological space, 
+$Y$ a compact Hausdorff space.
+Show that every continuous $\tau\colon X\ra Y$
+induces a continuous $\hat\tau\colon\beta X\ra Y$
+with $\hat\tau\circ\beta=\tau$.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
