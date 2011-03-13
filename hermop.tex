@@ -2,6 +2,60 @@
 \begin{document}
 % 5
 \section{Hermitian Operators}
+We start with some basic facts dealing 
+with normed vector spaces and Hilbert spaces.
+%
+%                  5.1
+%
+\begin{psec}{5.1}%
+Let $E$ and $F$ be vector spaces,
+endowed with norms $\|\cdot\|_E$ and $\|\cdot\|_F$, respectively.
+\begin{enumerate}
+\item \label{5.1-1}
+Let $T$ be a linear map $E\ra F$.
 
+If there exists a number $c\in [0,\infty)$ such that
+\begin{equation*}
+\|Tx\|_F \ \leq \ c\,\|x\|_E \qquad (x\in E)
+\end{equation*}
+then $\|Tx-Ty\|_F \leq \|x-y\|_E\quad (x,y\in E)$,
+so that~$T$ is continuous
+(relative to the metrics induced by the norms).
+
+On the other hand,
+if no such~$c$ exists,
+$T$ is \emph{not} continuous.
+Indeed,
+for every $n\in\N$
+there then exists an~$x_n$ in~$E$
+with $\|T x_n\|_F > n \|x_n\|_E$.
+Then~$x_n\neq 0$, so $\|x_n\|_E\neq 0$.
+Putting $y_n:=(n\|x_n\|_E)^{-1}x_n$
+we get $y_n\ra 0$
+but not $Ty_n\ra 0=T0$.
+%
+\item \label{5.1-2}
+The continuous linear maps $E\ra F$ form a vector space
+\begin{equation*}
+\Lin(E,F)\htam{.}
+\end{equation*}
+With every $T\in\Lin(E,F)$ 
+we associate a nonnegative number $\| T \|$ by
+\begin{equation*}
+\|T\| = \inf \bigl\{ c\colon 
+\|Tx\|_F \leq c\,\|x\|_E\htam{ for all }x\in E\bigr\}
+\end{equation*}
+Then
+\begin{equation*}
+\|Tx\|_F\ \leq\ \|T\|\,\|x\|_E \qquad (T\in\Lin(E,F),\ x\in E)\htam{.}
+\end{equation*}
+It is not difficult to verify
+that~$\|\cdot\|$ is a norm on $\Lin(E,F)$.
+It is called the \keyword{operator norm}.
+An important fact:
+\statement{$\Lin(E,F)$ is complete relative to the operator norm
+in case~$F$ is complete relative to~$\|\cdot\|_F$.}
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
