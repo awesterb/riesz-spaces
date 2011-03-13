@@ -121,5 +121,49 @@ Then the formula
 determines a bona fide inner product on~$E/D$.
 \end{enumerate}
 \end{psec}
+
+\noindent {\sc From here on in this chapter
+$H$ is a Hilbert space.}
+
+%
+%                  5.4
+%
+\begin{psec}{5.4}{Definition}
+A map $T\colon H\ra H$ is called a \keyword{Hermitian operator} if
+\begin{equation*}
+\left\{\ 
+\begin{alignedat}{2}
+&T\htam{ is linear and continuous;} \\
+&\htam{if }x,y\in H\htam{, then }
+\left<Tx,y\right>=\left<x,Ty\right>\htam{.}
+\end{alignedat}
+\right.
+\end{equation*}
+(It can be proved that a linear $T\colon H\ra H$ 
+with $\left<Tx,y\right>=\left<x,Ty\right>$
+for all~$x$ and~$y$ must be continuous.)
+
+The Hermitian operators form a vector space
+\begin{equation*}
+\mathcal H\htam{.}
+\end{equation*}
+
+$\mathcal H$ is a linear subspace of $\Lin(H,H)$,
+closed under the operator norm. (See~\ref{5.1}\ref{5.1-2}.)
+Indeed,
+if $(T_n)_n$ is a sequence in~$\mathcal H$,
+converging to an element~$T$ of $\Lin(H,H)$
+in the sense of the operator norm,
+then $T_n x\rightarrow Tx$ for every $x\in H$,
+so $\left< Tx, y \right> 
+= \lim\left< T_n x, y \right>
+= \lim\left< x, T_n y \right>
+= \left< x, Ty \right>\quad (x,y\in H)$.
+
+In \ref{5.5}\ref{5.5-1} we will see
+that the product of two Hermitian operators
+need not be Hermitian.
+
+\end{psec}
 \clearpage
 \end{document}
