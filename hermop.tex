@@ -57,5 +57,30 @@ An important fact:
 in case~$F$ is complete relative to~$\|\cdot\|_F$.}
 \end{enumerate}
 \end{psec}
+%
+%                  5.2
+%
+\begin{psec}{5.2}%
+An inner product $\left<\cdot,\cdot\right>$
+on a vector space~$H$
+induces a norm~$\|\cdot\|$:
+\begin{equation*}
+\|x\|:=\sqrt{\left<x,x\right>}\qquad(x\in H)
+\end{equation*}
+satisfying the \keyword{Cauchy--Schwarz Inequality}
+\begin{equation*}
+\left|\left<x,y\right>\right| \ \leq\ \|x\|\,\|y\|\qquad(x,y\in H)\htam{.}
+\end{equation*}
+
+Relative to this norm,
+for each $x\in H$
+the function $y\mapsto \left<x,y\right>$ is continuous
+(since $\left|\left<x,y_1\right>-\left<x,y_2\right>\right|
+\leq\|x\|\,\|y_1 - y_2\|$ for all $y_1,y_2$).
+
+The inner product space $(H,\left<\cdot,\cdot\right>)$ 
+is called a \keyword{Hilbert space}
+if~$H$ is complete relative to the inner product norm.
+\end{psec}
 \clearpage
 \end{document}
