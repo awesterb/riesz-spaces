@@ -644,5 +644,59 @@ the set $W_0 - w_0$ has a supremum.
 Then $\sup(W_0-w_0)+w_0$ is the supremum of~$W_0$ and of $W$.
 \end{enumerate}
 \end{psec}
+%
+%                  4.18
+%
+\begin{psec}{4.18}{Theorem} \statement{
+\begin{enumerate}
+\item \label{4.18-1}
+Dedekind complete spaces are $\sigma$-Dedekind complete.
+%
+\item \label{4.18-2}
+$\sigma$-Dedekind complete spaces are Archimedean.
+%
+\item \label{4.18-3}
+Unitary $\sigma$-Dedekind complete spaces are uniformly complete.
+\end{enumerate} 
+} \end{psec}
+\begin{proof}
+\begin{enumerate}
+\item is trivial.
+\item Let~$E$ be a $\sigma$-Dedekind complete Riesz space.
+Let $a,b\in E^+$ be such that $na\leq b$ for all~$n$ in~$\N$;
+we prove $a=0$. (See~\ref{3.2}.)
+The set $\{na\colon n\in\N\}$ has a supremum, $c$, say.
+For all~$n$ in~$\N$ we have $(n+1)a\leq c$,
+so that $na\leq c-a$.
+Then $c-a$ is an upper bound for $\{na\colon n\in \N\}$,
+$c-a\geq c$, $a\leq 0$, and $a=0$.
+%
+\item We turn the argument of~\ref{4.5} inside out
+and use Yosida's Theorem to prove uniform completeness.
+Let~$E$ be a unitary $\sigma$-Dedekind complete Riesz space;
+we show that it is uniformly complete.
+By Yosida's Theorem we may assume
+that~$E$ is a dense Riesz subspace of some $\Cont{X}$,
+with $\mathbb{1}_X\in E$, 
+and by~\ref{4.6}\ref{4.6-2}
+it suffices to prove $E=\Cont{X}$.
+
+Take $f\in\Cont{X}$.
+For every $n\in\N$ there is an~$f_n$ in~$E$
+with $\|f-f_n\|_\infty \leq n^{-1}$, i.e.,
+\begin{equation*}
+f_n-n^{-1}\mathbb{1}\ \leq\ f\ \leq\ f_n+n^{-1}\mathbb{1}\htam{.}
+\end{equation*}
+The set $\{f_n - n^{-1}\mathbb{1}\colon n\in\N\}$ has a supremum, 
+$u$, in~$E$.
+The set $\{f_n+n^{-1} \mathbb{1}\colon n\in \N\}$ has an infimum,
+$v$, in~$E$.
+For all~$n$ we have
+\begin{equation*}
+f_n-n^{-1}\mathbb{1}\ \leq\ u\ \leq\ v\ \leq\ f_n+n^{-1}\mathbb{1}\htam{.}
+\end{equation*}
+Then $f=u=v\in E$. \xqed
+\end{enumerate}
+\end{proof}
 \clearpage
 \end{document}
