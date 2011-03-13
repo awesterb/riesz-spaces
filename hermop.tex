@@ -82,5 +82,44 @@ The inner product space $(H,\left<\cdot,\cdot\right>)$
 is called a \keyword{Hilbert space}
 if~$H$ is complete relative to the inner product norm.
 \end{psec}
+%
+%                  5.3
+%
+\begin{psec}{5.3}%
+\begin{enumerate}%
+\item\label{5.3-1}%
+A \keyword{semi-inner product} on~$E$ is a function $[\cdot,\cdot]$
+on $E\times E$ satisfying
+\begin{enumerate}[label={},itemindent=2em,labelindent=2em]
+\item $y\mapsto [x,y]$ is linear for each $x$;
+\item $[x,y]=[y,x]\qquad(x,y\in E)$;
+\item $[x,x]\geq 0\qquad(x\in E)$.
+\end{enumerate}
+These properties suffice to 
+imply a \keyword{Cauchy--Schwarz Inequality}:
+\begin{equation*}
+|[x,x]|\ \leq\ \sqrt{[x,x]}\,\sqrt{[y,y]}
+\end{equation*}
+
+For example,
+let $E$ be the space of all Riemann integrable functions
+on the interval~$[0,1]$, with
+\begin{equation*}
+[f,g]\ :=\ \int_0^1 f(x)g(x)\,\mathrm{d}x\htam{.}
+\end{equation*}
+%
+\item \label{5.3-2}
+Let $[\cdot,\cdot]$ be such a semi-inner product on~$E$.
+The elements~$x$ of~$E$ for which $[x,x]=0$
+form a linear subspace~$D$ of~$E$.
+Form the quotient vector space~$E/D$
+and the quotient map $Q\colon E\ra E/D$.
+Then the formula
+\begin{equation*}
+\left< Qx,Qy \right> = [x,y]\qquad (x,y\in E)
+\end{equation*}
+determines a bona fide inner product on~$E/D$.
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
