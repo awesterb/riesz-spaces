@@ -736,5 +736,74 @@ such that~$f$ is constant on $\R\backslash A$.}
 Show that~$E$ is $\sigma$-Dedekind complete but not Dedekind complete.
 \end{enumerate}
 \end{psec}
+%
+%                  4.21
+%
+\begin{psec}{4.21}{Theorem}\statement{
+The spaces $\Mod(\Lambda)$ (\ref{1.10}),
+$\BA(\mathcal{A})$ (\ref{1.12}) 
+and $\sigma(\mathcal{A})$ (\ref{1.14})
+are Dedekind complete.
+}\end{psec}
+\begin{proof}
+$\BA(\mathcal A)$ is a special case of $\Mod(\Lambda)$,
+and $\sigma(\mathcal A)$ is an ideal in $\BA(\mathcal A)$,
+so we need only consider $\Mod(\Lambda)$:
+Let~$\Lambda$ be a distributive lattice with a smallest element, $0$.
+
+If $\varphi,\psi\in\Mod(\Lambda)$ and $\varphi\leq\psi$,
+then $\psi-\varphi$ is increasing,
+so that for all $s\in\Lambda$, 
+$(\psi-\varphi)(s)\geq(\psi-\varphi)(0)=0$.
+Thus:
+\begin{equation}
+\label{eq4.21} \tag{$*$}
+\begin{alignedat}{2}
+&\htam{For }s\in\Lambda\htam{ the function }\varphi \mapsto \varphi(s) \\
+&\htam{on }\Mod(\Lambda)\htam{ is increasing.}
+\end{alignedat}
+\end{equation}
+
+Let $\Omega$ be a nonempty subset of $\Mod(\Lambda)^+$,
+upwards directed and bounded from above.
+Invoking~\ref{4.17}\ref{4.17-2},
+we see that we are done if we prove that~$\Omega$ has a supremum.
+
+Every $s\in\Lambda$ induces 
+a net $(\omega(s))_{\omega\in\Omega}$ in~$\R$ that,
+by~\eqref{eq4.21} is increasing and bounded from above,
+hence converging.
+Define $\omega_0\colon\Lambda\ra\R$ by
+\begin{equation*}
+\omega_0(s):=\lim_{\omega\in\Omega}\omega(s)
+=\sup_{\omega\in\Omega}(\omega(s))\qquad(s\in \Lambda)\htam{.}
+\end{equation*}
+
+From this, it is clear that $\omega_0(0)=0$
+and that~$\omega_0$ is modular (\ref{1.8}\ref{1.8-2}) and increasing;
+hence $\omega_0 \in\Mod(\Lambda)^+$.
+
+Take~$\varphi$ in~$\Omega$.
+Then $\Omega_\varphi:=\{\omega\in \Omega\colon \omega\geq \varphi\}$
+is cofinal in~$\Omega$, so
+\begin{equation*}
+\omega_0(s)=\lim_{\omega\in\Omega_\varphi} \omega(s) 
+\qquad (s\in\Lambda)\htam{.}
+\end{equation*}
+By the definition of the ordering in $\Mod(\Lambda)$,
+for every~$\omega$ in~$\Omega_\varphi$
+the function $\omega-\varphi$ is increasing:
+then so is $\omega_0-\varphi$.
+Thus, $\omega_0$ is an upper bound for~$\Omega$ in $\Mod(\Lambda)$.
+
+Finally,
+let $\omega'$ be any upper bound for~$\Omega$.
+Then for all~$\omega$ in~$\Omega$ we have 
+that the function $\omega'-\omega$ is increasing.
+From the definition of~$\omega_0$ it follows that $\omega'-\omega_0$
+is increasing, i.e., $\omega'\geq\omega_0$ in $\Mod(\Lambda)$.
+
+Thus, $\omega_0=\sup\Omega$. \xqed
+\end{proof}
 \clearpage
 \end{document}
