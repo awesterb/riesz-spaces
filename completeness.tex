@@ -474,18 +474,22 @@ thanks to~\ref{2.18},
  (f\in \BCont{X}\,)\\
 & \quad\iff\quad f(x_i)\longrightarrow f(a) \qquad
  (f\in \BCont{X}\,)
-\end{alignat*}
-
+\end{alignat*}%
 In particular,
 this means that~$\beta$ is continuous.
-It also shows that~$\beta$ is a homeomorphism $X\rightarrow \beta(X)$,
-if, e.g., $X$ is metrizable.
+%
+\item \label{4.12-VI}
+Since $\beta X$ is completely regular, 
+$\beta(X)$ is completely regular too.
+So if $\beta$ is a homeomorphism $X\ra \beta(X)$,
+$X$ is completely regular.
+Conversely, $\beta$ is a homeomorphism $X\rightarrow \beta(X)$,
+if $X$ is completely regular (e.g., metrizable).
 
-Indeed,
-suppose~$d$ is a metric for~$X$.
+Indeed, suppose $X$ is completely regular.
 If $a,b\in X$ and $a\neq b$,
 there are functions~$f$ in $\BCont{X}$
-with $f(a)\neq f(b)$ (such as $x\mapsto d(a,x)\wedge 1)$
+with $f(a)\neq f(b)$,
 then $(\beta(a))(f)\neq (\beta(b))(f)$,
 so $\beta(a)\neq\beta(b)$.
 Thus,
@@ -495,7 +499,7 @@ If~$(x_i)_i$ is a net in~$X$
 and $a\in X$,
 and if $\beta(x_i)\rightarrow \beta(a)$,
 then $f(x_i)\rightarrow f(a)$ for all~$f$ in $\BCont{X}$;
-letting~$f$ be $x\mapsto d(a,x)\wedge 1$
+Thus by lemma~\ref{2.18},
 we obtain $x_i\rightarrow a$.
 Thus,
 $\beta^{-1}$ is continuous.
