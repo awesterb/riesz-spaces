@@ -599,7 +599,7 @@ implies completeness.
 \begin{psec}{4.16}{Definitions}
 A Riesz space is called \keyword{Dedekind complete}
 if every nonempty subset that is bounded from above
-has a supremumum;
+has a supremum;
 it is \keyword{$\sigma$-Dedekind complete}
 if every countable nonempty subset
 that is bounded from above
@@ -618,7 +618,7 @@ that is bounded from below has an infimum.
 %
 \item \label{4.17-2}
 There are various alternative ways to describe
-$\sigma$-Dedekind completeness.
+[$\sigma$-]Dedekind completeness.
 One of them:
 
 Call a subset~$W$ of~$E$ \keyword{upwards directed}
@@ -631,7 +631,9 @@ directed and bounded from above has a supremum.}
 Indeed,
 suppose the latter condition is satisfied.
 Let $\varnothing\neq W\subseteq E$ 
-and let~$W$ be bounded from above.
+and let~$W$ be bounded from above;
+for the $\sigma$-completeness,
+assume~$W$ is countable.
 Choose~$w_0$ in~$W$.
 The set
 \begin{equation*}
@@ -682,7 +684,7 @@ and by~\ref{4.6}\ref{4.6-2}
 it suffices to prove $E=\Cont{X}$.
 
 Take $f\in\Cont{X}$.
-For every $n\in\N$ there is an~$f_n$ in~$E$
+For each $n\in\N$ there is an~$f_n$ in~$E$
 with $\|f-f_n\|_\infty \leq n^{-1}$, i.e.,
 \begin{equation*}
 f_n-n^{-1}\mathbb{1}\ \leq\ f\ \leq\ f_n+n^{-1}\mathbb{1}\htam{.}
@@ -707,8 +709,8 @@ Then $f=u=v\in E$. \xqed
 It is perfectly clear that~$\R^X$ and $\ell^\infty(X)$
 are Dedekind complete.
 \item \label{4.19-2}
-Every Riesz ideal of a [$\sigma$-]Dedekind complete Riesz space
-is also [$\sigma$-]Dedekind complete.
+Riesz ideals of a [$\sigma$-]Dedekind complete Riesz spaces
+are [$\sigma$-]Dedekind complete.
 \item \label{4.19-3}
 Thus, the spaces~$\ell^1$ and~$\cseq_0$ (\ref{1.5}\ref{1.5-5})
 are Dedekind complete.
@@ -729,10 +731,10 @@ but not $\sigma$-Dedekind complete.
 \item \label{4.20-2}
 Let $E$ be the Riesz space of all bounded functions~$f$ on~$\R$
 with the property:
-\begin{center}
-\parbox{15em}{There exists a countable set $A\subset\R$
-such that~$f$ is constant on $\R\backslash A$.}
-\end{center}
+\begin{alignat*}{2}
+&\htam{There exists a countable set }A\subset\R \\
+&\htam{such that }f\htam{ is constant on }\R\backslash A\htam{.}
+\end{alignat*}
 Show that~$E$ is $\sigma$-Dedekind complete but not Dedekind complete.
 \end{enumerate}
 \end{psec}
@@ -745,7 +747,7 @@ For the moment,
 by way of nontrivial examples,
 we prove the following:
 \begin{psec}{4.21}{Theorem}\statement{
-The spaces $\Mod(\Lambda)$ (\ref{1.10}),
+$\Mod(\Lambda)$ (\ref{1.10}),
 $\BA(\mathcal{A})$ (\ref{1.12}) 
 and $\sigma(\mathcal{A})$ (\ref{1.14})
 are Dedekind complete.
@@ -753,7 +755,7 @@ are Dedekind complete.
 \begin{proof}
 $\BA(\mathcal A)$ is a special case of $\Mod(\Lambda)$,
 and $\sigma(\mathcal A)$ is an ideal in $\BA(\mathcal A)$,
-so we need only consider $\Mod(\Lambda)$:
+so we only consider $\Mod(\Lambda)$:
 Let~$\Lambda$ be a distributive lattice with a smallest element, $0$.
 
 If $\varphi,\psi\in\Mod(\Lambda)$ and $\varphi\leq\psi$,
@@ -775,7 +777,7 @@ Invoking~\ref{4.17}\ref{4.17-2},
 we see that we are done if we prove that~$\Omega$ has a supremum.
 
 Every $s\in\Lambda$ induces 
-a net $(\omega(s))_{\omega\in\Omega}$ in~$\R$ that,
+a net $(\omega(s))_{\omega\in\Omega}$ in~$\R$ that
 by~\eqref{eq4.21} is increasing and bounded from above,
 hence converging.
 Define $\omega_0\colon\Lambda\ra\R$ by
