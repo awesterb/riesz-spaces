@@ -354,5 +354,34 @@ The Cauchy--Schwarz Inequality then entails $[x,y]=0$,
 i.e. $\left<Tx,y\right>=0$, for all~$x$ and~$y$.
 Choosing $y=Tx$ we find $Tx=0$ for every~$x$.
 \end{psec}
+%
+%                  5.9
+%
+\begin{psec}{5.9}{Definition}
+The above allows us to define an ordering in~$\mathscr H$:
+\begin{equation*}
+S\leq T\quad \iff \quad
+\left<Sx,x\right>\leq \left<Tx,x\right>\qquad (x\in H)\htam{.}
+\end{equation*}
+We set
+\begin{equation*}
+{\mathscr H}^+ \ :=\ \bigl\{T\in\mathscr H\colon T\geq 0\bigr\}\htam{.}
+\end{equation*}
+The elements of ${\mathscr H}^+$ are called
+\keyword{positive Hermitian operators}.
+For instance,
+\begin{equation*}
+T^2\htam{\  is positive }\qquad (T\in\mathscr H)
+\end{equation*}
+because $\left< T^2 x, x\right> = \left<Tx,Tx\right>\geq 0$
+for all~$x$.
+Thus,
+if~$P$ is a projection,
+then
+\begin{equation*}
+P\in{\mathscr H}^+
+\end{equation*}
+since $P\in \mathscr H$ and $P=P^2$.
+\end{psec}
 \clearpage
 \end{document}
