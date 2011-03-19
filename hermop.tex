@@ -383,5 +383,48 @@ P\in{\mathscr H}^+
 \end{equation*}
 since $P\in \mathscr H$ and $P=P^2$.
 \end{psec}
+%
+%                  5.10
+%
+\begin{psec}{5.10}{Lemma}\statement{
+Let $T\in{\mathscr H}^+$. 
+Then
+\begin{equation*}
+T\leq I\quad \iff\quad \|T\|\leq 1\htam{.}
+\end{equation*}
+}\end{psec}
+\begin{proof}
+If $\|T\|\leq 1$,
+then by Cauchy--Schwartz 
+$\left<Tx,x\right>
+\leq \|Tx\|\,\|x\|
+\leq\|x\|^2
+=\left<Ix,x\right>\quad(x\in H)$,
+so $T\leq I$.
+
+The reverse implication is harder to prove.
+The formula 
+\begin{equation*}
+(x,y) \mapsto \left< Tx, y \right>\qquad (x,y\in H)
+\end{equation*}
+determines a semi-inner product,
+to which we can apply the Cauchy--Schwartz Inequality:
+\begin{equation*}
+\left< Tx, y\right>^2\ \leq\ \left<Tx,x\right>\left<Ty,y\right>
+\qquad(x,y\in H)\htam{.}
+\end{equation*}
+Choosing $y:=Tx$ we get for all~$x$:
+\begin{align*}
+\|Tx\|^4\ &\leq\ \left<Tx, x\right>\,\left< T^2x,Tx\right> \\
+          &\leq\ \left<Ix, x\right>\,\|T^2 x\|\,\|Tx\| \\
+          &\leq\ \|x\|^2\,\|T\|\,\|Tx\|^2
+\end{align*}
+and thereby
+\begin{equation*}
+\|Tx\|\ \leq\ \|T\|^{\sfrac{1}{2}} \|x\|\htam{.}
+\end{equation*}
+It follows that $\|T\|\leq \|T\|^{\sfrac{1}{2}}$,
+and $\|T\|\leq 1$. \xqed
+\end{proof}
 \clearpage
 \end{document}
