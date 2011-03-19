@@ -250,5 +250,76 @@ $M_uf$ is given by
 \end{align*}
 \end{enumerate}
 \end{psec}
+%
+%                  5.6
+%
+\begin{psec}{5.6}%
+\begin{enumerate}
+\item \label{5.6-1}
+For $x,y\in H$ we define
+\begin{equation*}
+x\perp y \quad \iff \quad \left<x,y\right>=0\htam{.}
+\end{equation*}
+If $x\perp y$ we have the Pythagoras Formula
+\begin{equation*}
+\|x+y\|^2\ =\ \|x\|^2 + \|y\|^2\htam{.}
+\end{equation*}
+%
+\item \label{5.6-2}
+For a subset $X$ of $H$ the set
+\begin{equation*}
+X^\perp\ =\ \bigl\{ y\in H\colon \left<x,y\right>=0\quad(x\in H)\bigr\}
+\end{equation*}
+is a linear subspace of~$H$.
+The fact that for every~$x$
+the function $y\mapsto\left<x,y\right>$
+is continuous (\ref{5.2}) 
+implies that~$X^\perp$ is closed.
+Thus $X^{\perp\perp}$ ($:=(X^\perp)^\perp$)
+is a closed linear subspace of~$H$, containing~$X$.
+%
+\item \label{5.6-3}
+\textbf{Projection Theorem}\  (very non-trivial)
+\statement{Let $D$ be a closed linear subspace of~$H$.
+Then
+\begin{equation*}
+\frmd{D\cap D^\perp = \{0\}\htam{, } \quad D+D^\perp = H}
+\end{equation*}
+and
+\begin{equation*}
+\frmd{D^{\perp\perp}=D}\htam{.}
+\end{equation*}}
+%
+\item \label{5.6-4}
+Continuing~\ref{5.6-3}:
+There is a map $P_D\colon H\ra H$ determined by
+\begin{equation*}
+P_D x\in D\htam{, }\quad x-P_Dx\in D^\perp\qquad (x\in H)\htam{.}
+\end{equation*}
+This $P_D$,
+called the \keyword{projection onto}~$D$,
+is linear.
+Evidently,
+$I-P_D$ is the projection onto~$D^\perp$.
+
+By the Pythagoras Formula,
+$\|x\|^2 = \|P_D x\|^2 + \|x-P_Dx\|^2 \geq\|P_D x\|^2$
+for all~$x$,
+so that~$P_D$ is continuous and
+\begin{equation*}
+\| P_D \| \leq 1\htam{.}
+\end{equation*}
+
+Furthermore,
+for all $x,y\in H$
+we have $P_D x\perp y-P_D y$,
+which implies $\left<P_D x,y\right>=\left<P_Dx,P_Dy\right>$.
+Similarly, $\left<x,P_Dy\right>=\left<P_Dx,P_Dy\right>$,
+so that $\left<P_Dx,y\right>=\left<x,P_Dy\right>$:
+\begin{equation*}
+\frmd{P_D \htam{ is Hermitian}}\htam{.}
+\end{equation*}
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
