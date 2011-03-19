@@ -160,11 +160,95 @@ so $\left< Tx, y \right>
 = \lim\left< T_n x, y \right>
 = \lim\left< x, T_n y \right>
 = \left< x, Ty \right>\quad (x,y\in H)$.
+\end{psec}
 
 In \ref{5.5}\ref{5.5-1} we will see
 that the product of two Hermitian operators
 need not be Hermitian.
+%
+%                  5.5
+%
+\begin{psec}{5.5}{Examples}
+\begin{enumerate}
+\item \label{5.5-1}
+$\R^2$ is a Hilbert space under the standard inner product.
+All linear maps $\R^2\ra\R^2$ are continuous.
+If we identify a linear map $\R^2\ra\R^2$ with its matrix,
+the Hermitian operators in~$\R^2$ are precisely the matrices
+\begin{equation*}
+\begin{pmatrix}
+a & b \\
+b & c 
+\end{pmatrix}\htam{.}
+\end{equation*}
+The identity
+\begin{equation*}
+\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}
+\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}
+=
+\begin{pmatrix} 1 & 1 \\ 0 & 0 \end{pmatrix}
+\end{equation*}
+shows that a product of two Hermitian operators
+may not be Hermitian.
+%
+\item \label{5.5-2}
+By $\ell^2$ we denote the space of all real number sequences
+$x=(x_n)_n$ for which $\sum x_n^2<\infty$.
+This~$\ell^2$ is a Riesz ideal in~$\ell^\infty$.
 
+It is not quite trivial to prove that~$\ell^2$
+is a Hilbert space under
+\begin{equation*}
+\left<x,y\right>\ :=\ \sum_{n=1}^\infty x_n y_n \qquad (x,y\in\ell^2)\htam{.}
+\end{equation*}
+
+Continuous linear maps $\ell^2\ra\ell^2$
+can be presented by infinitely large matrices;
+Hermitian operators correspond to symmetric matrices.
+(Not every infinitely large matrix denotes a map $\ell^2\ra\ell^2$.)
+%
+\item \label{5.5-3}
+On $\Cont{[0,1]}$ we have the inner product
+\begin{equation*}
+\left< f,g\right>\ = \ \int_0^1 f(x)g(x)\,\mathrm{d}x
+\qquad(f,g\in\Cont{[0,1]}\,)\htam{.}
+\end{equation*}
+Under this inner product,
+$\Cont{[0,1]}$ is not complete.
+However,
+as a metric space
+(with the inner product metric),
+it has a completetion.
+For esoteric reasons of our own
+we call this completion~$\Leb^2[0,1]$.
+It turns out to be possible (and not too difficult)
+to extend the addition, scalar multiplication and inner product
+of $\Cont{[0,1]}$ to $\Leb^2[0,1]$,
+rendering $\Leb^2[0,1]$ a Hilbert space.
+(In a later chapter we will see how $\Leb^2[0,1]$
+can be realized as a space of functions on~$[0,1]$.)
+
+A linear map $\Cont{[0,1]}\ra\Cont{[0,1]}$
+that is continuous relative to the inner product norm
+has a unique continuous linear extension
+$\Leb^2[0,1]\ra\Leb^2[0,1]$.
+Examples of continuous linear maps
+$\Cont{[0,1]}\ra\Cont{[0,1]}$ that
+lead to Hermitian operators in $\Leb^2[0,1]$ are
+\begin{align*}
+(T_1 f)(x) &= x\,f(x)\htam{,} \\
+(T_2 f)(x) &= \textstyle{\int_0^1} x\wedge t\,f(t)\,\mathrm{d}t \htam{,} \\
+(T_3 f)(x) &= f(1-x)\htam{.} \\%
+\intertext{%
+Every $u\in\Cont{[0,1]}$ induces a Hermitian 
+``multiplication operator''~$M_u$
+in $\Leb^2[0,1]$;
+for $f\in \Cont{[0,1]}$,
+$M_uf$ is given by
+}%
+(M_uf)(x) &= u(x)\,f(x)\htam{.}
+\end{align*}
+\end{enumerate}
 \end{psec}
 \clearpage
 \end{document}
