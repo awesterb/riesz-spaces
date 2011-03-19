@@ -330,5 +330,29 @@ Prove: $T$ is a projection
 if and only if~$T\in\mathscr H$ and $T=T^2$.
 (Hint: Consider $D:=\{x\colon (I-T)x=0\}$.)
 \end{psec}
+%
+%                  5.8
+%
+\begin{psec}{5.8}%
+With each $T$ in~$\mathscr H$
+we associate the function 
+$x\mapsto\left<Tx,x\right>$ on~$H$.
+This function determines~$T$.
+Indeed:
+
+Let $T_1,T_2\in\mathscr H$,
+$\left< T_1 x,x\right> = \left<T_2 x,x\right>\quad (x\in H)$;
+we prove $T_1 = T_2$.
+With $T:=T_1 - T_2$
+we have $T\in\mathscr H$,
+$\left< Tx,x\right>=0\quad (x\in H)$
+and we wish to prove~$T=0$.
+Now~$T$ determines a semi-inner product $[\cdot,\cdot]$
+by: $[x,y]:=\left<Tx,y\right>$,
+and $[x,x]=0$ for all~$x$.
+The Cauchy--Schwarz Inequality then entails $[x,y]=0$,
+i.e. $\left<Tx,y\right>=0$, for all~$x$ and~$y$.
+Choosing $y=Tx$ we find $Tx=0$ for every~$x$.
+\end{psec}
 \clearpage
 \end{document}
