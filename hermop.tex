@@ -451,5 +451,52 @@ then a two-element subset $\{S,T\}$ of~$\mathscr H$
 has a supremum only if $S\leq T$
 or $S\geq T$.)
 \end{psec}
+
+\noindent Our aim now is to find
+linear subspaces of~$\mathscr H$
+that \emph{are} Riesz spaces,
+that is,
+in which every element has an absolute value.
+(See~\ref{1.3}.)
+For that,
+we base ourselves upon
+the multiplicative structure of~$\mathscr H$,
+trying to obtain the absolute value of a Hermitian operator
+as the square root of its square.
+
+Unfortunately,
+as we have already seen,
+$\mathscr H$ is not closed under multiplication.
+The following lemma clarifies the situation somewhat.
+%
+%                  5.12
+%
+\begin{psec}{5.12}{Lemma}\statement{
+Let $S,T\in\mathscr H$.
+Then
+\begin{equation*}
+ST\in\mathscr H\quad \iff \quad ST=TS\htam{.}
+\end{equation*}
+In particular:
+If $T\in\mathscr H$,
+then $T^2,T^3,\dotsc\in\mathscr H$.
+}\end{psec}
+\begin{proof}
+For $x,y\in H$ we have
+\begin{equation*}
+\left< STx,y\right>\ =\ \left<Tx,Sy\right>\ =\ \left<x,TSy\right>\htam{.}
+\end{equation*}
+On the one hand,
+it follows that,
+if $ST=TS$,
+then $ST\in\mathscr H$.
+On the other,
+if $ST\in\mathscr H$
+we obtain $\left< x,STy\right>=\left<x,TSy\right>$,
+so that $\left<x,STy-TSy\right>=0$
+for all $x,y\in H$;
+and upon taking $x:=STy-TSy$
+we find $STy=TSy \qquad (y\in H)$. \xqed
+\end{proof}
 \clearpage
 \end{document}
