@@ -656,5 +656,197 @@ of~$\mathscr H$ the set~${\mathscr S}^\square$ is strongly closed.
 Strongly closed subalgebras of~$\mathscr H$
 will return in the next chapter.
 \end{psec}
+
+\noindent We intend to show that
+every norm closed subalgebra of~$\mathscr H$
+is a Riesz space.
+This we will do by constructing
+for every Hermitian operator~$T$
+an absolute value (see~\ref{1.3}),
+in the form of a positive square root of~$T^2$.
+%
+%                  5.18
+%
+\begin{psec}{5.18}%
+For the time being,
+$T$ is a Hermitian operator in~$H$ with $0\leq T\leq I$,
+so that $\| T\|\leq 1$.
+\begin{enumerate}
+\item \label{5.18-1}
+It will be convenient to view a ``polynomial'' 
+as a function on~$[0,1]$.
+If $p\colon t\mapsto \pi_0 + \pi_1 t + \dotsb + \pi_N t^N$
+is a polynomial, we set
+\begin{equation*}
+p(T)\ :=\ \pi_0 I + \pi_1 T + \dotsb + \pi_N T^N\htam{.}
+\end{equation*}
+%
+\item \label{5.18-2}
+For a polynomial $p\colon t\mapsto \pi_0 + \pi_1 t +\dotsb + \pi_N t^N$
+we write
+\begin{equation*}
+p \gg 0
+\end{equation*}
+to indicate that all coefficients $\pi_0,\pi_1,\dotsc,\pi_N$
+are nonnegative.
+In that case
+\begin{equation}
+\tag{$*$}\label{eq5.18-2}
+\|p(T)\| \ \leq \ p(1)\htam{.}
+\end{equation}
+(Indeed,
+as $\|T\|\leq 1$, for all~$x$ in~$H$
+we have $\|Tx\|\leq 1$,
+$\|T^2 x\|\leq \|T x\|\leq \| x\|$,
+etc., and $\|p(T)x\|\leq \pi_0 \|x\|+\pi_1 \|Tx\| + \dotsb +\pi_N\|T^n x\|
+\leq (\pi_0+\pi_1+\dotsb + \pi_N) \|x \|= p(1)\|x\|$.)
+
+Moreover,
+for such a polynomial~$p$
+\begin{equation*}
+p(T)\in\mathscr{H}^+\htam{,}
+\end{equation*}
+because for $n\in\{0,1,2,\dotsc\}$
+and $x\in T$,
+$\left< T^{2n}x,x\right>=\left<y,y\right>\geq 0$
+and $\left< T^{2n+1} x,x\right>=\left< Ty,y\right>\geq 0$,
+where $y=T^n x$.
+%
+\item \label{1.18-3}
+Define polynomials $p_1,p_2,\dotsc$ and $q_1,q_2,\dotsc$:
+\begin{alignat*}{2}
+ p_1(t)&:={\textstyle\frac{1}{2} t\htam{, }\qquad
+ p_2(t):=\frac{1}{8}} t\qquad &&(t\in[0,1])\htam{;}\\
+p_{n+1}&:=(p_1+p_2+\dotsb+p_{n-1}+{\textstyle\frac{1}{2}}p_n)\, p_n
+\qquad&&(n=2,3,\dotsc)\htam{;}\\
+    q_n&:=\phantom{(}p_1+p_2+\dotsb+p_n\qquad&&(n\in \N)\htam{.}
+\end{alignat*}
+Then $p_n\gg 0$ and $q_n\gg 0$ for all~$n$.
+
+For all~$n$ and~$t$,
+\begin{equation*}
+\tag{$**$} \label{eq5.18-3}
+2 q_{n+1}(t)\ =\ t+q_n(t)^2\htam{.}
+\end{equation*}
+From this one sees that
+\begin{equation*}
+1-{\textstyle\frac{2}{n+1}}\ \leq\ q_n(1)\ \leq\ 1
+\qquad(n\in \N)\htam{,}
+\end{equation*}
+whence
+\begin{equation*}
+\sum_{n=1}^{\infty}\, p_n(1)=1\htam{.}
+\end{equation*}
+(As $0\leq q_1\leq q_2\leq \dotsb$ 
+and $q_n(t)\leq q_n(1)$ for $n\in\N$, $t\in[0,1]$,
+it follows that $\lim_{n\rightarrow\infty} q_n(t)$
+exists for $t\in[0,1]$,
+and one easily checks that the limit equals $1-\sqrt{1-t}$.
+Our program is:
+Show that $\lim_{n\ra\infty} q_n(T)$ exists,
+and make a square root of $I-T$.)
+
+Defining
+\begin{equation*}
+Q_n\ :=\ q_n(T)\qquad(n\in\N)
+\end{equation*}
+and observing that $q_n\gg 0$,
+from~\eqref{eq5.18-2} we obtain
+\begin{equation*}
+\|Q_n\|\ \leq\ 1\qquad (n\in \N)\htam{.}
+\end{equation*}
+
+For $x\in H$ we have
+\begin{alignat*}{2}
+\sum_{n=1}^\infty \|p_n(T)x\|\ 
+&\leq\ \sum_{n=1}^\infty \|p_n(T)\|\,\|x\|\\
+&\leq\ \sum_{n=1}^\infty \phantom{\|}
+p_n(\lsub{1)}{T)}\phantom{\|}\,\|x\|\ \leq\ \|x\|\ <\ \infty\htam{.}
+\end{alignat*}
+Thanks to the completeness of~$H$
+this means that $\sum_{n=1}^{\infty} p_n(T) x$
+exists in~$H$, i.e. 
+\begin{equation*}
+Qx=\lim_{n\ra\infty} q_n(T)x=\lim_{n\ra\infty}Q_n x
+\end{equation*}
+exists.
+
+Thus,
+we obtain a map $Q\colon H\ra H$.
+From the properties of the~$Q_n$
+it follows that~$Q$ is linear
+and that $\|Qx\|\leq\|x\|$,
+$\left<Qx,y\right>=\left<x,Qy\right>$
+and $0\leq\left<Qx,y\right>\leq\left<x,x\right>$
+for all~$x$ and~$y$;
+in short:
+\begin{equation*}
+Q\in\mathscr H\htam{, }\qquad 0\leq Q\leq I\htam{.}
+\end{equation*}
+
+$Q$ is the limit of the~$Q_n$
+not only pointwise but also in the sense of the operator norm.
+Indeed,
+for $N\in\N$ and $x\in H$,
+\begin{alignat*}{2}
+\|Qx-Q_N x\|\ 
+&=\ \textstyle\bigl\| \sum_1^\infty p_n(T)x - \sum_1^Np_N(T)x\bigr\| \\
+&=\ \textstyle\bigl\| \sum_{N+1}^\infty p_n(T) x\bigr\| \\
+&\leq\ \textstyle\sum_{N+1}^\infty \|p_n(T)x\| \\
+&\leq\ \textstyle\sum_{N+1}^\infty \|p_n(T)\| \, \|x\| \\
+&\leq\ \textstyle\sum_{N+1}^\infty p_n(1)\|x\| \\
+&=\ \textstyle(1-q_N(1))\, \|x\|\ \leq\ \frac{2}{N+1} \|x\|\htam{,} \\
+\intertext{so}%
+\|Q-Q_N\|\ &\leq\ {\textstyle \frac{2}{N+1}}\qquad (N\in\N)\htam{.}
+\end{alignat*}
+
+Furthermore,
+\eqref{eq5.18-3} implies
+\begin{equation*}
+2Q_{n+1} - Q_n^2 = T \qquad(n\in\N)\htam{.}
+\end{equation*}
+Now for every $x\in H$
+\begin{alignat*}{2}
+\left<Q_{n+1}x,x\right> &\ \longrightarrow\  \left< Qx,x\right>\htam{,}\\
+\left<Q_n^2 x, x\right>
+ = \left<Q_n x,Q_n x\right>
+ = \|Q_n x\|^2
+&\ \longrightarrow\  \|Qx\|^2 = \left<Q^2 x,x\right>\htam{.}
+\end{alignat*}
+Hence,
+\begin{equation*}
+\left<(2Q-Q^2)x,x\right>\ =\ \left<Tx,x\right>\qquad(x\in H)\htam{.}
+\end{equation*}
+In~\ref{5.8}
+we have seen that this entails
+\begin{alignat*}{2}
+2Q-Q^2 &= T\htam{,}\intertext{i.e.,}%
+(I-Q)^2 &= I-T\htam{.}
+\end{alignat*}
+%
+\item \label{5.18-4}
+At this stage
+we change our point of view
+and apply the above to~$I-T$
+instead of~$T$
+(which is feasible because $0\leq I-T\leq I$).
+We see that $S:=\lim q_n(I-T)$ exists 
+in the sense of the operator norm,
+that $0\leq S\leq I$,
+and $(I-S)^2=T$.
+We could now reasonably
+for every~$T$ with $0\leq T\leq I$
+define~$\sqrt{T}$
+to be $I-S$,
+i.e., $I-\lim q_n(I-T)$.
+However,
+this definition does not immediately 
+make clear that,
+say, $\smash{\sqrt{\smash{\sfrac{1}{4}}\,T}=\sfrac{1}{2}\,\sqrt{T}}$;
+also, we need~$\sqrt{T}$ for \emph{all}~$T$ in~${\mathscr H}^+$.
+Therefore:
+\end{enumerate}
+\end{psec}
+
 \clearpage
 \end{document}
