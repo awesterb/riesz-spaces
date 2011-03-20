@@ -574,6 +574,56 @@ in~$\mathscr{H}$ or in $\Lin(H,H)$
 (which is the same thing,
 as $\mathscr H$ is closed in $\Lin(H,H)$.)
 Then~$\bar{\mathscr{A}}$ is a subalgebra of~$\mathscr H$.
+
+\emph{Proof}\  We have $\bar{\mathscr A}\subseteq \mathscr H$,
+so we need only prove that $ST\in\bar{\mathscr A}$
+as soon as~$S,T\in\bar{\mathscr A}$.
+
+If $S\in\mathscr A$ and $T\in \bar{\mathscr A}$,
+there is a sequence $(T_n)_n$ in~$\mathscr A$
+with $\lim T_n = T$ (in the sense of the norm);
+then $ST = \lim ST_n\in \bar{\mathscr A}$.
+
+For arbitrary $S,T\in\bar{\mathscr A}$,
+choose a sequence $(S_n)_n$ in~$\mathscr A$ 
+with $\lim S_n = S$;
+then $S_n T\in \bar{\mathscr A}$,
+as we have just seen,
+and $ST=\lim S_n T\in \bar{\mathscr A}$.
+%
+\item \label{5.16-5}
+For $\mathscr S \subseteq \mathscr H$, set
+\begin{equation*}
+{\mathscr S}^{\square} \ :=\ 
+ \bigl\{ T\in \mathscr H\colon
+ ST=TS\htam{ for all }S\in\mathscr S\bigr\}\htam{.}
+\end{equation*}
+${\mathscr S}^\square$ is a closed linear subspace of~$\mathscr H$
+but in general not a subalgebra.
+(E.g., $\{0\}^\square$ is~$\mathscr H$.)
+However:
+\statement{If~$\mathscr A$ is a commutative subset of~$\mathscr H$,
+then~${\mathscr A}^{\square \square}$
+($:=({\mathscr A}^\square)^\square$)
+is a subalgebra of~$\mathscr H$,
+and ${\mathscr A}^{\square\square}\supseteq\mathscr A$.
+Also, $I\in{\mathscr A}^{\square\square}$.}
+
+\emph{Proof}\  The inclusion 
+$\mathscr{A}\subseteq{\mathscr{A}}^{\square\square}$ is trivial.
+For $\mathscr{S},\mathscr{T}\subseteq\mathscr H$
+with $\mathscr{S}\subseteq\mathscr{T}$
+we have ${\mathscr S}^\square\supseteq{\mathscr T}^\square$.
+As~$\mathscr{A}$ is commutative,
+$\mathscr A\subseteq {\mathscr A}^\square$,
+so that ${\mathscr A}^\square \supseteq {\mathscr A}^{\square\square}$.
+Hence, if $S,T\in{\mathscr A}^{\square\square}$
+then $ST=TS$
+(since $S\in{\mathscr A}^\square$ and $T\in{\mathscr A}^{\square\square}$),
+and $ST\in\mathscr H$.
+It follows that $ST\in{\mathscr A}^{\square\square}$
+because every element of ${\mathscr A}^\square$
+commutes with~$S$ and with~$T$.
 \end{enumerate}
 \end{psec}
 \clearpage
