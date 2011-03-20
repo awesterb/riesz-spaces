@@ -847,6 +847,37 @@ also, we need~$\sqrt{T}$ for \emph{all}~$T$ in~${\mathscr H}^+$.
 Therefore:
 \end{enumerate}
 \end{psec}
+%
+%                  5.19
+%
+\begin{psec}{5.19}{Definition}
+For $T\in{\mathscr H}^+$
+we define $\sqrt{T}\in\mathscr H$ by:
+\begin{alignat*}{2}
+\sqrt{T}\ &:=\ 0 \qquad &&\htam{if }T=0\htam{,}\\
+\sqrt{T}\ &:=\ I-\lim_{n\ra\infty} q_n(I-T) \qquad&&\htam{if }\|T\|=1\htam{,}\\
+\sqrt{T}\ &:=\ \sqrt{t}\,\sqrt{t^{-1}T}\qquad 
+&&\htam{if }T\neq 0\htam{, }\ t=\|T\|\htam{.}
+\end{alignat*}
+Then
+\begin{equation*}
+\sqrt{T} \in{\mathscr H}^+ \qquad \htam{and} \qquad \sqrt{T}^2=T\htam{.}
+\end{equation*}
+For every~$n$ we have $q_n(0)=0$;
+consequently,
+\begin{equation*}
+\sqrt{I}=I\htam{.}
+\end{equation*}
 
+It is worth observing that~$\sqrt{T}$ lies in the norm closure
+of the linear hull of $\{T,T^2,T^3,\dotsc\}$,
+since $\sr_n(T)\ra \sqrt{T}$,
+where $\sr_n$ is the polynomial 
+$t\mapsto q_n(1)-q_n(1-t)$,
+that has value~$0$ at~$0$.
+The moral of that remark is that~$\sqrt{T}$
+lies in every closed subalgebra of~$\mathscr H$
+that contains~$T$.
+\end{psec}
 \clearpage
 \end{document}
