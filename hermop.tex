@@ -237,7 +237,7 @@ $\Cont{[0,1]}\ra\Cont{[0,1]}$ that
 lead to Hermitian operators in $\Leb^2[0,1]$ are
 \begin{align*}
 (T_1 f)(x) &= x\,f(x)\htam{,} \\
-(T_2 f)(x) &= \textstyle{\int_0^1} x\wedge t\,f(t)\,\mathrm{d}t \htam{,} \\
+(T_2 f)(x) &= \textstyle{\int_0^1} (x\wedge t)\,f(t)\,\mathrm{d}t \htam{,} \\
 (T_3 f)(x) &= f(1-x)\htam{.} \\%
 \intertext{%
 Every $u\in\Cont{[0,1]}$ induces a Hermitian 
@@ -395,7 +395,7 @@ T\leq I\quad \iff\quad \|T\|\leq 1\htam{.}
 }\end{psec}
 \begin{proof}
 If $\|T\|\leq 1$,
-then by Cauchy--Schwartz 
+then by Cauchy--Schwarz 
 $\left<Tx,x\right>
 \leq \|Tx\|\,\|x\|
 \leq\|x\|^2
@@ -408,7 +408,7 @@ The formula
 (x,y) \mapsto \left< Tx, y \right>\qquad (x,y\in H)
 \end{equation*}
 determines a semi-inner product,
-to which we can apply the Cauchy--Schwartz Inequality:
+to which we can apply the Cauchy--Schwarz Inequality:
 \begin{equation*}
 \left< Tx, y\right>^2\ \leq\ \left<Tx,x\right>\left<Ty,y\right>
 \qquad(x,y\in H)\htam{.}
@@ -638,7 +638,7 @@ A subset~$\mathscr X$ of~$\mathscr H$ is called
 if it has the following property:
 \vspace{.5em}
 \begin{center}
-\begin{minipage}{.35\textwidth}
+\begin{minipage}{.30\textwidth}
 If $T\in\mathscr H$ and if there is a net
 $(T_i)_{i\in I}$ in~$\mathscr X$ with
 \begin{equation*}
@@ -716,7 +716,7 @@ where $y=T^n x$.
 Define polynomials $p_1,p_2,\dotsc$ and $q_1,q_2,\dotsc$:
 \begin{alignat*}{2}
  p_1(t)&:={\textstyle\frac{1}{2} t\htam{, }\qquad
- p_2(t):=\frac{1}{8}} t\qquad &&(t\in[0,1])\htam{;}\\
+ p_2(t):=\frac{1}{8}} t^2\qquad &&(t\in[0,1])\htam{;}\\
 p_{n+1}&:=(p_1+p_2+\dotsb+p_{n-1}+{\textstyle\frac{1}{2}}p_n)\, p_n
 \qquad&&(n=2,3,\dotsc)\htam{;}\\
     q_n&:=\phantom{(}p_1+p_2+\dotsb+p_n\qquad&&(n\in \N)\htam{.}
@@ -761,7 +761,7 @@ For $x\in H$ we have
 \sum_{n=1}^\infty \|p_n(T)x\|\ 
 &\leq\ \sum_{n=1}^\infty \|p_n(T)\|\,\|x\|\\
 &\leq\ \sum_{n=1}^\infty \phantom{\|}
-p_n(\lsub{1)}{T)}\phantom{\|}\,\|x\|\ \leq\ \|x\|\ <\ \infty\htam{.}
+p_n(\lsub{1)}{T)}\phantom{\|}\,\|x\|\ =\ \|x\|\ <\ \infty\htam{.}
 \end{alignat*}
 Thanks to the completeness of~$H$
 this means that $\sum_{n=1}^{\infty} p_n(T) x$
