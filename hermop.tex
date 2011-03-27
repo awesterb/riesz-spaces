@@ -1036,4 +1036,38 @@ whence $Tx=x$ (Pythagoras).
 $P$ is the projection onto $\left\{ x\colon Tx=x \right\}$.
 \end{enumerate}
 \end{psec}
+%
+%                  5.24
+%
+\begin{psec}{5.24}{Exercise}
+(built upon the previous one)
+Let~$A$ and~$B$ be closed linear subspaces of~$H$
+with projections~$Q$ and~$R$, respectively.
+We consider the sequence
+\begin{equation*}
+Q,\ RQ,\ QRQ,\ RQRQ,\ \dotsc
+\end{equation*}
+Prove the following.
+\begin{enumerate}
+\item\label{5.24-1}
+$QRQ\in\mathscr H$, $0\leq QRQ \leq I$.
+%
+\item\label{5.24-2}
+For all $x\in H$ the sequence $QRQx,\ QRQRQx,\ \dotsc$ converges.
+
+Denote its limit by~$Px$.
+We now have a map $P\colon H\ra H$.
+%
+\item\label{5.24-3}
+$P$ is the projection onto $A\cap B$.
+(If $QRQx=x$, then $x\in Q(H)$, so $Qx=x$.)
+%
+\item\label{5.24-4}
+For every~$x$ the sequence
+\begin{equation*}
+Qx,\ RQx,\ QRQx,\ RQRQx,\ \dotsc
+\end{equation*}
+converges to~$Px$.
+\end{enumerate}
+\end{psec}
 \end{document}
