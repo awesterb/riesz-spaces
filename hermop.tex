@@ -880,4 +880,87 @@ lies in every closed subalgebra of~$\mathscr H$
 that contains~$T$.
 \end{psec}
 \clearpage
+\begin{psec}{5.20}%
+Next,
+we look at some properties of the square root map.
+\begin{enumerate}
+\item \label{5.20-1} \statement{
+Let $S\in\mathscr{H}$, $T\in{\mathscr H}^+$.
+If $S$ commutes with~$T$,
+then it commutes with~$\sqrt{T}$.}
+This follows from the last part of~\ref{5.19}:
+$S$ commutes with all powers of~$T$,
+therefore with every $\sr_n(T)$,
+therefore with~$\sqrt{T}$.
+%
+\item \label{5.20-2} \statement{
+If $S,T\in\mathscr{H}^+$ and $ST=TS$, then $ST\in{\mathscr H}^+$.}
+
+\noindent \emph{Proof}\  By~\ref{5.12}, $ST\in{\mathscr H}$.
+As for the positivity: 
+\ref{5.20-1} implies that~$T$ commutes with~$\sqrt{S}$
+and, again, that~$\sqrt{S}$ commutes with~$\sqrt{T}$.
+Then $ST=\smash{\sqrt{S}^2} \smash{\sqrt{T}^2}
+= \smash{\bigl(\sqrt{S}^{\phantom{2}}\sqrt{T}\,\bigr)^2}\in{\mathscr H}^+$
+\quad(\ref{5.9}). \xqed
+%
+\item \label{5.20-3} \statement{
+Let $S,T\in\mathscr{H}$, $S\leq T$.
+Then $VS\leq VT$ for every~$V$ in~${\mathscr H}^+$
+that commutes with~$S$ and with~$T$.}
+
+\noindent \emph{Proof}\  $VS-VT=V(T-S)\in{\mathscr H}^+$,
+by~\ref{5.20-2}. \xqed
+%
+\item \label{5.20-4} \statement{
+Let $S,T\in{\mathscr H}^+$, $ST=TS$.
+If $S\leq T$, then $S^2 \leq T^2$.}
+
+\noindent \emph{Proof}\ With~\ref{5.20-3}:
+$SS\leq ST=TS\leq TT$. \xqed
+%
+\item \label{5.20-5} \statement{
+Let $T\in{\mathscr H}^+$, $V\in\mathscr H$, $TV=VT$.
+If $V^2\leq T$, then $V\leq \sqrt{T}$.}
+
+\noindent\emph{Proof}\  We may assume $\|T\|=1$.
+Let~$q_n$ be as in~\ref{5.18} and~\ref{5.19},
+so that $q_n(I-T)\rightarrow I-\sqrt{T}$.
+We are done if $q_n(I-T)\leq I-V$ for all~$n$.
+This inequality can be proved inductively.
+First: 
+\begin{alignat*}{2}
+I-V-q_1(I-T) 
+& = I-V-{\textstyle \frac{1}{2}}(I-T)  & \\
+& = {\textstyle \frac{1}{2}} I - V + {\textstyle \frac{1}{2}} T & \\
+& \geq {\textstyle \frac{1}{2}} I - V + {\textstyle \frac{1}{2}} V^2
+ &= {\textstyle \frac{1}{2}} (I-V)^2 \geq 0\htam{,}
+\end{alignat*}
+so $q_1(I-T)\leq I-V$.
+
+Second:  if~$n$ is so that $q_n(I-T)\leq I-V$, then
+\begin{alignat*}{2}
+2q_{n+1} (I-T) 
+& = I-T+(q_n(I-T))^2 & \\
+& \relref{\leq}{5.20-4} I-T+(I-V)^2 & \\
+& \leq I-V^2+(I-V)^2 & = 2(I-V)
+\end{alignat*}
+and $q_{n+1} (I-T) \leq I-V$. \xqed
+%
+\item \label{5.20-6} \statement{
+If $T\in{\mathscr H}^+$, then $\smash{\sqrt{T^2}=T}$.}
+
+\noindent \emph{Proof} Put $S:=\smash{\sqrt{T^2}}-T$.
+By~\ref{5.20-5}, $T\leq \smash{\sqrt{T^2}}$,
+i.e., $S\geq 0$.
+Then $ST\geq 0$ according to~\ref{5.20-2}.
+But~$ST$ equals $-\frac{1}{2} S^2$.
+Hence for all~$x$ in~$H$
+\begin{equation*}
+\|Sx\|^2 = \left<Sx,Sx\right>=\left<S^2 x,x\right>
+=-2\left<STx,x\right>\leq 0\htam{.}
+\end{equation*}
+It follows that $S=0$, and $\smash{\sqrt{T^2}}=T$. \xqed
+\end{enumerate}
+\end{psec}
 \end{document}
