@@ -993,4 +993,47 @@ then
 \end{equation*}
 \end{enumerate}
 \end{psec}
+%
+%                  5.23
+%
+\begin{psec}{5.23}{Exercise}
+(built upon the previous one)
+Let $T\in\mathscr H$, $0\leq T\leq I$
+(or: $T\in{\mathscr H}^+$, $\|T\|\leq 1$).
+Prove:
+\begin{enumerate}
+\item\label{5.23-1}
+$I\geq T \geq T^2 \geq \dotsb$.
+%
+\item\label{5.23-2}
+$Px:=\lim_{n\ra\infty} T^n x$ exists for all~$x$ in~$H$.
+
+This defines a (linear) map $P\colon H\ra H$.
+For each~$x$ in~$H$
+we see that $\|x\|\geq\|Tx\|\geq\|T^2 x\|\geq \dotsb$,
+so that $\|Px\|\leq \|x\|\quad (x\in H)$
+and~$P$ is continuous.
+%
+\item\label{5.23-3}
+$P\in\mathscr H$, $0\leq P \leq T\leq I$.
+%
+\item\label{5.23-4}
+$P=P^2$. (Careful: From $T^n x\ra Px\quad(x\in H)$
+it does not immediately follow that $T^{2n} x\ra P^2 x\quad(x\in H)$.
+Instead, prove $\left<Px,x\right>=\|Px\|^2$.)
+
+Thus, $P$ is a projection (\ref{5.7}).
+%
+\item\label{5.23-5}
+If $x\in H$ and $Tx=x$,
+then $Px=x$.
+Conversely,
+if $x\in H$ and $Px=x$,
+then $\left< Tx,x\right>=\left<x,x\right>$,
+so $Tx-x\perp x$,
+whence $Tx=x$ (Pythagoras).
+
+$P$ is the projection onto $\left\{ x\colon Tx=x \right\}$.
+\end{enumerate}
+\end{psec}
 \end{document}
