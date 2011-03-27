@@ -1041,6 +1041,25 @@ $P$ is the projection onto $\left\{ x\colon Tx=x \right\}$.
 %
 \begin{psec}{5.24}{Exercise}
 (built upon the previous one)
+\begin{center}
+\begin{tikzpicture}
+% A:
+\draw[line width=.8pt] (-1,0) -- (3,0);
+\draw (3,0) node[anchor=west]{$A$};
+
+% B:
+\draw[line width=.8pt] (-.28,-.28) -- (2,2);
+\draw (2,2) node[anchor=south west]{$B$};
+
+% x:
+\draw[fill=black] (2.6,1.1) circle (.4pt);
+\draw (2.6,1.1) node[anchor=west]{$x$};
+
+% projections:
+\draw (2.6,1.1) -- (2.6,0) -- (1.3,1.3) -- (1.3,0) -- (.65,.65) -- (.65,0);
+\draw[->] (.65,0) -- (.4,.25);
+\end{tikzpicture}
+\end{center}
 Let~$A$ and~$B$ be closed linear subspaces of~$H$
 with projections~$Q$ and~$R$, respectively.
 We consider the sequence
@@ -1053,7 +1072,8 @@ Prove the following.
 $QRQ\in\mathscr H$, $0\leq QRQ \leq I$.
 %
 \item\label{5.24-2}
-For all $x\in H$ the sequence $QRQx,\ QRQRQx,\ \dotsc$ converges.
+For all $x\in H$ the sequence $QRQx$,  $QRQRQx$, 
+$\dotsc$ converges.
 
 Denote its limit by~$Px$.
 We now have a map $P\colon H\ra H$.
