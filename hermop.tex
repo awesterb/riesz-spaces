@@ -2,7 +2,7 @@
 \begin{document}
 % 5
 \section{Hermitian Operators}
-We start with some basic facts dealing 
+First, some basic facts dealing 
 with normed vector spaces and Hilbert spaces.
 %
 %                  5.1
@@ -347,7 +347,9 @@ With $T:=T_1 - T_2$
 we have $T\in\mathscr H$,
 $\left< Tx,x\right>=0\quad (x\in H)$
 and we wish to prove~$T=0$.
-Now~$T$ determines a semi-inner product $[\cdot,\cdot]$
+For all $x,y\in H$ we have
+$\left<Tx,y\right>=\left<x,Ty\right>=\left<Ty,x\right>$.
+It follows that~$T$ determines a semi-inner product $[\cdot,\cdot]$
 by: $[x,y]:=\left<Tx,y\right>$,
 and $[x,x]=0$ for all~$x$.
 The Cauchy--Schwarz Inequality then entails $[x,y]=0$,
@@ -671,6 +673,7 @@ in the form of a positive square root of~$T^2$.
 For the time being,
 $T$ is a Hermitian operator in~$H$ with $0\leq T\leq I$,
 so that $\| T\|\leq 1$.
+(See lemma~\ref{5.10}.)
 \begin{enumerate}
 \item \label{5.18-1}
 It will be convenient to view a ``polynomial'' 
