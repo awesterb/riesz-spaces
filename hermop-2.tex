@@ -211,4 +211,80 @@ Qx,\ RQx,\ QRQx,\ RQRQx,\ \dotsc
 converges to~$Px$.
 \end{enumerate}
 \end{psec}
+
+\noindent
+We begin to get results:
+\begin{psec}{5.25}{Lemma}\statement{
+Let $\mathscr A$ be a closed subalgebra of~$\mathscr H$.
+\begin{enumerate}
+\item\label{5.25-1} $\mathscr A$ is a Riesz space
+under the ordering of~$\mathscr H$, and 
+\begin{equation*}
+|T|\ =\ \sqrt{T^2}\qquad(T\in\mathscr A)\htam{.}
+\end{equation*}
+%
+\item\label{5.25-2} If $I\in\mathscr A$,
+then~$I$ is a unit,
+the norm~$\|\cdot\|_I$ is the operator norm,
+and~$\mathscr A$ is uniformly complete.
+\end{enumerate}
+}\end{psec}
+\begin{proof}
+\begin{enumerate}
+\item
+It suffices to prove that for $T\in \mathscr A$,
+$\smash{\sqrt{T^2}}$ is the supremum of $\{T,-T\}$
+in the ordered vector space~$\mathscr A$.
+Let $T\in\mathscr A$.
+\begin{itemize}
+\item  In the final lines of~\ref{5.19}
+we have seen that $\sqrt{T}\in\mathscr A$,
+\item $\pm T \leq \smash{\sqrt{T^2}}$, 
+since $(\pm T)^2\leq T^2$ (\ref{5.20}\ref{5.20-5}).
+\item Let $W$ be an upper bound of $\{T,-T\}$ in~$\mathscr A$.
+Then $W\geq \frac{1}{2}(T+-T)=0$.
+Also, with~\ref{5.20}\ref{5.20-2}, 
+$0\leq (W-T)(W+T)=W^2-T^2$,
+so that $W^2\geq T^2$ and,
+with~\ref{5.20}\ref{5.20-6} and~\ref{5.20}\ref{5.20-5},
+$W=\smash{\sqrt{W^2}}\geq\smash{\sqrt{T^2}}$.
+\end{itemize}
+%
+\item \label{5.25-2}
+For $T\in\mathscr A$
+we see that $|T|^2=T^2$.
+Then for all~$x$ in~$H$
+\begin{equation*}
+\| T x \|\ = \|\, |T|x\, \|\htam{,}
+\end{equation*}
+since
+$\|Tx\|^2=\left<Tx,Tx\right>
+=\left<T^2x,x\right>
+=\left<|T|^2x,x\right>
+=\||T|x\|^2$.
+Hence, $T$ and~$|T|$
+have the same operator norm.
+From lemma~\ref{5.20}
+it follows easily that~$I$ is a unit in~$\mathscr A$
+and that $\|\,|T|\,\|_I$ equals the operator norm of~$|T|$.
+Thus, $\|T\|_I=\|T\|$.
+
+As a closed subset of~$\mathscr H$
+or~$\Lin(H,H)$,
+$\mathscr A$ is complete in the operator norm (\ref{5.1}\ref{5.1-2}),
+hence uniformly complete. \xqed
+\end{enumerate}
+\end{proof}
+
+\noindent The moral is obvious:
+By Yosida's Theorem every closed subalgebra of~$\mathscr H$
+that contains~$I$
+is Riesz isomorphic to some~$\Cont{\Phi}$.
+Before filing this result as a theorem
+we address ourselves to a question.
+Both the operator algebra and~$\Cont{\Phi}$
+carry multiplications.
+Any connection?
+
+The following lemma paves the way to an affirmative answer.
 \end{document}
