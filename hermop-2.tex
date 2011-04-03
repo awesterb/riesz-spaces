@@ -351,4 +351,55 @@ so that
 and we are done. \xqed
 \end{enumerate}
 \end{proof}
+%
+%                  5.27
+%
+\begin{psec}{5.17}%
+A brief digression before we return to our operator algebras.
+
+By applying Yosida's Theorem we see that
+in the situation of~\ref{5.26}
+the operation~$*$ a posteriori
+turns out to be commutative and associative,
+and to obey formulas such as
+\begin{alignat*}{2}
+|x*y|\ &=\ |x|*|y|\htam{,} \\
+x*x \ &\geq\ 0\htam{,} \\
+x*x=0\quad&\implies\quad x=0\htam{,} \\
+x\perp y\quad&\iff\quad x*y=0\htam{.}
+\end{alignat*}
+For a non-Achimedean~$E$
+things may go wrong.
+Consider~$\R^3$,
+ordered lexicographically by
+\begin{equation*}
+\begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix}
+\ \leq\ 
+\begin{pmatrix}y_1 \\ y_2 \\ y_3\end{pmatrix}
+\qquad\htam{if}\quad
+\left\{\ 
+\begin{aligned}
+&\htam{either }&&x_1<y_1\htam{,} \\
+&\htam{or } &&x_1=y_1,\ x_2<y_2\htam{,} \\
+&\htam{or } &&x_1=y_1,\ x_2=y_2,\ x_3\leq y_3\htam{.}
+\end{aligned}
+\right.
+\end{equation*}
+The operation~$*$ defined by
+\begin{equation*}
+\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+* 
+\begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix}
+:= 
+\left(
+\begin{array}{l}
+x_1 y_1 \\
+x_1 y_2 + y_2 y_1 \\
+x_1 y_3 + x_3 y_1 + x_2 y_3
+\end{array}
+\right)
+\end{equation*}
+satisfies the conditions of the lemma
+but is not commutative.
+\end{psec}
 \end{document}
