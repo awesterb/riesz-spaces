@@ -287,4 +287,68 @@ carry multiplications.
 Any connection?
 
 The following lemma paves the way to an affirmative answer.
+%
+%                  5.26
+%
+\begin{psec}{5.26}{Lemma}\statement{
+Let $E$ be a Riesz space with a unit~$e$.
+Suppose there is given a ``multiplication'' 
+$*\colon E\times E\ra E$ satisfying
+\begin{itemize}
+\item For every~$a$ in~$E$
+the maps $x\mapsto a*x$ and $x\mapsto x*a$ are linear;
+\item $e*a=a*e=a$ for all~$a$ in~$E$;
+\item if $a,b\in E^+$,
+then $a*b\in E^+$.
+\end{itemize}
+Let $\varphi\colon E\ra \R$ be a Riesz homomorphism
+with $\varphi(e)=1$.
+Then $\varphi$ is ``multiplicative'':
+\begin{equation*}
+\varphi(x*y) \ =\ \varphi(x)\,\varphi(y)\qquad(x,y\in E)\htam{.}
+\end{equation*}
+}\end{psec}
+\begin{proof}
+\begin{enumerate}[label=(\Roman*)]
+\item\label{5.26-I}
+First, an auxiliary formula:
+If $a,b\in E$, then
+\begin{equation*}
+|a*b|\ \leq\ |a|*|b|\htam{.}
+\end{equation*}
+Indeed,
+\begin{alignat*}{2}
+|a*b|\ &=\ \bigl|(a^+-a^-)*(b^+-b^-)\bigr| \\
+&=\ \bigl| a^+*b^+ \,-\,a^-*b^+ \,-\, a^+*b^- \,+\, a^-*b^- \bigr| \\
+&\leq\ \phantom{\bigl|}a^+*b^+ \,+\, a^-*b^+ \,+\, a^+*b^- \,+\,a^-*b^-\\
+&=\  (a^+ + a^-)*(b^++b^-) \ =\ |a|*|b|
+\end{alignat*}
+%
+\item\label{5.26-II}
+With $a\in E$ and $|a|\leq e$ we get for all $\lambda\in\R$:
+\begin{alignat*}{2}
+|a*a - \lambda a|
+\ &=\ |a*(a-\lambda e)|\ &&\leq\ |a|*|a-\lambda e| \\
+\ &\leq\ e*|a-\lambda e|\ &&=\ |a-\lambda e|\htam{,}\intertext{%
+and, upon applying $\varphi$:}%
+|\varphi(a*a)-\lambda\varphi(a)|\ &\leq\ |\varphi(a)-\lambda|\htam{.}\\%
+\intertext{Choosing $\lambda = \varphi(a)$ yields}%
+\varphi(a*a)\ &=\ \varphi(a)^2\htam{.}
+\end{alignat*}
+%
+\item\label{5.26-III}
+It follows that for \emph{all} $z\in E$,\quad  $\varphi(z*z)=\varphi(z)^2$.
+For $x,y\in E$ we have
+\begin{equation*}
+2\,x*y\ =\ (x+y)*(x+y) \,-\, x*x \,-\, y*y
+\end{equation*}
+so that
+\begin{equation*}
+2\,\varphi(x*y)\ 
+=\ (\varphi(x)+\varphi(y))^2 - \varphi(x)^2 - \varphi(y)^2
+\ =\ 2\,\varphi(x)\,\varphi(y)\htam{,}
+\end{equation*}
+and we are done. \xqed
+\end{enumerate}
+\end{proof}
 \end{document}
