@@ -402,4 +402,52 @@ x_1 y_3 + x_3 y_1 + x_2 y_3
 satisfies the conditions of the lemma
 but is not commutative.
 \end{psec}
+%
+%                  5.28
+%
+\noindent Except for one detail we now know:
+
+\begin{psec}{5.28}{Theorem}\statement{
+Let $\mathscr A$ be a closed subalgebra of~$\mathscr H$ containing~$I$.
+Then there exist
+a compact Hausdorff space~$\Phi$
+and a multiplicative Riesz isomorphism $T\mapsto \hat{T}$
+of~$\mathscr A$ onto~$\Cont{\Phi}$,
+with $\hat I=\mathbb{1}_\Phi$
+and $\|\hat T\|_\infty = \| T\|\quad(T\in\mathscr A)$.
+}\end{psec}
+\begin{proof}
+The missing detail,
+the preservation of the norm,
+is easily supplied:
+By Yosida's Theorem,
+$\|\hat T\|_\infty$
+equals~$\|T\|_I$
+where~$\|\cdot\|_I$
+is the norm on~$\mathscr A$
+induced by the unit~$I$;
+by~\ref{5.25}, $\|\cdot\|_I$ is the operator norm. \xqed
+\end{proof}
+
+\noindent This Theorem presents us with numerous little facts,
+such as (with $S,T\in\mathscr H$):
+\begin{itemize}
+\item $\|T^n\| = \|T\|^n\quad(n=1,2,\dotsc)$,
+\item $T$ has a unique third root,
+\item $I+T^2$ is a bijection $H\ra H$
+and has a continuous inverse,
+\item $ST=0\iff TS=0\iff |S|\wedge|T|=0$.
+\end{itemize}
+If~$\mathscr A$ is any subalgebra of~$\mathscr H$,
+not necessarily closed,
+then it need not be a Riesz space.
+Still, we can apply the above to the closure of
+$\mathscr A+\R I$ ($:=\{T+\lambda I\colon T\in\mathscr A,\  \lambda\in\R\})$
+and obtain an injective map $\mathscr A\ra\Cont{\Phi}$
+that is linear, multiplicative, order-preserving and isometric.
+
+For a \emph{closed} subalgebra of~$\mathscr H$
+that does not contain~$I$
+we can do better.
+First, a general lemma from functional analysis.
 \end{document}
