@@ -549,4 +549,91 @@ in the sense of the order.
 Show that there is a~$J$ in~$\mathscr A$ with $TJ=JT=T\quad(T\in \mathscr A)$.
 \end{enumerate}
 \end{psec}
+%
+%                  5.32
+%
+\begin{psec}{5.32}%
+For~$A$ in~$\mathscr H$ we set
+\begin{equation*}
+\R[A]\ :=\ \bigl\{p(A)\colon p\htam{ is a polynomial}\bigr\}
+\end{equation*}
+(so $\R[A]$ is the linear hull of $\{I,A,A^2,\dotsc\}$)
+and we define
+\begin{equation*}
+\overline{\R [A]}
+\end{equation*}
+to be its closure.
+Both are subalgebras of~$\mathscr H$ (\ref{5.16}).
+Yosida's Theorem produces a compact Hausdorff space~$\Phi$
+and a Riesz isomorphism $T\mapsto \hat T$
+of $\overline{\R[A]}$ onto $\Cont{\Phi}$.
+We now show that~$\Phi$ is homeomorphic to a subset of~$\R$.
+
+$\hat A$ is a continuous function $\Phi\ra \R$;
+its range we call the spectrum of~$A$:
+\begin{equation*}
+\Sp{A}\htam{.}
+\end{equation*}
+It is the set of all numbers~$\varphi(A)$
+where~$\varphi$ is a Riesz homomorphism
+$\overline{\R[A]}$
+with $\varphi(I)=1$.
+(In~\ref{5.36} we obtain a more direct description.)
+
+We claim that, actually,
+$\hat A$ is a homeomorphism $\Phi\ra \Sp{A}$.
+To validate this claim
+we only have to show that~$\hat A$ is injective.
+That is not hard to do:
+
+Suppose $\varphi,\psi\in\Phi$,
+$\hat A(\varphi)=\hat A(\psi)$.
+Then $\varphi(A)=\psi(A)$.
+As~$\varphi$ and~$\psi$ are multiplicative,
+we get $\varphi(p(A))=\psi(p(A))$ for all polynomials~$p$.
+In other words: $\varphi$ and~$\psi$ coincide on~$\R [A]$.
+But both are continuous relative to the norm~$\|\cdot\|_I$,
+which is the operator norm (\ref{5.25}\ref{5.25-2}).
+Hence, $\varphi$ and~$\psi$ coincide on $\smash{\overline{\R [A]}}$,
+i.e. $\varphi=\psi$.
+
+The homeomorphism $\hat A\colon \Phi \ra \Sp{A}$
+produces a multiplicative
+\begin{equation*}
+\xymatrix{
+\Phi \ar[rr]^{\hat A} && \Sp{A}\ar[rr]^f && \R
+}
+\end{equation*}
+Riesz isomorphism $f\mapsto f\circ \hat A$
+of $\Cont{\Sp{A}}$ onto $\Cont{\Phi}$.
+\begin{equation*}
+\xymatrix{
+\overline{\R [A]}
+  \ar[rr]^{T\mapsto \hat T} 
+&& \Cont{\Phi}
+&& \Cont{\Sp{A}} 
+  \ar[ll]_{f\mapsto f\circ \hat A}
+  \ar@/^1.5em/@{-->}[llll]^{f\mapsto f(A)}
+}
+\end{equation*}
+The isomorphisms $T\mapsto \hat T$
+and $f\mapsto f\circ \hat A$ combine 
+into an isomorphism $\Cont{\Sp{A}}\ra \smash{\overline{\R[A]}}$.
+By linearity and multiplicativity
+one sees that under this isomorphism the image of a polynomial~$p$
+(viewed as a function on~$\Sp{A}$) is the operator~$p(A)$.
+
+For arbitrary~$f$ in $\Cont{\Sp{A}}$ we now define
+\begin{equation*}
+f(A)
+\end{equation*}
+to be the image of~$f$ under the above 
+isomorphism $\Cont{\Sp{A}}\ra\smash{\overline{\R[A]}}$;
+it is determined~by
+\begin{align*}
+\widehat{f(A)}\ &=\ f\circ \hat{A}\htam{,}\intertext{or:}
+\varphi(f(A))\ &=\ f(\varphi(A))\qquad(\varphi\in\Phi)\htam{.}
+\end{align*}
+
+\end{psec}
 \end{document}
