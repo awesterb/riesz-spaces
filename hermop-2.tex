@@ -486,4 +486,35 @@ so $x_{n(\rho)}\ra b-\lambda a$.
 Then $b-\lambda a\in D$ and $b\in D+\R a$. \xqed
 \end{enumerate}
 \end{proof}
+%
+%                  5.30
+%
+\begin{psec}{5.30}{Theorem}\statement{
+Let $\mathscr A$ be a closed subalgebra of~$\mathscr H$,
+and $I\notin \mathscr A$.
+Then there exist a compact Hausdorff space~$\Phi$,
+an element~$\varphi_0$ of~$\Phi$,
+and a norm-preserving multiplicative 
+Riesz isomorphism of~$\mathscr A$ onto
+\begin{equation*}
+\bigl\{f\in\Cont{\Phi}\colon f(\varphi_0)=0\bigr\}\htam{.}
+\end{equation*}
+}\end{psec}
+\begin{proof}
+By lemma~\ref{5.29} and Theorem~\ref{5.28}
+we have a compact Hausdorff space~$\Phi$
+and a multiplicative Riesz isomorphism $T\mapsto \hat T$
+of $\mathscr A+\R I$ onto $\Cont{\Phi}$.
+We only have to prove that $\hat{\mathscr A}$ 
+($:=\{\hat T\colon T\in\mathscr A\}$)
+is of the form $\{f\colon f(\varphi_0)=0\}$.
+Now~$\mathscr A$ is the kernel of the multiplicative
+linear function $T+\lambda I\mapsto \lambda$ on $\mathscr A+\R I$.
+Then $\hat{\mathscr A}$ is the kernel of some
+multiplicative linear function on~$\Cont{\Phi}$.
+Such a multiplicative linear function is a Riesz isomorphism,
+as one proves with an obvious variant
+of the proof of Theorem~\ref{2.20}.
+Now apply~\ref{2.16}. \xqed
+\end{proof}
 \end{document}
