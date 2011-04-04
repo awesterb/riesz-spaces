@@ -450,4 +450,40 @@ For a \emph{closed} subalgebra of~$\mathscr H$
 that does not contain~$I$
 we can do better.
 First, a general lemma from functional analysis.
+%
+%                  5.29
+%
+\begin{psec}{5.29}{Lemma}\statement{
+Let $D$ be a closed linear subspace
+of a normed vector space~$E$
+and let $a\in E$.
+Then $D+\R a$ is closed in~$E$.
+}\end{psec}
+\begin{proof}
+Let $(x_n+\lambda_na)_n$ be a sequence in $D+\R a$
+that converges to an element~$b$ of~$E$;
+we prove $b\in D+\R a$.
+\begin{enumerate}[label=(\Roman*)]
+\item\label{5.29-I}
+If $\lambda_n\ra \infty$,
+then $\lambda_n^{-1}x_n+a = \lambda_n^{-1}(x_n+\lambda_n a)\ra 0$,
+so $-\lambda_n^{-1}x_n\ra a$.
+Then~$a$ lies in the closure of~$D$, which is~$D$;
+thus, $D+\R a=D$,
+and $D+\R a$ is closed (so that $b\in D+\R a$).
+%
+\item\label{5.29-II}
+The same conclusion is valid if the sequence $(\lambda_n)_n$
+has a subsequence tending to~$\infty$ or to~$-\infty$.
+%
+\item\label{5.29-III}
+In the remaining case
+the sequence~$(\lambda_n)_n$ is bounded,
+and has a subsequence $(\lambda_{n(\rho)})_\rho$
+that converges to some $\lambda\in\R$.
+We have $x_{n(\rho)}+\lambda_{n(\rho)} a\ra b$,
+so $x_{n(\rho)}\ra b-\lambda a$.
+Then $b-\lambda a\in D$ and $b\in D+\R a$. \xqed
+\end{enumerate}
+\end{proof}
 \end{document}
