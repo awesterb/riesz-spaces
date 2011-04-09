@@ -706,12 +706,72 @@ $\Sp {f(A)} = \smash{\widehat{f(A)}}(\Phi)
 
 \noindent Continuing for the moment in the situation of this theorem
 we see that for~$\lambda\in\R$
-\begin{align*}
+\begin{equation}
+\tag{$*$}\label{eqpre5.35}
+\begin{aligned}
 \lambda\in\Sp{A}\ 
 &\iff\ \lambda\htam{ is a value of the function }\smash{\hat{A}} \\
 &\iff\ \smash{\hat{A}} - \lambda\mathbb{1}\htam{ 
     has no inverse in }\Cont{\Phi} \\
 &\iff\ A-\lambda I\htam{ has no inverse in }\mathscr A \htam{.}
-\end{align*}
+\end{aligned}
+\end{equation}
 Taking $\mathscr A = \smash{\overline{\R [A]}}$ we obtain:
+%
+%                  5.35
+%
+\begin{psec}{5.35}{Theorem}\statement{
+Let $A\in\mathscr H$.
+Then $\Sp{A}$ consists precisely of the numbers~$\lambda$
+for which $A-\lambda I$ has no inverse in $\smash{\overline{\R[A]}}$.
+}\end{psec}
+%
+%                  5.36
+%
+\noindent But also:
+\begin{psec}{5.36}{Theorem}\statement{
+Let $A\in\mathscr H$.
+Then $\Sp{A}$ consists precisely of the numbers~$\lambda$
+for which $A-\lambda I$ has no inverse in~$\mathscr H$.
+}\end{psec}
+\begin{proof}
+Let $\lambda\in\Sp{A}$;
+it suffices to prove that $A-\lambda I$ has no inverse in~$\mathscr H$.
+Suppose $B\in\mathscr H$ and
+$(A-\lambda I)B = B(A-\lambda I)=I$.
+Then in particular~$A$ commutes with~$B$,
+and every power of~$A$ commutes with every power of~$B$.
+Let~$\mathscr A$ be the closure of the linear hull of
+$\bigl\{A^n B^m\colon n,m\in\{0,1,2,\dotsc\}\bigr\}$;
+then~$\mathscr A$ is a closed subalgebra of~$\mathscr H$.
+By~\eqref{eqpre5.35},
+$A-\lambda I$ has no inverse in~$\mathscr A$.
+Contradiction. 
+\end{proof}
+%
+%                  5.37
+%
+\begin{psec}{5.37}{Comments}
+Let $A\in\mathscr H$.
+\begin{enumerate}
+\item\label{5.37-1}
+The locution ``inverse in~$\mathscr H$'' in~\ref{5.35}
+deserves some attention.
+If $A$, as a map $H\ra H$,
+has an inverse, $A^{-1}\colon H\ra H$,
+it is not a priori clear that this inverse is again a Hermitian operator,
+the problem being continuity.
+The ``Inverse Mapping Theorem''
+in functional analysis
+guarantees the continuity of the inverses of continuous bijections
+between complete normed spaces.
+%
+\item\label{5.37-2}
+If $H$ is finite dimensional,
+$\Sp{A}$ is just the set of all eigenvalues of~$A$.
+If $H$ is infinite dimensional,
+all eigenvalues lie in the spectrum
+but the spectrum may contain more.
+\end{enumerate}
+\end{psec}
 \end{document}
