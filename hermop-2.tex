@@ -677,4 +677,30 @@ that the elements of~$\Omega$
 are precisely the restrictions to $\smash{\overline{\R[A]}}$
 of the elements of~$\Phi$.
 Therefore:
+%
+%                  5.34
+%
+\begin{psec}{5.34}{Theorem}\statement{
+Let $\mathscr A$ be a closed subalgebra of~$\mathscr H$
+with $I\in \mathscr A$,
+and let~$\Phi$ be the set of all Riesz homomorphisms
+$\mathscr A\ra \R$ that send~$I$ to~$1$.
+If $A\in\mathscr A$ and $f\in\Sp{A}$, then
+\begin{align*}
+\Sp{A}\ &=\ \bigl\{\varphi(A)\colon \varphi\in\Phi\bigr\}\htam{,} \\
+\varphi(f(A))\ &=\ f(\varphi(A))\qquad (\varphi\in\Phi)\htam{.}%
+\intertext{Again indicating by $\smash{\hat{\cdot}}$
+the natural isomorphism $\mathscr A\ra \Cont{\Phi}$:}
+\Sp{A}\ &=\ \smash{\hat A} (\Phi)\htam{,} \\
+\smash{\widehat{f(A)}}\ &=\  f\circ \hat A\htam{.}
+\end{align*}
+Moreover, $f$ maps the spectrum of~$A$ onto the spectrum of~$f(A)$.
+}\end{psec}
+\begin{proof}
+of the last statement:
+$\Sp {f(A)} = \smash{\widehat{f(A)}}(\Phi)
+= (f\circ\hat{A})(\Phi)
+= f(\hat{A}(\Phi))
+= f(\Sp{A})$.~\xqed
+\end{proof}
 \end{document}
