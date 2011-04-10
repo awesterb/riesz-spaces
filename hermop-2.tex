@@ -794,4 +794,56 @@ then $I\in\smash{\overline{\R_0[A]}}$
 (so that $\smash{\overline{\R_0[A]} = \overline{\R[A]}}$).
 \end{enumerate}
 \end{psec}
+%
+%                  5.39
+%
+\begin{psec}{5.39}{Exercise}
+Let $A\in\mathscr H$.
+Let $g\in\Cont{\Sp{A}}$
+and set $B:=g(A)$.
+Then $B\in\mathscr H$
+and~$g$ maps~$\Sp{A}$ onto~$\Sp{B}$ (\ref{5.34}).
+Every continuous $f\colon\Sp{B}\ra \R$
+determines an operator~$f(B)$,
+but also (as $f\circ g\in\Cont{\Sp{A}}$)
+an operator $(f\circ g)(A)$.
+Show that these are equal:
+\begin{equation*}
+f(g(A))\ =\ (f\circ g)(A)\htam{.}
+\end{equation*}
+\end{psec}
+%
+%                  5.40
+%
+\begin{psec}{5.40}{Exercise}
+For $A\in\mathscr H$
+we define $e^A$ to be (of course) $f(A)$
+with $f(t)=e^t\quad(t\in\Sp{A})$.
+\begin{enumerate}
+\item\label{5.40-1}
+Show that for all $A\in\mathscr H$
+\begin{equation*}
+e^A\ =\ \sum_{n=0}^\infty \ \frac{A^n}{n!}\htam{.}
+\end{equation*}
+%
+\item\label{5.40-2}
+Show: If $A,B\in\mathscr H$
+and $AB=BA$,
+then $e^{A+B} = e^A\,e^B$.
+\end{enumerate}
+\end{psec}
+%
+%                  5.41
+%
+\begin{psec}{5.41}{Exercise}
+Let $P$ be a projection,
+not~$I$ and not~$0$.
+Show that $\Sp{P}=\{0,1\}$
+and that
+\begin{equation*}
+f(P)\ =\ f(0)\,I\,+\,f(1)\,P
+\end{equation*}
+for every $f\colon \{0,1\}\ra\R$.
+\end{psec}
+\clearpage
 \end{document}
