@@ -2,7 +2,67 @@
 \begin{document}
 % 6
 \section{Dedekind Completeness, I}
+\begin{psec}{6.1}%
+Let $X$ be a compact Hausdorff space
+such that $\Cont{X}$ is Dedekind complete,
+and let~$U$ be an open subset of~$X$.
+\begin{enumerate}
+\item\label{6.1-1}
+The set
+\begin{equation*}
+F\ :=\ \bigl\{ f\in \Cont{X}\colon f\leq\mathbb{1}_U \bigr\}
+\end{equation*}
+is bounded from above by~$\mathbb{1}$,
+hence has a supremum~$f_0$ in~$\Cont{X}$.
+For every $a\in U$,
+by Urysohn's Lemma
+there is a continuous $f\colon X\ra [0,1]$
+with $f(a)=1$, $f=0$ on~$X\backslash U$.
+Then $f\in F$, so that $f\leq f_0$.
+As, of course, $f_0\leq \mathbb{1}$
+we find that $f_0=1$ on~$U$,
+and, by continuity
+\begin{equation*}
+f_0=1\ \htam{ on }\ \overline{U}\htam{.}
+\end{equation*}
+%
+\item\label{6.1-2}
+Similarly, the set
+\begin{equation*}
+G\ :=\ \bigl\{g\in\Cont{X}\colon
+ g\leq \mathbb{1}_{X\backslash\overline{U}} \bigr\}
+\end{equation*}
+has a supremum, $g_0$, in~$\Cont{X}$, with
+\begin{equation*}
+g_0=1\ \htam{ on }\ X\backslash\overline{U}\htam{.}
+\end{equation*}
+(Of course, $g_0=1$ on the closure of~$X\backslash \overline U$,
+but we have no use for that.)
+%
+\item\label{6.1-3}
+But:
+If $f\in F$ and $g\in G$,
+then $f+g\leq \mathbb{1}$.
+Hence,
+if $f\in F$,
+then $\mathbb 1-f$ is an upper bound for~$G$,
+whence $g_0\leq\mathbb 1-f$.
 
+This, in turn,
+implies that $\mathbb 1-g_0$ is an upper bound for~$F$, and
+\begin{equation*}
+f_0\ \leq\ \mathbb 1-g_0\htam{.}
+\end{equation*}
+%
+\item\label{6.1-4}
+Combining these results
+(and noting that $f_0\geq 0$)
+we see that~$f_0$ must be~${\mathbb 1}_{\overline U}$.
+In particular,
+$\mathbb{1}_{\overline U}$ must be continuous:
+$\overline U$ is clopen.
+\end{enumerate}
+\end{psec}
 
 \clearpage
 \end{document}
