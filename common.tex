@@ -2,6 +2,10 @@
 \renewcommand{\mathbb}[1]{\mathbbm{#1}}
 \newcommand{\sr}{\ensuremath{r}}
 
+% The silly enumitem package requires registering of convertors
+% of counters into text other then e.g. \roman, \arabic and \alph:
+\AddEnumerateCounter{\greek}{\greek}{$\mu$}
+
 %  for setting
 \newcommand{\stub}{\emph{Stub.}}
 \newcommand{\snote}[1]{\footnote{\emph{Bram: }#1}}

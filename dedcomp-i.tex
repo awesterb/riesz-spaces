@@ -202,6 +202,32 @@ The proof of the first formula is straightforward,
 the proof of the second hinges on the implications
 $f_\infty(x)<s\implies x\notin U_s \implies f_\infty(x)\leq s$. \xqed
 \end{proof}
+%
+%                  6.6
+%
+\begin{psec}{6.6}{Exercise}
+Let $X$ be a compact Hausdorff space.
+Prove the equivalence of:
+\begin{enumerate}[label=(\greek{*})]
+\item\label{6.6-alpha}
+$\Cont{X}$ is $\sigma$-Dedekind compltee.
+%
+\item\label{6.6-beta}
+For every~$f$ in~$\Cont{X}^+$ the open set $\{x\colon f(x)>0\}$
+has open closure.
+%
+\item\label{6.6-gamma}
+If $f_1,f_2,\dotsc\in\Cont{X}^+$,
+then $\bigcup\bigl\{x\colon f_n(x)>0\bigr\}$ has open closure.
+\end{enumerate}
+
+(\ref{6.6-gamma} follows from~\ref{6.6-beta},
+e.g., via $f:=\sum f_n\wedge 2^{-n} \, \mathbb{1}$.\ )
+\end{psec}
+
+\noindent\textbf{Comment}\  Property \ref{6.6-beta} 
+is known as ``basic disconnectedness''.
+It implies zerodimensionality.
 
 \clearpage
 \end{document}
