@@ -146,6 +146,62 @@ and metrizable,
 then~$X$ is finite.
 \end{enumerate}
 \end{psec}
+%
+%                  6.5
+%
+\begin{psec}{6.5}{Theorem}\statement{
+Let~$X$ be a compact Hausdorff space.
+Then $\Cont{X}$ is Dedekind complete
+if and only if~$X$ is extremally disconnected.
+}\end{psec}
+\begin{proof}
+The ``only if'' we have seen in~\ref{6.1}.
+Now let~$X$ be extremally disconnected.
+Let~$F$ be a nonempty subset of~$\Cont{X}^+$
+that is bounded from above;
+we show that it has a supremum.
+Choose an upper bound~$f_0$ for~$F$.
+(The following construction depends on the existence
+of the upper bound, not on its values.)
+
+Define $g\colon X\ra [0,\infty)$ by
+\begin{equation*}
+g(x)\ :=\ \sup_{f\in F} f(x)\qquad(x\in X)\htam{.}
+\end{equation*}
+For each~$s$ in~$(0,\infty)$
+the set $\{x\colon g(x)>s\}$ is open, since
+\begin{equation*}
+\{x\colon g(x)>s\}\ =\ \bigcup_{f\in F} \{x\colon f(x)>s\}\htam{;}
+\end{equation*}
+let~$U_s$ be its closure.
+
+This gives us a family $(U_s)_{s>0}$ of clopen sets, with
+\begin{equation*}
+s<t\quad\implies\quad U_s \supseteq U_t\htam{.}
+\end{equation*}
+
+For each~$s$ we have $f_0 > s$ on $\{x\colon g(x)>s\}$,
+so that $f_0\geq s\,\mathbb{1}_{U_s}$
+as~$f_0$ is continuous.
+Thus, we can define $f_\infty\colon X\ra \R$ by
+\begin{equation*}
+f_\infty(x)\ 
+:=\ \sup s\mathbb{1}_{U_s}(x)\ 
+=\ \sup\{s\colon x\in U_s\}
+\qquad(x\in X)\htam{.}
+\end{equation*}
+Then $g\leq f_\infty\leq f_0$ for any upper bound~$f_0$ of~$F$.
+Therefore, $f_\infty$ will be the supremum of~$F$ in~$\Cont{X}$
+if and only if it is continuous.
+But the continuity of~$f_\infty$ follows from the formulas
+\begin{align*}
+\{ x\colon f_\infty(x)>t\}\ &=\ \bigcup_{s>t} U_s\htam{,}\\
+\{ x\colon f_\infty(x)<t\}\ &=\ \bigcup_{s<t} X\backslash U_s\htam{.}
+\end{align*}
+The proof of the first formula is straightforward,
+the proof of the second hinges on the implications
+$f_\infty(x)<s\implies x\notin U_s \implies f_\infty(x)\leq s$. \xqed
+\end{proof}
 
 \clearpage
 \end{document}
