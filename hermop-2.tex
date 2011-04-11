@@ -222,6 +222,9 @@ under the ordering of~$\mathscr H$, and
 \begin{equation*}
 |T|\ =\ \sqrt{T^2}\qquad(T\in\mathscr A)\htam{.}
 \end{equation*}
+If $\mathscr B$ is a closed subalgebra of~$\mathscr H$
+and $\mathscr B \subseteq \mathscr A$,
+then $\mathscr B$ is a Riesz subspace of~$\mathscr A$.
 %
 \item\label{5.25-2} If $I\in\mathscr A$,
 then~$I$ is a unit,
@@ -325,30 +328,16 @@ Indeed,
 \end{alignat*}
 %
 \item\label{5.26-II}
-With $a\in E$ and $|a|\leq e$ we get for all $\lambda\in\R$:
+With $a,b\in E$ and $n$ such that $|a|\leq ne$ we get for all $\lambda\in\R$:
 \begin{alignat*}{2}
-|a*a - \lambda a|
-\ &=\ |a*(a-\lambda e)|\ &&\leq\ |a|*|a-\lambda e| \\
-\ &\leq\ e*|a-\lambda e|\ &&=\ |a-\lambda e|\htam{,}\intertext{%
+|a*b - \lambda a|
+\ &=\ |a*(b-\lambda e)|\ &&\leq\ |a|*|b-\lambda e| \\
+\ &\leq\ ne*|b-\lambda e|\ &&=\ n\,|b-\lambda e|\htam{,}\intertext{%
 and, upon applying $\varphi$:}%
-|\varphi(a*a)-\lambda\varphi(a)|\ &\leq\ |\varphi(a)-\lambda|\htam{.}\\%
-\intertext{Choosing $\lambda = \varphi(a)$ yields}%
-\varphi(a*a)\ &=\ \varphi(a)^2\htam{.}
+|\varphi(a*b)-\lambda\varphi(a)|\ &\leq\ n\,|\varphi(b)-\lambda|\htam{.}\\%
+\intertext{Choosing $\lambda = \varphi(b)$ yields}%
+\varphi(a*b)\ &=\ \varphi(a)\,\varphi(b)\htam{. \xqed}
 \end{alignat*}
-%
-\item\label{5.26-III}
-It follows that for \emph{all} $z\in E$,\quad  $\varphi(z*z)=\varphi(z)^2$.
-For $x,y\in E$ we have
-\begin{equation*}
-2\,x*y\ =\ (x+y)*(x+y) \,-\, x*x \,-\, y*y
-\end{equation*}
-so that
-\begin{equation*}
-2\,\varphi(x*y)\ 
-=\ (\varphi(x)+\varphi(y))^2 - \varphi(x)^2 - \varphi(y)^2
-\ =\ 2\,\varphi(x)\,\varphi(y)\htam{,}
-\end{equation*}
-and we are done. \xqed
 \end{enumerate}
 \end{proof}
 %
@@ -358,7 +347,8 @@ and we are done. \xqed
 A brief digression before we return to our operator algebras.
 
 By applying Yosida's Theorem we see that
-in the situation of~\ref{5.26}
+in the situation of~\ref{5.26},
+if~$E$ is Archimedean,
 the operation~$*$ a posteriori
 turns out to be commutative and associative,
 and to obey formulas such as
@@ -405,7 +395,11 @@ but is not commutative.
 %
 %                  5.28
 %
-\noindent Except for one detail we now know:
+\noindent Lemma~\ref{5.26} implies:
+A Riesz homomorphism of a subalgebra of~$\mathscr H$
+into a $\Cont{\Phi}$
+that sends~$I$ to~$\mathbb{1}_\Phi$ must be multiplicative.
+Except for one detail we now know:
 
 \begin{psec}{5.28}{Theorem}\statement{
 Let $\mathscr A$ be a closed subalgebra of~$\mathscr H$ containing~$I$.
@@ -495,7 +489,7 @@ and $I\notin \mathscr A$.
 Then there exist a compact Hausdorff space~$\Phi$,
 an element~$\varphi_0$ of~$\Phi$,
 and a norm-preserving multiplicative 
-Riesz isomorphism of~$\mathscr A$ onto
+Riesz homomorphism of~$\mathscr A$ onto
 \begin{equation*}
 \bigl\{f\in\Cont{\Phi}\colon f(\varphi_0)=0\bigr\}\htam{.}
 \end{equation*}
@@ -746,7 +740,7 @@ $\bigl\{A^n B^m\colon n,m\in\{0,1,2,\dotsc\}\bigr\}$;
 then~$\mathscr A$ is a closed subalgebra of~$\mathscr H$.
 By~\eqref{eqpre5.35},
 $A-\lambda I$ has no inverse in~$\mathscr A$.
-Contradiction. 
+Contradiction. \xqed
 \end{proof}
 %
 %                  5.37
