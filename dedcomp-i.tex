@@ -299,4 +299,91 @@ according to Yosida.
 Prove that~$\Phi$ is a Stone space for~$\mathcal A$~(\ref{3.19}).
 \end{psec}
 \clearpage
+%
+%                  6.10
+%
+\begin{psec}{6.10}{Theorem}\statement{
+Let $\mathcal A$ be an algebra of subsets of a set~$X$
+and let~$\mu$ be a nonnegative additive function $\mathcal A\ra \R$.
+Then there is a unique linear function
+\begin{equation*}
+f\ \mapsto\ \int f\,\mathrm d\mu
+\end{equation*}
+on $\BLeb(\mathcal A)$ with the properties
+\begin{equation*}
+\left\{\quad
+\begin{aligned}
+\int \mathbb{1}_{A}\,\mathrm d\mu\ &=\ \mu(A)\qquad 
+  &(A\in\mathcal A)\htam{,} \\
+\int f\,\mathrm{d}\mu\ &\geq\ 0\qquad
+  &\htam{if }f\geq 0\htam{.}
+\end{aligned}
+\right.
+\end{equation*}
+}\end{psec}
+\begin{proof}
+(inspired by the proof of~\ref{3.18}.)
+\begin{enumerate}[label=(\Roman*)]
+\item\label{6.10-I}
+A ``partition'' here is a finite set of nonempty elements of~$\mathcal A$
+whose union is~$X$.
+A ``refinement'' of a partition is what you think it is.
+For a partition~$S$ we denote by~$\lbb S\rbb$
+the vector space of all functions $X\ra \R$
+that are constant on each element of~$S$.
+If~$T$ is a refinement of~$S$,
+then $\lbb S \rbb \subseteq \lbb T \rbb$.
+The union of all spaces~$\lbb S \rbb$ is precisely~$\lbb \mathcal A \rbb$,
+the set of all $\mathcal{A}$-step~functions.
+
+For $f\in\lbb A \rbb$ we define
+\begin{equation*}
+\int_S f\,\mathrm{d}\mu\ =\ \sum_{s\in S} \alpha_s\,\mu(s)
+\quad\htam{ where }\quad f=\sum_{s\in S} \alpha_s \mathbb{1}_s\htam{.}
+\end{equation*}
+Then $\int_S \cdot\,\mathrm{d}\mu$ is a linear function $\lbb S \rbb \ra \R$.
+
+Is $S$ a partition and~$T$ is a refinement of~$S$, then
+\begin{alignat*}{2}
+\int_T f\,\mathrm{d}\mu\ &=\ \int_S 
+f\,\mathrm{d}\mu\qquad&(f\in \lbb S \rbb)\htam{.} \\
+\intertext{(Here we use the additivity of~$\mu$.)
+It follows that we can define a linear function $\int\cdot\,\mathrm d\mu$
+on~$\lbb \mathcal A \rbb$ by}
+\int f\,\mathrm{d}\mu\ &:=\ \int_S f\mathrm{d}\mu
+ \qquad &\htam{ if } f\in\lbb S \rbb\htam{.}
+\end{alignat*}
+Observe that $\int \mathbb{1}_A\,\mathrm{d}\mu=\mu(A)
+\quad(A\in\lbb \mathcal A \rbb)$,
+and also that $\int f\,\mathrm{d}\mu\geq 0$
+if $f\in\lbb\mathcal{A}\rbb^+$.
+%
+\item\label{6.10-II}
+It follows that $\int\cdot\,\mathrm{d}\mu$ is increasing, so that
+\begin{equation*}
+\Bigl|\int f\,\mathrm{d}\mu\  -\int f\,\mathrm{d}\mu\  \Bigr|
+\ \leq\ \int \bigl|f-g\bigr|\,\mathrm{d}\mu
+\ \leq\ \|f-g\|_\infty \,\mu(X)\qquad(f,g\in\lbb \mathcal A \rbb)
+\htam{,}
+\end{equation*}
+because $\pm(f-g)\leq|f-g|\leq\|f-g\|_\infty\,\mathbb{1}$.
+
+Viewing $\BLeb(\mathcal A)$ as a metric space
+under the metric derived from $\|\cdot\|_\infty$,
+we see that~$\lbb\mathcal{A}\rbb$ is a dense subset
+on which $\int\cdot\,\mathrm d\mu$ is a uniformly continuous function.
+By the completeness of~$\R$,
+this function extends uniquely to a continuous function
+$\BLeb(\mathcal A)\ra \R$,
+which we again denote by $\int\cdot\,\mathrm{d}\mu$.
+
+Every element of $\BLeb(\mathcal A)$ being the $\|\cdot\|_\infty$-limit
+of a sequence in~$\lbb\mathcal A\rbb$
+one easily proves that $\int\cdot\,\mathrm d\mu$ is linear
+and increasing on $\BLeb(\mathcal A)$.
+%
+\item\label{6.10-III}
+The uniqueness is now clear. \xqed
+\end{enumerate}
+\end{proof}
 \end{document}
