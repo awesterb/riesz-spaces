@@ -229,5 +229,44 @@ Property \ref{6.6-beta}
 is known as ``basic disconnectedness''.
 It implies zerodimensionality.
 \end{psec*}
+%
+%                  6.7
+%
+\begin{psec}{6.7}%
+Let $X$ be a set, $\mathcal A$ an algebra of subsets of~$X$.
+(See~\ref{1.1}\ref{1.1-4} for a definition.)
+\begin{enumerate}
+\item\label{6.7-1}
+An $\mathcal A$-\keyword{step function}
+is a function on~$X$,
+representable as
+\begin{equation*}
+\sum_{n=1}^N \,\alpha_n \mathbb{1}_{A_n}
+\end{equation*}
+where $N\in\N$, $\alpha_1,\dotsc,\alpha_N\in\R$,
+and $A_1,\dotsc,A_N$
+are pairwise disjoint elements of~$\mathcal A$.
+The $\mathcal A$-step functions form a Riesz space~$\lbb \mathcal A \rbb$
+(\ref{1.5}\ref{1.5-7}).
+%
+\item\label{6.7-2}
+We define
+\begin{equation*}
+\BLeb(\mathcal{A})
+\end{equation*}
+to be the closure of~$\lbb\mathcal A\rbb$ in~$\ell^\infty(X)$
+(see~\ref{1.5}\ref{1.5-2}) relative to~$\|\cdot\|_\infty$.
+A function $f\colon X\ra\R$ lies in~$\BLeb(\mathcal A)$
+if and only if for every $\varepsilon>0$
+there is an $\mathcal A$-step function~$h$
+with $\|f-h\|_\infty\leq\varepsilon$.
+This~$\BLeb(\mathcal A)$ is a Riesz subspace of~$\ell^\infty(X)$.
+It has a unit, e.g., the function~$\mathbb{1}$.
+
+(If~$\mathcal A$ is a $\sigma$-algebra,
+$\BLeb(\mathcal A)$ is the space of
+all bounded $\mathcal A$-measurable functions.)
+\end{enumerate}
+\end{psec}
 \clearpage
 \end{document}
