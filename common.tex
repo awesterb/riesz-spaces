@@ -48,7 +48,8 @@
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
 \newcommand\statement[1]{\emph{#1}}
 \NewDocumentEnvironment{psec*}{g}{%
-        \par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip1em\fi%
+        \ifdim\lastskip<1em\removelastskip\vskip.3em\fi%
+	\par\penalty-200%
         \noindent%
 	\IfNoValueTF{#1}{}{\textbf{{#1}}\ }}
         {\par\penalty-200\ifdim\lastskip<1em\removelastskip\vskip0.9em\fi}
