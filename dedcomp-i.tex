@@ -681,6 +681,66 @@ $\smash{\bigl\{[f_n]_\mu\colon n\in\N\bigr\}}$ in~$\BNL(\mu)$.
 \end{enumerate}
 \end{psec}
 %
+%                  6.19
+%
+\begin{psec}{6.19}{Theorem}\statement{
+Let $\mu$ be a finite measure on a $\sigma$-algebra~$\mathcal A$
+in a set~$X$.
+Then~$\BNL(\mu)$ is Dedekind complete.
+Furthermore,
+if~$F$ is a set in~$\BNL(\mu)$
+that has a supremum,
+then~$F$ has a countable subset with the same supremum.
+}\end{psec}
+\begin{proof}
+Let $F$ be a nonempty subset of $\BNL{\mu}$
+with an upper bound $[g]_\mu$.
+Define
+\begin{equation*}
+\mathcal{F}\ :=\ \bigl\{ f\in\BLeb(\mathcal{A})\colon
+  [f]_\mu\in F\htam{, }\ f\leq g\bigr\}\htam{.}
+\end{equation*}
+Then $F=\smash{\bigl\{[f]_\mu\colon f\in\mathcal F\bigr\}}$.
+(If $f\in\BLeb(\mathcal A)$ and $[f]_\mu\in F$,
+then $[f]_\mu = [f]_\mu\wedge[g]_\mu = [f\wedge g]_\mu$,
+and $f\wedge g\in\mathcal F$.)
+
+Let $s:=\sup\smash{\bigl\{\int f\,\mathrm{d}\mu\colon
+f\in\mathcal F\bigr\}}$ and choose $f_1,f_2,\dotsc$ in~$\mathcal F$
+with $\int f_n\,\mathrm{d}\mu\ra s$.
+We can define a function~$f_\infty$ on~$X$ by
+\begin{equation*}
+f_\infty(x)\ :=\ \textstyle \sup_n f_n(x)\qquad(x\in X)\htam{.}
+\end{equation*}
+By~\ref{6.14} we have~$f_\infty\in\BLeb(\mathcal A)$,
+so that (with Exercise~\ref{6.18}\ref{6.18-2})
+\begin{equation*}
+[f_\infty]_\mu\ =\ \sup\,\bigl\{[f_n]_\mu\colon n\in\N\bigr\}
+\qquad\htam{ in }\BNL(\mu)\htam{.}
+\end{equation*}
+
+Therefore,
+we are done if $[f_\infty]_\mu$
+is an upper bound for~$F$,
+which will be true if $[f_\infty]_\mu\geq [f]_\mu$
+for all~$f$ in~$\mathcal F$.
+
+Let $f\in\mathcal F$.
+For every~$n$,
+\begin{alignat*}{2}
+\int |f-f\wedge f_\infty |\,\mathrm{d}\mu
+\ &=\ \int (f-f\wedge f_\infty)\,\mathrm{d}\mu  \\
+\ &\leq\ \int(f-f\wedge f_n)\,\mathrm{d}\mu \\
+\ &=\ \int(f\vee f_n -f_n)\,\mathrm{d}\mu \\
+\ &=\ \int(f\vee f_n)\,\mathrm{d}\mu 
+      -\int f_n\,\mathrm{d}\mu
+\ \leq\ s-\int f_n\,\mathrm{d}\mu\htam{,}
+\end{alignat*}
+so $\int |f-f\wedge f_\infty|\,\mathrm{d}\mu=0$,
+$[f-f\wedge f_\infty]=0$,
+and $[f]_\mu= [f\wedge f_\infty]_\mu\leq [f_\infty]_\mu$. \xqed
+\end{proof}
+%
 %
 %
 \clearpage
