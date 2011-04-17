@@ -503,4 +503,30 @@ h\ =\ \sum_{n=1}^N\,s_n\,\mathbb{1}_{A_n}\htam{.}
 \end{equation*}
 \end{enumerate}
 \end{psec}
+%
+%                  6.14
+%
+\begin{psec}{6.14}{Theorem}\statement{
+Let $\mathcal A$ be a $\sigma$-algebra in a set~$X$.
+Then $\BLeb(\mathcal A)$ is $\sigma$-Dedekind complete.
+More than that:
+If $\{f_1,f_2,\dotsc\}$ is a countable subset of~$\BLeb(\mathcal A)$,
+bounded from above,
+then the function
+\begin{equation*}
+f\colon x\mapsto \sup_n f_n(x)\qquad(x\in X)
+\end{equation*}
+is the supremum of $\{f_1,f_2,\dotsc\}$ in the
+Riesz space~$\BLeb(\mathcal A)$.
+}\end{psec}
+\begin{proof}
+For every $s$ in~$\R$ we have
+\begin{equation*}
+\bigl\{x\colon f(x)>s\bigr\}\ =\ 
+  {\bigcup}_n\bigl\{x\colon f_n(x)>s\bigr\}\in\mathcal{A}\htam{.}
+\end{equation*}
+It follows from~\ref{6.13} that
+$f\in\BLeb(\mathcal A)$.
+The rest is obvious. \xqed
+\end{proof}
 \end{document}
