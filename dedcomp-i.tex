@@ -557,4 +557,90 @@ for each~$x$,
 so $f\in\BLeb(\mathcal A)$,
 again by the theorem. \xqed
 \end{proof}
+%
+%                  6.16
+%
+\begin{psec}{6.16}%
+Again,
+let $\mathcal A$ be a $\sigma$-algebra in a set~$X$.
+Let~$\mu$ be a \keyword{finite measure} on~$\mathcal A$,
+i.e., a signed measure (see~\ref{1.13})
+with values in~$[0,\infty)$.
+$\mu$ is finitely additive,
+so \ref{6.10}--\ref{6.12} are applicable
+\begin{enumerate}
+\item\label{6.16-1}
+Call a subset~$A$ of~$X$ \keyword{null} (or: $\mu$-\emph{null})
+if~$A\in\mathcal A$ and $\mu(A)=0$.
+A function~$f$ in~$\BLeb(\mathcal A)$ is \keyword{null}
+if $\{x\colon f(x)\neq 0\}$ is null.
+(Observe that for every~$f$ in~$\BLeb(\mathcal{A})$
+we have
+$\{x\colon f(x)\neq 0\}
+=\{x\colon |f(x)|>0\}\in\mathcal A$
+by~\ref{6.13}\ref{6.13-1}.
+%
+\item\label{6.16-2}\statement{
+If $A$ is a null set
+and~$B$ is a subset of~$A$
+that lies in the $\sigma$-algebra~$\mathcal A$,
+then~$B$ is null.}
+Slightly less obviouss:
+\statement{Every union of countably many null sets is null.}
+For a proof,
+let $A_1,A_2,\dotsc$ be null sets;
+define $B_1:=A_1$, 
+$B_n:=A_n\backslash \bigcup_{i<n} A_i \quad (n\in\N)$; then
+\begin{equation*}
+\textstyle \mu(\bigcup A_n)\ 
+=\ \mu(\bigcup B_n)\ 
+=\ \sum \mu(B_n)\ 
+\leq\ \sum \mu(A_n)\ =\ 0\htam{.}
+\end{equation*}
+%
+\item\label{6.16-3}
+Let $f\in\BLeb(\mathcal A)$.
+Claim:\statement{
+\begin{equation*}
+\textstyle f\htam{ is null} \quad\iff\quad \int|f|\,\mathrm{d}\mu=0\htam{.}
+\end{equation*}
+}Proof:
+If~$f$ is null and $A:=\{x\colon f(x)\neq 0\}$,
+then $|f|\leq\|f\|_\infty\,\mathbb{1}_A$,
+whence $\int|f|\,\mathrm{d}\mu \leq\|f\|_\infty \,\mu(A)=0$.
+Conversely,
+suppose $\int|f|\,\mathrm{d}\mu=0$.
+For $n\in\N$, put
+ $A_m:=\smash{\bigl\{x\colon |f(x)|>n^{-1}\bigr\}}$.
+Then $A_n\in\mathcal A$ and $\mathbb{1}_{A_n}\leq n|f|$ for all~$n$,
+implying
+$\mu(A_n) 
+= \int \mathbb{1}_{A_n}\,\mathrm{d}\mu
+\leq n\int|f|\mathrm{d}\mu =0$.
+Thus every~$A_n$ is null.
+Then so is their union,
+which is $\{x\colon f(x)\neq 0\}$.
+%
+\item\label{6.16-4}
+The set of all null functions
+is a Riesz ideal in~$\BLeb(\mathcal A)$.
+It is uniformly closed,
+because,
+if $f_n\ra f$ uniformly (or even pointwise),
+then 
+\begin{equation*}
+\textstyle \{x\colon |f(x)|\neq 0\} 
+\subseteq \bigcup_n \{ x\colon f_n(x)\neq 0\}\htam{.}
+\end{equation*}
+
+We denote the quotient space by
+\begin{equation*}
+\BNL(\mu)\htam{,}
+\end{equation*}
+and the quotient map $\BLeb(\mathcal A)\ra\BNL(\mu)$ by
+\begin{equation*}
+f\mapsto [f]_\mu\htam{.}
+\end{equation*}
+\end{enumerate}
+\end{psec}
 \end{document}
