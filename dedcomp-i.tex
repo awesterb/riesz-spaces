@@ -529,4 +529,32 @@ It follows from~\ref{6.13} that
 $f\in\BLeb(\mathcal A)$.
 The rest is obvious. \xqed
 \end{proof}
+%
+%                  6.15
+%
+\noindent As a by-product we get:
+\begin{psec}{6.15}{Corollary}\statement{
+Let $\mathcal A$ be a $\sigma$-algebra in a set~$X$.
+Let~$f$ be a bounded function on~$X$
+that is pointwise limit of a sequence in~$\BLeb(\mathcal A)$.
+Then~$f\in\BLeb(\mathcal A)$.}
+(For uniform limits this conclusion is basically trivial,
+for pointwise limits not at all.)
+\end{psec}
+\begin{proof}
+Choose a number~$c$ such that $|f|\leq c\,\mathbb{1}$.
+Choose a sequence~$(f_n)_n$ in~$\BLeb(\mathcal A)$
+that tends to~$f$ pointwise.
+For $x\in X$ and $n\in \N$,
+set 
+\begin{equation*}
+g_n(x)\ :=\ \cramped{\sup_{m\geq n}} \ f_m(x)\wedge c\qquad(x\in X)\htam{.}
+\end{equation*}
+By the theorem,
+every~$g_n$ lies in~$\BLeb(\mathcal A)$.
+We have $g_n(x)\downarrow f(x)\geq -c$
+for each~$x$,
+so $f\in\BLeb(\mathcal A)$,
+again by the theorem. \xqed
+\end{proof}
 \end{document}
