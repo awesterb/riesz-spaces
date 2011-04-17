@@ -456,4 +456,51 @@ with $\varphi=\varphi_\mu$,
 and that $\Var{}{\mu}\leq\|\varphi\|$.
 \end{enumerate}
 \end{psec}
+%
+%                  6.13
+%
+\begin{psec}{6.13}%
+Now assume that~$\mathcal A$ actually is a $\sigma$-algebra.
+(For the moment,
+no~$\mu$ is given:
+we investigate~$\BLeb(\mathcal A)$.)
+\begin{enumerate}
+\item\label{6.13-1}
+Let $f\in \BLeb(\mathcal A)$ and $s\in\R$.
+Then the set $\bigl\{x\colon f(x)>s\bigr\}$ lies in~$\mathcal A$.
+Proof:\ 
+For each~$n$ there is an $\mathcal A$-step function~$f_n$
+with $f-n^{-1}\mathbb{1}\leq f_n\leq f$.
+Then
+\begin{equation*}
+\bigl\{ x\colon f(x)>s\bigr\}\ =\ 
+\,{\bigcup}_n \bigl\{x\colon f_n(x)>s\bigr\}\htam{.}
+\end{equation*}
+Thus, $\bigl\{ x\colon f(x)>s\bigr\}$ is
+a union of countably many elements of~$\mathcal A$.
+%
+\item\label{6.13-2}
+Conversely,
+let~$f$ be a bounded function on~$X$
+such that $\bigl\{x\colon f(x)>s\bigr\}\in\mathcal A$
+for every $s\in\R$.
+Let $\varepsilon>0$;
+we make an $\mathcal A$-step function~$h$ with 
+$\|f-h\|_\infty \leq\varepsilon$.
+
+Choose $s_0<s_1<\dotsb<s_N$ in~$\R$
+so that all values of~$f$ lie in the interval $(s_0,s_N)$,
+whereas $s_n<s_{n-1}+\varepsilon\quad(n=1,\dotsc,N)$.
+Set
+\begin{equation*}
+A_n\ :=\ \bigl\{x\colon f(x)>s_n\bigr\}\,\backslash\,
+  \bigl\{x\colon f(x)>s_{n-1}\bigr\}
+\qquad (n=1,\dotsc,N)
+\end{equation*}
+and take
+\begin{equation*}
+h\ =\ \sum_{n=1}^N\,s_n\,\mathbb{1}_{A_n}\htam{.}
+\end{equation*}
+\end{enumerate}
+\end{psec}
 \end{document}
