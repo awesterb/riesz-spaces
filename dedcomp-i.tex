@@ -404,4 +404,56 @@ f\leq g\quad\implies\quad
 \|f\|_\infty\, \mu(X)\htam{.}
 \end{alignat}
 \end{psec}
+%
+%                  6.12
+%
+\begin{psec}{6.12}{Exercise}
+Let $\mathcal A$ be an algebra of subsets of~$X$.
+We are going to investigate the linear functions $\BLeb(\mathcal A)\ra \R$
+that are continuous relative to 
+the norm~$\|\cdot\|_\infty$ on $\BLeb(\mathcal A)$.
+In the language of~\ref{5.1}\ref{5.1-2},
+these linear functions form a vector space
+$\Lin(\BLeb(\mathcal{A}),\R)$,
+endowed with a norm~$\|\cdot\|$,
+described by
+\begin{equation*}
+\|\varphi\|\ =\ \inf\bigl\{
+c\in[0,\infty)\colon |\varphi(f)|\leq c\,\|f\|_\infty
+\htam{ for all }f\htam{ in }\BLeb(\mathcal A)\bigr\}\htam{.}
+\end{equation*}
+
+In \ref{1.12} we have met the Riesz space $\BA(\mathcal A)$
+of bounded additive functions $\mathcal A\ra\R$.
+\begin{enumerate}
+\item\label{6.12-1}
+Prove that for every~$\mu$ in $\BA(\mathcal A)$
+there is one linear function
+$\varphi_\mu\colon \BLeb(\mathcal A)\ra \R$
+with
+\begin{equation*}
+\left\{
+\ 
+\begin{aligned}
+&\varphi_\mu(\mathbb{1}_A)\ =\ \mu(A)\qquad (A\in\mathcal A)\htam{,} \\
+&\varphi_\mu\htam{ is continuous.}
+\end{aligned}
+\right.
+\end{equation*}
+(The existence is easy: $\mu=\mu^+-\mu^-$.)
+
+Prove also:
+\begin{equation*}
+\|\varphi\|\ \leq\ \Var{}{\mu}\htam{.}
+\end{equation*}
+(See~\ref{1.8} for ``$\Var{}{}$''.)
+%
+\item\label{6.12-2}
+Conversely,
+let $\varphi\colon\BLeb(\mathcal A)\ra\R$ be linear and continuous.
+Show that there exists one~$\mu$ in~$\BA(\mathcal A)$
+with $\varphi=\varphi_\mu$,
+and that $\Var{}{\mu}\leq\|\varphi\|$.
+\end{enumerate}
+\end{psec}
 \end{document}
