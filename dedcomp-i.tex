@@ -741,6 +741,198 @@ $[f-f\wedge f_\infty]=0$,
 and $[f]_\mu= [f\wedge f_\infty]_\mu\leq [f_\infty]_\mu$. \xqed
 \end{proof}
 %
+%                  6.20
+%
+\begin{psec}{6.20}%
+(Situation as above)
+\begin{enumerate}
+\item\label{6.20-1}
+Yosida's Theorem (see Theorem~\ref{6.5})
+produces an extremally disconnected compact Hausdorff space~$Y$
+and a Riesz \emph{iso}morphism
+of $\BNL(\mu)$ onto~$\Cont{Y}$.
+It will be convenient for us
+to compose this map with the quotient map
+$\BLeb(\mathcal A)\ra \BNL(\mu)$,
+obtaining a surjective Riesz homomorphism
+$\BLeb(\mathcal A)\ra\Cont{Y}$,
+denoted
+\begin{equation*}
+f\mapsto \hat{f}\qquad(f\in\BLeb(\mathcal A))
+\end{equation*}
+such that
+\begin{alignat*}{2}
+\hat{\mathbb{1}}_X\ &=\ \mathbb{1}_Y\htam{,} \\
+\hat f \ &=\ \hat g\quad&
+&\iff\quad \bigl\{x\colon f(x)\neq g(x)\bigr\}\htam{ is }\mu\htam{-null} \\
+&&&\iff\quad \int |f-g|\,\mathrm{d}\mu = 0\htam{.}
+\end{alignat*}
+It follows from~\ref{5.26}
+that this map is multiplicative.
+The identity $\hat{\mathbb{1}}_X=\mathbb{1}_Y$ implies
+\begin{equation*}
+\|\hat{f}\|_\infty\ \leq\ \|f\|_\infty\qquad (f\in\BLeb(\mathcal A))\htam{.}
+\end{equation*}
+%
+\item\label{6.20-2}
+If $A\in\mathcal A$
+(this we have done before),
+then $\mathbb{1}_A \perp \mathbb{1}_X -\mathbb{1}_A$,
+whence $\hat{\mathbb{1}}_A \perp \mathbb{1}_Y - \hat{\mathbb{1}}_A$,
+and $\hat{\mathbb{1}}_A$ is an indicator function.
+Thus,
+with every $A\in\mathcal A$
+we can associate an $\hat{A}\in\clopen(Y)$ by
+\begin{equation*}
+\hat{\mathbb 1}_A\ =\ \mathbb{1}_{\hat A}\htam{.}
+\end{equation*}
+The resulting map $A\mapsto \hat{A}$ is a lattice homomorphism.
+
+It maps~$\mathcal A$ \emph{onto} $\clopen(Y)$.
+Proof:
+Take~$U$ in $\clopen(Y)$.
+There is an~$f$ in~$\BLeb(\mathcal A)$
+with $\hat f=\mathbb{1}_U$.
+Then $\smash{\widehat{f^2}}=\mathbb{1}_U^2=\mathbb{1}_U=\hat f$,
+so $\{x\in X\colon f(x)\neq f^2(x)\}$ is $\mu$-null.
+Setting $A:=\{x\colon f(x)>0\}$
+we have $A\in\mathcal A$ by~\ref{6.13}\ref{6.13-1},
+and $\mathbb{1}_U = \hat f = \hat{\mathbb{1}}_A$
+because $\{x\colon f(x)\neq \mathbb{1}_A(x)\}$
+is precisely $\{x\colon f(x)\neq f^2(x)\}$.
+%
+\item\label{6.20-3}
+The map $A\mapsto \hat A$ is generally not injective:
+$\hat A=\varnothing$ if and only if~$A$ is $\mu$-null.
+
+If $A,B\in \mathcal A$ and $\hat A=\hat B$,
+then $\{x\colon \mathbb{1}_A(x)\neq\mathbb{1}_B(x)\}$
+is a $\mu$-null set.
+But this set is $(A\backslash B)\cup(B\backslash A)$,
+so
+\begin{equation*}
+\mu(A\backslash B)\ =\ \mu(B\backslash A)\ =\ 0\htam{,}
+\end{equation*}
+whence
+\begin{equation*}
+\mu(A)\ =\ \mu(A\backslash B) + \mu(A\cap B)
+\ =\ \mu(B\backslash A) + \mu(A\cap B)
+\ =\ \mu(B)\htam{.}
+\end{equation*}
+
+It follows that we can define
+$\overline \mu\colon \clopen(Y)\ra \R$ by
+\begin{equation*}
+\overline{\mu} (\hat A)\ :=\ \mu(A)\qquad (A\in\mathcal A)\htam{.}
+\end{equation*}
+$\overline \mu$ is additive.
+%
+\item\label{6.20-4}
+If $f\in\BLeb(\mathcal A)$
+(and $\hat f\in\Cont{Y}\subseteq \BLeb(\clopen(Y))$\,), then
+\begin{equation*}
+\int \hat{f}\,\mathrm{d}\overline{\mu}\ =\ \int f\,\mathrm{d}\mu\htam{.}
+\end{equation*}
+For a proof,
+first observe that this is just the definition of~$\overline \mu$
+if $f=\mathbb{1}_A$, $A\in\mathcal A$;
+the validity of the formula for~$f$ in~$\lbb\mathcal A\rbb$
+is a direct consequence;
+finally, we use uniform limits for arbitrary~$f$.
+%
+\item\label{6.20-5}
+Out of $\mu\colon\mathcal A\ra \R$
+we have made $\overline\mu\colon\clopen(Y)\ra\R$.
+This eems a clear loss,
+as~$\mathcal A$ is a $\sigma$-algebra
+and $\clopen(Y)$
+in all probability is not.
+But now we have a topology at our disposal
+and we have eliminated the null sets:
+\statement{%
+\begin{equation*}
+\htam{If }\ U\in\clopen(Y)\ \htam{ and }\ 
+\overline\mu(U)=0\htam{,\quad then }\ U=\varnothing\htam{.}
+\end{equation*}}
+(This is obvious.)
+%
+\item\label{6.20-6}
+As a consequence,
+\emph{every disjoint collection of clopen subsets of~$Y$
+is countable.}
+(It contains at most $37\,\overline{\mu}(Y)$ elements~$U$
+with $\overline \mu(U)>37^{-1}$.)
+%
+\item\label{6.20-7}
+$\overline\mu$ has this additivity property:
+\emph{If $U_1,U_2,\dotsc$ are pairwise disjoint
+clopen sets and~$U$ is the closure of their union,
+then
+\begin{equation*}
+\overline\mu(U)\ =\ \sum\,\overline\mu(U_n)\htam{.}
+\end{equation*}}
+Proof:
+Choose $A_1,A_2,\dotsc$ in~$\mathcal A$
+with $\hat{A}_n=U_n\quad(n\in\N)$.
+Define $B_1,B_2,\dotsc\in\mathcal A$ by
+\begin{alignat*}{4}
+B_1\ :=&\ A_1\htam{, }&\qquad
+B_n\ :=&\ A_n\backslash A_1\cup\dotsb\cup A_{n-1}& \quad &(n\geq 2)\htam{;} \\
+\shortintertext{
+then $B_1,B_2,\dotsc$ are mutually disjoint and}
+\hat{B}_1\ =&\ \hat{A}_1\htam{, }&\qquad
+\hat{B}_n\ =&\ \hat{A}_n\backslash \hat{A}_1 \cup\dotsb\cup\hat{A}_{n-1}&
+  \quad&(n\geq 2)\htam{,}
+\end{alignat*}
+from which it follows that $\hat{B}_n=U_n$
+for each~$n$.
+With $B:=\bigcup B_n$
+we have $\mathbb{1}_B=\sup_n \mathbb{1}_{B_n}$
+in~$\BLeb(\mathcal A)$,
+so $\hat{\mathbb{1}}_B=\sup_n \hat{\mathbb{1}}_{B_n}=\sup \mathbb{1}_{U_n}$
+in~$\Cont{Y}$,
+so that $\hat{B}=U$.
+Now $\overline\mu(U)=\mu(B)
+=\sum\mu(B_n)=\sum\overline\mu(U_n)$.
+%
+\item\label{6.20-8}
+We will also deal with a finite measure~$\nu$ on~$\mathcal A$ satisfying
+\begin{equation*}
+\nu(A)\leq\mu(A)\qquad(A\in\mathcal A)\htam{.}
+\end{equation*}
+
+If $A,B\in\mathcal A$
+and $\hat A=\hat B$,
+then (see~\ref{6.20-3})
+we have $\mu(A\backslash B)=\mu(B\backslash A)=0$,
+and therefore $\nu(A\backslash B)= \nu(B\backslash A)=0$;
+by the argument of~\ref{6.20-3}
+this implies $\nu(A)=\nu(B)$.
+Hence, the formula
+\begin{equation*}
+\overline\nu(\hat A)\ :=\ \nu(A)\qquad(A\in\mathcal A)
+\end{equation*}
+defines an (additive) function~$\overline\nu$ on $\clopen(Y)$ with
+\begin{equation*}
+\overline\nu(U)\ \leq\ \overline\mu(U)\qquad(U\in\clopen(U)\,)\htam{.}
+\end{equation*}
+%
+\item\label{6.20-9}
+$\overline\nu$ has the additive property ascribed to~$\overline\mu$
+in~\ref{6.20-7}.
+(Observe that 
+\begin{alignat*}{2}
+\textstyle\overline\nu(U)-\sum_{n\geq N} \overline\nu(U_n)
+\ &=\    \overline\nu\bigl(\,U\,\backslash
+          \textstyle\bigcup_{n\leq N}U_n\,\bigr) \\
+\ &\leq\ \overline\mu\bigl(\,U\,\backslash
+          \textstyle \bigcup_{n\leq N}U_n\,\bigr)
+\ =\     \overline\mu(U)-\sum_{n\leq N}\overline\mu(U_n)
+\end{alignat*}
+for every~$N$.)
+\end{enumerate}
+\end{psec}
+%
 %
 %
 \clearpage
