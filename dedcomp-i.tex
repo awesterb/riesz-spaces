@@ -106,9 +106,8 @@ but not extremally disconnected.
 Let $X$ be a compact Hausdorff space.
 \begin{enumerate}
 \item\label{6.4-1}
-Show that the following property of~$X$
+Show: the following property of~$X$
 is equivalent to extremal disconnectedness:
-\vspace{.5em}
 \begin{center}
 \begin{minipage}{.45\textwidth}
 If two open subsets of~$X$
@@ -168,8 +167,8 @@ Define $g\colon X\ra [0,\infty)$ by
 \begin{equation*}
 g(x)\ :=\ \sup_{f\in F} f(x)\qquad(x\in X)\htam{.}
 \end{equation*}
-For each~$s$ in~$(0,\infty)$
-the set $\{x\colon g(x)>s\}$ is open, since
+For each~$s$ in~$[0,\infty)$
+the set $\{x\colon g(x)\geq s\}$ is open, since
 \begin{equation*}
 \{x\colon g(x)>s\}\ =\ \bigcup_{f\in F} \{x\colon f(x)>s\}\htam{;}
 \end{equation*}
@@ -186,7 +185,7 @@ as~$f_0$ is continuous.
 Thus, we can define $f_\infty\colon X\ra \R$ by
 \begin{equation*}
 f_\infty(x)\ 
-:=\ \sup s\mathbb{1}_{U_s}(x)\ 
+:=\ \smash{\sup_{s\geq 0}}\, s\mathbb{1}_{U_s}(x)\ 
 =\ \sup\{s\colon x\in U_s\}
 \qquad(x\in X)\htam{.}
 \end{equation*}
@@ -292,7 +291,7 @@ then
 Let $\mathcal A$ be an algebra of subsets of~$X$.
 As a closed Riesz subspace of~$\ell^\infty(X)$
 that contains~$\mathbb 1$, \ 
-$\BLeb(\mathcal A)$ is unitary and uniformly complete,
+$\BLeb(\mathcal A)$ is Archimedean, unitary and uniformly complete,
 hence Riesz isomorphic to some~$\Cont{\Phi}$,
 according to Yosida.
 
@@ -303,7 +302,7 @@ Prove that~$\Phi$ is a Stone space for~$\mathcal A$~(\ref{3.19}).
 %
 \begin{psec}{6.10}{Theorem}\statement{
 Let $\mathcal A$ be an algebra of subsets of a set~$X$
-and let~$\mu$ be a nonnegative additive function $\mathcal A\ra \R$.
+and let~$\mu$ be an additive function $\mathcal A\ra [0,\infty)$.
 Then there is a unique linear function
 \begin{equation*}
 f\ \mapsto\ \int f\,\mathrm d\mu
@@ -315,7 +314,7 @@ on $\BLeb(\mathcal A)$ with the properties
 \int \mathbb{1}_{A}\,\mathrm d\mu\ &=\ \mu(A)\qquad 
   &(A\in\mathcal A)\htam{,} \\
 \int f\,\mathrm{d}\mu\ &\geq\ 0\qquad
-  &\htam{if }f\geq 0\htam{.}
+  &(f\geq 0)\htam{.}
 \end{aligned}
 \right.
 \end{equation*}
@@ -324,7 +323,8 @@ on $\BLeb(\mathcal A)$ with the properties
 (inspired by the proof of~\ref{3.18}.)
 \begin{enumerate}[label=(\Roman*)]
 \item\label{6.10-I}
-A ``partition'' here is a finite set of nonempty elements of~$\mathcal A$
+A ``partition'' here is a finite set of pairwise disjoint 
+nonempty elements of~$\mathcal A$
 whose union is~$X$.
 A ``refinement'' of a partition is what you think it is.
 For a partition~$S$ we denote by~$\lbb S\rbb$
@@ -335,7 +335,7 @@ then $\lbb S \rbb \subseteq \lbb T \rbb$.
 The union of all spaces~$\lbb S \rbb$ is precisely~$\lbb \mathcal A \rbb$,
 the set of all $\mathcal{A}$-step~functions.
 
-For $f\in\lbb A \rbb$ we define
+For $f\in\lbb S \rbb$ we define
 \begin{equation*}
 \int_S f\,\mathrm{d}\mu\ =\ \sum_{s\in S} \alpha_s\,\mu(s)
 \quad\htam{ where }\quad f=\sum_{s\in S} \alpha_s \mathbb{1}_s\htam{.}
@@ -350,7 +350,7 @@ f\,\mathrm{d}\mu\qquad&(f\in \lbb S \rbb)\htam{.} \\
 It follows that we can define a linear function $\int\cdot\,\mathrm d\mu$
 on~$\lbb \mathcal A \rbb$ by}
 \int f\,\mathrm{d}\mu\ &:=\ \int_S f\mathrm{d}\mu
- \qquad &\htam{ if } f\in\lbb S \rbb\htam{.}
+ \qquad &(f\in\lbb S \rbb)\htam{.}
 \end{alignat*}
 Observe that $\int \mathbb{1}_A\,\mathrm{d}\mu=\mu(A)
 \quad(A\in\lbb \mathcal A \rbb)$,
@@ -360,7 +360,7 @@ if $f\in\lbb\mathcal{A}\rbb^+$.
 \item\label{6.10-II}
 It follows that $\int\cdot\,\mathrm{d}\mu$ is increasing, so that
 \begin{equation*}
-\Bigl|\int f\,\mathrm{d}\mu\  -\int f\,\mathrm{d}\mu\  \Bigr|
+\Bigl|\int f\,\mathrm{d}\mu\  -\int g\,\mathrm{d}\mu\  \Bigr|
 \ \leq\ \int \bigl|f-g\bigr|\,\mathrm{d}\mu
 \ \leq\ \|f-g\|_\infty \,\mu(X)\qquad(f,g\in\lbb \mathcal A \rbb)
 \htam{,}
@@ -394,14 +394,15 @@ we will use some elementary properties of this intergral
 without explicitly mentioning them.
 This concerns in particular the following observations:
 \begin{alignat}{2}
-f\leq g\quad\implies\quad 
+\label{eq6.11-1}f\leq g\quad\implies\quad 
  &\int f\,\mathrm d\mu \ \leq\ \int g\,\mathrm d\mu\htam{,} \\
-\Bigl| \int f\,\mathrm d\mu\ \Bigr|\ \quad\leq\ \quad
+\label{eq6.11-2}\Bigl| \int f\,\mathrm d\mu\ \Bigr|\ \quad\leq\ \quad
  &\int\bigl|f\bigr|\,\mathrm d\mu\htam{;}\\
-\intertext{this follows from: $-|f|\leq f\leq |f|$.}
-\Bigl| \int f\,\mathrm d\mu\ \Bigr|\ \quad\leq\ \quad
-\|f\|_\infty\, \mu(X)\htam{.}
+\label{eq6.11-3}\Bigl| \int f\,\mathrm d\mu\ \Bigr|\ \quad\leq\ \quad
+&\|f\|_\infty\, \mu(X)\htam{.}
 \end{alignat}
+Here~\eqref{eq6.11-2} is a consequence of~\eqref{eq6.11-1}
+and the inequalities $-|f|\leq f\leq |f|$.
 \end{psec}
 %
 %                  6.12
@@ -423,13 +424,13 @@ c\in[0,\infty)\colon |\varphi(f)|\leq c\,\|f\|_\infty
 \end{equation*}
 
 In \ref{1.12} we have met the Riesz space $\BA(\mathcal A)$
-of bounded additive functions $\mathcal A\ra\R$.
+of bounded additive functions on~$\mathcal A$.
 \begin{enumerate}
 \item\label{6.12-1}
 Prove that for every~$\mu$ in $\BA(\mathcal A)$
 there is one linear function
 $\varphi_\mu\colon \BLeb(\mathcal A)\ra \R$
-with
+for which
 \begin{equation*}
 \left\{
 \ 
@@ -566,7 +567,7 @@ Let~$\mu$ be a \keyword{finite measure} on~$\mathcal A$,
 i.e., a signed measure (see~\ref{1.13})
 with values in~$[0,\infty)$.
 $\mu$ is finitely additive,
-so \ref{6.10}--\ref{6.12} are applicable
+so~\ref{6.10} and~\ref{6.11} are applicable.
 \begin{enumerate}
 \item\label{6.16-1}
 Call a subset~$A$ of~$X$ \keyword{null} (or: $\mu$-\emph{null})
@@ -577,19 +578,19 @@ if $\{x\colon f(x)\neq 0\}$ is null.
 we have
 $\{x\colon f(x)\neq 0\}
 =\{x\colon |f(x)|>0\}\in\mathcal A$
-by~\ref{6.13}\ref{6.13-1}.
+by~\ref{6.13}\ref{6.13-1}.)
 %
 \item\label{6.16-2}\statement{
 If $A$ is a null set
 and~$B$ is a subset of~$A$
 that lies in the $\sigma$-algebra~$\mathcal A$,
 then~$B$ is null.}
-Slightly less obviouss:
+Slightly less obvious:
 \statement{Every union of countably many null sets is null.}
 For a proof,
 let $A_1,A_2,\dotsc$ be null sets;
 define $B_1:=A_1$, 
-$B_n:=A_n\backslash \bigcup_{i<n} A_i \quad (n\in\N)$; then
+$B_n:=A_n\backslash \bigcup_{i<n} A_i \quad (n\in\N)$; then we have
 \begin{equation*}
 \textstyle \mu(\bigcup A_n)\ 
 =\ \mu(\bigcup B_n)\ 
@@ -606,7 +607,7 @@ Claim:\statement{
 }Proof:
 If~$f$ is null and $A:=\{x\colon f(x)\neq 0\}$,
 then $|f|\leq\|f\|_\infty\,\mathbb{1}_A$,
-whence $\int|f|\,\mathrm{d}\mu \leq\|f\|_\infty \,\mu(A)=0$.
+consequently $\int|f|\,\mathrm{d}\mu \leq\|f\|_\infty \,\mu(A)=0$.
 Conversely,
 suppose $\int|f|\,\mathrm{d}\mu=0$.
 For $n\in\N$, put
@@ -629,7 +630,7 @@ if $f_n\ra f$ uniformly (or even pointwise),
 then 
 \begin{equation*}
 \textstyle \{x\colon |f(x)|\neq 0\} 
-\subseteq \bigcup_n \{ x\colon f_n(x)\neq 0\}\htam{.}
+\ \subseteq\  \bigcup_n \{ x\colon f_n(x)\neq 0\}\htam{.}
 \end{equation*}
 
 We denote the quotient space by
@@ -660,12 +661,15 @@ Prove:
 \begin{psec}{6.18}{Exercise}
 \begin{enumerate}
 \item\label{6.18-1}
+The space 
 $D:=\smash{\bigl\{f\in\Cont{[0,1]}\colon f(0)=0\bigr\}}$
 is a uniformly closed Riesz ideal in $E:=\Cont{[0,1]}$.
 Form the quotient space $E/D$
 and the quotient Riesz homomorphism $Q\colon E\ra E/D$.
 Let $F \subseteq E$ be the set $\{f_1, f_2, \dotsc\}$
-where $f_n(t)=\sqrt[n]{t}\quad(n\in\N,\ t\in[0,1])$.
+\begin{equation*}
+f_n(t)\ =\ \sqrt[n]{t}\qquad(n\in\N,\ t\in[0,1])\htam{.}
+\end{equation*}
 Show that~$F$ has a supremum in~$E$
 and that $Q(F)$ has a supremum in~$E/D$,
 but that $Q(\sup F)$ is not $\sup Q(F)$.
@@ -674,7 +678,8 @@ but that $Q(\sup F)$ is not $\sup Q(F)$.
 (However:)
 In the situation of~\ref{6.16},
 let $g,\,f_1,f_2,\dotsc\in\BLeb(\mathcal A)$,
-$g=\sup\{f_n\colon n\in\N\}$ in~$\BLeb(\mathcal A)$.
+so that~$g$
+is the supremum of $\{f_n\colon n\in\N\}$ in~$\BLeb(\mathcal A)$.
 Show that~$[g]_\mu$
 is the supremum of 
 $\smash{\bigl\{[f_n]_\mu\colon n\in\N\bigr\}}$ in~$\BNL(\mu)$.
@@ -702,7 +707,7 @@ Define
 \end{equation*}
 Then $F=\smash{\bigl\{[f]_\mu\colon f\in\mathcal F\bigr\}}$.
 (If $f\in\BLeb(\mathcal A)$ and $[f]_\mu\in F$,
-then $[f]_\mu = [f]_\mu\wedge[g]_\mu = [f\wedge g]_\mu$,
+then $[f]_\mu = [f\wedge g]_\mu$,
 and $f\wedge g\in\mathcal F$.)
 
 Let $s:=\sup\smash{\bigl\{\int f\,\mathrm{d}\mu\colon
