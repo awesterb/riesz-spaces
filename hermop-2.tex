@@ -343,21 +343,50 @@ and, upon applying $\varphi$:}%
 %
 %                  5.27
 %
-\begin{psec}{5.17}%
-A brief digression before we return to our operator algebras.
-
-By applying Yosida's Theorem we see that
-in the situation of~\ref{5.26},
+\begin{psec}{5.17}{Comments}
+\begin{enumerate}
+\item\label{5.27-1}
+A a corollary we obtain:
+\statement{
+Let $E,e,*$ be as in~\ref{5.26};
+let~$X$ be a set and let~$T$ be a Riesz homomorphism
+$E\ra \R^X$ with~$Te=\mathbb{1}_X$.
+Then~$T$ is multiplicative:
+\begin{equation*}
+T(a*b)\ =\ (Ta)(Tb)\qquad(a,b\in E)\htam{.}
+\end{equation*}
+Consequently, the range of~$T$ is a subalgebra of~$\R^X$:
+\begin{equation*}
+f,g\in T(E)\quad\implies\quad fg\in T(E)\htam{.}
+\end{equation*}}
+%
+\item\label{5.27-2}
+In our applications,
+$T$ will result from the Yosida Theorem
+and will map~$E$ into~$\Cont{X}$,
+where~$X$ is a compact Hausdorff space.
+%
+\item\label{5.27-3}
+Also,
+the operator~$*$
+will be known to be commutative and associative.
+However,
 if~$E$ is Archimedean,
-the operation~$*$ a posteriori
-turns out to be commutative and associative,
-and to obey formulas such as
+the properties of~$*$ given in~\ref{5.26} \emph{imply}
+commutativity and associativity, and formulas such as
 \begin{alignat*}{2}
 |x*y|\ &=\ |x|*|y|\htam{,} \\
 x*x \ &\geq\ 0\htam{,} \\
 x*x=0\quad&\implies\quad x=0\htam{,} \\
 x\perp y\quad&\iff\quad x*y=0\htam{.}
 \end{alignat*}
+This follows directly from the observation that,
+by Yosida's Theorem and by~\ref{5.26}
+there is an injective (and multiplicative)
+Riesz homomorphism of~$E$ into some~$\Cont{X}$
+with $e\mapsto\mathbb{1}_X$.
+%
+\item\label{5.27-4}
 For a non-Achimedean~$E$
 things may go wrong.
 Consider~$\R^3$,
@@ -391,6 +420,7 @@ x_1 y_3 + x_3 y_1 + x_2 y_3
 \end{equation*}
 satisfies the conditions of the lemma
 but is not commutative.
+\end{enumerate}
 \end{psec}
 %
 %                  5.28
