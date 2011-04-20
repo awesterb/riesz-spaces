@@ -831,6 +831,31 @@ $\overline \mu\colon \clopen(Y)\ra \R$ by
 \overline{\mu} (\hat A)\ :=\ \mu(A)\qquad (A\in\mathcal A)\htam{.}
 \end{equation*}
 $\overline \mu$ is additive.
+\begin{equation*}
+\xymatrix@!C{
+&
+ \R & 
+\\
+\BLeb(\mathcal{A})
+  \ar[ru]^{\int\cdot\,\mathrm{d}\mu}
+  \ar@/_1em/@{->>}[rr]_{f\mapsto \hat f}
+  \ar@{->>}[r]^{f\mapsto [f]_\mu}&
+\BNL(\mu) 
+  \ar@3{-}[r]&
+\lsub{\BLeb(\clopen(Y))=\Cont{Y}}{\BLeb(\clopen(Y))}
+  \ar[lu]_{\int\cdot\,\mathrm{d}\overline\mu}\\
+\mathcal{A}
+  \ar@{->>}[rr]_{A\mapsto\hat A}
+  \ar[rd]_\mu
+  \ar[u]^{A\mapsto\mathbb{1}_A}&
+&
+\clopen(Y)
+  \ar[ld]^{\overline\mu}
+  \ar[u]_{U\mapsto\mathbb{1}_U}\\
+&
+\R&
+}
+\end{equation*}
 %
 \item\label{6.20-4}
 If $f\in\BLeb(\mathcal A)$
