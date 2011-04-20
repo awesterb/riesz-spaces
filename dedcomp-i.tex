@@ -873,7 +873,7 @@ finally, we use uniform limits for arbitrary~$f$.
 \item\label{6.20-5}
 Out of $\mu\colon\mathcal A\ra \R$
 we have made $\overline\mu\colon\clopen(Y)\ra\R$.
-This eems a clear loss,
+This seems a clear loss,
 as~$\mathcal A$ is a $\sigma$-algebra
 and $\clopen(Y)$
 in all probability is not.
@@ -883,7 +883,7 @@ and we have eliminated the null sets:
 \begin{equation*}
 \htam{If }\ U\in\clopen(Y)\ \htam{ and }\ 
 \overline\mu(U)=0\htam{,\quad then }\ U=\varnothing\htam{.}
-\end{equation*}}
+\end{equation*}}%
 (This is obvious.)
 %
 \item\label{6.20-6}
@@ -962,6 +962,162 @@ in~\ref{6.20-7}.
 for every~$N$.)
 \end{enumerate}
 \end{psec}
+%
+%                  6.21
+%
+
+\begin{psec}{6.21}%
+\noindent Now we prove a classical result from integration theory:
+
+\vspace{.5em}
+\noindent\textbf{Radon--Nikodym Theorem}\  
+\statement{Let $\mu$ and~$\nu$ be finite measures
+on a $\sigma$-algebra~$\mathcal A$ of subsets of a set~$X$,
+such that
+\begin{alignat*}{2}
+\nu(A)\ &\leq\ \mu(A)\qquad(A\in\mathcal A)\htam{.} \\
+\shortintertext{Then there is an~$f$ in $\BLeb(\mathcal A)^+$ with}
+\nu(A)\ &=\int\mathbb{1}_A\, f\,\mathrm{d}\mu\qquad(A\in\mathcal A)\htam{.}
+\end{alignat*}
+}\end{psec}
+\begin{proof}
+With the aid of~\ref{6.20}
+we see that it suffices to prove the following:
+\vspace{.5em}
+\begin{center}
+\begin{minipage}{.8\textwidth}
+Let $Y$ be an extremally disconnected compact Hausdorff space.
+Let~$\overline\mu$ and~$\overline\nu$
+be additive functions $\clopen(Y)\ra[0,\infty)$
+such that $\overline\nu\leq\overline\mu$
+and~$\overline\mu$ has the properties described
+in~\ref{6.20-5}--\ref{6.20-7} of~\ref{6.20}.
+Then there exists an~$f$ in~$\Cont{X}^+$ with
+\begin{equation*}
+\overline\nu(A)\ =\int\mathbb{1}_A\,f\,\mathrm{d}\overline\mu
+   \qquad (A\in\clopen(Y)\,)\htam{.}
+\end{equation*}
+\end{minipage}
+\end{center}
+\vspace{.5em}
+This we proceed to do.
+Define $\omega\colon\clopen(X)\ra[0,1]$ by:
+\begin{equation*}
+\omega(A)\ :=\inf_{\substack{B\htam{ clopen}\\B\subseteq A}}\  
+\frac{\nu(B)}{\mu(B)}\htam{.}
+\end{equation*}
+Thanks to Dedekind completeness of~$X$
+we can define an~$f$ in~$\Cont{X}$ by
+\begin{equation*}
+f\ :=\ \sup\,\bigl\{ \omega(A)\,\mathbb{1}_A\colon\ 
+   A\htam{ clopen,} \ A\neq\varnothing\bigr\}
+\quad\htam{(in }\Cont{X}\,\htam{).}
+\end{equation*}
+\begin{enumerate}[label=(\Roman*)]
+\item\label{6.21-I}
+Let $W\subseteq X$ be clopen,
+$s\in\R$, and $f\leq s$ on~$W$.
+Claim: $\nu(W)\leq s\,\mu(W)$.
+
+\noindent\emph{Proof}\  Suppose not.
+Choose a number~$t$ with
+\begin{alignat*}{2}
+s\ <\ t\ &<\ \textstyle \frac{\nu(W)}{\mu(W)}\htam{;}\\
+\shortintertext{then}
+t\,\mu(W)\ &<\ \nu(W)\htam{.}
+\end{alignat*}
+Let $\mathcal A$ be a maximal disjoint collection
+of clopen subsets~$A$ of~$W$
+with $\nu(A)\leq t\,\mu(A)$,
+and let~$W_0$ be the closure of its union.
+$W_0$ is a clopen subset of~$W$.
+It follows from~\ref{6.20-6}, \ref{6.20-7}
+and~\ref{6.20-9} of~\ref{6.20} that
+$\nu(W_0)\leq t\,\mu(W_0)$,
+so $W_0\neq W$.
+
+By the maximality of the system~$\mathcal A$,
+for every nonempty clopen $B\subseteq  W\backslash W_0$
+we have $\nu(B)>t\,\mu(B)$,
+which implies $\omega(W\backslash W_0)\geq t > s\geq f(x)$
+for all~$x$ in~$W$.
+But $f(x)\geq \omega(W\backslash W_0)$
+if $x\in W\backslash W_0$.
+Contradiction.
+%
+\item\label{6.21-II}
+Let $W\subseteq X$ be clopen,
+$s\in\R$, and $f\geq s$ on~$W$.
+Claim: $\nu(W)\geq s\,\mu(W)$.
+
+\noindent\emph{Proof}\  Suppose not.
+Choose a number~$t$ with
+\begin{equation*}
+s\ >\ t\ >\ {\textstyle \frac{\nu(W)}{\mu(W)}}\htam{.}
+\end{equation*}
+Let $\mathcal A$ be a maximal disjoint collection of
+clopen subsets~$A$ of~$W$ with $\nu(A)\geq t\,\mu(A)$,
+and let~$W_0$ be the closure of its union.
+As before,
+$W_0\neq W$.
+With~$\varepsilon:=s-t$ we have
+$f-\varepsilon\,\mathbb{1}_{W\backslash W_0} <f$,
+so that by the definition of~$f$,
+there exist an~$a$ in~$X$
+and a nonempty clopen set~$A$ with
+\begin{equation*}
+f(a)-\varepsilon\,\mathbb{1}_{W\backslash W_0}(a)
+\ <\ \omega(A)\,\mathbb{1}_A (a)\htam{.}
+\end{equation*}
+As $f\geq\omega(A)\,\mathbb{1}_A$,
+we see from this that $a\in W\backslash W_0$;
+then $f(a)\geq s$, and:
+\begin{equation*}
+t\ =\ s-\varepsilon\ <\ \omega(A)\,\mathbb{1}_A(a)\htam{.}
+\end{equation*}
+Hence, $a\in A$ and $\omega(A)>t$.
+Setting $B:=A\cap(W\backslash W_0)$
+we observe that $B\neq\varnothing$ (as~$a\in B$)
+and $t<\omega(A)<\smash{\frac{\nu(B)}{\mu(B)}}$,
+contradicting the maximality of~$\mathcal A$.
+
+\item\label{6.21-III}
+Now let $A\in\clopen(X)$, $N\in\N$;
+we show that
+\begin{equation*}
+\bigl|\textstyle  \nu(A)-\int\mathbb{1}_A\,f\,\mathrm{d}\mu\bigr|
+\ \leq\ N^{-1}\mu(A)\htam{.}
+\end{equation*}
+(This proves the theorem.)
+
+Define
+\begin{alignat*}{2}
+V_0 &:= \varnothing\htam{,}\quad
+V_N:=A\htam{,} \\
+V_n &:= \bigl\{x\in A\colon f(x)<{\textstyle\frac{n}{N}}\bigl\}
+    &\qquad&(n=1,\dotsc,N-1)\htam{,} \\
+W_n &:= \overline{V}_n\backslash\overline{V}_{n-1}
+ &\qquad&(n=1,\dotsc,N)\htam{.}
+\end{alignat*}
+(The bar indicates closure.)
+The sets $W_1,\dotsc,W_N$ are clopen,
+pairwise disjoint;
+they cover~$A$,
+and $\smash{\frac{n-1}{N}\leq f\leq \frac{n}{N}}$
+on~$W_n\quad(n=1,\dotsc,N)$.
+From~\ref{6.21-I} and~\ref{6.21-II} we obtain,
+for each~$n$,
+\begin{alignat*}{2}
+\nu(W_n)\ &\leq\ &\textstyle\frac{n}{N}\ \,\mu(W_n)
+  \ &\leq\ \int\mathbb{1}_{W_n}\,f\,\mathrm{d}\mu 
+  \ +\  N^{-1}\,\mu(W_n)\htam{,} \\
+\nu(W_n)\ &\geq\ &\textstyle\frac{n-1}{N}\,\mu(W_n)
+  \ &\geq\ \int\mathbb{1}_{W_n}\,f\,\mathrm{d}\mu 
+  \ -\  N^{-1}\,\mu(W_n)\htam{.} 
+\end{alignat*}
+Addition produces the desired inequality. \xqed
+\end{enumerate}
+\end{proof}
 %
 %
 %
