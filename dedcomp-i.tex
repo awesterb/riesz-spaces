@@ -705,7 +705,8 @@ that has a supremum,
 then~$F$ has a countable subset with the same supremum.
 }\end{psec}
 \begin{proof}
-Let $F$ be a nonempty subset of $\BNL{\mu}$
+Let $F$ be a nonempty subset of $\BNL(\mu)$,
+upwards directed (\ref{4.17}\ref{4.17-2}), and
 with an upper bound $[g]_\mu$.
 Define
 \begin{equation*}
@@ -716,6 +717,7 @@ Then $F=\smash{\bigl\{[f]_\mu\colon f\in\mathcal F\bigr\}}$.
 (If $f\in\BLeb(\mathcal A)$ and $[f]_\mu\in F$,
 then $[f]_\mu = [f\wedge g]_\mu$,
 and $f\wedge g\in\mathcal F$.)
+As~$F$ is upwards directed, so is~$\mathcal F$.
 
 Let $s:=\sup\smash{\bigl\{\int f\,\mathrm{d}\mu\colon
 f\in\mathcal F\bigr\}}$ and choose $f_1,f_2,\dotsc$ in~$\mathcal F$
@@ -748,8 +750,10 @@ For every~$n$,
       -\int f_n\,\mathrm{d}\mu
 \ \leq\ s-\int f_n\,\mathrm{d}\mu\htam{,}
 \end{alignat*}
-so $\int |f-f\wedge f_\infty|\,\mathrm{d}\mu=0$,
-$[f-f\wedge f_\infty]=0$,
+where $\int f(f\vee f_n)\,\mathrm{d}\mu\leq s$
+thanks to the directedness of~$\mathcal F$.
+Consequently,
+$f-f\wedge f_\infty$ is null,
 and $[f]_\mu= [f\wedge f_\infty]_\mu\leq [f_\infty]_\mu$. \xqed
 \end{proof}
 %
