@@ -2,6 +2,85 @@
 \begin{document}
 % 6
 \section{Dedekind Completeness, II}
+Another application concerns an extension of the
+representation theory for Hermitian operators.
+First, some topology.
+%
+%                  7.1,  Baire Category Theorem
+%
+\begin{psec}{7.1}{Baire Category Theorem}\statement{
+Let $X$ be either a compact Hausdorff space
+or a complete metric space.
+\begin{enumerate}
+\item\label{7.1-1}
+If $U_1, U_2,\dotsc$ are dense open sets,
+then $\bigcap U_n$ is dense.
+%
+\item\label{7.1-2}
+If $C_1,C_2,\dotsc$ are closed sets with empty interior,
+then $\bigcup C_n$ has empty interior.
+%
+\item\label{7.1-3}
+If $C_1,C_2,\dotsc$ are closed sets and $\bigcup C_n=X$,
+then at least one~$C_n$ has nonempty interior
+---
+provided~$X$ is nonempty.
+\end{enumerate}
+}\end{psec}
+\begin{proof}
+For $Y\subseteq X$
+the statements ``$Y$ is dense''
+and ``$X\backslash Y$ has empty interior''
+are equivalent.
+Consequently,
+we have \ref{7.1-1}$\iff$\ref{7.1-2}$\implies$\ref{7.1-3},
+and it suffices to prove~\ref{7.1-1}.
+Let $U_1,U_2,\dotsc$ be dense open sets
+and let~$W$ be open, nonempty;
+we wish to show that $W\cap \bigcap U_n\neq \varnothing$.
+
+As $U_1$ is open and dense, $W\cap U_1$
+is a nonempty open set.
+Then there is a nonempty open~$V_1$
+with $\overline{V}_1\subseteq W\cap U_1$.
+Similarly,
+$V_1\cap U_2$ is nonempty and open:
+Choose a nonempty open~$V_2$ with $\overline{V}_2\subseteq V_1\cap U_2$.
+Continuing in this fashion
+one obtains the following scheme:
+\begin{equation*}
+\xymatrix@-1em{
+W 
+  \ar@{}[r]|*{\supseteq}&
+\overline{V}_1 
+  \ar@{}[r]|*{\supseteq}&
+V_1
+ \ar@{}[r]|*{\supseteq}&
+\overline{V}_2 
+ \ar@{}[r]|*{\supseteq}  &
+V_2
+  \ar@{}[r]|*{\supseteq} &
+\overline{V}_3
+  \ar@{}[r]|*{\supseteq}  &
+\dotsb \\
+&
+U_1
+ \ar@{}[u]|*{\begin{turn}{90}$\supseteq$\end{turn}} &
+&
+U_2 \ar@{}[u]|*{\begin{turn}{90}$\supseteq$\end{turn}} &
+&
+U_3 \ar@{}[u]|*{\begin{turn}{90}$\supseteq$\end{turn}} &
+}\end{equation*}
+Now $\bigcap \overline{V}_n \subseteq W\cap \bigcap U_n$;
+and we are done in case $\bigcap \overline{V}_n \neq \varnothing$.
+
+If $X$ is compact,
+this is automatic.
+If~$X$ is a complete metric space,
+we insert one clause in the above construction,
+viz., that~$V_n$ be a ball with radius~$\leq n^{-1}$.
+\xqed
+\end{proof}
 %
 %
 %
