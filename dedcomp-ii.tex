@@ -82,6 +82,76 @@ viz., that~$V_n$ be a ball with radius~$\leq n^{-1}$.
 \xqed
 \end{proof}
 %
+%                  7.2
+%
+\begin{psec}{7.2}{Definition}
+Let $X$ be a compact Hausdorff space.
+
+A subset~$Y$ of~$X$ is called \keyword{meager}
+if there exist subsets $C_1,C_2,\dotsc$ of~$X$ such that
+\begin{equation*}
+\left\{\ 
+\begin{aligned}
+& \htam{every }C_n\htam{ is closed and has empty interior,} \\
+& \textstyle Y\subseteq \bigcup C_n\htam{.}
+\end{aligned}
+\right.
+\end{equation*}
+\end{psec}
+%
+%                  7.3
+%
+\begin{psec}{7.3}%
+In a compact Hausdorff space~$X$,
+meager sets are small in a sense illustrated by the following observations.
+\begin{itemize}[itemindent=1.2em]
+\item
+Meager sets have empty interior;
+in other words:
+the complement of a meager set is dense.
+(This is Baire's Theorem~\ref{7.1}.)
+%
+\item
+The only meager open set is~$\varnothing$.
+%
+\item
+A closed set is meager
+if and only if its interior is empty.
+%
+\item
+Subsets of meager sets are meager.
+%
+\item
+A union of countably many meager sets is meager.
+\end{itemize}
+
+Meager sets are in topology
+more or less what null sets are in measure theory.
+\end{psec}
+%
+%                  7.4
+%
+\begin{psec}{7.4}{Examples}
+In $[0,1]$,
+every countable set is meager.
+
+Let $(q_1,q_2,\dotsc)$ be an enumeration of $[0,1]\cap\mathbb{Q}$,
+and for $\varepsilon>0$ let
+\begin{equation*}
+U_\varepsilon\ =\ [0,1]\,\cap\,{\bigcup}_n
+  \bigl(q_n-\varepsilon\, 2^{-n},\, q_n +\varepsilon\, 2^{-n}\bigr)\htam{.}
+\end{equation*}
+$U_\varepsilon$ is a dense open subset of~$[0,1]$.
+
+Then $[0,1]\,\backslash\, U_{\sfrac{1}{5}}$ is meager
+but its Lebesgue measure is positive.
+The set
+\begin{equation*}
+\bigcap_{p\in\N} U_{\sfrac{1}{p}}
+\end{equation*}
+has measure~$0$ but its complement is meager.
+\end{psec}
+%
 %
 %
 \clearpage
