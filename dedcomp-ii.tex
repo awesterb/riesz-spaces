@@ -237,6 +237,57 @@ and $f\equiv g$, then $f=g$.
 \end{enumerate}
 \end{psec}
 %
+%                  7.8
+%
+\begin{psec}{7.8}{Lemma}\statement{
+Let $X$ be a compact Hausdorff space.}
+
+\statement{The subsets $Y$  of $X$ with the property
+\begin{equation}\label{eq7.8-1}
+Y\equiv U\quad\htam{ for some open set }\ U
+\end{equation}
+form a $\sigma$-algebra containing all open sets.}
+
+\statement{The condition~\eqref{eq7.8-1}
+is equivalent to
+\begin{equation}\label{eq7.8-2}
+Y\equiv C\quad\htam{ for some closed set }\ C\htam{.}
+\end{equation}}
+
+\statement{If $X$ is extremally disconnected,
+\eqref{eq7.8-1} and~\eqref{eq7.8-2}
+are equivalent to
+\begin{equation}\label{eq7.8-3}
+Y\equiv W\quad \htam{ for some clopen set }\ W\htam{.}
+\end{equation}}
+\end{psec}
+\begin{proof}
+Let $\mathcal A$ be the collection
+of all sets with Property~\eqref{eq7.8-1}.
+Obviously, $\mathcal A$ contains~$\varnothing$
+and all open sets.
+If $Y_1,Y_2,\dotsc \in\mathcal A$
+and if $U_1,U_2,\dotsc$ are open sets with $A_n\equiv U_n\quad(n\in\N)$,
+then $\bigcup Y_n\equiv \bigcup U_n$~(\ref{7.7}\ref{7.7-3}),
+so $\bigcup Y_n\in\mathcal A$.
+If $Y\in\mathcal A$ and~$U$ is open,
+$Y\equiv U$,
+then $Y\equiv \overline U$~(\ref{7.7}\ref{7.7-1}),
+so that $X\backslash Y\equiv X\backslash\overline U$~(\ref{7.7}\ref{7.7-2}),
+and $X\backslash Y\in\mathcal A$.
+
+Thus, $\mathcal A$ is a $\sigma$-algebra.
+A set~$Y$ has Property~\eqref{eq7.8-2}
+if and only if $X\backslash Y\in\mathcal A$,
+if and only if $Y\in\mathcal A$.
+Thus, \eqref{eq7.8-1} and~\eqref{eq7.8-2} are equivalent.
+
+If $X$ is extremally disconnected,
+then~\eqref{eq7.8-1} implies~\eqref{eq7.8-3}
+because for any open set~$U$
+we have $U\equiv\overline U$ and~$\overline U$ is clopen. \xqed
+\end{proof}
+%
 %
 %
 \clearpage
