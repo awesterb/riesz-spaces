@@ -406,6 +406,45 @@ The proof is now nothing but aping our proof of Theorem~\ref{6.10},
 replacing~$\R$ by the complete metric space~$E$. \xqed
 \end{proof}
 %
+%                  7.11
+%
+\begin{psec}{7.12}{Exercise}
+The functions~$f$ on~$\N$
+for which $\lim_{n\ra \infty} f(n)$ exists (in~$\R$)
+form a Riesz space~$\cseq$.
+(See~\ref{1.5}\ref{1.5-4}, \ref{4.20}.)
+Let~$\mathcal A$ be the collection of all subsets of~$\N$
+that either are finite or have a finite complement.
+\begin{enumerate}
+\item\label{7.12-1}
+Show that~$\mathcal A$ is an algebra
+and that $\BLeb(\mathcal A)=\cseq$.
+%
+\item\label{7.12-2}
+Define $\mu\colon\mathcal A\ra\R$ by
+\begin{equation*}
+\mu(A)\ :=\ \sum_{n\in A} \,2^{-n}\htam{.}
+\end{equation*}
+``Describe'' (more directly than by quoting the definition)
+$\int \cdot\,\mathrm{d}\mu$.
+%
+\item\label{7.12-3}
+Define $\pi\colon\mathcal A\ra\R$ by
+\begin{alignat*}{2}
+\pi(A)&:=0 \qquad&&\htam{if }A\htam{ is finite,} \\
+\pi(A)&:=1 \qquad&&\htam{if }\N\backslash A\htam{ is finite.}
+\end{alignat*}
+``Describe'' $\int\cdot\,\mathrm{d}\pi$.
+%
+\item\label{7.12-4}
+Define $\tau\colon \mathcal A\ra\ell^\infty$ ($:=\ell^\infty(\N)$) by
+\begin{equation*}
+\tau(A)\ :=\ \mathbb{1}_A\htam{.}
+\end{equation*}
+``Describe'' $\int\cdot\,\mathrm{d}\tau$.
+\end{enumerate}
+\end{psec}
+%
 %
 %
 \clearpage
