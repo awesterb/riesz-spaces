@@ -301,7 +301,71 @@ These sets form a collection
 \end{equation*}
 that is easily seen to be an algebra.
 \end{psec}
-
+%
+%                  7.10
+%
+\begin{psec}{7.10}{Comments}
+\begin{enumerate}
+\item\label{7.10-1}
+If $f\in\Cont{X}$,
+then the set $\{x\colon f(x)>0\}$ is of the first Baire class,
+as its indicator is $\lim \smash{\sqrt[n]{f^+}}$.
+Therefore,
+if $f\in\Cont{X}$,
+sets such as $\{x\colon f(x)>3\}$,
+$\{x\colon f(x)\leq 3 \}$,
+$\{x\colon 2\leq f(x)\leq 3\}$ lie in~$\BaireI(X)$.
+%
+\item\label{7.10-2}
+It follows that
+\begin{equation*}
+\Cont{X}\ \subseteq\ \BNL(\BaireI(X))\htam{.}
+\end{equation*}
+Indeed,
+let $f\in\Cont{X}$, $\varepsilon>0$.
+Choose $s_0<s_1<\dotsb<s_N$ in~$\R$
+with $s_n<s_{n-1}+\varepsilon$
+for $n=1,\dotsc,N$
+and such that all values of~$f$ lie in the interval $(s_0,s_N)$.
+Setting $A_n:=\{x\colon s_{n-1}<f(x)\leq s_n\}$
+we obtain $A_1,\dotsc, A_N$ in~$\BaireI(X)$,
+pairwise disjoint, and with
+\begin{equation*}
+0\ \leq\ f-{\textstyle\sum}\,
+ s_n\,\mathbb{1}_{A_n}\ \leq\ \varepsilon\,\mathbb{1}\htam{.}
+\end{equation*}
+%
+\item\label{7.10-3}
+In the case $X$ is metrizable,
+one can show that every open set is of the form $\{x\colon f(x)>0\}$
+for some~$f$ in~$\Cont{X}$,
+so all open sets are of the first Baire class.
+For, e.g., the space $[0,1]^\R$ this is not true.
+%
+\item\label{7.10-4}
+Let $A\in\BaireI(X)$.
+Choose $f_1,f_2,\dotsc$ in~$\Cont{X}$
+with $f_n\ra \mathbb{1}_A$.
+Then an element~$x$ of~$X$ belongs to~$A$
+if and only if there is an~$N$ with
+\begin{equation*}
+\bigl\{ f_N(x),\, f_{N+1}(x),\, \dotsc\,\bigr\}
+\ \subseteq\ \bigl(\textstyle\frac{1}{2},\infty\bigr)\htam{.}
+\end{equation*}
+Hence,
+\begin{equation*}
+A\ =\ \bigcup_N \bigcap_{n\geq N} \bigl\{ 
+x\colon f_n(x)>\textstyle \frac{1}{2} \bigr\}\htam{.}
+\end{equation*}
+As $\{x\colon f_n(x)>\sfrac{1}{2}\}$ is always open,
+it follows that~$A$ lies in the $\sigma$-algebra
+described in Lemma~\ref{6.19}.
+What we will use farther on is this:
+\statement{If~$A$ is a set of the first Baire class
+in an extremally disconnected compact Hausdorff space,
+then there is a unique clopen set~$U$ with $A\equiv U$.}
+\end{enumerate}
+\end{psec}
 %
 %
 %
