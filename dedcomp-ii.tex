@@ -367,6 +367,45 @@ then there is a unique clopen set~$U$ with $A\equiv U$.}
 \end{enumerate}
 \end{psec}
 %
+%                  7.11
+%
+\begin{psec}{7.11}%
+Next,
+we extend the integration theory of~\ref{6.10}.
+Instead of an additive $\mu\colon \mathcal A\ra\R^+$
+we now consider an additive $\mu\colon \mathcal A\ra E^+$
+where~$E$ is a suitable Riesz space:
+
+\vspace{.5em}
+\noindent\textbf{Theorem}\  \statement{
+Let $\mathcal A$ be an algebra of subsets of a set~$X$.
+Let~$E$ be a uniformly complete
+unitary Riesz space,
+and let~$\mu$ be an additive map $\mathcal A\ra E^+$.
+Then there is a unique linear map
+\begin{equation*}
+f\mapsto \int f\,\mathrm{d}\mu
+\end{equation*}
+of $\BLeb(\mathcal A)$ into~$E$ with the properties
+\begin{equation*}
+\left\{\ 
+\begin{aligned}
+\int \mathbb{1}_A\,\mathrm{d}\mu\ &=\ \mu(A)
+  \qquad& (A\in\mathcal A)\htam{,} \\
+\int f\,\mathrm{d}\mu \ &\geq\ 0
+  \qquad & (f\geq 0)\htam{.}
+\end{aligned}
+\right.
+\end{equation*}}
+\end{psec}
+\begin{proof}
+Let~$e$ be a unit for~$E$;
+then under the norm~$\|\cdot\|_e$,
+$E$ is complete.
+The proof is now nothing but aping our proof of Theorem~\ref{6.10},
+replacing~$\R$ by the complete metric space~$E$. \xqed
+\end{proof}
+%
 %
 %
 \clearpage
