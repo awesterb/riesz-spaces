@@ -939,10 +939,20 @@ we prove~$\mu^+\in\sigma(\mathcal A)$. (See~\ref{1.6}.)
 Let $(A_n)_n$ be a disjoint sequence in~$\mathcal A$.
 We have
 \begin{equation*}
+\textstyle
 \mu^+ \bigl( \bigcup A_n \bigr)
    \ \geq\  \sup_N  \mu^+(A_1 \cup \dotsb \cup A_N) 
    \ =\  \sum_{n=1}^\infty \mu^+(A_n)
 \htam{,}
+\end{equation*}
+On the other hand,
+for $T\in\mathcal A$ with $T\subseteq\bigcup A_n$ we obtain
+\begin{equation*}
+\textstyle
+\mu(T)\ =\ \mu\bigl(\bigcup(T\cap A_n)\bigr)
+\ =\ \sum\mu(T\cap A_n)
+\ \leq\ \sum\mu^+(T\cap A_n)
+\ \leq\ \sum\mu^+(A_n)\htam{,}
 \end{equation*}
 so that, 
 by the comment following~\ref{1.12},
