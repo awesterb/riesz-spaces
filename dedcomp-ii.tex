@@ -445,6 +445,253 @@ Define $\tau\colon \mathcal A\ra\ell^\infty$ ($:=\ell^\infty(\N)$) by
 \end{enumerate}
 \end{psec}
 %
+%                  7.13
+%
+We return to the Hermitian operators.
+In the following pages
+our notation are as in Chapter~\ref{5}.
+\begin{psec}{7.13}{Theorem}\statement{
+Every strongly closed subalgebra of~$\mathscr H$
+is a Dedekind complete Riesz space.}
+(See~\ref{5.17} for the definition of ``strongly closed''.)
+\end{psec}
+\begin{proof}
+Let $\mathscr A$ be a strongly closed subalgebra of~$\mathscr H$.
+Being closed in the sense of the norm,
+$\mathscr A$ is a Riesz space (Lemma~\ref{5.25}).
+We show Dedekind completeness with the aid of~\ref{4.17}\ref{4.17-2}:
+
+Let $\mathscr T$ be a nonempty subset of~${\mathscr A}^+$,
+upwards directed,
+with an upper bound~$A$ in~${\mathscr A}^+$.
+Without loss of generality we assume~$\|A\|\leq 1$;
+then $A\leq I$ (Lemma~\ref{5.10})
+so that~$I$ is an upper bound for~$\mathscr T$.
+(Possibly, $I\notin \mathscr A$,
+but that turns out to be irrelevant.)
+
+$\mathscr T$ is a directed set. For $x\in H$,
+\begin{equation*}
+\bigl(\left< Tx, x\right>\bigr)_{T\in\mathscr T}
+\end{equation*}
+is an increasing net in~$\R$,
+bounded from above by~$\left<x,x\right>$,
+and therefore convergent to some number, $\alpha(x)$, say:
+\begin{equation*}
+\alpha(x)\ =\ \lim_{T\in\mathscr T} \left<Tx,x\right>
+\ =\ \sup_{T\in\mathscr T} \left<Tx,x\right>
+\qquad(x\in H)\htam{.}
+\end{equation*}
+
+If $S,T\in\mathscr T$ and $S\geq T$,
+then $0\leq S-T\leq I-0=I$,
+so that (\ref{5.20}\ref{5.20-2})
+\begin{equation*}
+(S-T)^2\ \leq\ S-T\htam{.}
+\end{equation*}
+Then for all~$x$ in~$H$
+\begin{alignat*}{2}
+\bigl\|Sx - Tx\bigr\|^2\ 
+  &=\ \bigl<(S-T)x,(S-T)x\bigr> \\
+  &=\ \bigl<(S-T)^2x,x\bigr> \\
+  &=\ \bigl<(S-T)x,x\bigr> \\
+  &=\ \bigl<Sx,x\bigr> - \bigl<Tx,x\bigr> \\
+  &\leq\ \alpha(x) - \bigl<Tx,x\bigr>\htam{.}
+\end{alignat*}
+It follows without too much trouble
+that the net $(Tx)_{T\in\mathscr T}$ converges:
+Choose $T_1\leq T_2\leq \dotsb$ in~$\mathscr T$
+with $\left<T_nx,x\right>\geq\alpha(x)-n^{-2}$ for all~$n$; then
+\begin{equation*}
+\| Sx-T_nx\|\ \leq\ n^{-1}
+\qquad(S\in\mathscr T,\ n\in\N,\ S\geq T_n)\htam{.}
+\end{equation*}
+In particular, $(T_nx)_n$ is a Cauchy sequence.
+If $x^*$ is its limit,
+we have $\|x^* - T_nx\|\leq n^{-1}$ for all~$n$,
+so that $\|Tx-x^*\|\leq
+\|Tx-T_nx\| + \|x^*-T_nx\|\leq 2n^{-1}$
+as soon as $T\geq T_n$:
+Thus, $x^* = \lim_{T\in\mathscr T} Tx$.
+
+Consequently,
+we can define $T_\infty\colon H\ra H$ by
+\begin{equation*}
+T_\infty x\ =\ \lim_{T\in \mathscr T} Tx\qquad (x\in H)\htam{.}
+\end{equation*}
+
+We have $T\leq I\quad(T\in\mathscr H)$,
+hence, by Lemma~\ref{5.10}, $\|Tx\|\leq\|x\|\quad(T\in\mathscr T,\ x\in H)$,
+hence $\|T_\infty x\|\leq\|x\|$.
+Then~$T_\infty$ is a continuous linear map.
+As $\left<Tx,y\right>=\left<x,Ty\right>\quad(T\in\mathscr T; x,y\in H)$,
+we also have $\left<T_\infty x,y\right> = \left<x,T_\infty y\right>$
+for all~$x$ and~$y$, so $T_\infty\in\mathscr H$.
+Thanks to the strong closedness of~$\mathscr A$ in~$\mathscr H$, \ 
+$T_\infty\in\mathscr A$, and the formula
+\begin{equation*}
+\left<T_\infty x,x\right>\ 
+=\ \sup_{T\in\mathscr T} \left<Tx,x\right>\qquad(x\in H)
+\end{equation*}
+implies $T_\infty = \sup \mathscr T$. \xqed
+\end{proof}
+%
+%                  7.14, Spectral Theorem for Hermitian operators
+%
+\begin{psec}{7.14}{Spectral Theorem for Hermitian operators}\statement{
+Let $A$ be a Hermitian operator in~$H$.
+Then there exists an additive
+$P\colon \BaireI(\Sp{A})\ra(A^{\square\square})^+$
+with the properties
+\begin{equation*}
+\left\{\quad 
+\begin{aligned}
+f(A)\ &=\ \smash{\int} f\,\mathrm{d}P\qquad&&(f\in\Cont{\Sp{A}}\,)\htam{,} \\
+P(Y)\ &\htam{\,is \  a projection }
+  \qquad&&(Y\in\BaireI(\Sp{A})\,)\htam{,}\\
+P(\Sp{A})\ &=\ I\htam{,} \\
+P(Y)\,P(Z)\ &=\ P(Y\cap Z)\qquad&&(Y,Z\in\BaireI(\Sp{A})\,)\htam{.}
+\end{aligned}
+\right.
+\end{equation*}
+}\end{psec}
+\begin{proof}
+\begin{enumerate}[label=(\Roman*)]
+\item\label{7.14-I}
+With $A$ we have associated two closed subalgebras of~$\mathscr H$,
+viz. $\smash{\overline{\R[A]}}$ (see~\ref{5.32})
+and $A^{\square\square}$ ($:=\smash{\bigl(\{A\}^\square\bigr)^\square}$;
+see~\ref{5.16}\ref{5.16-5}).
+We have a Riesz isomorphism $f\mapsto f(A)$
+of~$\Cont{\sigma_A}$ onto $\smash{\overline{\R[A]}}$ (\ref{5.33}),
+and a Riesz isomorphism $T\mapsto T^n$ of~$A^{\square\square}$
+onto~$\Cont{\Phi}$
+for some extremally disconnected compact Hausdorff space~$\Cont{\Phi}$
+(\ref{6.5}, \ref{6.32}, \ref{5.17}).
+\begin{equation*}
+\xymatrix@=4em{
+\overline{\R[A]}
+  \ar@{}[r]|*{\subseteq} & 
+A^{\square\square}
+  \ar[d]^{T\mapsto \hat{T}}\\
+\Cont{\Sp{A}}
+  \ar[r]_{f\mapsto f\circ \omega} 
+  \ar[u]^{f\mapsto f(A)}&
+\Cont{\Phi}
+}
+\end{equation*}
+The inclusion $\smash{\overline{\R[A]}}\subseteq A^{\square\square}$
+induces a Riesz homomorphism
+\begin{equation*}
+f\mapsto \widehat{f(A)}
+\end{equation*}
+of~$\Cont{\Sp{A}}$ into~$\Cont{\Phi}$,
+with $\mathbb{1}_{\Sp{A}}\mapsto\mathbb{1}_\Phi$.
+
+According to Exercise~\ref{7.15},
+there is a continuous $\omega\colon \Phi\ra\Sp{A}$
+with
+\begin{equation*}
+\widehat{f(A)}\ =\ f\circ \omega\qquad (f\in \Cont{\Sp{A}}\,)\htam{.}
+\end{equation*}
+%
+\item\label{7.14-II}
+If $Y\in\BaireI(\Sp{A})$,
+there exists a sequence $(f_n)_n$ in~$\Cont{\Sp{A}}$
+such that $f_n \ra\mathbb{1}_Y$
+pointwise on~$\Sp{A}$.
+Then the sequence $(f_n\circ\omega)_n$
+converges to $\mathbb{1}_Y\circ\omega$
+--- which is $\mathbb{1}_{\omega^{-1}(Y)}$ ---
+pointwise on~$\Phi$.
+Thus,
+$\omega^{-1}(Y)\in\BaireI(\Phi)$.
+Then, by~\ref{6.31}\ref{6.31-4}
+there is a clopen set $U\subseteq \Phi$
+with $\omega^{-1}(Y)\equiv U$.
+As $\mathbb{1}_U\in\Cont{\Phi}$,
+there is an element~$P(Y)$ of~$A^{\square\square}$
+with $\mathbb{1}_U=\smash{\widehat{P(Y)}}$:
+\begin{equation*}
+\label{eq7.14-II}\tag{$*$}
+\mathbb{1}_Y\circ\omega\ \equiv\ \widehat{P(Y)}\htam{.}
+\end{equation*}
+($P(Y)$ is determined by this relation:
+there is only one $T\in A^{\square\square}$ with
+$\mathbb{1}_Y\circ\omega=\hat{T}$.)
+%
+\item\label{7.14-III}
+We obtain a map $P\colon \BaireI(\Sp{A})\ra A^{\square\square}$
+satisfying~\eqref{eq7.14-II} for every~$Y$.
+Clearly this~$P$ is additive,
+and $P(Y)\,P(Z)=P(Y\cap Z)$ if $Y,Z\in\BaireI(\Sp{A})$.
+
+In particular,
+$P(Y)^2=P(Y)$,
+so each~$P(Y)$ is a projection~(\ref{5.7}).
+
+Of course, $P(\sigma_A)=I$.
+%
+\item\label{7.14-IV}
+Take~$f$ in~$\Cont{\Sp{A}}$.
+By~\ref{6.31}\ref{6.31-2},
+$\int f\,\mathrm{d}P$ exists;
+we prove that it equals~$f(A)$.
+
+Let $\varepsilon>0$.
+Following~\ref{6.31}\ref{6.31-2},
+choose $N\in\N$,
+$s_1,\dotsc,s_N\in\R$
+and $Y_1,\dotsc,Y_N\in\BaireI(\Sp{A})$ so that
+\begin{equation}
+\label{eq7.14-IV-*}\tag{$**$}
+0\ \leq\ f-{\textstyle\sum}\,s_n\,\mathbb{1}_{Y_n}
+\ \leq\ \varepsilon\,\mathbb{1}_{\Sp{A}}\qquad(\htam{on }\Sp{A})\htam{.}
+\end{equation}
+
+On the one hand,
+integration with respect to~$P$ yields
+\begin{equation}
+\label{eq7.14-IV-1}\tag{$1$}
+0\ \leq\ {\textstyle\int}f\,\mathrm{d}P - 
+{\textstyle\sum}\,s_n\,P(Y_n)\ \leq\ \varepsilon\,I\htam{.}
+\end{equation}
+
+On the other,
+\eqref{eq7.14-IV-*}~implies
+\begin{equation*}
+0\ \leq\ f\circ\omega -{\textstyle\sum}\,s_n\,\mathbb{1}_{Y_n}\circ\omega
+\ \leq\ \varepsilon\,\mathbb{1}_\Phi\qquad(\htam{on }\Phi)\htam{.}
+\end{equation*}
+But
+\begin{equation*}
+f\circ\omega - {\textstyle\sum}\,s_n\,\mathbb{1}_{Y_n}\circ\omega
+\ \equiv\ \widehat{f(A)} - {\textstyle\sum}\,s_n\,\widehat{P(Y_n)}\htam{.}
+\end{equation*}
+The right hand member denoting a continuous function,
+we obtain
+\begin{equation*}
+0\ \leq\ \widehat{f(A)} - {\textstyle\sum}\,s_n\,\widehat{P(Y_n)}
+\ \leq\ \varepsilon\,\mathbb{1}_\Phi\qquad(\htam{on }\Phi)\htam{.}
+\end{equation*}
+whence
+\begin{equation}
+\label{eq7.14-IV-2}\tag{$2$}
+0\ \leq\ f(A)-{\textstyle\sum}\,s_n\,P(Y_n)\ \leq\ \varepsilon\,I
+\qquad(\htam{in }A^{\square\square})\htam{.}
+\end{equation}
+
+It follows from~\eqref{eq4.17-IV-1} and~\eqref{4.17-IV-2} that
+\begin{equation*}
+-\varepsilon\,I\ \leq\ f(A)-{\textstyle\int}f\,\mathrm{d}P
+\ \leq\ \varepsilon\,I\htam{.}
+\end{equation*}
+
+As this inequality holds for every~$\varepsilon$,
+we have: $f(A)=\int f\,\mathrm{d}P$. \xqed
+\end{enumerate}
+\end{proof}
+%
 %
 %
 \clearpage
