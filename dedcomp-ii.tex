@@ -319,7 +319,7 @@ $\{x\colon 2\leq f(x)\leq 3\}$ lie in~$\BaireI(X)$.
 \item\label{7.10-2}
 It follows that
 \begin{equation*}
-\Cont{X}\ \subseteq\ \BNL(\BaireI(X))\htam{.}
+\Cont{X}\ \subseteq\ \BLeb(\BaireI(X))\htam{.}
 \end{equation*}
 Indeed,
 let $f\in\Cont{X}$, $\varepsilon>0$.
@@ -358,9 +358,7 @@ A\ =\ \bigcup_N \bigcap_{n\geq N} \bigl\{
 x\colon f_n(x)>\textstyle \frac{1}{2} \bigr\}\htam{.}
 \end{equation*}
 As $\{x\colon f_n(x)>\sfrac{1}{2}\}$ is always open,
-it follows that~$A$ lies in the $\sigma$-algebra
-described in Lemma~\ref{6.19}.
-What we will use farther on is this:
+Lemma~\ref{7.8} implies:
 \statement{If~$A$ is a set of the first Baire class
 in an extremally disconnected compact Hausdorff space,
 then there is a unique clopen set~$U$ with $A\equiv U$.}
@@ -564,10 +562,10 @@ and $A^{\square\square}$ ($:=\smash{\bigl(\{A\}^\square\bigr)^\square}$;
 see~\ref{5.16}\ref{5.16-5}).
 We have a Riesz isomorphism $f\mapsto f(A)$
 of~$\Cont{\sigma_A}$ onto $\smash{\overline{\R[A]}}$ (\ref{5.33}),
-and a Riesz isomorphism $T\mapsto T^n$ of~$A^{\square\square}$
+and a Riesz isomorphism $T\mapsto \hat{T}$ of~$A^{\square\square}$
 onto~$\Cont{\Phi}$
 for some extremally disconnected compact Hausdorff space~$\Cont{\Phi}$
-(\ref{6.5}, \ref{6.32}, \ref{5.17}).
+(\ref{5.17},\ref{6.5}, \ref{7.13}).
 \begin{equation*}
 \xymatrix@=4em{
 \overline{\R[A]}
@@ -606,7 +604,7 @@ converges to $\mathbb{1}_Y\circ\omega$
 pointwise on~$\Phi$.
 Thus,
 $\omega^{-1}(Y)\in\BaireI(\Phi)$.
-Then, by~\ref{6.31}\ref{6.31-4}
+Then, by~\ref{7.10}\ref{7.10-4}
 there is a clopen set $U\subseteq \Phi$
 with $\omega^{-1}(Y)\equiv U$.
 As $\mathbb{1}_U\in\Cont{\Phi}$,
@@ -634,12 +632,12 @@ Of course, $P(\sigma_A)=I$.
 %
 \item\label{7.14-IV}
 Take~$f$ in~$\Cont{\Sp{A}}$.
-By~\ref{6.31}\ref{6.31-2},
+By~\ref{7.10}\ref{7.10-4},
 $\int f\,\mathrm{d}P$ exists;
 we prove that it equals~$f(A)$.
 
 Let $\varepsilon>0$.
-Following~\ref{6.31}\ref{6.31-2},
+Following~\ref{7.10}\ref{7.10-2},
 choose $N\in\N$,
 $s_1,\dotsc,s_N\in\R$
 and $Y_1,\dotsc,Y_N\in\BaireI(\Sp{A})$ so that
@@ -681,7 +679,7 @@ whence
 \qquad(\htam{in }A^{\square\square})\htam{.}
 \end{equation}
 
-It follows from~\eqref{eq4.17-IV-1} and~\eqref{4.17-IV-2} that
+It follows from~\eqref{eq7.14-IV-1} and~\eqref{eq7.14-IV-2} that
 \begin{equation*}
 -\varepsilon\,I\ \leq\ f(A)-{\textstyle\int}f\,\mathrm{d}P
 \ \leq\ \varepsilon\,I\htam{.}
@@ -702,6 +700,45 @@ Prove that there is a continuous $\tau\colon Z\ra X$
 such that
 \begin{equation*}
 Tf\ =\ f\circ\tau\qquad (f\in\Cont{X}\,)\htam{.}
+\end{equation*}
+\end{psec}
+%
+%                  7.16
+%
+\begin{psec}{7.16}{Comment}
+Suppose $\dim H<\infty$.
+Then $\Sp{A}$ consists of the eigenvalues of~$A$~(\ref{5.36}),
+and is a finite set $\{s_1,\dotsc,s_N\}\quad(s_n\neq s_m\htam{ if }n\neq m)$.
+It follows that~$\BaireI(\Sp{A})$ is
+the algebra of all subsets of~$\Sp{A}$.
+In the terminology of~\ref{7.14},
+put $P_n:=P(\{s_n\})\quad(n=1,\dotsc,N)$.
+Then $P_1,\dotsc,P_N$ are projections
+on mutually orthogonal linear subspaces of~$H$, and
+\begin{align*}
+I\ &=\ {\textstyle\sum}\,P_n &
+A\ &=\ {\textstyle\sum}\,s_n\,P_n\htam{.}
+\end{align*}
+\end{psec}
+%
+%                  7.17
+%
+\begin{psec}{7.17}{Exercise}
+Prove the following weak version of the Spectral Theorem:
+If $A\in\mathscr H$
+and $\varepsilon\in(0,\infty)$,
+there exist $N\in\N$,
+$s_1,\dotsc,s_N\in\R$
+and closed linear subspaces
+$H_1,\dotsc,H_N$ of~$H$ such that
+\begin{equation*}
+\left\{\ 
+\begin{aligned}
+&H_n\perp H_m \htam{ whenever }n\neq m\htam{; }H_1+\dotsb+H_N=H\htam{;} \\
+&\htam{ if }x\in H_n\htam{, then }Ax\in H_n\htam{ and }
+\|Ax -s_nx\|\leq\varepsilon\,\|x\|\htam{.}
+\end{aligned}
+\right.
 \end{equation*}
 \end{psec}
 %
