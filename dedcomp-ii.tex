@@ -569,13 +569,22 @@ for some extremally disconnected compact Hausdorff space~$\Cont{\Phi}$
 \begin{equation*}
 \xymatrix@=4em{
 \overline{\R[A]}
-  \ar@{}[r]|*{\subseteq} & 
-A^{\square\square}
-  \ar[d]^{T\mapsto \hat{T}}\\
+  \ar@{}[d]|*{\begin{turn}{-90}$\subseteq$\end{turn}} & 
 \Cont{\Sp{A}}
-  \ar[r]_{f\mapsto f\circ \omega} 
-  \ar[u]^{f\mapsto f(A)}&
-\Cont{\Phi}
+  \ar[d] |!{[rr];[dl]}\hole
+  \ar@{}[d]_{f\mapsto f\circ \omega}
+  \ar[l]_{f\mapsto f(A)} &
+&
+\BaireI(\Sp{A})
+  \ar[d]^{Y\mapsto \omega^{-1}(Y)}
+  \ar@{-->}[llld]|*+{\scriptstyle Y\mapsto P(Y)} \\
+A^{\square\square}
+  \ar[r]_{T\mapsto \hat{T}}&
+\Cont{\Phi} &
+\clopen(\Phi)
+  \ar[l]^{U\mapsto \mathbb{1}_U} &
+\BaireI(\Phi)
+  \ar[l]^{Z\equiv U\mapsto U}
 }
 \end{equation*}
 The inclusion $\smash{\overline{\R[A]}}\subseteq A^{\square\square}$
