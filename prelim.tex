@@ -582,7 +582,7 @@ If $\Lambda$ is a ring of sets,
 additive functions are modular.
 On~$[0,1]$, all functions are modular.
 On $\Cont{[0,1]}$, 
-the function~$\smash{f\mapsto\int_0^1 f(x)^{37} dx}$ is modular.
+the function~$\smash{f\mapsto\int_0^1 f(x)^{37}\,\mathrm{d}x}$ is modular.
 \end{enumerate}
 \end{psec}
 %
@@ -797,35 +797,55 @@ Indeed,
 for every $A$ in $\mathcal A$
 we have $|\mu(A)| 
   \leq |\mu(A) - \mu(\eset)| + |\mu(X) - \mu(A)|
-  \leq \Var{[\eset,A]}{\mu}$,
+  \leq \Var{[\eset,X]}{\mu}$,
 which proves the implication ``$\Rightarrow$''.
 For the reverse,
 let 
-\begin{equation*}
-c:=\sup_{A\in\mathcal A} |\mu(A)|\htam{;}
-\end{equation*}
-it suffices to prove~$\Var{[\eset,X]}\mu \leq 2c$.
-Thus, let $S_0,S_1,\dotsc,S_N\in\mathcal{A}$,
-$\eset = S_0 \subseteq S_1 \subseteq \ldots \subseteq S_N = X$;
-we prove $\smash{\sum |\mu(S_n)-\mu(S_{n-1})|\leq 2c}$.
+$\mu$ be bounded.
+(It would now suffice to prove $\Var{[\varnothing,X]}{\mu}<\infty$,
+but for reasons of our own we do more.)
+To $A\in\mathcal A$ we assign a (finite) number~$\nu(A)$ by
+\begin{align*}
+\nu(A)\ &:=\ \sup_{\substack{
+  \scriptscriptstyle T\in\mathcal A \\ 
+  \scriptscriptstyle T\subseteq A}}
+\,\bigl(\mu(T)-\mu(A\backslash T)\bigr)\htam{;}\\
+\shortintertext{we show that}
+\nu(A)\ &=\ \Var{[\varnothing,A]}{\mu}\htam{.}
+\end{align*}
+
+Take $A\in\mathcal A$.
+The (not immediately useful) inequality
+$\nu(A)\leq\Var{[\varnothing,A]}{\mu}$ is easy:
+for all~$T$ in~$\mathcal A$ we have
+\begin{align*}
+\mu(T)-\mu(A\backslash T)\ 
+   &\leq\ \bigl|\mu(T)-\mu(\varnothing)\bigr| + \bigl|\mu(A)-\mu(T)\bigr|
+   \ \leq\ \Var{[\varnothing,A]}{\mu}\htam{.}
+\end{align*}
+
+For the inequality $\Var{[\varnothing,A]}{\mu}\leq\nu(A)$,
+let $S_0,S_1,\dotsc,S_N$ be elements of~$\mathcal{A}$ such that 
+$\eset = S_0 \subseteq S_1 \subseteq \ldots \subseteq S_N = A$;
+we prove $\smash{\sum |\mu(S_n)-\mu(S_{n-1})|\leq \nu(A)}$.
 Setting $T_n :=S_n \backslash S_{n-1}\quad(n=1,\dotsc,N)$
 we have pairwise disjoint~$T_1,\dotsc,T_N$
 in~$\mathcal A$ and are done if
 \begin{equation*}
-\sum \bigl|\mu(T_n)\bigr| \leq 2c
+\sum \bigl|\mu(T_n)\bigr|\ \leq\  \nu(A) 
 \htam{.}
 \end{equation*}
 Put $\mathcal{N}_+ := \{ n\colon \mu(T_n)>0\}\htam{, }
-\quad \mathcal{N}_- := \{ n\colon \mu(T_n)<0\}$.
+\quad \mathcal{N}_- := \{ n\colon \mu(T_n)\leq 0\}$.
 Then
 \begin{align*}
 \sum\bigl| \mu(T_n)\bigr| 
-  & = \sum_{\lsub{n\in\mathcal{N}_+}{n\in\mathcal{N}}} \mu(T_n)
-      -\sum_{\lsub{n\in\mathcal{N}_-}{n\in\mathcal{N}}} \mu(T_n) = \\
-  & = \mu\bigl( \bigcup_{\lsub{n\in\mathcal{N}_+}{n\in\mathcal{N}}} T_n\bigr)
-      -\mu\bigl( \bigcup_{\lsub{n\in\mathcal{N}_-}{n\in\mathcal{N}}} T_n\bigr) 
-      \leq 2c
-\htam{.}
+  & \ =\  \sum_{\lsub{n\in\mathcal{N}_+}{n\in\mathcal{N}}} \mu(T_n)
+      -\sum_{\lsub{n\in\mathcal{N}_-}{n\in\mathcal{N}}} \mu(T_n) \\
+  & \ =\ \mu(T)-\mu(A\backslash T)
+      \ \leq\  \nu(A)\htam{,}
+\shortintertext{where}
+T\ &:=\ \bigcup_{\lsub{n\in\mathcal{N}_+}{n\in\mathcal{N}}} T_n\htam{.}
 \end{align*}
 \end{psec}
 %
@@ -834,8 +854,19 @@ Then
 
 Thus, $\Mod(\mathcal A)$ consists precisely of
 the bounded additive functions on~$\mathcal A$.
-Observing that an additive function is increasing
-if and only if it has all values in~$[0,\infty)$
+An additive function on~$\mathcal A$ is increasing
+if and only if it has all values in~$[0,\infty)$.
+Consequently,
+for $\mu,\nu\in\Mod(\mathcal A)$
+we see that $\mu-\nu$ is increasing if and only
+if $\mu(A)-\nu(A)\geq 0\quad(A\in\mathcal A)$,
+i.e., $\mu(A)\geq\nu(A)\quad(A\in\mathcal A)$.
+Thus, the ordering of $\Mod(\mathcal A)$,
+as defined in Theorem~\ref{1.10},
+coindices with the usual ordering of functions on~$\mathcal A$.
+
+The above proves the following theorem
+except for its final clause:
 we arrive at:
 \begin{psec}{1.12}{Theorem}
 \statement{
@@ -844,10 +875,9 @@ of a set~$X$.
 Denote by~$\BA(\mathcal A)$ 
 the set of all bounded additive functions on~$\mathcal A$.
 Then under pointwise ordering~$\BA(\mathcal A)$
-is a Riesz space.
-} %statement
-\end{psec}
-For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
+is a Riesz space.}
+
+\statement{For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
 \begin{equation*}
 \mu^+(A) 
   = \sup_{\substack{\scriptscriptstyle T\in \mathcal{A} \\
@@ -855,6 +885,24 @@ For $\mu \in \BA(\mathcal A)$, $\mu^+$ is given by
   \qquad (A\in\mathcal A)
 \htam{.}
 \end{equation*}
+} %statement
+\end{psec}
+\begin{proof}
+To prove the final clause,
+take~$\mu$ in $\BA(\mathcal A)=\Mod(\mathcal A)$.
+By \ref{1.10} and~\ref{1.11},
+\begin{align*}
+|\mu|(A)\ &=\ \Var{[\varnothing,A]}{\mu}\ =\ \nu(A) \\
+  &=\ \sup_{\substack{
+       \scriptscriptstyle T\in\mathcal A \\
+       \scriptscriptstyle T\subseteq A}}\,
+    \bigl( \mu(T)-\mu(A\backslash T)\bigr) \\
+  &=\ 2 \, \sup_{\substack{
+       \scriptscriptstyle T\in\mathcal A \\
+       \scriptscriptstyle T\subseteq A}}\,\mu(T) \ -\mu(A)\htam{.}
+\end{align*}
+Now observe that $|\mu|+\mu = 2\mu^+$. \xqed
+\end{proof}
 %
 %                  1.13
 %
@@ -959,7 +1007,7 @@ for $T\in\mathcal A$ with $T\subseteq\bigcup A_n$ we obtain
 \ \leq\ \sum\mu^+(A_n)\htam{,}
 \end{equation*}
 so that, 
-by the comment following~\ref{1.12},
+by the final clause of~\ref{1.12},
 $\mu^+\bigl(\bigcup A_n\bigr) \leq \sum\mu^+(A_n)$.
 \xqed
 \end{proof}
