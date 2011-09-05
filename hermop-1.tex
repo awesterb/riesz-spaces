@@ -417,9 +417,10 @@ to which we can apply the Cauchy--Schwarz Inequality:
 \end{equation*}
 Choosing $y:=Tx$ we get for all~$x$:
 \begin{align*}
-\|Tx\|^4\ &\leq\ \left<Tx, x\right>\,\left< T^2x,Tx\right> \\
-          &\leq\ \left<Ix, x\right>\,\|T^2 x\|\,\|Tx\| \\
-          &\leq\ \|x\|^2\,\|T\|\,\|Tx\|^2
+\|Tx\|^4\ &\leq\ \left<Tx, x\right>\,\left< T y,y\right> \\
+          &\leq\ \left<Ix, x\right>\,\left< I y,y\right>\\
+          &  =\  \|x\|^2 \, \|y\|^2 \\
+          &\leq\ \|x\|^2\,\|Tx\|^2
 \end{align*}
 and thereby
 \begin{equation*}
@@ -435,17 +436,37 @@ and $\|T\|\leq 1$. \xqed
 but not a Riesz space:
 \begin{psec}{5.11}{Exercise}
 For $H=\R^2$
-the elements of~$\mathscr H$ can be viewed as $2\times 2$-matrices
+the elements of~$\mathscr H$ can be viewed as matrices
+$\smash{\bigl(\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\bigr)}$
 (\ref{5.5}\ref{5.5-1}).
+\begin{enumerate}[label=(\alph*)]
+\item\label{5.11a}
+Show: If 
+$\smash{\bigl(\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\bigr)}\geq 0$,
+then
+$\smash{\bigl(\begin{smallmatrix}a&-b\\-b&c\end{smallmatrix}\bigr)}\geq 0$.
+
+\item\label{5.11b}
 Let
 \begin{equation*}
 E_1 := \begin{pmatrix}1&0\\0&0\end{pmatrix}\htam{, }\quad
 E_2 := \begin{pmatrix}0&0\\0&1\end{pmatrix}\htam{, }\quad
-I   := \begin{pmatrix}1&1\\1&1\end{pmatrix}\htam{, }\quad
-A   := \begin{pmatrix}2&1\\1&2\end{pmatrix}\htam{.}
+I   := \begin{pmatrix}1&0\\0&1\end{pmatrix}\htam{, }\quad
+A   := \begin{pmatrix}2&\sqrt{2}\\\sqrt{2}&2\end{pmatrix}\htam{.}
 \end{equation*}
-Show that $E_1\leq I$, $E_2\leq I$, $E_1\leq A$, $E_2\leq A$.
-Show that $\{E_1,E_2\}$ has no supremum.
+\end{enumerate}
+\emph{Assume} that~$\{E_1,E_2\}$ has a supremum
+$\smash{\bigl(\begin{smallmatrix}x&y\\y&z\end{smallmatrix}\bigr)}$
+in~$\mathscr H$.
+Show (using~\ref{5.11a}) that~$y=0$ and that
+$\smash{\bigl(\begin{smallmatrix}x&y\\y&z\end{smallmatrix}\bigr)}$
+can only be~$I$.
+Show that~$A$ is an upper bound for~$\{E_1,E_2\}$
+but $I\nleq A$.
+
+Thus,
+$\{E_1,E_2\}$ has no supremum.
+
 (Indeed,
 it can be proved that,
 if $\dim H>1$,
@@ -468,7 +489,7 @@ as the square root of its square.
 
 Unfortunately,
 as we have already seen,
-$\mathscr H$ is not closed under multiplication.
+$\mathscr H$ may not be closed under multiplication.
 The following lemma clarifies the situation somewhat.
 %
 %                  5.12
@@ -656,7 +677,7 @@ One easily sees that for every subset~$\mathscr S$
 of~$\mathscr H$ the set~${\mathscr S}^\square$ is strongly closed.
 
 Strongly closed subalgebras of~$\mathscr H$
-will return in the next chapter.
+will return in Chapter~\ref{sec:dedcomp-ii}
 \end{psec}
 
 \noindent We intend to show that
@@ -780,7 +801,7 @@ From the properties of the~$Q_n$
 it follows that~$Q$ is linear
 and that $\|Qx\|\leq\|x\|$,
 $\left<Qx,y\right>=\left<x,Qy\right>$
-and $0\leq\left<Qx,y\right>\leq\left<x,x\right>$
+and $0\leq\left<Qx,x\right>\leq\left<x,x\right>$
 for all~$x$ and~$y$;
 in short:
 \begin{equation*}
@@ -873,12 +894,21 @@ consequently,
 \end{equation*}
 
 It is worth observing that~$\sqrt{T}$ lies in the norm closure
-of the linear hull of $\{T,T^2,T^3,\dotsc\}$,
-since $\sr_n(T)\ra \sqrt{T}$,
-where $\sr_n$ is the polynomial 
-$t\mapsto q_n(1)-q_n(1-t)$,
-that has value~$0$ at~$0$.
-The moral of that remark is that~$\sqrt{T}$
+of the linear hull of $\{T,T^2,T^3,\dotsc\}$.
+For a proof we may assume~$\|T \|=1$
+and $\sqrt{T}=I - \lim q_n(I-T)$.
+Let~$r_n$ be the polynomial
+$t\mapsto q_n(t)-q_n(1-t)$;
+then~$r_n$ has the value~$0$ at~$0$,
+so~$r_n(T)$ lies in the linear hull of $\{T,T^2,T^3,\dotsc\}$.
+But $\sqrt{T}=\lim r_n(T)$,
+since
+\begin{equation*}
+(I-q_n(I-T)) - r_n(T) \ =\ (1-q_n(1))\,I
+\end{equation*}
+for each~$n$, and $q_n(1)\ra 1$.
+
+The moral of this remark is that~$\sqrt{T}$
 \emph{lies in every closed subalgebra of~$\mathscr H$
 that contains~$T$.}
 \end{psec}
