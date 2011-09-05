@@ -57,7 +57,7 @@ are all Archimedean.
 Defining a binary relation $\leqlex$ on $\R^2$ by
 \begin{align*}
 (x_1,x_2) \leqlex (y_1,y_2)   \quad \iff \quad
-& \htam{ either }x_1<y_2 \\
+& \htam{ either }x_1<y_1 \\
 & \htam{ or }x_1 = y_1\htam{, }\ x_2 \leq y_2\htam{, }
 \end{align*}
 we have a total ordering,
@@ -325,6 +325,20 @@ $nf(a)\geq f(e)>0$
 and~$f(a)>0$.  \xqed
 \end{proof}
 %
+%                  '3.10 1/2'
+%
+\begin{psec}{3.10.5}{Exercise}
+Let $N\in\N$ and let~$E$ be an $N$-dimensional Archimedean
+Riesz space.
+Prove that~$E$ is Riesz isomorphic to~$\R^N$.
+(Show that~$E$ is unitary;
+that for $x,y\in E$ with $x\neq y$
+there is a Riesz homomorphism~$\varphi\colon E\ra \R$
+with $\varphi(x)\neq\varphi(y)$;
+and that the ($N$-dimensional) vector space of all linear functionals
+$E\ra \R$ has a basis consisting of Riesz homomorphisms.)
+\end{psec}
+%
 %                  3.10
 %
 \begin{psec}{3.10}%
@@ -389,7 +403,7 @@ If $x\in E$, then
 \begin{equation*}
 |x|\leq \|x\|_e e\htam{.}
 \end{equation*}
-(See exercise~\ref{3.2}\ref{3.2-alpha}$\implies$\ref{3.2-delta}.)
+(See exercise~\ref{3.2}.)
 %
 \item \label{3.12-2}
 $\|\cdot\|_e$ is a norm.
