@@ -91,6 +91,11 @@ Observe that then for all $x,y\in E$
 x\leq y \quad \implies \quad -x \geq -y\htam{.}
 \end{equation*}
 (Take $a:=-x-y$.)
+
+The \keyword{positive cone} in an ordered vector space~$E$ is
+\begin{equation*}
+E^+\ :=\ \{ x\in E\colon x\geq 0 \} \htam{.}
+\end{equation*}
 \end{psec}
 %
 %                  1.3
@@ -193,7 +198,7 @@ because~$(x\vee y)-x-y
 Take~$a\in E$ and let $M_a\colon E\ra E$ 
 be either the map~$x\mapsto x\vee a$
 or~$x\mapsto x\wedge a$. 
-Let~$A\subseteq E$.
+Let~$X\subseteq E$.
 Then
 \begin{align*}
 M_a(\sup X) &= \sup M_a(X) \\
@@ -206,7 +211,7 @@ Proof for $M_a(x)=x\vee a$:
 \begin{itemize}
 \item %
 If~$X$ has a supremum:  
-For~$z\in E$ we
+For~$z\in E$ we have
 \begin{align*}
 z\ge (\sup X)\vee a  
   & \iff z\ge \sup X\ \htam{ and }\  z\ge a \\
@@ -376,12 +381,6 @@ one infers easily that for every~$x$
 the set~$\{ y: x\perp y\}$
 is a linear subspace of~$E$.
 %
-\item \label{1.14-12}
-The \keyword{positive cone} of~$E$ is the set
-\begin{equation*}
-E^+ := \{x\in E\colon x\ge 0\}
-\htam{.}
-\end{equation*}
 \end{enumerate}
 \end{psec}
 %
@@ -405,11 +404,16 @@ this~$\R^X$ is a Riesz space:
 (x\in X\htam{; }f,g\in\R^X)
 \htam{.}
 \end{equation*}
+In particular,
+for every~$N\in\N$
+the Euclidean space~$\R^N$
+is a Riesz space under coordinatewise operations.
 %
 \item
 \label{1.5-2}
 For any set~$X$ the bounded functions on~$X$ form a 
 Riesz~space~$\ell^\infty(X)$.
+The space~$\ell^\infty(\N)$ is usually denoted by: $\ell^\infty$.
 %
 \setcounter{list-1.5}{\value{enumi}}
 \item
@@ -607,8 +611,8 @@ For the reverse,
 assume~$a=s_0\leq s_1 \leq \ldots \leq s_N = c$.
 Then
 \begin{equation*}
-a \leq s_0\wedge b \leq s_1 \wedge b \leq \ldots s_N\wedge b
-  = b = s_0 \vee b \leq s_1 \vee b \leq \ldots s_N\vee b = c
+a = s_0\wedge b \leq s_1 \wedge b \leq \ldots \leq s_N  \wedge b
+  = b = s_0 \vee b \leq s_1 \vee b \leq \ldots \leq s_N\vee b = c
 \htam{.}
 \end{equation*}
 For each $n$,
