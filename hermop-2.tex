@@ -30,7 +30,7 @@ Let $S,T\in\mathscr{H}$, $S\leq T$.
 Then $VS\leq VT$ for every~$V$ in~${\mathscr H}^+$
 that commutes with~$S$ and with~$T$.}
 
-\noindent \emph{Proof}\  $VS-VT=V(T-S)\in{\mathscr H}^+$,
+\noindent \emph{Proof}\  $VT-VS=V(T-S)\in{\mathscr H}^+$,
 by~\ref{5.20-2}. \xqed
 %
 \item \label{5.20-4} \statement{
@@ -124,7 +124,7 @@ Let $T\in\mathscr H$, $0\leq T\leq I$
 Prove:
 \begin{enumerate}
 \item\label{5.23-1}
-$I\geq T \geq T^2 \geq \dotsb$.
+$T^n \geq 0$ for every~$n$, and $I\geq T \geq T^2 \geq \dotsb$.
 %
 \item\label{5.23-2}
 $Px:=\lim_{n\ra\infty} T^n x$ exists for all~$x$ in~$H$.
@@ -603,7 +603,7 @@ its range we call the spectrum of~$A$:
 \end{equation*}
 It is the set of all numbers~$\varphi(A)$
 where~$\varphi$ is a Riesz homomorphism
-$\overline{\R[A]}$
+$\overline{\R[A]}\ra \R$
 with $\varphi(I)=1$.
 (In~\ref{5.36} we obtain a more direct description.)
 
@@ -713,7 +713,7 @@ Let $\mathscr A$ be a closed subalgebra of~$\mathscr H$
 with $I\in \mathscr A$,
 and let~$\Phi$ be the set of all Riesz homomorphisms
 $\mathscr A\ra \R$ that send~$I$ to~$1$.
-If $A\in\mathscr A$ and $f\in\Sp{A}$, then
+If $A\in\mathscr A$ and $f\in\Cont{\Sp{A}}$, then
 \begin{align*}
 \Sp{A}\ &=\ \bigl\{\varphi(A)\colon \varphi\in\Phi\bigr\}\htam{,} \\
 \varphi(f(A))\ &=\ f(\varphi(A))\qquad (\varphi\in\Phi)\htam{.}%
@@ -770,8 +770,10 @@ $(A-\lambda I)B = B(A-\lambda I)=I$.
 Then in particular~$A$ commutes with~$B$,
 and every power of~$A$ commutes with every power of~$B$.
 Let~$\mathscr A$ be the closure of the linear hull of
-$\bigl\{A^n B^m\colon n,m\in\{0,1,2,\dotsc\}\bigr\}$;
-then~$\mathscr A$ is a closed subalgebra of~$\mathscr H$.
+$\bigl\{A^n B^m\colon n,m\in\{0,1,2,\dotsc\}\bigr\}$
+where, by definition, $A^0=B^0=I$;
+then~$\mathscr A$ is a closed subalgebra of~$\mathscr H$
+that contains~$I$.
 By~\eqref{eqpre5.35},
 $A-\lambda I$ has no inverse in~$\mathscr A$.
 Contradiction. \xqed
@@ -869,7 +871,7 @@ not~$I$ and not~$0$.
 Show that $\Sp{P}=\{0,1\}$
 and that
 \begin{equation*}
-f(P)\ =\ f(0)\,I\,+\,f(1)\,P
+f(P)\ =\ f(0)\,(I-P)\,+\,f(1)\,P
 \end{equation*}
 for every $f\colon \{0,1\}\ra\R$.
 \end{psec}
