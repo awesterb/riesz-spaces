@@ -375,7 +375,7 @@ and $(f-\varepsilon \mathbb{1})^+ \in D$. \xqed
 \begin{proof} of Theorem~\ref{4.10}:
 As in our proof of Lemma~\ref{4.7},
 we assume $E=\Cont{X}$ for some compact~$X$.
-Then $D=\{ f\colon |A = 0 \}$ for some closed $A\subseteq X$,
+Then $D=\{ f\colon f|A = 0 \}$ for some closed $A\subseteq X$,
 and $E/D$ is Riesz isomorphic to~$\Cont{A}$~(\ref{2.9}).
 But $\Cont{A}$ is uniformly complete (\ref{4.6}\ref{4.6-1}). \xqed
 \end{proof}
@@ -449,7 +449,7 @@ and~$\hat f$ as an extension of~$f$.
 \item \label{4.12-III}
 If $X$ itself is a compact Hausdorff space,
 then~$\beta$ is a homeomorphism of~$X$ onto~$\beta X$;
-that is~\ref{3.12}.
+that is~\ref{3.15}.
 %
 \item \label{4.12-IV}
 $\beta(X)$ is always a dense subset of~$\beta X$.
@@ -488,7 +488,7 @@ if $X$ is completely regular (e.g., metrizable).
 
 Indeed, suppose $X$ is completely regular.
 If $a,b\in X$ and $a\neq b$,
-there are functions~$f$ in $\BCont{X}$
+there is a  function~$f$ in $\BCont{X}$
 with $f(a)\neq f(b)$,
 then $(\beta(a))(f)\neq (\beta(b))(f)$,
 so $\beta(a)\neq\beta(b)$.
@@ -525,7 +525,7 @@ Let $X,Y$ be topological spaces,
 $\tau$ a continuous map $X\rightarrow Y$.
 Prove that the following formula
 \begin{equation*}
-\beta\tau\colon\varphi\mapsto\varphi\circ\tau\qquad(\varphi\in\BCont{X}\,)
+\beta\tau\colon\varphi\mapsto\varphi\circ\tau\qquad(\varphi\in\BCont{Y}\,)
 \end{equation*}
 defines a continuous map $\beta\tau\colon\beta X\ra\beta Y$,
 satisfying $(\beta\tau)\circ\beta=\beta\circ\tau$:
@@ -636,7 +636,7 @@ Indeed,
 suppose the latter condition is satisfied.
 Let $\varnothing\neq W\subseteq E$ 
 and let~$W$ be bounded from above;
-for the $\sigma$-completeness,
+for the $\sigma$-Dedekind completeness,
 assume~$W$ is countable.
 Choose~$w_0$ in~$W$.
 The set
