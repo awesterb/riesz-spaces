@@ -168,7 +168,7 @@ Define $g\colon X\ra [0,\infty)$ by
 g(x)\ :=\ \sup_{f\in F} f(x)\qquad(x\in X)\htam{.}
 \end{equation*}
 For each~$s$ in~$[0,\infty)$
-the set $\{x\colon g(x)\geq s\}$ is open, since
+the set $\{x\colon g(x)> s\}$ is open, since
 \begin{equation*}
 \{x\colon g(x)>s\}\ =\ \bigcup_{f\in F} \{x\colon f(x)>s\}\htam{;}
 \end{equation*}
@@ -209,7 +209,7 @@ Let $X$ be a compact Hausdorff space.
 Prove the equivalence of:
 \begin{enumerate}[label=(\greek{*})]
 \item\label{6.6-alpha}
-$\Cont{X}$ is $\sigma$-Dedekind compltee.
+$\Cont{X}$ is $\sigma$-Dedekind complete.
 %
 \item\label{6.6-beta}
 For every~$f$ in~$\Cont{X}^+$ the open set $\{x\colon f(x)>0\}$
@@ -295,7 +295,7 @@ $\BLeb(\mathcal A)$ is Archimedean, unitary and uniformly complete,
 hence Riesz isomorphic to some~$\Cont{\Phi}$,
 according to Yosida.
 
-Prove that~$\Phi$ is a Stone space for~$\mathcal A$~(\ref{3.19}).
+Prove that~$\Phi$ is a Stone space for~$\mathcal A$~(\ref{3.21}).
 \end{psec}
 %
 %                  6.10
@@ -353,7 +353,7 @@ on~$\lbb \mathcal A \rbb$ by}
  \qquad &(f\in\lbb S \rbb)\htam{.}
 \end{alignat*}
 Observe that $\int \mathbb{1}_A\,\mathrm{d}\mu=\mu(A)
-\quad(A\in\lbb \mathcal A \rbb)$,
+\quad(A\in \mathcal A )$,
 and also that $\int f\,\mathrm{d}\mu\geq 0$
 if $f\in\lbb\mathcal{A}\rbb^+$.
 %
@@ -444,7 +444,7 @@ for which
 
 Prove also:
 \begin{equation*}
-\|\varphi\|\ \leq\ \Var{}{\mu}\htam{.}
+\|\varphi_\mu\|\ \leq\ \Var{[\varnothing,X]}{\mu}\htam{.}
 \end{equation*}
 (See~\ref{1.8} for ``$\Var{}{}$''.)
 %
@@ -564,8 +564,8 @@ again by the theorem. \xqed
 Again,
 let $\mathcal A$ be a $\sigma$-algebra in a set~$X$.
 Let~$\mu$ be a \keyword{finite measure} on~$\mathcal A$,
-i.e., a signed measure (see~\ref{1.13})
-with values in~$[0,\infty)$.
+i.e., a signed measure 
+with values in~$[0,\infty)$ (see~\ref{1.13}).
 $\mu$ is finitely additive,
 so~\ref{6.10} and~\ref{6.11} are applicable.
 \begin{enumerate}
@@ -599,12 +599,12 @@ $B_n:=A_n\backslash \bigcup_{i<n} A_i \quad (n\in\N)$; then we have
 %
 \item\label{6.16-3}
 Let $f\in\BLeb(\mathcal A)$.
-Claim:\statement{
+Claim:
 \begin{equation*}
 \textstyle f\htam{ is null} \quad\iff\quad 
    \bigl\{x\colon f(x)\neq 0\bigr\}\htam{ is null.}
 \end{equation*}
-}Proof:
+Proof:
 Put $A:=\{x\colon f(x)\neq 0\}$.
 Note that $A\in\mathcal{A}$ because $A=\{x\colon |f(x)|>0\}$
 and because of~\ref{6.13}.
@@ -635,7 +635,7 @@ because,
 if $f_n\ra f$ uniformly (or even pointwise),
 then 
 \begin{equation*}
-\textstyle \{x\colon |f(x)|\neq 0\} 
+\textstyle \{x\colon f(x)\neq 0\} 
 \ \subseteq\  \bigcup_n \{ x\colon f_n(x)\neq 0\}\htam{.}
 \end{equation*}
 
@@ -750,7 +750,7 @@ For every~$n$,
       -\int f_n\,\mathrm{d}\mu
 \ \leq\ s-\int f_n\,\mathrm{d}\mu\htam{,}
 \end{alignat*}
-where $\int f(f\vee f_n)\,\mathrm{d}\mu\leq s$
+where $\int (f\vee f_n)\,\mathrm{d}\mu\leq s$
 thanks to the directedness of~$\mathcal F$.
 Consequently,
 $f-f\wedge f_\infty$ is null,
@@ -845,7 +845,7 @@ $\overline \mu$ is additive.
 %
 \item\label{6.20-4}
 If $f\in\BLeb(\mathcal A)$
-(and $\hat f\in\Cont{Y}\subseteq \BLeb(\clopen(Y))$\,), then
+(and $\hat f\in\Cont{Y}= \BLeb(\clopen(Y))$\,), then
 \begin{equation*}
 \int \hat{f}\,\mathrm{d}\overline{\mu}\ =\ \int f\,\mathrm{d}\mu\htam{.}
 \end{equation*}
@@ -918,11 +918,11 @@ with $\hat{A}_n=U_n\quad(n\in\N)$.
 Define $B_1,B_2,\dotsc\in\mathcal A$ by
 \begin{alignat*}{4}
 B_1\ :=&\ A_1\htam{, }&\qquad
-B_n\ :=&\ A_n\backslash A_1\cup\dotsb\cup A_{n-1}& \quad &(n\geq 2)\htam{;} \\
+B_n\ :=&\ A_n\backslash (A_1\cup\dotsb\cup A_{n-1})& \quad &(n\geq 2)\htam{;} \\
 \shortintertext{
 then $B_1,B_2,\dotsc$ are mutually disjoint and}
 \hat{B}_1\ =&\ \hat{A}_1\htam{, }&\qquad
-\hat{B}_n\ =&\ \hat{A}_n\backslash \hat{A}_1 \cup\dotsb\cup\hat{A}_{n-1}&
+\hat{B}_n\ =&\ \hat{A}_n\backslash (\hat{A}_1 \cup\dotsb\cup\hat{A}_{n-1})&
   \quad&(n\geq 2)\htam{,}
 \end{alignat*}
 from which it follows that $\hat{B}_n=U_n$
@@ -930,7 +930,7 @@ for each~$n$.
 With $B:=\bigcup B_n$
 we have $\mathbb{1}_B=\sup_n \mathbb{1}_{B_n}$
 in~$\BLeb(\mathcal A)$,
-so $\hat{\mathbb{1}}_B=\sup_n \hat{\mathbb{1}}_{B_n}=\sup \mathbb{1}_{U_n}$
+so $\hat{\mathbb{1}}_B=\sup_n \hat{\mathbb{1}}_{B_n}=\sup_n \mathbb{1}_{U_n}$
 in~$\Cont{Y}$,
 so that $\hat{B}=U$.
 Now $\overline\mu(U)=\mu(B)
@@ -963,7 +963,7 @@ $\overline\nu$ has the additivity property ascribed to~$\overline\mu$
 in~\ref{6.20-7}.
 (Observe that 
 \begin{alignat*}{2}
-\textstyle\overline\nu(U)-\sum_{n\geq N} \overline\nu(U_n)
+\textstyle\overline\nu(U)-\sum_{n\leq N} \overline\nu(U_n)
 \ &=\    \overline\nu\bigl(\,U\,\backslash
           \textstyle\bigcup_{n\leq N}U_n\,\bigr) \\
 \ &\leq\ \overline\mu\bigl(\,U\,\backslash
@@ -1023,7 +1023,7 @@ We look for an~$f$ in~$\Cont{X}^+$ with
 \end{equation*}
 Define $\omega\colon\clopen(X)\ra[0,1]$ by:
 \begin{equation*}
-\omega(A)\ :=\inf_{\substack{B\htam{ clopen}\\B\subseteq A}}\  
+\omega(A)\ :=\inf_{\substack{B\htam{ clopen}\\\varnothing \neq B\subseteq A}}\  
 \frac{\nu(B)}{\mu(B)}\htam{.}
 \end{equation*}
 Thanks to Dedekind completeness of~$X$
