@@ -268,7 +268,7 @@ of all sets with Property~\eqref{eq7.8-1}.
 Obviously, $\mathcal A$ contains~$\varnothing$
 and all open sets.
 If $Y_1,Y_2,\dotsc \in\mathcal A$
-and if $U_1,U_2,\dotsc$ are open sets with $A_n\equiv U_n\quad(n\in\N)$,
+and if $U_1,U_2,\dotsc$ are open sets with $Y_n\equiv U_n\quad(n\in\N)$,
 then $\bigcup Y_n\equiv \bigcup U_n$~(\ref{7.7}\ref{7.7-3}),
 so $\bigcup Y_n\in\mathcal A$.
 If $Y\in\mathcal A$ and~$U$ is open,
@@ -294,7 +294,7 @@ we have $U\equiv\overline U$ and~$\overline U$ is clopen. \xqed
 \begin{psec}{7.9}{Definition}
 Let $X$ be a compact Hausdorff space.
 We say that a subset~$Y$ of~$X$ is \keyword{of the first Baire class}
-if~$\mathbb{1}_A$ is the (pointwise) limit of a sequence
+if~$\mathbb{1}_Y$ is the (pointwise) limit of a sequence
 of continuous functions.
 These sets form a collection
 \begin{equation*}
@@ -484,7 +484,7 @@ and therefore convergent to some number, $\alpha(x)$, say:
 
 If $S,T\in\mathscr T$ and $S\geq T$,
 then $0\leq S-T\leq I-0=I$,
-so that (\ref{5.20}\ref{5.20-2})
+so that (\ref{5.20}\ref{5.20-3})
 \begin{equation*}
 (S-T)^2\ \leq\ S-T\htam{.}
 \end{equation*}
@@ -493,7 +493,7 @@ Then for all~$x$ in~$H$
 \bigl\|Sx - Tx\bigr\|^2\ 
   &=\ \bigl<(S-T)x,(S-T)x\bigr> \\
   &=\ \bigl<(S-T)^2x,x\bigr> \\
-  &=\ \bigl<(S-T)x,x\bigr> \\
+  &\leq\ \bigl<(S-T)x,x\bigr> \\
   &=\ \bigl<Sx,x\bigr> - \bigl<Tx,x\bigr> \\
   &\leq\ \alpha(x) - \bigl<Tx,x\bigr>\htam{.}
 \end{alignat*}
@@ -566,7 +566,7 @@ of~$\Cont{\sigma_A}$ onto $\smash{\overline{\R[A]}}$ (\ref{5.33}),
 and a Riesz isomorphism $T\mapsto \hat{T}$ of~$A^{\square\square}$
 onto~$\Cont{\Phi}$
 for some extremally disconnected compact Hausdorff space~$\Cont{\Phi}$
-(\ref{5.17},\ref{6.5}, \ref{7.13}).
+(\ref{4.5}, \ref{5.17}, \ref{6.5}, \ref{7.13}).
 \begin{equation*}
 \xymatrix@=4em{
 \overline{\R[A]}
@@ -615,7 +615,7 @@ pointwise on~$\Phi$.
 Thus,
 $\omega^{-1}(Y)\in\BaireI(\Phi)$.
 Then, by~\ref{7.10}\ref{7.10-4}
-there is a clopen set $U\subseteq \Phi$
+there is a unique clopen set $U\subseteq \Phi$
 with $\omega^{-1}(Y)\equiv U$.
 As $\mathbb{1}_U\in\Cont{\Phi}$,
 there is an element~$P(Y)$ of~$A^{\square\square}$
@@ -626,7 +626,7 @@ with $\mathbb{1}_U=\smash{\widehat{P(Y)}}$:
 \end{equation*}
 ($P(Y)$ is determined by this relation:
 there is only one $T\in A^{\square\square}$ with
-$\mathbb{1}_Y\circ\omega=\hat{T}$.)
+$\mathbb{1}_Y\circ\omega\equiv\hat{T}$.)
 %
 \item\label{7.14-III}
 We obtain a map $P\colon \BaireI(\Sp{A})\ra A^{\square\square}$
@@ -642,7 +642,7 @@ Of course, $P(\sigma_A)=I$.
 %
 \item\label{7.14-IV}
 Take~$f$ in~$\Cont{\Sp{A}}$.
-By~\ref{7.10}\ref{7.10-4},
+By~\ref{7.10}\ref{7.10-2},
 $\int f\,\mathrm{d}P$ exists;
 we prove that it equals~$f(A)$.
 
